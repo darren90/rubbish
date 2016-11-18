@@ -14,6 +14,20 @@
 		FEDE0EFE1DDF5B0C00266EF3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FEDE0EFC1DDF5B0C00266EF3 /* LaunchScreen.storyboard */; };
 		FEDE0F091DDF5B0C00266EF3 /* iTVshowsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEDE0F081DDF5B0C00266EF3 /* iTVshowsTests.swift */; };
 		FEDE0F141DDF5B0C00266EF3 /* iTVshowsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEDE0F131DDF5B0C00266EF3 /* iTVshowsUITests.swift */; };
+		FEDE0F261DDF645700266EF3 /* libGeTuiSdk-1.5.3.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FEDE0F241DDF645700266EF3 /* libGeTuiSdk-1.5.3.a */; };
+		FEDE0F271DDF645700266EF3 /* libGtExtensionSdk-1.0.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FEDE0F251DDF645700266EF3 /* libGtExtensionSdk-1.0.0.a */; };
+		FEDE0F2E1DDF64C600266EF3 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = FEDE0F2D1DDF64C600266EF3 /* libc++.tbd */; };
+		FEDE0F301DDF64CC00266EF3 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = FEDE0F2F1DDF64CC00266EF3 /* libz.tbd */; };
+		FEDE0F321DDF64D400266EF3 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = FEDE0F311DDF64D400266EF3 /* libsqlite3.tbd */; };
+		FEDE0F341DDF64D900266EF3 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEDE0F331DDF64D900266EF3 /* Security.framework */; };
+		FEDE0F361DDF64DF00266EF3 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEDE0F351DDF64DF00266EF3 /* MobileCoreServices.framework */; };
+		FEDE0F381DDF64E400266EF3 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEDE0F371DDF64E400266EF3 /* SystemConfiguration.framework */; };
+		FEDE0F3A1DDF64E900266EF3 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEDE0F391DDF64E900266EF3 /* CoreTelephony.framework */; };
+		FEDE0F3C1DDF64EE00266EF3 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEDE0F3B1DDF64EE00266EF3 /* AVFoundation.framework */; };
+		FEDE0F3E1DDF64F300266EF3 /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEDE0F3D1DDF64F300266EF3 /* JavaScriptCore.framework */; };
+		FEDE0F401DDF64FB00266EF3 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEDE0F3F1DDF64FB00266EF3 /* CoreLocation.framework */; };
+		FEDE0F421DDF650100266EF3 /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEDE0F411DDF650100266EF3 /* UserNotifications.framework */; };
+		FEDE0F441DDF650700266EF3 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEDE0F431DDF650700266EF3 /* AdSupport.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +61,24 @@
 		FEDE0F0F1DDF5B0C00266EF3 /* iTVshowsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iTVshowsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FEDE0F131DDF5B0C00266EF3 /* iTVshowsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iTVshowsUITests.swift; sourceTree = "<group>"; };
 		FEDE0F151DDF5B0C00266EF3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FEDE0F221DDF645700266EF3 /* GeTuiExtSdk.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeTuiExtSdk.h; sourceTree = "<group>"; };
+		FEDE0F231DDF645700266EF3 /* GeTuiSdk.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeTuiSdk.h; sourceTree = "<group>"; };
+		FEDE0F241DDF645700266EF3 /* libGeTuiSdk-1.5.3.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libGeTuiSdk-1.5.3.a"; sourceTree = "<group>"; };
+		FEDE0F251DDF645700266EF3 /* libGtExtensionSdk-1.0.0.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libGtExtensionSdk-1.0.0.a"; sourceTree = "<group>"; };
+		FEDE0F281DDF646800266EF3 /* iTVshows-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iTVshows-Bridging-Header.h"; sourceTree = "<group>"; };
+		FEDE0F2D1DDF64C600266EF3 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		FEDE0F2F1DDF64CC00266EF3 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		FEDE0F311DDF64D400266EF3 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		FEDE0F331DDF64D900266EF3 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		FEDE0F351DDF64DF00266EF3 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		FEDE0F371DDF64E400266EF3 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		FEDE0F391DDF64E900266EF3 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		FEDE0F3B1DDF64EE00266EF3 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		FEDE0F3D1DDF64F300266EF3 /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		FEDE0F3F1DDF64FB00266EF3 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		FEDE0F411DDF650100266EF3 /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
+		FEDE0F431DDF650700266EF3 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
+		FEDE0F451DDF651000266EF3 /* iTVshows.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = iTVshows.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +86,20 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FEDE0F441DDF650700266EF3 /* AdSupport.framework in Frameworks */,
+				FEDE0F421DDF650100266EF3 /* UserNotifications.framework in Frameworks */,
+				FEDE0F401DDF64FB00266EF3 /* CoreLocation.framework in Frameworks */,
+				FEDE0F3E1DDF64F300266EF3 /* JavaScriptCore.framework in Frameworks */,
+				FEDE0F3C1DDF64EE00266EF3 /* AVFoundation.framework in Frameworks */,
+				FEDE0F3A1DDF64E900266EF3 /* CoreTelephony.framework in Frameworks */,
+				FEDE0F381DDF64E400266EF3 /* SystemConfiguration.framework in Frameworks */,
+				FEDE0F361DDF64DF00266EF3 /* MobileCoreServices.framework in Frameworks */,
+				FEDE0F341DDF64D900266EF3 /* Security.framework in Frameworks */,
+				FEDE0F321DDF64D400266EF3 /* libsqlite3.tbd in Frameworks */,
+				FEDE0F301DDF64CC00266EF3 /* libz.tbd in Frameworks */,
+				FEDE0F2E1DDF64C600266EF3 /* libc++.tbd in Frameworks */,
+				FEDE0F261DDF645700266EF3 /* libGeTuiSdk-1.5.3.a in Frameworks */,
+				FEDE0F271DDF645700266EF3 /* libGtExtensionSdk-1.0.0.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +127,7 @@
 				FEDE0F071DDF5B0C00266EF3 /* iTVshowsTests */,
 				FEDE0F121DDF5B0C00266EF3 /* iTVshowsUITests */,
 				FEDE0EF11DDF5B0C00266EF3 /* Products */,
+				FEDE0F2C1DDF64C600266EF3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,12 +144,15 @@
 		FEDE0EF21DDF5B0C00266EF3 /* iTVshows */ = {
 			isa = PBXGroup;
 			children = (
+				FEDE0F451DDF651000266EF3 /* iTVshows.entitlements */,
+				FEDE0F211DDF645700266EF3 /* GtSdkLib */,
 				FEDE0EF31DDF5B0C00266EF3 /* AppDelegate.swift */,
 				FEDE0EF51DDF5B0C00266EF3 /* ViewController.swift */,
 				FEDE0EF71DDF5B0C00266EF3 /* Main.storyboard */,
 				FEDE0EFA1DDF5B0C00266EF3 /* Assets.xcassets */,
 				FEDE0EFC1DDF5B0C00266EF3 /* LaunchScreen.storyboard */,
 				FEDE0EFF1DDF5B0C00266EF3 /* Info.plist */,
+				FEDE0F281DDF646800266EF3 /* iTVshows-Bridging-Header.h */,
 			);
 			path = iTVshows;
 			sourceTree = "<group>";
@@ -125,6 +175,36 @@
 			path = iTVshowsUITests;
 			sourceTree = "<group>";
 		};
+		FEDE0F211DDF645700266EF3 /* GtSdkLib */ = {
+			isa = PBXGroup;
+			children = (
+				FEDE0F221DDF645700266EF3 /* GeTuiExtSdk.h */,
+				FEDE0F231DDF645700266EF3 /* GeTuiSdk.h */,
+				FEDE0F241DDF645700266EF3 /* libGeTuiSdk-1.5.3.a */,
+				FEDE0F251DDF645700266EF3 /* libGtExtensionSdk-1.0.0.a */,
+			);
+			path = GtSdkLib;
+			sourceTree = "<group>";
+		};
+		FEDE0F2C1DDF64C600266EF3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FEDE0F431DDF650700266EF3 /* AdSupport.framework */,
+				FEDE0F411DDF650100266EF3 /* UserNotifications.framework */,
+				FEDE0F3F1DDF64FB00266EF3 /* CoreLocation.framework */,
+				FEDE0F3D1DDF64F300266EF3 /* JavaScriptCore.framework */,
+				FEDE0F3B1DDF64EE00266EF3 /* AVFoundation.framework */,
+				FEDE0F391DDF64E900266EF3 /* CoreTelephony.framework */,
+				FEDE0F371DDF64E400266EF3 /* SystemConfiguration.framework */,
+				FEDE0F351DDF64DF00266EF3 /* MobileCoreServices.framework */,
+				FEDE0F331DDF64D900266EF3 /* Security.framework */,
+				FEDE0F311DDF64D400266EF3 /* libsqlite3.tbd */,
+				FEDE0F2F1DDF64CC00266EF3 /* libz.tbd */,
+				FEDE0F2D1DDF64C600266EF3 /* libc++.tbd */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -133,8 +213,8 @@
 			buildConfigurationList = FEDE0F181DDF5B0C00266EF3 /* Build configuration list for PBXNativeTarget "iTVshows" */;
 			buildPhases = (
 				FEDE0EEC1DDF5B0C00266EF3 /* Sources */,
-				FEDE0EED1DDF5B0C00266EF3 /* Frameworks */,
 				FEDE0EEE1DDF5B0C00266EF3 /* Resources */,
+				FEDE0EED1DDF5B0C00266EF3 /* Frameworks */,
 			);
 			buildRules = (
 			);
@@ -194,7 +274,16 @@
 					FEDE0EEF1DDF5B0C00266EF3 = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = 68539G8D3N;
+						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 					FEDE0F031DDF5B0C00266EF3 = {
 						CreatedOnToolsVersion = 8.0;
@@ -413,11 +502,19 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = iTVshows/iTVshows.entitlements;
 				DEVELOPMENT_TEAM = 68539G8D3N;
 				INFOPLIST_FILE = iTVshows/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/iTVshows/GtSdkLib",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.ftf.iTVshows;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "iTVshows/iTVshows-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -426,11 +523,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = iTVshows/iTVshows.entitlements;
 				DEVELOPMENT_TEAM = 68539G8D3N;
 				INFOPLIST_FILE = iTVshows/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/iTVshows/GtSdkLib",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.ftf.iTVshows;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "iTVshows/iTVshows-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
