@@ -38,10 +38,11 @@ class ViewController: UIViewController {
 //            self.shareText(platType: platformType)
 //        }
 //        shareAction()
+        shareText(platType: .sina);
     }
 
     func shareText(platType:UMSocialPlatformType) {
-        let messObj = UMSocialMessageObject()
+        let messObj = UMSocialMessageObject.init()
         messObj.text = "Swift分享的测试版本"
         messObj.isKind(of: UMSocialShareResponse.classForCoder())
 

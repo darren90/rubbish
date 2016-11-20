@@ -223,6 +223,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GeTuiSdkDelegate,UNUserNo
         umMangerr?.setPlaform(.sina, appKey: "2949226810", appSecret: "ad08040031457a934608f9118a8577e4", redirectURL: "http://mobile.umeng.com/social")
     }
     
+    func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
+        let result = UMSocialManager.default().handleOpen(url)
+        if !result {
+            
+        }
+        return result
+    }
+    
+    func application(_ application: UIApplication, handleOpen url: URL) -> Bool {
+        let result = UMSocialManager.default().handleOpen(url)
+        if !result {
+            
+        }
+        return result
+    }
     
 }
 
