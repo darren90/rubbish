@@ -28,6 +28,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GeTuiSdkDelegate,UNUserNo
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         umengTrack()
         setupBugly()
+        setupUMsocial()
         // Override point for customization after application launch.
         
         // [ GTSdk ]：是否允许APP后台运行
@@ -205,4 +206,47 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GeTuiSdkDelegate,UNUserNo
         
         Bugly.setUserValue(ProcessInfo.processInfo.processName, forKey: "Process")
     }
+    
+    // MARK: - bugly
+    func setupUMsocial() {
+        let umMangerr = UMSocialManager.default()
+        umMangerr?.openLog(true)
+        umMangerr?.umSocialAppkey = KUMAPPKEy
+        
+        //微信
+        umMangerr?.setPlaform(.wechatSession, appKey: "wxdc1e388c3822c80b", appSecret: "3baf1193c85774b3fd9d18447d76cab0", redirectURL: "http://mobile.umeng.com/social")
+        
+        //qq
+        umMangerr?.setPlaform(.QQ, appKey: "100424468", appSecret: nil, redirectURL: "http://mobile.umeng.com/social")
+        
+        //新浪
+        umMangerr?.setPlaform(.sina, appKey: "2949226810", appSecret: "ad08040031457a934608f9118a8577e4", redirectURL: "http://mobile.umeng.com/social")
+    }
+    
+    
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
