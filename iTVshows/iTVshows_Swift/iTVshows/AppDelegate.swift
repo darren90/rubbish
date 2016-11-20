@@ -11,9 +11,9 @@ import UIKit
 
 import UserNotifications
 
-let kGtAppId:String = "iMahVVxurw6BNr7XSn9EF2"
-let kGtAppKey:String = "yIPfqwq6OMAPp6dkqgLpG5"
-let kGtAppSecret:String = "G0aBqAD6t79JfzTB6Z5lo5"
+let kGtAppId:String = "RFv32a4xd68NrWGFVqsju9"
+let kGtAppKey:String = "YmBdOO7I8z6fEyvMH8AYK"
+let kGtAppSecret:String = "ZpvMmf7mXD7tY7BVVKUfU7"
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, GeTuiSdkDelegate,UNUserNotificationCenterDelegate {
