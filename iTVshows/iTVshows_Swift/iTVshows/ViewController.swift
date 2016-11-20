@@ -35,12 +35,13 @@ class ViewController: UIViewController {
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
 //        UMSocialUIManager.showShareMenuViewInWindow { (shareselectView, platformType) in
-//            self.shareText(platType: platformType)
+//            self.shareText(platType: .sina)
 //        }
 //        shareAction()
-//        shareText(platType: .sina);
         
-        loginin()
+        shareText(platType: .sina);
+        
+//        loginin()
     }
     
     
