@@ -28,6 +28,29 @@
 		FE69C4591DE163BB002AA9E5 /* UMShareMenuSelectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = FE69C4461DE163BB002AA9E5 /* UMShareMenuSelectionView.m */; };
 		FE69C45A1DE163BC002AA9E5 /* UMSocialShareScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = FE69C4481DE163BB002AA9E5 /* UMSocialShareScrollView.m */; };
 		FE69C45B1DE163BC002AA9E5 /* UMSocialUIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FE69C44A1DE163BB002AA9E5 /* UMSocialUIManager.m */; };
+		FE69C4731DE1C464002AA9E5 /* _0000_Settings_tap.png in Resources */ = {isa = PBXBuildFile; fileRef = FE69C45D1DE1C464002AA9E5 /* _0000_Settings_tap.png */; };
+		FE69C4741DE1C464002AA9E5 /* Default-568h@2x-1.png in Resources */ = {isa = PBXBuildFile; fileRef = FE69C45E1DE1C464002AA9E5 /* Default-568h@2x-1.png */; };
+		FE69C4751DE1C464002AA9E5 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FE69C45F1DE1C464002AA9E5 /* Default-568h@2x.png */; };
+		FE69C4761DE1C464002AA9E5 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = FE69C4601DE1C464002AA9E5 /* icon.png */; };
+		FE69C4771DE1C464002AA9E5 /* iPhone6PlusPortrait.png in Resources */ = {isa = PBXBuildFile; fileRef = FE69C4611DE1C464002AA9E5 /* iPhone6PlusPortrait.png */; };
+		FE69C4781DE1C464002AA9E5 /* iPhone6Portrait.png in Resources */ = {isa = PBXBuildFile; fileRef = FE69C4621DE1C464002AA9E5 /* iPhone6Portrait.png */; };
+		FE69C4791DE1C464002AA9E5 /* qrcode.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FE69C4631DE1C464002AA9E5 /* qrcode.jpg */; };
+		FE69C47A1DE1C464002AA9E5 /* res6.gif in Resources */ = {isa = PBXBuildFile; fileRef = FE69C4641DE1C464002AA9E5 /* res6.gif */; };
+		FE69C47B1DE1C464002AA9E5 /* test.gif in Resources */ = {isa = PBXBuildFile; fileRef = FE69C4651DE1C464002AA9E5 /* test.gif */; };
+		FE69C47C1DE1C464002AA9E5 /* umengFile.txt in Resources */ = {isa = PBXBuildFile; fileRef = FE69C4661DE1C464002AA9E5 /* umengFile.txt */; };
+		FE69C47D1DE1C464002AA9E5 /* UMS_account@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FE69C4671DE1C464002AA9E5 /* UMS_account@2x.png */; };
+		FE69C47E1DE1C464002AA9E5 /* UMS_bar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FE69C4681DE1C464002AA9E5 /* UMS_bar@2x.png */; };
+		FE69C47F1DE1C464002AA9E5 /* UMS_comment@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FE69C4691DE1C464002AA9E5 /* UMS_comment@2x.png */; };
+		FE69C4801DE1C464002AA9E5 /* UMS_mutilBar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FE69C46A1DE1C464002AA9E5 /* UMS_mutilBar@2x.png */; };
+		FE69C4811DE1C464002AA9E5 /* UMS_settings@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FE69C46B1DE1C464002AA9E5 /* UMS_settings@2x.png */; };
+		FE69C4821DE1C464002AA9E5 /* UMS_share@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FE69C46C1DE1C464002AA9E5 /* UMS_share@2x.png */; };
+		FE69C4831DE1C464002AA9E5 /* UMS_social_demo.png in Resources */ = {isa = PBXBuildFile; fileRef = FE69C46D1DE1C464002AA9E5 /* UMS_social_demo.png */; };
+		FE69C4841DE1C464002AA9E5 /* wechat.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FE69C46E1DE1C464002AA9E5 /* wechat.jpg */; };
+		FE69C4851DE1C464002AA9E5 /* yinxing0.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FE69C46F1DE1C464002AA9E5 /* yinxing0.jpg */; };
+		FE69C4861DE1C464002AA9E5 /* yinxing1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FE69C4701DE1C464002AA9E5 /* yinxing1.jpg */; };
+		FE69C4871DE1C464002AA9E5 /* yinxing2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FE69C4711DE1C464002AA9E5 /* yinxing2.jpg */; };
+		FE69C4881DE1C464002AA9E5 /* yinxing3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FE69C4721DE1C464002AA9E5 /* yinxing3.jpg */; };
+		FE69C48A1DE1CCCC002AA9E5 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE69C4891DE1CCCC002AA9E5 /* ImageIO.framework */; };
 		FEDE0EF41DDF5B0C00266EF3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEDE0EF31DDF5B0C00266EF3 /* AppDelegate.swift */; };
 		FEDE0EF61DDF5B0C00266EF3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEDE0EF51DDF5B0C00266EF3 /* ViewController.swift */; };
 		FEDE0EF91DDF5B0C00266EF3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FEDE0EF71DDF5B0C00266EF3 /* Main.storyboard */; };
@@ -111,6 +134,29 @@
 		FE69C4481DE163BB002AA9E5 /* UMSocialShareScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UMSocialShareScrollView.m; sourceTree = "<group>"; };
 		FE69C4491DE163BB002AA9E5 /* UMSocialUIManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UMSocialUIManager.h; sourceTree = "<group>"; };
 		FE69C44A1DE163BB002AA9E5 /* UMSocialUIManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UMSocialUIManager.m; sourceTree = "<group>"; };
+		FE69C45D1DE1C464002AA9E5 /* _0000_Settings_tap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = _0000_Settings_tap.png; sourceTree = "<group>"; };
+		FE69C45E1DE1C464002AA9E5 /* Default-568h@2x-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x-1.png"; sourceTree = "<group>"; };
+		FE69C45F1DE1C464002AA9E5 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		FE69C4601DE1C464002AA9E5 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		FE69C4611DE1C464002AA9E5 /* iPhone6PlusPortrait.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iPhone6PlusPortrait.png; sourceTree = "<group>"; };
+		FE69C4621DE1C464002AA9E5 /* iPhone6Portrait.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iPhone6Portrait.png; sourceTree = "<group>"; };
+		FE69C4631DE1C464002AA9E5 /* qrcode.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = qrcode.jpg; sourceTree = "<group>"; };
+		FE69C4641DE1C464002AA9E5 /* res6.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = res6.gif; sourceTree = "<group>"; };
+		FE69C4651DE1C464002AA9E5 /* test.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = test.gif; sourceTree = "<group>"; };
+		FE69C4661DE1C464002AA9E5 /* umengFile.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = umengFile.txt; sourceTree = "<group>"; };
+		FE69C4671DE1C464002AA9E5 /* UMS_account@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "UMS_account@2x.png"; sourceTree = "<group>"; };
+		FE69C4681DE1C464002AA9E5 /* UMS_bar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "UMS_bar@2x.png"; sourceTree = "<group>"; };
+		FE69C4691DE1C464002AA9E5 /* UMS_comment@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "UMS_comment@2x.png"; sourceTree = "<group>"; };
+		FE69C46A1DE1C464002AA9E5 /* UMS_mutilBar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "UMS_mutilBar@2x.png"; sourceTree = "<group>"; };
+		FE69C46B1DE1C464002AA9E5 /* UMS_settings@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "UMS_settings@2x.png"; sourceTree = "<group>"; };
+		FE69C46C1DE1C464002AA9E5 /* UMS_share@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "UMS_share@2x.png"; sourceTree = "<group>"; };
+		FE69C46D1DE1C464002AA9E5 /* UMS_social_demo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = UMS_social_demo.png; sourceTree = "<group>"; };
+		FE69C46E1DE1C464002AA9E5 /* wechat.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = wechat.jpg; sourceTree = "<group>"; };
+		FE69C46F1DE1C464002AA9E5 /* yinxing0.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = yinxing0.jpg; sourceTree = "<group>"; };
+		FE69C4701DE1C464002AA9E5 /* yinxing1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = yinxing1.jpg; sourceTree = "<group>"; };
+		FE69C4711DE1C464002AA9E5 /* yinxing2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = yinxing2.jpg; sourceTree = "<group>"; };
+		FE69C4721DE1C464002AA9E5 /* yinxing3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = yinxing3.jpg; sourceTree = "<group>"; };
+		FE69C4891DE1CCCC002AA9E5 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
 		FEDE0EF01DDF5B0C00266EF3 /* iTVshows.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iTVshows.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FEDE0EF31DDF5B0C00266EF3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FEDE0EF51DDF5B0C00266EF3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -145,13 +191,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FEDE0F3A1DDF64E900266EF3 /* CoreTelephony.framework in Frameworks */,
+				FE69C48A1DE1CCCC002AA9E5 /* ImageIO.framework in Frameworks */,
 				FEDE0F441DDF650700266EF3 /* AdSupport.framework in Frameworks */,
 				FE69C44C1DE163BB002AA9E5 /* TencentOpenAPI.framework in Frameworks */,
 				FEDE0F421DDF650100266EF3 /* UserNotifications.framework in Frameworks */,
 				FEDE0F401DDF64FB00266EF3 /* CoreLocation.framework in Frameworks */,
 				FEDE0F3E1DDF64F300266EF3 /* JavaScriptCore.framework in Frameworks */,
 				FEDE0F3C1DDF64EE00266EF3 /* AVFoundation.framework in Frameworks */,
-				FEDE0F3A1DDF64E900266EF3 /* CoreTelephony.framework in Frameworks */,
 				FE69C44E1DE163BB002AA9E5 /* libSocialSina.a in Frameworks */,
 				FEDE0F381DDF64E400266EF3 /* SystemConfiguration.framework in Frameworks */,
 				FE69C4551DE163BB002AA9E5 /* UMSocialCore.framework in Frameworks */,
@@ -399,6 +446,35 @@
 			path = Resource;
 			sourceTree = "<group>";
 		};
+		FE69C45C1DE1C464002AA9E5 /* DemoImages */ = {
+			isa = PBXGroup;
+			children = (
+				FE69C45D1DE1C464002AA9E5 /* _0000_Settings_tap.png */,
+				FE69C45E1DE1C464002AA9E5 /* Default-568h@2x-1.png */,
+				FE69C45F1DE1C464002AA9E5 /* Default-568h@2x.png */,
+				FE69C4601DE1C464002AA9E5 /* icon.png */,
+				FE69C4611DE1C464002AA9E5 /* iPhone6PlusPortrait.png */,
+				FE69C4621DE1C464002AA9E5 /* iPhone6Portrait.png */,
+				FE69C4631DE1C464002AA9E5 /* qrcode.jpg */,
+				FE69C4641DE1C464002AA9E5 /* res6.gif */,
+				FE69C4651DE1C464002AA9E5 /* test.gif */,
+				FE69C4661DE1C464002AA9E5 /* umengFile.txt */,
+				FE69C4671DE1C464002AA9E5 /* UMS_account@2x.png */,
+				FE69C4681DE1C464002AA9E5 /* UMS_bar@2x.png */,
+				FE69C4691DE1C464002AA9E5 /* UMS_comment@2x.png */,
+				FE69C46A1DE1C464002AA9E5 /* UMS_mutilBar@2x.png */,
+				FE69C46B1DE1C464002AA9E5 /* UMS_settings@2x.png */,
+				FE69C46C1DE1C464002AA9E5 /* UMS_share@2x.png */,
+				FE69C46D1DE1C464002AA9E5 /* UMS_social_demo.png */,
+				FE69C46E1DE1C464002AA9E5 /* wechat.jpg */,
+				FE69C46F1DE1C464002AA9E5 /* yinxing0.jpg */,
+				FE69C4701DE1C464002AA9E5 /* yinxing1.jpg */,
+				FE69C4711DE1C464002AA9E5 /* yinxing2.jpg */,
+				FE69C4721DE1C464002AA9E5 /* yinxing3.jpg */,
+			);
+			path = DemoImages;
+			sourceTree = "<group>";
+		};
 		FEDE0EE71DDF5B0C00266EF3 = {
 			isa = PBXGroup;
 			children = (
@@ -424,15 +500,16 @@
 			isa = PBXGroup;
 			children = (
 				FEDE0F451DDF651000266EF3 /* iTVshows.entitlements */,
+				FEDE0F281DDF646800266EF3 /* iTVshows-Bridging-Header.h */,
 				FE69C40E1DE14EC3002AA9E5 /* Lib */,
 				FE69C4061DE14EC2002AA9E5 /* Class */,
 				FEDE0EF31DDF5B0C00266EF3 /* AppDelegate.swift */,
 				FEDE0EF51DDF5B0C00266EF3 /* ViewController.swift */,
+				FE69C45C1DE1C464002AA9E5 /* DemoImages */,
 				FEDE0EF71DDF5B0C00266EF3 /* Main.storyboard */,
 				FEDE0EFA1DDF5B0C00266EF3 /* Assets.xcassets */,
 				FEDE0EFC1DDF5B0C00266EF3 /* LaunchScreen.storyboard */,
 				FEDE0EFF1DDF5B0C00266EF3 /* Info.plist */,
-				FEDE0F281DDF646800266EF3 /* iTVshows-Bridging-Header.h */,
 			);
 			path = iTVshows;
 			sourceTree = "<group>";
@@ -458,6 +535,7 @@
 		FEDE0F2C1DDF64C600266EF3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FE69C4891DE1CCCC002AA9E5 /* ImageIO.framework */,
 				FEDE0F431DDF650700266EF3 /* AdSupport.framework */,
 				FEDE0F411DDF650100266EF3 /* UserNotifications.framework */,
 				FEDE0F3F1DDF64FB00266EF3 /* CoreLocation.framework */,
@@ -591,14 +669,36 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE69C4881DE1C464002AA9E5 /* yinxing3.jpg in Resources */,
+				FE69C4781DE1C464002AA9E5 /* iPhone6Portrait.png in Resources */,
 				FE69C44D1DE163BB002AA9E5 /* TencentOpenApi_IOS_Bundle.bundle in Resources */,
+				FE69C4791DE1C464002AA9E5 /* qrcode.jpg in Resources */,
+				FE69C47D1DE1C464002AA9E5 /* UMS_account@2x.png in Resources */,
+				FE69C4771DE1C464002AA9E5 /* iPhone6PlusPortrait.png in Resources */,
+				FE69C4841DE1C464002AA9E5 /* wechat.jpg in Resources */,
+				FE69C4751DE1C464002AA9E5 /* Default-568h@2x.png in Resources */,
+				FE69C47B1DE1C464002AA9E5 /* test.gif in Resources */,
 				FEDE0EFE1DDF5B0C00266EF3 /* LaunchScreen.storyboard in Resources */,
 				FE69C4501DE163BB002AA9E5 /* WeiboSDK.bundle in Resources */,
 				FEDE0EFB1DDF5B0C00266EF3 /* Assets.xcassets in Resources */,
 				FE69C4531DE163BB002AA9E5 /* read_me.txt in Resources */,
+				FE69C4741DE1C464002AA9E5 /* Default-568h@2x-1.png in Resources */,
+				FE69C4821DE1C464002AA9E5 /* UMS_share@2x.png in Resources */,
+				FE69C4811DE1C464002AA9E5 /* UMS_settings@2x.png in Resources */,
+				FE69C47E1DE1C464002AA9E5 /* UMS_bar@2x.png in Resources */,
+				FE69C4731DE1C464002AA9E5 /* _0000_Settings_tap.png in Resources */,
+				FE69C4761DE1C464002AA9E5 /* icon.png in Resources */,
+				FE69C4851DE1C464002AA9E5 /* yinxing0.jpg in Resources */,
+				FE69C47A1DE1C464002AA9E5 /* res6.gif in Resources */,
 				FE69C4571DE163BB002AA9E5 /* UMSocialSDKResources.bundle in Resources */,
+				FE69C47C1DE1C464002AA9E5 /* umengFile.txt in Resources */,
+				FE69C4801DE1C464002AA9E5 /* UMS_mutilBar@2x.png in Resources */,
+				FE69C4871DE1C464002AA9E5 /* yinxing2.jpg in Resources */,
+				FE69C4831DE1C464002AA9E5 /* UMS_social_demo.png in Resources */,
 				FE69C4541DE163BB002AA9E5 /* README.txt in Resources */,
 				FEDE0EF91DDF5B0C00266EF3 /* Main.storyboard in Resources */,
+				FE69C4861DE1C464002AA9E5 /* yinxing1.jpg in Resources */,
+				FE69C47F1DE1C464002AA9E5 /* UMS_comment@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -95,6 +95,8 @@ static NSString *kUMSSharePlatformItemView = @"UMSSharePlatformItemView";
         
         //获取可分享平台
         NSMutableArray *platformArray = [[NSMutableArray alloc] init];
+        NSArray *arr = [UMSocialManager defaultManager].platformTypeArray;
+        NSLog(@"arr:%@",arr);
         for (NSNumber *platformType in [UMSocialManager defaultManager].platformTypeArray) {
             NSMutableDictionary *dict = [self dictWithPlatformName:platformType];
             [dict setObject:platformType forKey:kUMSSharePlatformType];
