@@ -9,11 +9,15 @@
 
 import UIKit
 
+
 import UserNotifications
 
 let kGtAppId:String = "RFv32a4xd68NrWGFVqsju9"
 let kGtAppKey:String = "YmBdOO7I8z6fEyvMH8AYK"
 let kGtAppSecret:String = "ZpvMmf7mXD7tY7BVVKUfU7"
+
+let KUMAPPKEy = "58307336aed1797abf00115c"
+let KBuglyAPPID = "900059888"
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, GeTuiSdkDelegate,UNUserNotificationCenterDelegate {
@@ -22,6 +26,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GeTuiSdkDelegate,UNUserNo
     
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        umengTrack()
+        setupBugly()
         // Override point for customization after application launch.
         
         // [ GTSdk ]：是否允许APP后台运行
@@ -169,5 +175,34 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GeTuiSdkDelegate,UNUserNo
         let msg:String = "Receive Payload: \(payloadMsg), taskId:\(taskId), messageId:\(msgId)";
         
         NSLog("\n>>>[GeTuiSdk DidReceivePayload]:%@\n\n",msg);
+    }
+    
+    
+    // MARK: - 友盟统计
+    func umengTrack() {
+        MobClick.setLogEnabled(true)
+        let config = UMAnalyticsConfig.sharedInstance()
+        config!.appKey = KUMAPPKEy
+//        config.secret = 
+        MobClick.start(withConfigure: config)
+    }
+    
+    // MARK: - bugly
+    func setupBugly() {
+        // Get the default config
+        let config = BuglyConfig()
+        #if DEBUG
+            config.debugMode = true
+        #endif
+        config.reportLogLevel = BuglyLogLevel.warn
+        
+        config.channel = "TFStore"
+        Bugly.start(withAppId: "900001055", config: config)
+        
+        Bugly.setTag(1799);
+        
+        Bugly.setUserIdentifier(UIDevice.current.name)
+        
+        Bugly.setUserValue(ProcessInfo.processInfo.processName, forKey: "Process")
     }
 }

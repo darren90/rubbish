@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FE69C4181DE14EC3002AA9E5 /* libGeTuiSdk-1.5.3.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FE69C4151DE14EC3002AA9E5 /* libGeTuiSdk-1.5.3.a */; };
+		FE69C4191DE14EC3002AA9E5 /* libGtExtensionSdk-1.0.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FE69C4161DE14EC3002AA9E5 /* libGtExtensionSdk-1.0.0.a */; };
+		FE69C41A1DE14EC3002AA9E5 /* UMMobClick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE69C4171DE14EC3002AA9E5 /* UMMobClick.framework */; };
+		FE69C41C1DE15F25002AA9E5 /* Bugly.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE69C41B1DE15F25002AA9E5 /* Bugly.framework */; };
 		FEDE0EF41DDF5B0C00266EF3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEDE0EF31DDF5B0C00266EF3 /* AppDelegate.swift */; };
 		FEDE0EF61DDF5B0C00266EF3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEDE0EF51DDF5B0C00266EF3 /* ViewController.swift */; };
 		FEDE0EF91DDF5B0C00266EF3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FEDE0EF71DDF5B0C00266EF3 /* Main.storyboard */; };
@@ -14,8 +18,6 @@
 		FEDE0EFE1DDF5B0C00266EF3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FEDE0EFC1DDF5B0C00266EF3 /* LaunchScreen.storyboard */; };
 		FEDE0F091DDF5B0C00266EF3 /* iTVshowsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEDE0F081DDF5B0C00266EF3 /* iTVshowsTests.swift */; };
 		FEDE0F141DDF5B0C00266EF3 /* iTVshowsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEDE0F131DDF5B0C00266EF3 /* iTVshowsUITests.swift */; };
-		FEDE0F261DDF645700266EF3 /* libGeTuiSdk-1.5.3.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FEDE0F241DDF645700266EF3 /* libGeTuiSdk-1.5.3.a */; };
-		FEDE0F271DDF645700266EF3 /* libGtExtensionSdk-1.0.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FEDE0F251DDF645700266EF3 /* libGtExtensionSdk-1.0.0.a */; };
 		FEDE0F2E1DDF64C600266EF3 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = FEDE0F2D1DDF64C600266EF3 /* libc++.tbd */; };
 		FEDE0F301DDF64CC00266EF3 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = FEDE0F2F1DDF64CC00266EF3 /* libz.tbd */; };
 		FEDE0F321DDF64D400266EF3 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = FEDE0F311DDF64D400266EF3 /* libsqlite3.tbd */; };
@@ -48,6 +50,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FE69C4131DE14EC3002AA9E5 /* GeTuiExtSdk.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeTuiExtSdk.h; sourceTree = "<group>"; };
+		FE69C4141DE14EC3002AA9E5 /* GeTuiSdk.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeTuiSdk.h; sourceTree = "<group>"; };
+		FE69C4151DE14EC3002AA9E5 /* libGeTuiSdk-1.5.3.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libGeTuiSdk-1.5.3.a"; sourceTree = "<group>"; };
+		FE69C4161DE14EC3002AA9E5 /* libGtExtensionSdk-1.0.0.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libGtExtensionSdk-1.0.0.a"; sourceTree = "<group>"; };
+		FE69C4171DE14EC3002AA9E5 /* UMMobClick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = UMMobClick.framework; sourceTree = "<group>"; };
+		FE69C41B1DE15F25002AA9E5 /* Bugly.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bugly.framework; sourceTree = "<group>"; };
 		FEDE0EF01DDF5B0C00266EF3 /* iTVshows.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iTVshows.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FEDE0EF31DDF5B0C00266EF3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FEDE0EF51DDF5B0C00266EF3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -61,10 +69,6 @@
 		FEDE0F0F1DDF5B0C00266EF3 /* iTVshowsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iTVshowsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FEDE0F131DDF5B0C00266EF3 /* iTVshowsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iTVshowsUITests.swift; sourceTree = "<group>"; };
 		FEDE0F151DDF5B0C00266EF3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FEDE0F221DDF645700266EF3 /* GeTuiExtSdk.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeTuiExtSdk.h; sourceTree = "<group>"; };
-		FEDE0F231DDF645700266EF3 /* GeTuiSdk.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeTuiSdk.h; sourceTree = "<group>"; };
-		FEDE0F241DDF645700266EF3 /* libGeTuiSdk-1.5.3.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libGeTuiSdk-1.5.3.a"; sourceTree = "<group>"; };
-		FEDE0F251DDF645700266EF3 /* libGtExtensionSdk-1.0.0.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libGtExtensionSdk-1.0.0.a"; sourceTree = "<group>"; };
 		FEDE0F281DDF646800266EF3 /* iTVshows-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iTVshows-Bridging-Header.h"; sourceTree = "<group>"; };
 		FEDE0F2D1DDF64C600266EF3 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
 		FEDE0F2F1DDF64CC00266EF3 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
@@ -94,12 +98,14 @@
 				FEDE0F3A1DDF64E900266EF3 /* CoreTelephony.framework in Frameworks */,
 				FEDE0F381DDF64E400266EF3 /* SystemConfiguration.framework in Frameworks */,
 				FEDE0F361DDF64DF00266EF3 /* MobileCoreServices.framework in Frameworks */,
+				FE69C4181DE14EC3002AA9E5 /* libGeTuiSdk-1.5.3.a in Frameworks */,
+				FE69C4191DE14EC3002AA9E5 /* libGtExtensionSdk-1.0.0.a in Frameworks */,
 				FEDE0F341DDF64D900266EF3 /* Security.framework in Frameworks */,
 				FEDE0F321DDF64D400266EF3 /* libsqlite3.tbd in Frameworks */,
+				FE69C41A1DE14EC3002AA9E5 /* UMMobClick.framework in Frameworks */,
 				FEDE0F301DDF64CC00266EF3 /* libz.tbd in Frameworks */,
+				FE69C41C1DE15F25002AA9E5 /* Bugly.framework in Frameworks */,
 				FEDE0F2E1DDF64C600266EF3 /* libc++.tbd in Frameworks */,
-				FEDE0F261DDF645700266EF3 /* libGeTuiSdk-1.5.3.a in Frameworks */,
-				FEDE0F271DDF645700266EF3 /* libGtExtensionSdk-1.0.0.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -120,6 +126,114 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FE69C4061DE14EC2002AA9E5 /* Class */ = {
+			isa = PBXGroup;
+			children = (
+				FE69C4071DE14EC2002AA9E5 /* Home */,
+				FE69C40B1DE14EC2002AA9E5 /* Main */,
+			);
+			path = Class;
+			sourceTree = "<group>";
+		};
+		FE69C4071DE14EC2002AA9E5 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				FE69C4081DE14EC2002AA9E5 /* Controller */,
+				FE69C4091DE14EC2002AA9E5 /* Model */,
+				FE69C40A1DE14EC2002AA9E5 /* View */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		FE69C4081DE14EC2002AA9E5 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		FE69C4091DE14EC2002AA9E5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FE69C40A1DE14EC2002AA9E5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FE69C40B1DE14EC2002AA9E5 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				FE69C40C1DE14EC2002AA9E5 /* Base */,
+				FE69C40D1DE14EC3002AA9E5 /* Launch */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		FE69C40C1DE14EC2002AA9E5 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		FE69C40D1DE14EC3002AA9E5 /* Launch */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Launch;
+			sourceTree = "<group>";
+		};
+		FE69C40E1DE14EC3002AA9E5 /* Lib */ = {
+			isa = PBXGroup;
+			children = (
+				FE69C40F1DE14EC3002AA9E5 /* Category */,
+				FE69C4101DE14EC3002AA9E5 /* Util */,
+				FE69C4111DE14EC3002AA9E5 /* Vendor */,
+			);
+			path = Lib;
+			sourceTree = "<group>";
+		};
+		FE69C40F1DE14EC3002AA9E5 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		FE69C4101DE14EC3002AA9E5 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		FE69C4111DE14EC3002AA9E5 /* Vendor */ = {
+			isa = PBXGroup;
+			children = (
+				FE69C41B1DE15F25002AA9E5 /* Bugly.framework */,
+				FE69C4121DE14EC3002AA9E5 /* GtSdkLib */,
+				FE69C4171DE14EC3002AA9E5 /* UMMobClick.framework */,
+			);
+			path = Vendor;
+			sourceTree = "<group>";
+		};
+		FE69C4121DE14EC3002AA9E5 /* GtSdkLib */ = {
+			isa = PBXGroup;
+			children = (
+				FE69C4131DE14EC3002AA9E5 /* GeTuiExtSdk.h */,
+				FE69C4141DE14EC3002AA9E5 /* GeTuiSdk.h */,
+				FE69C4151DE14EC3002AA9E5 /* libGeTuiSdk-1.5.3.a */,
+				FE69C4161DE14EC3002AA9E5 /* libGtExtensionSdk-1.0.0.a */,
+			);
+			path = GtSdkLib;
+			sourceTree = "<group>";
+		};
 		FEDE0EE71DDF5B0C00266EF3 = {
 			isa = PBXGroup;
 			children = (
@@ -145,7 +259,8 @@
 			isa = PBXGroup;
 			children = (
 				FEDE0F451DDF651000266EF3 /* iTVshows.entitlements */,
-				FEDE0F211DDF645700266EF3 /* GtSdkLib */,
+				FE69C40E1DE14EC3002AA9E5 /* Lib */,
+				FE69C4061DE14EC2002AA9E5 /* Class */,
 				FEDE0EF31DDF5B0C00266EF3 /* AppDelegate.swift */,
 				FEDE0EF51DDF5B0C00266EF3 /* ViewController.swift */,
 				FEDE0EF71DDF5B0C00266EF3 /* Main.storyboard */,
@@ -173,17 +288,6 @@
 				FEDE0F151DDF5B0C00266EF3 /* Info.plist */,
 			);
 			path = iTVshowsUITests;
-			sourceTree = "<group>";
-		};
-		FEDE0F211DDF645700266EF3 /* GtSdkLib */ = {
-			isa = PBXGroup;
-			children = (
-				FEDE0F221DDF645700266EF3 /* GeTuiExtSdk.h */,
-				FEDE0F231DDF645700266EF3 /* GeTuiSdk.h */,
-				FEDE0F241DDF645700266EF3 /* libGeTuiSdk-1.5.3.a */,
-				FEDE0F251DDF645700266EF3 /* libGtExtensionSdk-1.0.0.a */,
-			);
-			path = GtSdkLib;
 			sourceTree = "<group>";
 		};
 		FEDE0F2C1DDF64C600266EF3 /* Frameworks */ = {
@@ -505,12 +609,17 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = iTVshows/iTVshows.entitlements;
 				DEVELOPMENT_TEAM = 68539G8D3N;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/iTVshows/Lib/Vendor",
+				);
 				INFOPLIST_FILE = iTVshows/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/iTVshows/GtSdkLib",
+					"$(PROJECT_DIR)/iTVshows/Lib/Vendor/GtSdkLib",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.ftf.iTVshows;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -527,12 +636,17 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = iTVshows/iTVshows.entitlements;
 				DEVELOPMENT_TEAM = 68539G8D3N;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/iTVshows/Lib/Vendor",
+				);
 				INFOPLIST_FILE = iTVshows/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/iTVshows/GtSdkLib",
+					"$(PROJECT_DIR)/iTVshows/Lib/Vendor/GtSdkLib",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.ftf.iTVshows;
 				PRODUCT_NAME = "$(TARGET_NAME)";

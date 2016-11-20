@@ -5,3 +5,7 @@
 
 #import "GeTuiSdk.h"
 #import "GeTuiExtSdk.h"
+
+#import "UMMobClick/MobClick.h"
+
+#import <Bugly/Bugly.h>
