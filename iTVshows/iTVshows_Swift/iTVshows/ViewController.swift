@@ -39,9 +39,15 @@ class ViewController: UIViewController {
 //        }
 //        shareAction()
         
-        shareText(platType: .sina);
-        
+//        shareText(platType: .sina);
+
 //        loginin()
+    }
+
+
+    
+    func shareInfo ()  {
+//        UMSocialUrlResource
     }
     
     
@@ -64,9 +70,7 @@ class ViewController: UIViewController {
     }
     
     
-    
-    
-    
+
     
 
     func shareText(platType:UMSocialPlatformType) {

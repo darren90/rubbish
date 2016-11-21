@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		89C5DF8C1DE3103C00A39210 /* BaseTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C5DF8B1DE3103C00A39210 /* BaseTabBarController.swift */; };
+		89C5DF8E1DE3107C00A39210 /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C5DF8D1DE3107C00A39210 /* BaseNavigationController.swift */; };
+		89C5DF901DE3108B00A39210 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C5DF8F1DE3108B00A39210 /* BaseViewController.swift */; };
 		FE69C4181DE14EC3002AA9E5 /* libGeTuiSdk-1.5.3.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FE69C4151DE14EC3002AA9E5 /* libGeTuiSdk-1.5.3.a */; };
 		FE69C4191DE14EC3002AA9E5 /* libGtExtensionSdk-1.0.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FE69C4161DE14EC3002AA9E5 /* libGtExtensionSdk-1.0.0.a */; };
 		FE69C41A1DE14EC3002AA9E5 /* UMMobClick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE69C4171DE14EC3002AA9E5 /* UMMobClick.framework */; };
@@ -90,6 +93,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		89C5DF8B1DE3103C00A39210 /* BaseTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTabBarController.swift; sourceTree = "<group>"; };
+		89C5DF8D1DE3107C00A39210 /* BaseNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
+		89C5DF8F1DE3108B00A39210 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		FE69C4131DE14EC3002AA9E5 /* GeTuiExtSdk.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeTuiExtSdk.h; sourceTree = "<group>"; };
 		FE69C4141DE14EC3002AA9E5 /* GeTuiSdk.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeTuiSdk.h; sourceTree = "<group>"; };
 		FE69C4151DE14EC3002AA9E5 /* libGeTuiSdk-1.5.3.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libGeTuiSdk-1.5.3.a"; sourceTree = "<group>"; };
@@ -236,67 +242,62 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		FE69C4061DE14EC2002AA9E5 /* Class */ = {
+		89C5DF841DE3102500A39210 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				FE69C4071DE14EC2002AA9E5 /* Home */,
-				FE69C40B1DE14EC2002AA9E5 /* Main */,
+				89C5DF891DE3102500A39210 /* Main */,
+				89C5DF851DE3102500A39210 /* Home */,
 			);
-			path = Class;
+			path = Classes;
 			sourceTree = "<group>";
 		};
-		FE69C4071DE14EC2002AA9E5 /* Home */ = {
+		89C5DF851DE3102500A39210 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				FE69C4081DE14EC2002AA9E5 /* Controller */,
-				FE69C4091DE14EC2002AA9E5 /* Model */,
-				FE69C40A1DE14EC2002AA9E5 /* View */,
+				89C5DF861DE3102500A39210 /* Controller */,
+				89C5DF871DE3102500A39210 /* Model */,
+				89C5DF881DE3102500A39210 /* View */,
 			);
 			path = Home;
 			sourceTree = "<group>";
 		};
-		FE69C4081DE14EC2002AA9E5 /* Controller */ = {
+		89C5DF861DE3102500A39210 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			path = Controller;
 			sourceTree = "<group>";
 		};
-		FE69C4091DE14EC2002AA9E5 /* Model */ = {
+		89C5DF871DE3102500A39210 /* Model */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			path = Model;
 			sourceTree = "<group>";
 		};
-		FE69C40A1DE14EC2002AA9E5 /* View */ = {
+		89C5DF881DE3102500A39210 /* View */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			path = View;
 			sourceTree = "<group>";
 		};
-		FE69C40B1DE14EC2002AA9E5 /* Main */ = {
+		89C5DF891DE3102500A39210 /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				FE69C40C1DE14EC2002AA9E5 /* Base */,
-				FE69C40D1DE14EC3002AA9E5 /* Launch */,
+				89C5DF8A1DE3102500A39210 /* Base */,
 			);
 			path = Main;
 			sourceTree = "<group>";
 		};
-		FE69C40C1DE14EC2002AA9E5 /* Base */ = {
+		89C5DF8A1DE3102500A39210 /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				89C5DF8B1DE3103C00A39210 /* BaseTabBarController.swift */,
+				89C5DF8D1DE3107C00A39210 /* BaseNavigationController.swift */,
+				89C5DF8F1DE3108B00A39210 /* BaseViewController.swift */,
 			);
 			path = Base;
-			sourceTree = "<group>";
-		};
-		FE69C40D1DE14EC3002AA9E5 /* Launch */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Launch;
 			sourceTree = "<group>";
 		};
 		FE69C40E1DE14EC3002AA9E5 /* Lib */ = {
@@ -501,12 +502,12 @@
 			children = (
 				FEDE0F451DDF651000266EF3 /* iTVshows.entitlements */,
 				FEDE0F281DDF646800266EF3 /* iTVshows-Bridging-Header.h */,
-				FE69C40E1DE14EC3002AA9E5 /* Lib */,
-				FE69C4061DE14EC2002AA9E5 /* Class */,
 				FEDE0EF31DDF5B0C00266EF3 /* AppDelegate.swift */,
 				FEDE0EF51DDF5B0C00266EF3 /* ViewController.swift */,
-				FE69C45C1DE1C464002AA9E5 /* DemoImages */,
 				FEDE0EF71DDF5B0C00266EF3 /* Main.storyboard */,
+				89C5DF841DE3102500A39210 /* Classes */,
+				FE69C40E1DE14EC3002AA9E5 /* Lib */,
+				FE69C45C1DE1C464002AA9E5 /* DemoImages */,
 				FEDE0EFA1DDF5B0C00266EF3 /* Assets.xcassets */,
 				FEDE0EFC1DDF5B0C00266EF3 /* LaunchScreen.storyboard */,
 				FEDE0EFF1DDF5B0C00266EF3 /* Info.plist */,
@@ -723,9 +724,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				89C5DF8E1DE3107C00A39210 /* BaseNavigationController.swift in Sources */,
+				89C5DF8C1DE3103C00A39210 /* BaseTabBarController.swift in Sources */,
 				FE69C4591DE163BB002AA9E5 /* UMShareMenuSelectionView.m in Sources */,
 				FE69C4581DE163BB002AA9E5 /* UMShareMenuItem.m in Sources */,
 				FE69C45B1DE163BC002AA9E5 /* UMSocialUIManager.m in Sources */,
+				89C5DF901DE3108B00A39210 /* BaseViewController.swift in Sources */,
 				FEDE0EF61DDF5B0C00266EF3 /* ViewController.swift in Sources */,
 				FEDE0EF41DDF5B0C00266EF3 /* AppDelegate.swift in Sources */,
 				FE69C45A1DE163BC002AA9E5 /* UMSocialShareScrollView.m in Sources */,
