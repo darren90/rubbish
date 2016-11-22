@@ -15,6 +15,13 @@ class HomeViewController: BaseTableViewController {
 
         title = "首页"
         // Do any additional setup after loading the view.
+
+        APINetTools.GET(url: "http://106.75.11.245:10088/constant/category/sdfsdf", params: nil, success: {(json) -> Void in
+            print("-----json:\(json)--")
+        }){(error) -> Void in
+            print("-----error:\(error)-")
+        }
+
     }
 
     override func didReceiveMemoryWarning() {
