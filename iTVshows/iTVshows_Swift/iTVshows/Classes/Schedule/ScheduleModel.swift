@@ -51,8 +51,9 @@ class ScheduleModel: NSObject {
         //正：tomorrow
         //负：yesterday
         let date = NSDate.init(timeIntervalSinceNow: Double(offsetDate*24*60*60))
-//        var formate = DateFormatter
-//        formate.set
+        var formate = DateFormatter()
+//        formate.dateFormat(fromTemplate: "yyyy-MM-dd", options: .allZeros, locale: nil)
+//        let  dateStr = date
         let url = "http://api.ousns.net/tv/schedule?end=20161128&start=20161128"
 
         APINetTools.GET_TV(url: url, params: nil, success: {(json) -> Void in
