@@ -14,6 +14,15 @@ class ScheduleViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+
+        title = "Schedule"
+
+        APINetTools.GET_TV(url: "http://api.ousns.net/tv/schedule?end=20161128&start=20161128", params: nil, success: {(json) -> Void in
+            print("-----json:\(json)--")
+        }){(error) -> Void in
+            print("-----error:\(error)-")
+        }
+
     }
 
     override func didReceiveMemoryWarning() {
@@ -22,14 +31,5 @@ class ScheduleViewController: UIViewController {
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+   
 }
