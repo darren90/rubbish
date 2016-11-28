@@ -95,42 +95,7 @@ class ViewController: UIViewController {
     
     
     func shareAction (){
-        let arr = UMSocialManager.default().platformTypeArray;
-        print("---arr:\(arr)")
-        
-        UMSocialUIManager.showShareMenuViewInWindow { (shreMenuView, platformType) -> Void in
-            
-            let messageObject:UMSocialMessageObject = UMSocialMessageObject.init()
-            messageObject.text = "社会化组件UShare将各大社交平台接入您的应用，快速武装App。"//分享的文本
-            
-            /*
-             //1.分享图片
-             var shareObject:UMShareImageObject = UMShareImageObject.init()
-             shareObject.title = "Umeng分享"//显不显示有各个平台定
-             shareObject.descr = "描述信息"//显不显示有各个平台定
-             shareObject.thumbImage = UIImage.init(named: "icon")//显不显示有各个平台定
-             shareObject.shareImage = "http://dev.umeng.com/images/tab2_1.png"
-             messageObject.shareObject = shareObject;
-             */
-            
-            //2.分享分享网页
-            let shareObject:UMShareWebpageObject = UMShareWebpageObject.init()
-            shareObject.title = "分享标题"//显不显示有各个平台定
-            shareObject.descr = "描述信息"//显不显示有各个平台定
-            shareObject.thumbImage = UIImage.init(named: "icon")//缩略图，显不显示有各个平台定
-            shareObject.webpageUrl = "http://video.sina.com.cn/p/sports/cba/v/2013-10-22/144463050817.html"
-            messageObject.shareObject = shareObject;
-            
-            UMSocialManager.default().share(to: UMSocialPlatformType.sina, messageObject: messageObject, currentViewController: self, completion: { (shareResponse, error) -> Void in
-                if error != nil {
-                    print("Share Fail with error ：%@", error)
-                }else{
-                    print("Share succeed")
-                }
-                
-            })
-            
-        }
+      
     }
 
 }

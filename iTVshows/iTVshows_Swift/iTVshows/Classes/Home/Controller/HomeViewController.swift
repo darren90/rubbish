@@ -16,13 +16,20 @@ class HomeViewController: BaseTableViewController {
         title = "首页"
         // Do any additional setup after loading the view.
 
-        APINetTools.GET(url: "http://106.75.11.245:10088/constant/category/sdfsdf", params: nil, success: {(json) -> Void in
+
+//        http://106.75.11.245:10088/constant/category/sdfsdf
+        APINetTools.GET_TV(url: "http://api.ousns.net/tv/schedule?end=20161128&start=20161128", params: nil, success: {(json) -> Void in
             print("-----json:\(json)--")
         }){(error) -> Void in
             print("-----error:\(error)-")
         }
 
+
+//        NSString *m55 = [@"11$$f1a1a3a891ccdcfd08038c8678dcab53&&1480326828" MD5];
     }
+
+
+
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

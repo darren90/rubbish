@@ -12,6 +12,31 @@ import Alamofire
 //import Swif
 
 class APINetTools: NSObject {
+    static let cid = 11
+    static let client = 1
+    static let accesskey = "f1a1a3a891ccdcfd08038c8678dcab53"
+
+    static func GET_TV(url:String,params:[String:AnyObject]?,success:@escaping (_ json:AnyObject) -> Void,fail:@escaping (_ error:Any) ->Void){
+
+// http://api.ousns.net/tv/schedule?accesskey=e7d7640d0e1c89dbc5ccb9d0e24b5db3&cid=11&client=1&end=20161128&start=20161128&timestamp=1480326828
+
+        let timestamp = Int(NSDate().timeIntervalSince1970)
+        let md5Str = "\(cid)$$\(accesskey)&&\(timestamp)".md5!
+//        print("md5Str:\(md5Str),after:\(md5Str.md5!)")
+
+        let url = url + "&cid=\(cid)"+"&client=\(client)"+"&timestamp=\(timestamp)" + "&accesskey=\(md5Str)"
+        print("--timestamp:\(timestamp)--md5:\(md5Str)\n,url:\(url)")
+        Alamofire.request(url, method: .get).responseJSON { (response) in
+            switch response.result.isSuccess {
+            case true:
+                print("-- post request data:\(response.result.value)")
+                success(response.result.value! as AnyObject)
+            case false:
+                print("-- get request error:\(response.result.error!)")
+                fail(response.result.error!)
+            }
+        }
+    }
 
     static func GET(url:String,params:[String:AnyObject]?,success:@escaping (_ json:AnyObject) -> Void,fail:@escaping (_ error:Any) ->Void){
 
@@ -59,8 +84,33 @@ class APINetTools: NSObject {
 
 }
 
+/*
+ API使用反馈交流群： 595548644
+ CID:11
+ accesskey:
+ f1a1a3a891ccdcfd08038c8678dcab53
+ 
+资讯列表
+资讯详情
 
+影视列表
+影视详情
 
+资源下载方式
+影视资源列表
+
+搜索接口
+季度集数信息
+今日更新
+今日热门
+全局搜索接口
+
+字幕列表
+字幕详情
+
+美剧时间表
+
+*/
 
 
 

@@ -6,12 +6,16 @@
 #import "GeTuiSdk.h"
 #import "GeTuiExtSdk.h"
 
+//md5
+#import <CommonCrypto/CommonDigest.h>
+
+
 #import <Bugly/Bugly.h>
 
 #import "UMMobClick/MobClick.h"
 
 #import <UMSocialCore/UMSocialCore.h>
-#import "UMSocialUIManager.h"
+//#import "UMSocialUIManager.h"
 #import "UMSocialSinaHandler.h"
 
 
