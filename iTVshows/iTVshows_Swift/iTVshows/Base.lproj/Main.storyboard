@@ -19,8 +19,9 @@
                     </tabBar>
                     <connections>
                         <segue destination="RI0-ZP-cDN" kind="relationship" relationship="viewControllers" id="5uq-Dp-i5f"/>
-                        <segue destination="oyK-nC-uUm" kind="relationship" relationship="viewControllers" id="1QI-MN-T4w"/>
-                        <segue destination="ABO-sy-k6M" kind="relationship" relationship="viewControllers" id="s3T-Lc-MFd"/>
+                        <segue destination="oRD-8D-1Lx" kind="relationship" relationship="viewControllers" id="xPS-nf-xy6"/>
+                        <segue destination="oyK-nC-uUm" kind="relationship" relationship="viewControllers" id="uMs-JZ-wVu"/>
+                        <segue destination="ABO-sy-k6M" kind="relationship" relationship="viewControllers" id="CEc-bn-9ca"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="O7K-br-eAb" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -61,13 +62,13 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hcn-Us-OUm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1338" y="-932"/>
+            <point key="canvasLocation" x="1409" y="-910"/>
         </scene>
-        <!--Item-->
+        <!--Schedule-->
         <scene sceneID="Sne-es-Gs1">
             <objects>
                 <navigationController id="oyK-nC-uUm" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="u5r-dh-omK"/>
+                    <tabBarItem key="tabBarItem" title="Schedule" id="u5r-dh-omK"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="9yF-m6-4Rh">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -78,7 +79,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="p9X-oj-ECu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="65" y="-125"/>
+            <point key="canvasLocation" x="65" y="654"/>
         </scene>
         <!--Schedule View Controller-->
         <scene sceneID="LLS-iK-9rU">
@@ -97,7 +98,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="I7i-R7-sJS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1337" y="-90"/>
+            <point key="canvasLocation" x="1446" y="734"/>
         </scene>
         <!--Item-->
         <scene sceneID="LeU-R6-551">
@@ -114,7 +115,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RZn-EC-8dG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="86" y="644"/>
+            <point key="canvasLocation" x="65" y="1508"/>
         </scene>
         <!--Me View Controller-->
         <scene sceneID="KIo-qa-ZSZ">
@@ -133,7 +134,43 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OVb-on-hiS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1337" y="644"/>
+            <point key="canvasLocation" x="1446" y="1593"/>
+        </scene>
+        <!--Film-->
+        <scene sceneID="l8x-jj-cfG">
+            <objects>
+                <navigationController id="oRD-8D-1Lx" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Film" id="yDY-le-Woc"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="6hV-rl-n2Y">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="vhS-f7-DKu" kind="relationship" relationship="rootViewController" id="KFS-5X-sgw"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="odV-Ta-eOc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="65" y="-90"/>
+        </scene>
+        <!--File View Controller-->
+        <scene sceneID="ZUo-4v-ogw">
+            <objects>
+                <viewController id="vhS-f7-DKu" customClass="FileViewController" customModule="iTVshows" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="4JW-ZN-nEI"/>
+                        <viewControllerLayoutGuide type="bottom" id="xit-jT-oyG"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Rgc-DX-STt">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="NOh-wp-A6F"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7ed-0V-qID" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1446" y="-36"/>
         </scene>
     </scenes>
 </document>

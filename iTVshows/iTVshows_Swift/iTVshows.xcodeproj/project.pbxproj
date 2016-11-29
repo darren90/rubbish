@@ -45,6 +45,14 @@
 		89837C921DEC3B57009932DA /* UShareUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89837C841DEC3B57009932DA /* UShareUI.framework */; };
 		89837C951DEC52B9009932DA /* ScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89837C941DEC52B9009932DA /* ScheduleViewController.swift */; };
 		89837C971DEC557E009932DA /* ScheduleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89837C961DEC557E009932DA /* ScheduleModel.swift */; };
+		89837C9A1DED31CF009932DA /* ScheduleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89837C981DED31CF009932DA /* ScheduleCell.swift */; };
+		89837C9B1DED31CF009932DA /* ScheduleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 89837C991DED31CF009932DA /* ScheduleCell.xib */; };
+		89837C9D1DED3AA2009932DA /* ArticleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89837C9C1DED3AA2009932DA /* ArticleModel.swift */; };
+		89837C9F1DED47E9009932DA /* ArticleDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89837C9E1DED47E9009932DA /* ArticleDetailModel.swift */; };
+		89837CA21DED49D5009932DA /* FilmResModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89837CA11DED49D5009932DA /* FilmResModel.swift */; };
+		89837CCA1DED8D3D009932DA /* FileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89837CC91DED8D3D009932DA /* FileViewController.swift */; };
+		89837CCC1DED98CF009932DA /* FilmResDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89837CCB1DED98CF009932DA /* FilmResDetailModel.swift */; };
+		89837CCE1DEDABC9009932DA /* LinkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89837CCD1DEDABC9009932DA /* LinkModel.swift */; };
 		89C5DF8C1DE3103C00A39210 /* BaseTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C5DF8B1DE3103C00A39210 /* BaseTabBarController.swift */; };
 		89C5DF8E1DE3107C00A39210 /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C5DF8D1DE3107C00A39210 /* BaseNavigationController.swift */; };
 		89C5DF901DE3108B00A39210 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C5DF8F1DE3108B00A39210 /* BaseViewController.swift */; };
@@ -196,6 +204,14 @@
 		89837C841DEC3B57009932DA /* UShareUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = UShareUI.framework; sourceTree = "<group>"; };
 		89837C941DEC52B9009932DA /* ScheduleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleViewController.swift; sourceTree = "<group>"; };
 		89837C961DEC557E009932DA /* ScheduleModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleModel.swift; sourceTree = "<group>"; };
+		89837C981DED31CF009932DA /* ScheduleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleCell.swift; sourceTree = "<group>"; };
+		89837C991DED31CF009932DA /* ScheduleCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ScheduleCell.xib; sourceTree = "<group>"; };
+		89837C9C1DED3AA2009932DA /* ArticleModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleModel.swift; sourceTree = "<group>"; };
+		89837C9E1DED47E9009932DA /* ArticleDetailModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleDetailModel.swift; sourceTree = "<group>"; };
+		89837CA11DED49D5009932DA /* FilmResModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilmResModel.swift; sourceTree = "<group>"; };
+		89837CC91DED8D3D009932DA /* FileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileViewController.swift; sourceTree = "<group>"; };
+		89837CCB1DED98CF009932DA /* FilmResDetailModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilmResDetailModel.swift; sourceTree = "<group>"; };
+		89837CCD1DEDABC9009932DA /* LinkModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LinkModel.swift; sourceTree = "<group>"; };
 		89C5DF8B1DE3103C00A39210 /* BaseTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTabBarController.swift; sourceTree = "<group>"; };
 		89C5DF8D1DE3107C00A39210 /* BaseNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
 		89C5DF8F1DE3108B00A39210 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
@@ -498,9 +514,22 @@
 			isa = PBXGroup;
 			children = (
 				89837C941DEC52B9009932DA /* ScheduleViewController.swift */,
+				89837C981DED31CF009932DA /* ScheduleCell.swift */,
+				89837C991DED31CF009932DA /* ScheduleCell.xib */,
 				89837C961DEC557E009932DA /* ScheduleModel.swift */,
 			);
 			path = Schedule;
+			sourceTree = "<group>";
+		};
+		89837CA01DED49C2009932DA /* Film */ = {
+			isa = PBXGroup;
+			children = (
+				89837CC91DED8D3D009932DA /* FileViewController.swift */,
+				89837CA11DED49D5009932DA /* FilmResModel.swift */,
+				89837CCB1DED98CF009932DA /* FilmResDetailModel.swift */,
+				89837CCD1DEDABC9009932DA /* LinkModel.swift */,
+			);
+			path = Film;
 			sourceTree = "<group>";
 		};
 		89C5DF841DE3102500A39210 /* Classes */ = {
@@ -508,6 +537,7 @@
 			children = (
 				89C5DF891DE3102500A39210 /* Main */,
 				89C5DF851DE3102500A39210 /* Home */,
+				89837CA01DED49C2009932DA /* Film */,
 				89837C931DEC5287009932DA /* Schedule */,
 				89C5DF9B1DE31DF300A39210 /* Me */,
 			);
@@ -520,6 +550,8 @@
 				89C5DF861DE3102500A39210 /* Controller */,
 				89C5DF871DE3102500A39210 /* Model */,
 				89C5DF881DE3102500A39210 /* View */,
+				89837C9C1DED3AA2009932DA /* ArticleModel.swift */,
+				89837C9E1DED47E9009932DA /* ArticleDetailModel.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -907,6 +939,7 @@
 				89837C911DEC3B57009932DA /* UMSocialSDKResources.bundle in Resources */,
 				FEDE0EFB1DDF5B0C00266EF3 /* Assets.xcassets in Resources */,
 				FE69C4741DE1C464002AA9E5 /* Default-568h@2x-1.png in Resources */,
+				89837C9B1DED31CF009932DA /* ScheduleCell.xib in Resources */,
 				89837C8A1DEC3B57009932DA /* WeiboSDK.bundle in Resources */,
 				FE69C4821DE1C464002AA9E5 /* UMS_share@2x.png in Resources */,
 				FE69C4811DE1C464002AA9E5 /* UMS_settings@2x.png in Resources */,
@@ -999,15 +1032,19 @@
 				89C5DF8E1DE3107C00A39210 /* BaseNavigationController.swift in Sources */,
 				8972EC6B1DE42898009F0C58 /* MJRefreshAutoNormalFooter.m in Sources */,
 				8972EC6C1DE42898009F0C58 /* MJRefreshAutoStateFooter.m in Sources */,
+				89837C9F1DED47E9009932DA /* ArticleDetailModel.swift in Sources */,
 				8972EC771DE42898009F0C58 /* UIScrollView+MJRefresh.m in Sources */,
 				89837C5F1DEC3A43009932DA /* String-Extension.swift in Sources */,
 				89C5DF8C1DE3103C00A39210 /* BaseTabBarController.swift in Sources */,
+				89837CCC1DED98CF009932DA /* FilmResDetailModel.swift in Sources */,
 				89837C951DEC52B9009932DA /* ScheduleViewController.swift in Sources */,
+				89837CA21DED49D5009932DA /* FilmResModel.swift in Sources */,
 				89C5DF921DE31B3700A39210 /* BaseTableViewController.swift in Sources */,
 				8972EC6D1DE42898009F0C58 /* MJRefreshBackGifFooter.m in Sources */,
 				8972EC781DE42898009F0C58 /* UIView+MJExtension.m in Sources */,
 				8972EC661DE42898009F0C58 /* MJRefreshBackFooter.m in Sources */,
 				8972EC6A1DE42898009F0C58 /* MJRefreshAutoGifFooter.m in Sources */,
+				89837CCE1DEDABC9009932DA /* LinkModel.swift in Sources */,
 				89837C971DEC557E009932DA /* ScheduleModel.swift in Sources */,
 				8972EC701DE42898009F0C58 /* MJRefreshGifHeader.m in Sources */,
 				8972EC681DE42898009F0C58 /* MJRefreshFooter.m in Sources */,
@@ -1026,7 +1063,10 @@
 				8972EC6F1DE42898009F0C58 /* MJRefreshBackStateFooter.m in Sources */,
 				8972EC741DE42898009F0C58 /* MJRefreshConst.m in Sources */,
 				8972EC7A1DE428C3009F0C58 /* TestRefreshController.swift in Sources */,
+				89837C9D1DED3AA2009932DA /* ArticleModel.swift in Sources */,
 				FEDE0EF41DDF5B0C00266EF3 /* AppDelegate.swift in Sources */,
+				89837CCA1DED8D3D009932DA /* FileViewController.swift in Sources */,
+				89837C9A1DED31CF009932DA /* ScheduleCell.swift in Sources */,
 				89C5DFA51DE3F15200A39210 /* APINetTools.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

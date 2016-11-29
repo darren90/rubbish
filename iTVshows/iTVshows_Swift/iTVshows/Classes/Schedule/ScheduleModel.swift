@@ -33,38 +33,76 @@ class ScheduleModel: NSObject {
     init(dict:[String:AnyObject]) {
         super.init()
 
-//        setValuesForKeysWithDictionary(dict)
         setValuesForKeys(dict)
     }
 
-    override func setValue(_ value: Any?, forKey key: String) {
-
-        super.setValue(value, forKey: key)
-    }
+//    override func setValue(_ value: Any?, forKey key: String) {
+//        super.setValue(value, forKey: key)
+//    }
 
     override func setValue(_ value: Any?, forUndefinedKey key: String) {
 
     }
 
     //偏差日期
-    class func getScheduleList(offsetDate:Int,finished:(_ models:[ScheduleModel]?,_ error:Any?)->()){
+    class func getScheduleList(offsetDate:Int,finish:@escaping(_ models:[ScheduleModel]?,_ error:NSError?)->()){
+        //        http://api.ousns.net/tv/schedule?end=20161128&start=20161128
         //正：tomorrow
         //负：yesterday
         let date = NSDate.init(timeIntervalSinceNow: Double(offsetDate*24*60*60))
-        var formate = DateFormatter()
-//        formate.dateFormat(fromTemplate: "yyyy-MM-dd", options: .allZeros, locale: nil)
-//        let  dateStr = date
-        let url = "http://api.ousns.net/tv/schedule?end=20161128&start=20161128"
+        let formate = DateFormatter()
+        formate.dateFormat = "yyyyMMdd"
 
-        APINetTools.GET_TV(url: url, params: nil, success: {(json) -> Void in
-            print("-----json:\(json)--")
-        }){(error) -> Void in
-            print("-----error:\(error)-")
+        let dateStr = formate.string(from: date as Date)
+        formate.dateFormat = "yyyy-MM-dd"
+
+        let dateDiv = formate.string(from: date as Date)
+
+//        print("---dateStr:\(dateStr),--dateDiv:\(dateDiv)")
+        let url = "http://api.ousns.net/tv/schedule?end=\(dateStr)&start=\(dateStr)"
+
+        APINetTools.GET(urlStr: url, parms: nil) {(result : AnyObject?, error : NSError?) -> () in
+            print("----\(result)")
+            print("----\(error)")
+
+            if (error != nil){
+                finish(nil,error)
+            }else{
+                let status = result?["status"] as! Int
+                if (status != 1){
+                    finish(nil,NSError.init(domain: "错误的status值", code: 9999, userInfo: ["status码值错误" : "status值不等于1"]))
+                }
+                let dataDic :[String:AnyObject]? = result?["data"] as? [String:AnyObject]
+
+                if(dataDic == nil){
+                    finish(nil,NSError.init(domain: "没有可用的数据", code: 9999, userInfo: ["status码值错误" : "status值不等于1"]))
+                }else{
+                    let dataDiv :[[String:AnyObject]]? = dataDic?[dateDiv] as? [[String:AnyObject]]
+
+                    if(dataDiv == nil){
+                        finish(nil,NSError.init(domain: "没有可用的数据", code: 9999, userInfo: ["字典为空" : "status值不等于1"]))
+                    }else{
+                        var models = [ScheduleModel]()
+                        for dic in dataDiv! {
+                            let model = ScheduleModel.init(dict: dic)
+                            models.append(model)
+                        }
+                        finish(models,nil)
+                    }
+                }
+            }
         }
     }
-
 }
+
 /*
+ 
+ APINetTools.GET_TV(url: url, params: nil, success: {(json) -> Void in
+ print("-----json:\(json)--")
+ }){(error) -> Void in
+ print("-----error:\(error)-")
+ }
+
  //为了字典转模型
  init(dict:[String:AnyObject]){
  super.init()//用需要调用 super
