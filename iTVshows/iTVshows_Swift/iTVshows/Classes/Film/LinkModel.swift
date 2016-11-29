@@ -7,16 +7,26 @@
 //
 
 import UIKit
+enum LinkWayType:Int {
+    case eMule = 1 //电驴
+    case magnet = 2 //磁力
+    case netDisk = 9 //网盘
+    case chengtongDisk = 12 //城通盘
+}
 
 class LinkModel: NSObject {
 
-    var id:String?
+    //下载地址
+    var address:String?
 
-    var cnname:String?
+//    1-电驴  2-磁力   9-网盘    12-城通盘
+    var way : Int = 0 {
+        didSet {
+            //TODO : 待做 ---
+        }
+    }
 
-    var enname:String?
-
-    var content:String?
+    var watyType:LinkWayType = .eMule
 
     init(dict:[String:AnyObject]) {
         super.init()
