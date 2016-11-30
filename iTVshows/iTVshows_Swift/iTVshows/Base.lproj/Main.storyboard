@@ -153,10 +153,10 @@
             </objects>
             <point key="canvasLocation" x="65" y="-90"/>
         </scene>
-        <!--File View Controller-->
+        <!--Film View Controller-->
         <scene sceneID="ZUo-4v-ogw">
             <objects>
-                <viewController id="vhS-f7-DKu" customClass="FileViewController" customModule="iTVshows" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="vhS-f7-DKu" customClass="FilmViewController" customModule="iTVshows" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="4JW-ZN-nEI"/>
                         <viewControllerLayoutGuide type="bottom" id="xit-jT-oyG"/>

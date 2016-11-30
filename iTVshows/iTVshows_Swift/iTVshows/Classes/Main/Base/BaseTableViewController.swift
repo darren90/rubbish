@@ -25,12 +25,13 @@ class BaseTableViewController: UIViewController,UITableViewDelegate,UITableViewD
         self.view .addSubview(tableView)
         tableView.dataSource = self
         tableView.delegate = self
+        tableView.separatorStyle = .none
     }
 
 
 
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 0;
+        return 1;
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -45,10 +46,17 @@ class BaseTableViewController: UIViewController,UITableViewDelegate,UITableViewD
         return cell!;
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        /// 移除选中的状态
+        tableView.deselectRow(at: indexPath, animated: true)
+
+
     }
-    
+
 
 }
+
+
+
+
+

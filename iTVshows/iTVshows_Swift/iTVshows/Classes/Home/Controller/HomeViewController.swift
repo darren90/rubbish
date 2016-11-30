@@ -10,58 +10,59 @@ import UIKit
 
 class HomeViewController: BaseTableViewController {
 
+    var dataArray:[ArticleModel]?{
+        didSet{
+            tableView.reloadData()
+        }
+    }
+
+    /// 请求的当前页
+    var page:Int = 1
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
         title = "首页"
-        // Do any additional setup after loading the view.
+        tableView.rowHeight = 120
 
+        view.backgroundColor = KBgViewColor
 
+        ArticleModel.getArticleList { (list : [ArticleModel]?, error : NSError?) in
+//            print("--list-:\(list)")
+//             self.dataArray = list
+        }
 
-//        ArticleModel.getArticleList { (list : [ArticleModel]?, error : NSError?) in
+//        ArticleDetailModel.getArticleDetail(id: "29575"){(list : [ArticleDetailModel]?, error : NSError?) -> () in
 //            print("--list-:\(list)")
 //        }
 
-        ArticleDetailModel.getArticleDetail(id: "29575"){(list : [ArticleDetailModel]?, error : NSError?) -> () in
-            print("--list-:\(list)")
-        }
-
     }
 
+}
 
+//extension TableViewViewController: UITableViewDelegate,UITableViewDataSource
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        return 1;
-    }
-
+// MARK: -- tableView代理
+extension HomeViewController  {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10;
+        return dataArray?.count ?? 0;
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        var cell = tableView .dequeueReusableCell(withIdentifier: "cell")
-        if cell == nil {
-            cell = UITableViewCell.init(style: .default, reuseIdentifier: "cell")
-        }
-        cell?.textLabel?.text = "cell-:\(indexPath.row)"
-        return cell!;
+        let cell = ArticleListCell.cellWithTableView(tableView: tableView)
+        let model = dataArray![indexPath.row]
+        cell.model = model
+        return cell;
     }
-
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
+
+
+
+
+
+
+
+
+
+
+

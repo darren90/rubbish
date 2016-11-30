@@ -23,5 +23,19 @@
 #import "MJRefresh.h"
 
 
+//import YY系列的东西
+#import <YYImage/YYImage.h>
+#import  <YYWebImage/YYWebImage.h>
+
+#import  <YYWebImage/UIImageView+YYWebImage.h>
+#import  <YYWebImage/UIImage+YYWebImage.h>
+
+//#import "YYAnimatedImageView.h"
+//#import "UIImageView+YYWebImage.h"
+//#import "YYWebImageManager.h"
+
+//UIImageView+YYWebImage
+
+
 
 

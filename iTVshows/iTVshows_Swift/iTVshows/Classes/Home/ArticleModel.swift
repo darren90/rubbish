@@ -10,22 +10,6 @@ import UIKit
 
 class ArticleModel: NSObject {
 
-//    content = "";
-//    dateline = 1480217328;
-//    favorites = 0;
-//    id = 29575;
-//    intro = "\U5728\U6211\U4e0d\U591a\U7684\U89c1\U8bc6\U91cc\Uff0c\U4ece\U6765\U6ca1\U6709\U4e00\U90e8\U7ffb\U62cd\U7684\U5267\U96c6\U80fd\U8d85\U8d8a\U539f\U8457\Uff0c\U4f46\U8fd9\U90e8\Uff0c\U5df2\U7ecf\U5f88\U63a5\U8fd1\U4e86\U3002";
-//    poster = "2016/1127/1e25d122bd9150eca1d34c79608e05ff.jpg";
-//    resourceid = 0;
-//    review = "<null>";
-//    source = "";
-//    thanks = "<null>";
-//    title = "\U300a\U65e0\U4eba\U751f\U8fd8\U300b| \U4f60\U4ee5\U4e3a\U771f\U8ba9\U4f60\U6765\U770b\U63a8\U7406\U7684\U5417\Uff1f";
-//    translator = "<null>";
-//    type = "t_review";
-//    updatetime = 0;
-//    views = 5203;
-
     var id:String?
 
     var title:String?
@@ -63,9 +47,9 @@ class ArticleModel: NSObject {
     }
 
 
-    class func getArticleList(finish:@escaping(_ models:[ArticleModel]?,_ error:NSError?)->()){
+    class func getArticleList(page:Int = 1 , finish:@escaping(_ models:[ArticleModel]?,_ error:NSError?)->()){
 
-        let url = "http://api.ousns.net/article/fetchlist"
+        let url = "http://api.ousns.net/article/fetchlist?limit=15&page=\(page)"
 
         APINetTools.GET(urlStr: url, parms: nil) {(result : AnyObject?, error : NSError?) -> () in
             print("----\(result)")

@@ -10,7 +10,7 @@ import UIKit
 
 class ScheduleViewController: BaseTableViewController {
 
-    var dataArray:[ScheduleModel]?{
+    var dataArray:[ScheduleModel]? {
         didSet{
             tableView.reloadData()
         }
@@ -52,3 +52,12 @@ extension ScheduleViewController {
     }
 
 }
+
+
+
+
+
+
+
+
+

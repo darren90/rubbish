@@ -8,5 +8,11 @@ target 'iTVshows' do
 
   pod 'Alamofire', '~> 4.0.0'
   pod 'SwiftyJSON', '~> 3.1.1'
+  
+#  pod 'YYKit', '~> 1.0.9'
+
+   pod 'YYWebImage'
+   pod 'YYImage'
+
 
 end
