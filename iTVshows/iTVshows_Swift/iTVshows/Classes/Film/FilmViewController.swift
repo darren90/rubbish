@@ -63,6 +63,10 @@ extension FilmViewController  {
         cell.model = model
         return cell;
     }
+
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("---tableView")
+    }
 }
 
 

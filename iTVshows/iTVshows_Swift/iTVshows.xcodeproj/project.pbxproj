@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		894A65A51DEEE2B5004FC2F9 /* FilmListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894A65A31DEEE2B5004FC2F9 /* FilmListCell.swift */; };
 		894A65A61DEEE2B5004FC2F9 /* FilmListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 894A65A41DEEE2B5004FC2F9 /* FilmListCell.xib */; };
+		894A65A91DEF001E004FC2F9 /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894A65A81DEF001E004FC2F9 /* LaunchViewController.swift */; };
 		8972EC651DE42898009F0C58 /* MJRefreshAutoFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 8972EC391DE42898009F0C58 /* MJRefreshAutoFooter.m */; };
 		8972EC661DE42898009F0C58 /* MJRefreshBackFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 8972EC3B1DE42898009F0C58 /* MJRefreshBackFooter.m */; };
 		8972EC671DE42898009F0C58 /* MJRefreshComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 8972EC3D1DE42898009F0C58 /* MJRefreshComponent.m */; };
@@ -136,6 +137,7 @@
 		49BEA2AC4A54A516466B63C4 /* Pods_iTVshows.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iTVshows.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		894A65A31DEEE2B5004FC2F9 /* FilmListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilmListCell.swift; sourceTree = "<group>"; };
 		894A65A41DEEE2B5004FC2F9 /* FilmListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FilmListCell.xib; sourceTree = "<group>"; };
+		894A65A81DEF001E004FC2F9 /* LaunchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaunchViewController.swift; sourceTree = "<group>"; };
 		8972EC381DE42898009F0C58 /* MJRefreshAutoFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefreshAutoFooter.h; sourceTree = "<group>"; };
 		8972EC391DE42898009F0C58 /* MJRefreshAutoFooter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJRefreshAutoFooter.m; sourceTree = "<group>"; };
 		8972EC3A1DE42898009F0C58 /* MJRefreshBackFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefreshBackFooter.h; sourceTree = "<group>"; };
@@ -347,6 +349,14 @@
 				3D1BBDE993ABBB2CD5027313 /* Pods-iTVshows.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		894A65A71DEF000C004FC2F9 /* Launch */ = {
+			isa = PBXGroup;
+			children = (
+				894A65A81DEF001E004FC2F9 /* LaunchViewController.swift */,
+			);
+			path = Launch;
 			sourceTree = "<group>";
 		};
 		8972EC361DE42898009F0C58 /* MJRefresh */ = {
@@ -596,6 +606,7 @@
 		89C5DF891DE3102500A39210 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				894A65A71DEF000C004FC2F9 /* Launch */,
 				89C5DF8A1DE3102500A39210 /* Base */,
 			);
 			path = Main;
@@ -1061,6 +1072,7 @@
 				8972EC781DE42898009F0C58 /* UIView+MJExtension.m in Sources */,
 				8972EC661DE42898009F0C58 /* MJRefreshBackFooter.m in Sources */,
 				8972EC6A1DE42898009F0C58 /* MJRefreshAutoGifFooter.m in Sources */,
+				894A65A91DEF001E004FC2F9 /* LaunchViewController.swift in Sources */,
 				89837CCE1DEDABC9009932DA /* LinkModel.swift in Sources */,
 				89837C971DEC557E009932DA /* ScheduleModel.swift in Sources */,
 				8972EC701DE42898009F0C58 /* MJRefreshGifHeader.m in Sources */,

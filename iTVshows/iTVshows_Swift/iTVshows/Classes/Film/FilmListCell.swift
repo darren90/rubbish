@@ -22,11 +22,12 @@ class FilmListCell: UITableViewCell {
     var model:FilmResModel? {
         didSet {
             let url = URL(string: (model?.poster)!)!
-            iconView?.yy_setImage(with: url, placeholder: nil, options:  .setImageWithFadeAnimation, completion: nil)// .progressiveBlur |
+            iconView?.yy_setImage(with: url, placeholder: placeImg, options:  .setImageWithFadeAnimation, completion: nil)// .progressiveBlur |
             titleL.text = model?.cnname
             enTitleL.text = model?.enname
-            markL.text = String(model?.rank ?? 0)
+            markL.text = String(model?.score ?? 0)
             areaL.text = model?.area
+            updateL.text = model?.play_status
             categoryL.text = model?.category
         }
     }
@@ -42,6 +43,11 @@ class FilmListCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
+
+        self.enTitleL.backgroundColor = UIColor.black.withAlphaComponent(0.6)
+
+        self.markL.layer.cornerRadius = 6
+        self.markL.clipsToBounds = true
 
         self.backgroundColor = KBgViewColor
         bgView.backgroundColor = UIColor.white
