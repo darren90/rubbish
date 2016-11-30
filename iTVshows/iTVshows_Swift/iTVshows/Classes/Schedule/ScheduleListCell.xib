@@ -53,12 +53,12 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="4Os-6C-vnG" secondAttribute="trailing" constant="3" id="K6W-WI-ImY"/>
-                            <constraint firstItem="MAb-9K-rB3" firstAttribute="leading" secondItem="hux-mY-a31" secondAttribute="leading" id="Qym-i3-spa"/>
+                            <constraint firstItem="MAb-9K-rB3" firstAttribute="leading" secondItem="hux-mY-a31" secondAttribute="leading" constant="3" id="Qym-i3-spa"/>
                             <constraint firstItem="4Os-6C-vnG" firstAttribute="top" secondItem="hux-mY-a31" secondAttribute="top" constant="3" id="Y9v-PM-CB0"/>
                             <constraint firstAttribute="bottom" secondItem="4Os-6C-vnG" secondAttribute="bottom" constant="3" id="lLD-AS-f63"/>
-                            <constraint firstAttribute="bottom" secondItem="MAb-9K-rB3" secondAttribute="bottom" id="nJf-8N-ZQp"/>
+                            <constraint firstAttribute="bottom" secondItem="MAb-9K-rB3" secondAttribute="bottom" constant="3" id="nJf-8N-ZQp"/>
                             <constraint firstItem="4Os-6C-vnG" firstAttribute="leading" secondItem="hux-mY-a31" secondAttribute="leading" constant="3" id="tTn-St-NyY"/>
-                            <constraint firstAttribute="trailing" secondItem="MAb-9K-rB3" secondAttribute="trailing" id="woj-JT-OWK"/>
+                            <constraint firstAttribute="trailing" secondItem="MAb-9K-rB3" secondAttribute="trailing" constant="3" id="woj-JT-OWK"/>
                         </constraints>
                     </view>
                 </subviews>
