@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		894A65A51DEEE2B5004FC2F9 /* FilmListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894A65A31DEEE2B5004FC2F9 /* FilmListCell.swift */; };
 		894A65A61DEEE2B5004FC2F9 /* FilmListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 894A65A41DEEE2B5004FC2F9 /* FilmListCell.xib */; };
-		894A65A91DEF001E004FC2F9 /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894A65A81DEF001E004FC2F9 /* LaunchViewController.swift */; };
 		8972EC651DE42898009F0C58 /* MJRefreshAutoFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 8972EC391DE42898009F0C58 /* MJRefreshAutoFooter.m */; };
 		8972EC661DE42898009F0C58 /* MJRefreshBackFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 8972EC3B1DE42898009F0C58 /* MJRefreshBackFooter.m */; };
 		8972EC671DE42898009F0C58 /* MJRefreshComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 8972EC3D1DE42898009F0C58 /* MJRefreshComponent.m */; };
@@ -94,6 +93,9 @@
 		FE69C4871DE1C464002AA9E5 /* yinxing2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FE69C4711DE1C464002AA9E5 /* yinxing2.jpg */; };
 		FE69C4881DE1C464002AA9E5 /* yinxing3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FE69C4721DE1C464002AA9E5 /* yinxing3.jpg */; };
 		FE69C48A1DE1CCCC002AA9E5 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE69C4891DE1CCCC002AA9E5 /* ImageIO.framework */; };
+		FEA4EB3B1DEF188B0077DDA1 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA4EB381DEF188B0077DDA1 /* ErrorView.swift */; };
+		FEA4EB3C1DEF188B0077DDA1 /* ErrorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FEA4EB391DEF188B0077DDA1 /* ErrorView.xib */; };
+		FEA4EB3D1DEF188B0077DDA1 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA4EB3A1DEF188B0077DDA1 /* LoadingView.swift */; };
 		FEDE0EF41DDF5B0C00266EF3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEDE0EF31DDF5B0C00266EF3 /* AppDelegate.swift */; };
 		FEDE0EF61DDF5B0C00266EF3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEDE0EF51DDF5B0C00266EF3 /* ViewController.swift */; };
 		FEDE0EF91DDF5B0C00266EF3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FEDE0EF71DDF5B0C00266EF3 /* Main.storyboard */; };
@@ -137,7 +139,6 @@
 		49BEA2AC4A54A516466B63C4 /* Pods_iTVshows.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iTVshows.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		894A65A31DEEE2B5004FC2F9 /* FilmListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilmListCell.swift; sourceTree = "<group>"; };
 		894A65A41DEEE2B5004FC2F9 /* FilmListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FilmListCell.xib; sourceTree = "<group>"; };
-		894A65A81DEF001E004FC2F9 /* LaunchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaunchViewController.swift; sourceTree = "<group>"; };
 		8972EC381DE42898009F0C58 /* MJRefreshAutoFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefreshAutoFooter.h; sourceTree = "<group>"; };
 		8972EC391DE42898009F0C58 /* MJRefreshAutoFooter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJRefreshAutoFooter.m; sourceTree = "<group>"; };
 		8972EC3A1DE42898009F0C58 /* MJRefreshBackFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefreshBackFooter.h; sourceTree = "<group>"; };
@@ -261,6 +262,9 @@
 		FE69C4711DE1C464002AA9E5 /* yinxing2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = yinxing2.jpg; sourceTree = "<group>"; };
 		FE69C4721DE1C464002AA9E5 /* yinxing3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = yinxing3.jpg; sourceTree = "<group>"; };
 		FE69C4891DE1CCCC002AA9E5 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
+		FEA4EB381DEF188B0077DDA1 /* ErrorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
+		FEA4EB391DEF188B0077DDA1 /* ErrorView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ErrorView.xib; sourceTree = "<group>"; };
+		FEA4EB3A1DEF188B0077DDA1 /* LoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		FEDE0EF01DDF5B0C00266EF3 /* iTVshows.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iTVshows.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FEDE0EF31DDF5B0C00266EF3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FEDE0EF51DDF5B0C00266EF3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -349,14 +353,6 @@
 				3D1BBDE993ABBB2CD5027313 /* Pods-iTVshows.release.xcconfig */,
 			);
 			name = Pods;
-			sourceTree = "<group>";
-		};
-		894A65A71DEF000C004FC2F9 /* Launch */ = {
-			isa = PBXGroup;
-			children = (
-				894A65A81DEF001E004FC2F9 /* LaunchViewController.swift */,
-			);
-			path = Launch;
 			sourceTree = "<group>";
 		};
 		8972EC361DE42898009F0C58 /* MJRefresh */ = {
@@ -606,7 +602,6 @@
 		89C5DF891DE3102500A39210 /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				894A65A71DEF000C004FC2F9 /* Launch */,
 				89C5DF8A1DE3102500A39210 /* Base */,
 			);
 			path = Main;
@@ -619,6 +614,9 @@
 				89C5DF8D1DE3107C00A39210 /* BaseNavigationController.swift */,
 				89C5DF8F1DE3108B00A39210 /* BaseViewController.swift */,
 				89C5DF911DE31B3700A39210 /* BaseTableViewController.swift */,
+				FEA4EB381DEF188B0077DDA1 /* ErrorView.swift */,
+				FEA4EB391DEF188B0077DDA1 /* ErrorView.xib */,
+				FEA4EB3A1DEF188B0077DDA1 /* LoadingView.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -955,6 +953,7 @@
 				FE69C4781DE1C464002AA9E5 /* iPhone6Portrait.png in Resources */,
 				FE69C4791DE1C464002AA9E5 /* qrcode.jpg in Resources */,
 				FE69C47D1DE1C464002AA9E5 /* UMS_account@2x.png in Resources */,
+				FEA4EB3C1DEF188B0077DDA1 /* ErrorView.xib in Resources */,
 				89837C8E1DEC3B57009932DA /* README.txt in Resources */,
 				FE69C4771DE1C464002AA9E5 /* iPhone6PlusPortrait.png in Resources */,
 				89837CD81DEE90A7009932DA /* ArticleListCell.xib in Resources */,
@@ -1072,7 +1071,6 @@
 				8972EC781DE42898009F0C58 /* UIView+MJExtension.m in Sources */,
 				8972EC661DE42898009F0C58 /* MJRefreshBackFooter.m in Sources */,
 				8972EC6A1DE42898009F0C58 /* MJRefreshAutoGifFooter.m in Sources */,
-				894A65A91DEF001E004FC2F9 /* LaunchViewController.swift in Sources */,
 				89837CCE1DEDABC9009932DA /* LinkModel.swift in Sources */,
 				89837C971DEC557E009932DA /* ScheduleModel.swift in Sources */,
 				8972EC701DE42898009F0C58 /* MJRefreshGifHeader.m in Sources */,
@@ -1083,11 +1081,13 @@
 				8972EC751DE42898009F0C58 /* NSBundle+MJRefresh.m in Sources */,
 				894A65A51DEEE2B5004FC2F9 /* FilmListCell.swift in Sources */,
 				8972EC711DE42898009F0C58 /* MJRefreshNormalHeader.m in Sources */,
+				FEA4EB3D1DEF188B0077DDA1 /* LoadingView.swift in Sources */,
 				8972EC6E1DE42898009F0C58 /* MJRefreshBackNormalFooter.m in Sources */,
 				8972EC651DE42898009F0C58 /* MJRefreshAutoFooter.m in Sources */,
 				89C5DF941DE31CB700A39210 /* HomeViewController.swift in Sources */,
 				8972EC691DE42898009F0C58 /* MJRefreshHeader.m in Sources */,
 				FEDE0EF61DDF5B0C00266EF3 /* ViewController.swift in Sources */,
+				FEA4EB3B1DEF188B0077DDA1 /* ErrorView.swift in Sources */,
 				8972EC721DE42898009F0C58 /* MJRefreshStateHeader.m in Sources */,
 				8972EC761DE42898009F0C58 /* UIScrollView+MJExtension.m in Sources */,
 				8972EC6F1DE42898009F0C58 /* MJRefreshBackStateFooter.m in Sources */,

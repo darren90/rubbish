@@ -30,8 +30,7 @@ let KWidth = UIScreen.main.bounds.width
 let KHeight = UIScreen.main.bounds.height
 
 
-let placeImg = UIImage(named: "pleace")
-
+let KPlaceImg = UIImage(named: "kplace")
 
 
 

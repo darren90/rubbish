@@ -31,7 +31,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TKl-jC-oOI">
-                        <rect key="frame" x="10" y="10" width="300" height="99"/>
+                        <rect key="frame" x="10" y="10" width="310" height="99"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                 </subviews>
@@ -39,7 +39,7 @@
                     <constraint firstItem="804-Go-SoK" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="0Hf-Z6-QpX"/>
                     <constraint firstItem="TKl-jC-oOI" firstAttribute="height" secondItem="804-Go-SoK" secondAttribute="height" id="8Q9-Ug-2ct"/>
                     <constraint firstItem="804-Go-SoK" firstAttribute="leading" secondItem="TKl-jC-oOI" secondAttribute="leading" id="MM1-sP-gjt"/>
-                    <constraint firstAttribute="trailing" secondItem="TKl-jC-oOI" secondAttribute="trailing" constant="10" id="UTD-ap-nMo"/>
+                    <constraint firstAttribute="trailing" secondItem="TKl-jC-oOI" secondAttribute="trailing" id="UTD-ap-nMo"/>
                     <constraint firstAttribute="trailing" secondItem="nNj-7K-HYr" secondAttribute="trailing" constant="10" id="cPI-1E-tFc"/>
                     <constraint firstItem="nNj-7K-HYr" firstAttribute="leading" secondItem="804-Go-SoK" secondAttribute="trailing" constant="8" id="jdP-TS-5gR"/>
                     <constraint firstItem="nNj-7K-HYr" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" constant="-20" id="nq7-Wm-y3L"/>

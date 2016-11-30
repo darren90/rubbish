@@ -21,19 +21,14 @@ class HomeViewController: BaseTableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // MARK: --- loding动画
+        
         launchAnimation()
-
+        
         title = "首页"
         tableView.rowHeight = 120
 
         view.backgroundColor = KBgViewColor
-
-        ArticleModel.getArticleList { (list : [ArticleModel]?, error : NSError?) in
-//            print("--list-:\(list)")
-//             self.dataArray = list
-        }
+ 
 
 //        ArticleDetailModel.getArticleDetail(id: "29575"){(list : [ArticleDetailModel]?, error : NSError?) -> () in
 //            print("--list-:\(list)")
@@ -41,6 +36,20 @@ class HomeViewController: BaseTableViewController {
 
     }
 
+    
+    
+    override func request() {
+        ArticleModel.getArticleList { (list : [ArticleModel]?, error : NSError?) in
+            //            print("--list-:\(list)")
+            if error == nil {
+                self.errorType = .None
+                self.dataArray = list
+            }else{
+                self.errorType = .Default
+            }
+        }
+    }
+    
 }
 
 //extension TableViewViewController: UITableViewDelegate,UITableViewDataSource
@@ -59,6 +68,7 @@ extension HomeViewController  {
     }
 }
 
+
 extension HomeViewController {
     //播放启动画面动画
     func launchAnimation() {
@@ -69,7 +79,7 @@ extension HomeViewController {
         let delegate = UIApplication.shared.delegate
         delegate?.window!!.addSubview(launchview)
         //self.view.addSubview(launchview) //如果没有导航栏，直接添加到当前的view即可
-
+        
         //播放动画效果，完毕后将其移除
         UIView.animate(withDuration: 1, delay: 1.5, options: .beginFromCurrentState,
                        animations: {
@@ -80,9 +90,7 @@ extension HomeViewController {
             launchview.removeFromSuperview()
         }
     }
-
 }
-
 
 
 

@@ -28,7 +28,7 @@ class ArticleListCell: UITableViewCell {
     var model:ArticleModel? {
         didSet {
             let url = URL(string: (model?.poster)!)!
-            imgView?.yy_setImage(with: url, placeholder: nil, options:  .setImageWithFadeAnimation, completion: nil)// .progressiveBlur |
+            imgView?.yy_setImage(with: url, placeholder: KPlaceImg, options:  .setImageWithFadeAnimation, completion: nil)// .progressiveBlur |
             self.titleL.text = model?.title
         }
     }

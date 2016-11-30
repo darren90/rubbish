@@ -27,12 +27,7 @@ class FilmViewController: BaseTableViewController {
 
         view.backgroundColor = KBgViewColor
 
-        //影视列表
-        FilmResModel.getFilmList(page: 1) {(list : [FilmResModel]?, error : NSError?) -> () in
-            print("--list:\(list)")
-            self.dataArray = list
-        }
-
+       
         //影视详情
 //        FilmResDetailModel.getFilmDetail(id: "26315") { (model : FilmResDetailModel?, error : NSError?) -> () in
 //            
@@ -42,6 +37,19 @@ class FilmViewController: BaseTableViewController {
 //        LinkModel.getLink(id: "26315") {(link : LinkModel?, error : NSError?) -> () in
 //
 //        }
+    }
+    
+    override func request() {
+        //影视列表
+        FilmResModel.getFilmList(page: 1) {(list : [FilmResModel]?, error : NSError?) -> () in
+            print("--list:\(list)")
+            if error == nil {
+                self.errorType = .None
+                self.dataArray = list
+            }else{
+                self.errorType = .Default
+            }
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -62,10 +70,6 @@ extension FilmViewController  {
         let model = dataArray![indexPath.row]
         cell.model = model
         return cell;
-    }
-
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("---tableView")
     }
 }
 

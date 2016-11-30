@@ -8,7 +8,7 @@
 
 import UIKit
 
-class BaseTableViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
+class BaseTableViewController: BaseViewController,UITableViewDelegate,UITableViewDataSource {
 
     public var tableView:UITableView!
 
@@ -18,6 +18,7 @@ class BaseTableViewController: UIViewController,UITableViewDelegate,UITableViewD
         // Do any additional setup after loading the view.
 
         addTableView()
+        addLoadingView()
     }
 
     func addTableView() {
@@ -27,8 +28,6 @@ class BaseTableViewController: UIViewController,UITableViewDelegate,UITableViewD
         tableView.delegate = self
         tableView.separatorStyle = .none
     }
-
-
 
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1;
