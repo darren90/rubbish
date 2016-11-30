@@ -19,6 +19,12 @@ class FilmViewController: BaseTableViewController {
     /// 请求的当前页
     var page:Int = 1
     
+    // 顶部刷新
+    let header = MJRefreshNormalHeader()
+    
+    let footer = MJRefreshAutoNormalFooter()
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -27,7 +33,8 @@ class FilmViewController: BaseTableViewController {
 
         view.backgroundColor = KBgViewColor
 
-       
+       addReFreshControl()
+        
         //影视详情
 //        FilmResDetailModel.getFilmDetail(id: "26315") { (model : FilmResDetailModel?, error : NSError?) -> () in
 //            
@@ -43,9 +50,20 @@ class FilmViewController: BaseTableViewController {
         //影视列表
         FilmResModel.getFilmList(page: 1) {(list : [FilmResModel]?, error : NSError?) -> () in
             print("--list:\(list)")
+            self.endRefresh()
             if error == nil {
                 self.errorType = .None
-                self.dataArray = list
+                if(self.page == 1){
+                    self.dataArray = list
+                    print("-1-arrcount:\(self.dataArray?.count)")
+                }else{
+                    var tempArr = self.dataArray
+                    for m in list! {
+                        tempArr?.append(m)
+                    }
+                    self.dataArray = tempArr
+                    print("-2-arrcount:\(self.dataArray?.count)")
+                }
             }else{
                 self.errorType = .Default
             }
@@ -74,7 +92,37 @@ extension FilmViewController  {
 }
 
 
-
+// MARK: -- 刷新控件相关
+extension FilmViewController {
+    
+    func addReFreshControl() {
+        //下拉刷新相关设置
+        header.setRefreshingTarget(self, refreshingAction: #selector(FilmViewController.headerRefresh))
+        self.tableView!.mj_header = header
+        
+        footer.setRefreshingTarget(self, refreshingAction: #selector(FilmViewController.footerRefresh))
+        self.tableView!.mj_footer = footer
+    }
+    
+    //顶部下拉刷新
+    func footerRefresh(){
+        page = page + 1
+        request()
+    }
+    
+    //顶部下拉刷新
+    func headerRefresh(){
+        page = 1
+        request()
+    }
+    
+    func endRefresh() {
+        //结束刷新
+        self.tableView!.mj_footer.endRefreshing()
+        //结束刷新
+        self.tableView!.mj_header.endRefreshing()
+    }
+}
 
 
 

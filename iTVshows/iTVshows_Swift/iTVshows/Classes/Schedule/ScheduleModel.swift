@@ -46,6 +46,12 @@ class ScheduleModel: NSObject {
 
     //偏差日期
     class func getScheduleList(offsetDate:Int,finish:@escaping(_ models:[ScheduleModel]?,_ error:NSError?)->()){
+        
+//        start(必选) 开始时间,标准的时间格式,如:2015-02-03或2015-2-3或20150203
+//        end(必选) 结束时间,同上,开始时间和结束时间不能超过31天
+//        limit(可选) 返回数量
+
+        
         //        http://api.ousns.net/tv/schedule?end=20161128&start=20161128
         //正：tomorrow
         //负：yesterday

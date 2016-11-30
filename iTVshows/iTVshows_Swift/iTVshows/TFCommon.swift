@@ -20,7 +20,12 @@ import UIKit
 //let KColor()
 
 /// RandomColor
-let KRandomColor = UIColor(colorLiteralRed: Float(arc4random_uniform(256) / 255), green: Float(arc4random_uniform(256) / 255), blue: Float(arc4random_uniform(256) / 255), alpha: 1.0)
+//let KRandomColor = UIColor(colorLiteralRed: Float(arc4random_uniform(256) / 255), green: Float(arc4random_uniform(256) / 255), blue: Float(arc4random_uniform(256) / 255), alpha: 1.0)
+
+let red = CGFloat(arc4random()%256)/255.0
+let green = CGFloat(arc4random()%256)/255.0
+let blue = CGFloat(arc4random()%256)/255.0
+let KRandomColor =  UIColor(red: red, green: green, blue: blue, alpha: 1.0)
 
 /// View 的背景颜色 rgb(242, 246, 247)
 let KBgViewColor = UIColor(colorLiteralRed: 242/255.0, green: 246/255.0, blue: 247/255.0, alpha: 1.0)

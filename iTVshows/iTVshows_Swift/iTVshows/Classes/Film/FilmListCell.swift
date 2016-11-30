@@ -21,11 +21,15 @@ class FilmListCell: UITableViewCell {
 
     var model:FilmResModel? {
         didSet {
-            let url = URL(string: (model?.poster)!)!
-            iconView?.yy_setImage(with: url, placeholder: KPlaceImg, options:  .setImageWithFadeAnimation, completion: nil)// .progressiveBlur |
+            let url = URL(string: (model?.poster) ?? "")
+            if url == nil {
+                iconView.image = KPlaceImg
+            }else{
+                iconView?.yy_setImage(with: url, placeholder: KPlaceImg, options:  .setImageWithFadeAnimation, completion: nil)// .progressiveBlur |
+            }
             titleL.text = model?.cnname
             enTitleL.text = model?.enname
-            markL.text = String(model?.rank ?? 0)
+            markL.text = String(model?.score ?? 0)
             areaL.text = model?.area
             categoryL.text = model?.category
             updateL.text = model?.play_status

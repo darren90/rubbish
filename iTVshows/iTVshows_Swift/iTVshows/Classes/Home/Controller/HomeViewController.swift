@@ -18,6 +18,12 @@ class HomeViewController: BaseTableViewController {
 
     /// 请求的当前页
     var page:Int = 1
+    
+    // 顶部刷新
+    let header = MJRefreshNormalHeader()
+    
+    let footer = MJRefreshAutoNormalFooter()
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,28 +34,70 @@ class HomeViewController: BaseTableViewController {
         tableView.rowHeight = 120
 
         view.backgroundColor = KBgViewColor
- 
+
+        addReFreshControl()
 
 //        ArticleDetailModel.getArticleDetail(id: "29575"){(list : [ArticleDetailModel]?, error : NSError?) -> () in
 //            print("--list-:\(list)")
 //        }
-
     }
 
     
     
     override func request() {
-        ArticleModel.getArticleList { (list : [ArticleModel]?, error : NSError?) in
+        ArticleModel.getArticleList(page: page) { (list : [ArticleModel]?, error : NSError?) in
             //            print("--list-:\(list)")
+            self.endRefresh()
             if error == nil {
                 self.errorType = .None
-                self.dataArray = list
+                if(self.page == 1){
+                    self.dataArray = list
+                     print("-1-arrcount:\(self.dataArray?.count)")
+                }else{
+                    var tempArr = self.dataArray
+                    for m in list! {
+                        tempArr?.append(m)
+                    }
+                    self.dataArray = tempArr
+                    print("-2-arrcount:\(self.dataArray?.count)")
+                }
             }else{
                 self.errorType = .Default
             }
         }
     }
+}
+
+// MARK: -- 刷新控件相关
+extension HomeViewController {
     
+    func addReFreshControl() {
+        //下拉刷新相关设置
+        header.setRefreshingTarget(self, refreshingAction: #selector(HomeViewController.headerRefresh))
+        self.tableView!.mj_header = header
+        
+        footer.setRefreshingTarget(self, refreshingAction: #selector(HomeViewController.footerRefresh))
+        self.tableView!.mj_footer = footer
+    }
+    
+    //顶部下拉刷新
+    func footerRefresh(){
+        page = page + 1
+        request()
+    }
+    
+    //顶部下拉刷新
+    func headerRefresh(){
+        page = 1
+        request()
+    }
+    
+    func endRefresh() {
+        //结束刷新
+        self.tableView!.mj_footer.endRefreshing()
+        //结束刷新
+        self.tableView!.mj_header.endRefreshing()
+    }
 }
 
 //extension TableViewViewController: UITableViewDelegate,UITableViewDataSource

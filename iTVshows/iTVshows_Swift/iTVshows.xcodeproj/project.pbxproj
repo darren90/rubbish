@@ -96,6 +96,8 @@
 		FEA4EB3B1DEF188B0077DDA1 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA4EB381DEF188B0077DDA1 /* ErrorView.swift */; };
 		FEA4EB3C1DEF188B0077DDA1 /* ErrorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FEA4EB391DEF188B0077DDA1 /* ErrorView.xib */; };
 		FEA4EB3D1DEF188B0077DDA1 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA4EB3A1DEF188B0077DDA1 /* LoadingView.swift */; };
+		FEA4EB401DEF24D80077DDA1 /* ScheduleListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA4EB3E1DEF24D80077DDA1 /* ScheduleListCell.swift */; };
+		FEA4EB411DEF24D80077DDA1 /* ScheduleListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FEA4EB3F1DEF24D80077DDA1 /* ScheduleListCell.xib */; };
 		FEDE0EF41DDF5B0C00266EF3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEDE0EF31DDF5B0C00266EF3 /* AppDelegate.swift */; };
 		FEDE0EF61DDF5B0C00266EF3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEDE0EF51DDF5B0C00266EF3 /* ViewController.swift */; };
 		FEDE0EF91DDF5B0C00266EF3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FEDE0EF71DDF5B0C00266EF3 /* Main.storyboard */; };
@@ -265,6 +267,8 @@
 		FEA4EB381DEF188B0077DDA1 /* ErrorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
 		FEA4EB391DEF188B0077DDA1 /* ErrorView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ErrorView.xib; sourceTree = "<group>"; };
 		FEA4EB3A1DEF188B0077DDA1 /* LoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		FEA4EB3E1DEF24D80077DDA1 /* ScheduleListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleListCell.swift; sourceTree = "<group>"; };
+		FEA4EB3F1DEF24D80077DDA1 /* ScheduleListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ScheduleListCell.xib; sourceTree = "<group>"; };
 		FEDE0EF01DDF5B0C00266EF3 /* iTVshows.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iTVshows.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FEDE0EF31DDF5B0C00266EF3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FEDE0EF51DDF5B0C00266EF3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -530,6 +534,8 @@
 			isa = PBXGroup;
 			children = (
 				89837C941DEC52B9009932DA /* ScheduleViewController.swift */,
+				FEA4EB3E1DEF24D80077DDA1 /* ScheduleListCell.swift */,
+				FEA4EB3F1DEF24D80077DDA1 /* ScheduleListCell.xib */,
 				89837C981DED31CF009932DA /* ScheduleCell.swift */,
 				89837C991DED31CF009932DA /* ScheduleCell.xib */,
 				89837C961DEC557E009932DA /* ScheduleModel.swift */,
@@ -983,6 +989,7 @@
 				89837C871DEC3B57009932DA /* TencentOpenApi_IOS_Bundle.bundle in Resources */,
 				FE69C4861DE1C464002AA9E5 /* yinxing1.jpg in Resources */,
 				FE69C47F1DE1C464002AA9E5 /* UMS_comment@2x.png in Resources */,
+				FEA4EB411DEF24D80077DDA1 /* ScheduleListCell.xib in Resources */,
 				894A65A61DEEE2B5004FC2F9 /* FilmListCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1056,6 +1063,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FEA4EB401DEF24D80077DDA1 /* ScheduleListCell.swift in Sources */,
 				89C5DF8E1DE3107C00A39210 /* BaseNavigationController.swift in Sources */,
 				8972EC6B1DE42898009F0C58 /* MJRefreshAutoNormalFooter.m in Sources */,
 				8972EC6C1DE42898009F0C58 /* MJRefreshAutoStateFooter.m in Sources */,
