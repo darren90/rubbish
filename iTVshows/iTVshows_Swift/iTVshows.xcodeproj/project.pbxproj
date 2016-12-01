@@ -10,6 +10,7 @@
 		894A65A51DEEE2B5004FC2F9 /* FilmListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894A65A31DEEE2B5004FC2F9 /* FilmListCell.swift */; };
 		894A65A61DEEE2B5004FC2F9 /* FilmListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 894A65A41DEEE2B5004FC2F9 /* FilmListCell.xib */; };
 		894A65C41DEFE215004FC2F9 /* ArticleDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894A65C31DEFE215004FC2F9 /* ArticleDetailViewController.swift */; };
+		895993471DF04D24009BBDB0 /* FilmDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 895993461DF04D24009BBDB0 /* FilmDetailViewController.swift */; };
 		8972EC651DE42898009F0C58 /* MJRefreshAutoFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 8972EC391DE42898009F0C58 /* MJRefreshAutoFooter.m */; };
 		8972EC661DE42898009F0C58 /* MJRefreshBackFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 8972EC3B1DE42898009F0C58 /* MJRefreshBackFooter.m */; };
 		8972EC671DE42898009F0C58 /* MJRefreshComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 8972EC3D1DE42898009F0C58 /* MJRefreshComponent.m */; };
@@ -143,6 +144,7 @@
 		894A65A31DEEE2B5004FC2F9 /* FilmListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilmListCell.swift; sourceTree = "<group>"; };
 		894A65A41DEEE2B5004FC2F9 /* FilmListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FilmListCell.xib; sourceTree = "<group>"; };
 		894A65C31DEFE215004FC2F9 /* ArticleDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleDetailViewController.swift; sourceTree = "<group>"; };
+		895993461DF04D24009BBDB0 /* FilmDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilmDetailViewController.swift; sourceTree = "<group>"; };
 		8972EC381DE42898009F0C58 /* MJRefreshAutoFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefreshAutoFooter.h; sourceTree = "<group>"; };
 		8972EC391DE42898009F0C58 /* MJRefreshAutoFooter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJRefreshAutoFooter.m; sourceTree = "<group>"; };
 		8972EC3A1DE42898009F0C58 /* MJRefreshBackFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefreshBackFooter.h; sourceTree = "<group>"; };
@@ -549,6 +551,7 @@
 			isa = PBXGroup;
 			children = (
 				89837CC91DED8D3D009932DA /* FilmViewController.swift */,
+				895993461DF04D24009BBDB0 /* FilmDetailViewController.swift */,
 				89837CA11DED49D5009932DA /* FilmResModel.swift */,
 				89837CCB1DED98CF009932DA /* FilmResDetailModel.swift */,
 				89837CCD1DEDABC9009932DA /* LinkModel.swift */,
@@ -1069,6 +1072,7 @@
 				FEA4EB401DEF24D80077DDA1 /* ScheduleListCell.swift in Sources */,
 				89C5DF8E1DE3107C00A39210 /* BaseNavigationController.swift in Sources */,
 				8972EC6B1DE42898009F0C58 /* MJRefreshAutoNormalFooter.m in Sources */,
+				895993471DF04D24009BBDB0 /* FilmDetailViewController.swift in Sources */,
 				8972EC6C1DE42898009F0C58 /* MJRefreshAutoStateFooter.m in Sources */,
 				89837C9F1DED47E9009932DA /* ArticleDetailModel.swift in Sources */,
 				8972EC771DE42898009F0C58 /* UIScrollView+MJRefresh.m in Sources */,

@@ -16,6 +16,7 @@ class FilmResDetailModel: NSObject {
 
     var enname:String?
 
+    /// 纯汉字，没有html代码
     var content:String?
 
     var category:String?

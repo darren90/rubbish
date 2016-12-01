@@ -35,10 +35,7 @@ class FilmViewController: BaseTableViewController {
 
        addReFreshControl()
         
-        //影视详情
-//        FilmResDetailModel.getFilmDetail(id: "26315") { (model : FilmResDetailModel?, error : NSError?) -> () in
-//            
-//        }
+
 
         //下载地址
 //        LinkModel.getLink(id: "26315") {(link : LinkModel?, error : NSError?) -> () in
@@ -88,6 +85,13 @@ extension FilmViewController  {
         let model = dataArray![indexPath.row]
         cell.model = model
         return cell;
+    }
+
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let detailVc = FilmDetailViewController()
+        let model = dataArray![indexPath.row]
+        detailVc.filmId = model.id
+        navigationController?.pushViewController(detailVc, animated: true)
     }
 }
 
