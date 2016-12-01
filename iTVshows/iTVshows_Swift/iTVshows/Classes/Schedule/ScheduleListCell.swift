@@ -40,9 +40,13 @@ class ScheduleListCell: UICollectionViewCell {
         iconView.layer.cornerRadius = 6
         iconView.clipsToBounds = true
         
-        bgView.backgroundColor = comforColor()
-        titleBgView.backgroundColor = UIColor.black.withAlphaComponent(0.6)
+        //图片添加阴影
+        iconView.layer.shadowOpacity = 0.8
+        iconView.layer.shadowColor = UIColor.black.cgColor
+        iconView.layer.shadowOffset = CGSize(width: 1, height: 1)
         
+        bgView.backgroundColor = UIColor.clear//comforColor()
+        titleBgView.backgroundColor = UIColor.black.withAlphaComponent(0.6)
     }
     
     lazy var colorArr:[UIColor] = {

@@ -15,7 +15,7 @@ enum ErrorNetType:Int {
     case ServerError// 服务器错误
 }
 
-class BaseViewController: UIViewController {
+class BaseViewController: UIViewController,UIGestureRecognizerDelegate {
 
     var errorView:ErrorView = Bundle.main.loadNibNamed("ErrorView", owner: nil, options: nil)?.first as! ErrorView
 
@@ -49,7 +49,10 @@ class BaseViewController: UIViewController {
         super.viewDidLoad()
         
         view.backgroundColor = UIColor.white
-        
+
+        //启用滑动返回手势
+        self.navigationController?.interactivePopGestureRecognizer?.delegate = self
+
         request()
     }
     
@@ -104,7 +107,16 @@ class BaseViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
 
+
+    //MARK: --- 启用手势
+    func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool {
+        if gestureRecognizer == self.navigationController?.interactivePopGestureRecognizer {
+            return (self.navigationController?.viewControllers.count)! > 1
+        }
+        return true
+    }
+
+    
     
 }

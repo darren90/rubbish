@@ -29,6 +29,8 @@ class HomeViewController: BaseTableViewController {
         super.viewDidLoad()
         
         launchAnimation()
+
+//        Thread.sleep(forTimeInterval: 3.0) //延长程序启动时间为：3秒
         
         title = "首页"
         tableView.rowHeight = 120
@@ -37,9 +39,6 @@ class HomeViewController: BaseTableViewController {
 
         addReFreshControl()
 
-//        ArticleDetailModel.getArticleDetail(id: "29575"){(list : [ArticleDetailModel]?, error : NSError?) -> () in
-//            print("--list-:\(list)")
-//        }
     }
 
     
@@ -114,6 +113,14 @@ extension HomeViewController  {
         cell.model = model
         return cell;
     }
+
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let detailVc = ArticleDetailViewController()
+        let model = dataArray![indexPath.row]
+        detailVc.articleId = model.id
+        navigationController?.pushViewController(detailVc, animated: true)
+    }
+
 }
 
 

@@ -64,7 +64,7 @@ class ArticleDetailModel: NSObject {
     }
 
     //偏差日期
-    class func getArticleDetail(id : String, finish:@escaping(_ models:[ArticleDetailModel]?,_ error:NSError?)->()){
+    class func getArticleDetail(id : String, finish:@escaping(_ models:ArticleDetailModel?,_ error:NSError?)->()){
 
         let url = "http://api.ousns.net/article/getinfo?id=\(id)"
 
@@ -80,18 +80,13 @@ class ArticleDetailModel: NSObject {
                     finish(nil,NSError.init(domain: "错误的status值", code: 9999, userInfo: ["status码值错误" : "status值不等于1"]))
                 }
 
-                let dataDiv :[[String:AnyObject]]? = result?["data"] as? [[String:AnyObject]]
+                let dataDiv :[String:AnyObject]? = result?["data"] as? [String:AnyObject]
 
                 if(dataDiv == nil){
                     finish(nil,NSError.init(domain: "没有可用的数据", code: 9999, userInfo: ["字典为空" : "status值不等于1"]))
                 }else{
-                    var models = [ArticleDetailModel]()
-                    for dic in dataDiv! {
-                        let model = ArticleDetailModel.init(dict: dic)
-                        models.append(model)
-                    }
-                    //                    print("--ms-:\(models)")
-                    finish(models,nil)
+                    let model = ArticleDetailModel.init(dict: dataDiv!)
+                    finish(model,nil)
                 }
             }
             
