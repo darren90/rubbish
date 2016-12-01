@@ -66,11 +66,12 @@ class ScheduleViewController: BaseViewController,UICollectionViewDelegate,UIColl
         layout.minimumLineSpacing = 10
         layout.minimumInteritemSpacing = 10
         layout.itemSize = CGSize(width: width, height: height)
+        layout.sectionInset = UIEdgeInsets(top: marign, left: marign, bottom: marign, right: marign)
         
         watherView = UICollectionView(frame: self.view.bounds, collectionViewLayout: layout)
         watherView?.delegate = self
         watherView?.dataSource = self
-        watherView?.contentInset = UIEdgeInsets(top: marign, left: marign, bottom: 10, right: marign)
+//        watherView?.contentInset = UIEdgeInsets(top: 0, left: marign, bottom: 10, right: marign)
         watherView?.backgroundColor = KBgViewColor
         watherView?.register(UINib(nibName: "ScheduleListCell", bundle: nil), forCellWithReuseIdentifier: "ScheduleListCell")
         view.addSubview(watherView!)
