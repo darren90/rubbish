@@ -28,6 +28,7 @@ class FilmViewController: BaseTableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        navBarView.leftButton.isHidden = true
         navTitleStr = "Film"
 
         tableView.rowHeight = 120

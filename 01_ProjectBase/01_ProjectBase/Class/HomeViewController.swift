@@ -19,7 +19,7 @@ class HomeViewController: BaseViewController {
 
         rightTitle = "Push"
 
-        leftTitle = "Modar"
+//        leftTitle = "Modar"
 
 //        self.navBarView.rightButton.isHidden = false
     }

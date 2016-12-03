@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ArticleDetailViewController: BaseTableViewController ,UIWebViewDelegate{
+class ArticleDetailViewController: BaseViewController,UIScrollViewDelegate ,UIWebViewDelegate{
 
     //MARK: --- 暴露出来的参数
     var articleId:String?
@@ -38,7 +38,8 @@ class ArticleDetailViewController: BaseTableViewController ,UIWebViewDelegate{
     override func viewDidLoad() {
         super.viewDidLoad()
 
-         webView.frame = view.bounds//CGRect(x: 0, y: 0, width: view.frame.width, height: view.frame.height)
+//        navBarView.leftButton.isHidden = false
+        webView.frame = view.bounds//CGRect(x: 0, y: 0, width: view.frame.width, height: view.frame.height)
         view.addSubview(webView)//ParallaxHeaderView
 
         view.addSubview(headerView)
@@ -73,8 +74,9 @@ class ArticleDetailViewController: BaseTableViewController ,UIWebViewDelegate{
     func loadSuccess(model:ArticleDetailModel)  {
         var html = "<html> <head>"
 //        html += "<link rel=\"stylesheet\" href="
-//        html += cssStr
+//        htm l += cssStr
 //        html += "</head>"
+        html += "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />"
         html += model.content ?? ""
         html += "</body> </html>"
 
@@ -115,7 +117,7 @@ class ArticleDetailViewController: BaseTableViewController ,UIWebViewDelegate{
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
 
         let offsetY = scrollView.contentOffset.y - ( -200 )
-        print("offsetY:\(offsetY)")
+//        print("offsetY:\(offsetY)")
         let h = 200 - offsetY
         headerView.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: h)
 

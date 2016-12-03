@@ -157,7 +157,7 @@ class BaseViewController: UIViewController,UIGestureRecognizerDelegate {
             self.navBarView.rightButton.isHidden = false
             self.navBarView.rightButton.setImage(UIImage(named: rightImg ?? ""), for: .normal)
             self.navBarView.rightButton.setTitle(nil, for: .normal)
-            self.navBarView.leftButton.setImage(UIImage(named: rightImg ?? "")?.imageWithTintColor(color: UIColor.lightGray), for: .highlighted)
+            self.navBarView.rightButton.setImage(UIImage(named: rightImg ?? "")?.imageWithTintColor(color: UIColor.lightGray), for: .highlighted)
 
         }
     }

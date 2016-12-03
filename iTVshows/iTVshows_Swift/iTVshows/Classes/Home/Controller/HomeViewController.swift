@@ -27,7 +27,9 @@ class HomeViewController: BaseTableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
+        navBarView.leftButton.isHidden = true
+
         launchAnimation()
 
 //        Thread.sleep(forTimeInterval: 3.0) //延长程序启动时间为：3秒
@@ -120,6 +122,8 @@ extension HomeViewController  {
         let model = dataArray![indexPath.row]
         detailVc.articleId = model.id
         navigationController?.pushViewController(detailVc, animated: true)
+
+        tableView.deselectRow(at: indexPath, animated: true)
     }
 
 }

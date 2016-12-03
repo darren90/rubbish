@@ -22,7 +22,7 @@ class BaseTableViewController: BaseViewController,UITableViewDelegate,UITableVie
     }
 
     func addTableView() {
-        let rect = CGRect(x: 0, y: 64, width: self.view.bounds.width, height: self.view.bounds.height)
+        let rect = CGRect(x: 0, y: 64, width: self.view.bounds.width, height: self.view.bounds.height-64)
         tableView = UITableView.init(frame: rect, style: .plain)
         self.view .addSubview(tableView)
         tableView.dataSource = self

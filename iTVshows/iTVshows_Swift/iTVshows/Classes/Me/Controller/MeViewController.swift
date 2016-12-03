@@ -13,8 +13,7 @@ class MeViewController: BaseTableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
-
+        navBarView.leftButton.isHidden = true
         navTitleStr = "我的"
     }
 

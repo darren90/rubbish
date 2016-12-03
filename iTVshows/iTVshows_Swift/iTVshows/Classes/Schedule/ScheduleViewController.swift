@@ -33,6 +33,7 @@ class ScheduleViewController: BaseViewController,UICollectionViewDelegate,UIColl
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        navBarView.leftButton.isHidden = true
         navTitleStr = "Schedule"
 
         setUpCollectionView()
@@ -67,8 +68,9 @@ class ScheduleViewController: BaseViewController,UICollectionViewDelegate,UIColl
         layout.minimumInteritemSpacing = 10
         layout.itemSize = CGSize(width: width, height: height)
         layout.sectionInset = UIEdgeInsets(top: marign, left: marign, bottom: marign, right: marign)
-        
-        watherView = UICollectionView(frame: self.view.bounds, collectionViewLayout: layout)
+
+        let rect = CGRect(x: 0, y: 64, width: view.frame.width, height: view.frame.height - 64)
+        watherView = UICollectionView(frame: rect, collectionViewLayout: layout)
         watherView?.delegate = self
         watherView?.dataSource = self
 //        watherView?.contentInset = UIEdgeInsets(top: 0, left: marign, bottom: 10, right: marign)

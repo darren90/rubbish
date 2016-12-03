@@ -14,6 +14,7 @@ class Home01ViewController: BaseViewController {
         super.viewDidLoad()
 
         view.backgroundColor = UIColor.white
+        
         navTitleStr = "Home01"
 
         rightTitle = "Push03"
