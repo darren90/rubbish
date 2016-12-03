@@ -13,7 +13,15 @@ class Home01ViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        view.backgroundColor = UIColor.white
+        navTitleStr = "Home01"
+
+        rightTitle = "Push03"
+    }
+
+    override func rightBtnClick() {
+        let vc = Home03ViewController()
+        navigationController?.pushViewController(vc, animated: true)
     }
 
     override func didReceiveMemoryWarning() {

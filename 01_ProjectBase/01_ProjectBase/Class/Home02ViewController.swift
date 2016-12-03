@@ -14,6 +14,7 @@ class Home02ViewController: BaseViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        view.backgroundColor = UIColor.white
     }
 
     @IBAction func Close(_ sender: UIBarButtonItem) {

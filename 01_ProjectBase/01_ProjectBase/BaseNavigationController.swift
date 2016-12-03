@@ -8,7 +8,7 @@
 
 import UIKit
 
-class BaseNavigationController: UINavigationController {
+class BaseNavigationController: UINavigationController,UINavigationControllerDelegate,UIGestureRecognizerDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -17,6 +17,8 @@ class BaseNavigationController: UINavigationController {
         
         /// 隐藏导航栏
         isNavigationBarHidden = true
+        interactivePopGestureRecognizer?.delegate = self
+        
     }
 
     override func didReceiveMemoryWarning() {

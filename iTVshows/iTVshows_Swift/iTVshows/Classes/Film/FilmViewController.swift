@@ -35,8 +35,6 @@ class FilmViewController: BaseTableViewController {
 
        addReFreshControl()
         
-
-
         //下载地址
 //        LinkModel.getLink(id: "26315") {(link : LinkModel?, error : NSError?) -> () in
 //

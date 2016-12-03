@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		895993491DF118A2009BBDB0 /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 895993481DF118A2009BBDB0 /* UIImage+Extension.swift */; };
 		FEA4EB4F1DF079480077DDA1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA4EB4E1DF079480077DDA1 /* AppDelegate.swift */; };
 		FEA4EB511DF079480077DDA1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA4EB501DF079480077DDA1 /* ViewController.swift */; };
 		FEA4EB541DF079480077DDA1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FEA4EB521DF079480077DDA1 /* Main.storyboard */; };
@@ -44,6 +45,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		895993481DF118A2009BBDB0 /* UIImage+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
 		FEA4EB4B1DF079480077DDA1 /* 01_ProjectBase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 01_ProjectBase.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FEA4EB4E1DF079480077DDA1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FEA4EB501DF079480077DDA1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -121,6 +123,7 @@
 				FEA4EB501DF079480077DDA1 /* ViewController.swift */,
 				FEA4EB7E1DF079BE0077DDA1 /* BaseViewController.swift */,
 				FEA4EB911DF0817C0077DDA1 /* BaseNaviBar.swift */,
+				895993481DF118A2009BBDB0 /* UIImage+Extension.swift */,
 				FEA4EB821DF079E80077DDA1 /* BaseTabBarController.swift */,
 				FEA4EB801DF079D10077DDA1 /* BaseNavigationController.swift */,
 				FEA4EB841DF07D3A0077DDA1 /* Class */,
@@ -297,6 +300,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				895993491DF118A2009BBDB0 /* UIImage+Extension.swift in Sources */,
 				FEA4EB811DF079D20077DDA1 /* BaseNavigationController.swift in Sources */,
 				FEA4EB511DF079480077DDA1 /* ViewController.swift in Sources */,
 				FEA4EB921DF0817C0077DDA1 /* BaseNaviBar.swift in Sources */,
@@ -553,6 +557,7 @@
 				FEA4EB751DF079480077DDA1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FEA4EB761DF079480077DDA1 /* Build configuration list for PBXNativeTarget "01_ProjectBaseTests" */ = {
 			isa = XCConfigurationList;
@@ -561,6 +566,7 @@
 				FEA4EB781DF079480077DDA1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FEA4EB791DF079480077DDA1 /* Build configuration list for PBXNativeTarget "01_ProjectBaseUITests" */ = {
 			isa = XCConfigurationList;
@@ -569,6 +575,7 @@
 				FEA4EB7B1DF079480077DDA1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
