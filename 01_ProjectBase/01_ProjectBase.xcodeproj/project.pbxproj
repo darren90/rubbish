@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		895993491DF118A2009BBDB0 /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 895993481DF118A2009BBDB0 /* UIImage+Extension.swift */; };
+		895993DF1DF26AAF009BBDB0 /* TestWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 895993DE1DF26AAF009BBDB0 /* TestWebViewController.swift */; };
 		FEA4EB4F1DF079480077DDA1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA4EB4E1DF079480077DDA1 /* AppDelegate.swift */; };
 		FEA4EB511DF079480077DDA1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA4EB501DF079480077DDA1 /* ViewController.swift */; };
 		FEA4EB541DF079480077DDA1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FEA4EB521DF079480077DDA1 /* Main.storyboard */; };
@@ -46,6 +47,7 @@
 
 /* Begin PBXFileReference section */
 		895993481DF118A2009BBDB0 /* UIImage+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
+		895993DE1DF26AAF009BBDB0 /* TestWebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestWebViewController.swift; sourceTree = "<group>"; };
 		FEA4EB4B1DF079480077DDA1 /* 01_ProjectBase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 01_ProjectBase.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FEA4EB4E1DF079480077DDA1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FEA4EB501DF079480077DDA1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -162,6 +164,7 @@
 				FEA4EB8B1DF07D940077DDA1 /* Home01ViewController.swift */,
 				FEA4EB8D1DF07D9D0077DDA1 /* Home02ViewController.swift */,
 				FEA4EB8F1DF07EE90077DDA1 /* Home03ViewController.swift */,
+				895993DE1DF26AAF009BBDB0 /* TestWebViewController.swift */,
 			);
 			path = Class;
 			sourceTree = "<group>";
@@ -307,6 +310,7 @@
 				FEA4EB8A1DF07D780077DDA1 /* MeViewController.swift in Sources */,
 				FEA4EB8E1DF07D9D0077DDA1 /* Home02ViewController.swift in Sources */,
 				FEA4EB881DF07D700077DDA1 /* DiscoverViewController.swift in Sources */,
+				895993DF1DF26AAF009BBDB0 /* TestWebViewController.swift in Sources */,
 				FEA4EB831DF079E80077DDA1 /* BaseTabBarController.swift in Sources */,
 				FEA4EB8C1DF07D940077DDA1 /* Home01ViewController.swift in Sources */,
 				FEA4EB4F1DF079480077DDA1 /* AppDelegate.swift in Sources */,

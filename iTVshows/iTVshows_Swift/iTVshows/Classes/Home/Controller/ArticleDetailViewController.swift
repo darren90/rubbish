@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ArticleDetailViewController: BaseTableViewController {
+class ArticleDetailViewController: BaseTableViewController ,UIWebViewDelegate{
 
     //MARK: --- 暴露出来的参数
     var articleId:String?
@@ -19,20 +19,38 @@ class ArticleDetailViewController: BaseTableViewController {
     lazy var webView : UIWebView = {
         let webView = UIWebView()
         webView.scrollView.delegate = self
+        webView.delegate = self
         webView.scrollView.clipsToBounds = false
         webView.scrollView.showsHorizontalScrollIndicator = true
         webView.scrollView.showsVerticalScrollIndicator = false
         webView.scrollView.alwaysBounceVertical = true
         webView.scrollView.alwaysBounceHorizontal = false
+        webView.backgroundColor = UIColor.white
+        webView.scrollView.contentInset = UIEdgeInsets(top: 200, left: 0, bottom: 0, right: 0);
+        webView.isOpaque = false
+        webView.clipsToBounds = true
         return webView
     }()
+
+    var headerView:UIImageView = UIImageView()
 
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-
+         webView.frame = view.bounds//CGRect(x: 0, y: 0, width: view.frame.width, height: view.frame.height)
         view.addSubview(webView)//ParallaxHeaderView
+
+        view.addSubview(headerView)
+        headerView.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: 200)
+        headerView.contentMode = .scaleAspectFill
+        headerView.image = UIImage(named: "001")
+        headerView.clipsToBounds = true
+        view.bringSubview(toFront: navBarView)
+
+        view.bringSubview(toFront: navBarView)
+        navBarView.alpha = 0
+        navTitleStr = "ArticleDetail"
     }
 
     override func request() {
@@ -41,37 +59,76 @@ class ArticleDetailViewController: BaseTableViewController {
         }
 
         ArticleDetailModel.getArticleDetail(id: articleId!){ (model : ArticleDetailModel?, error : NSError?) in
+//            print("detailModel:\(model)")
+            if error == nil {
+//                self.errorType = .None
+                self.loadSuccess(model: model!)
+            }else{
+                self.errorType = .Default
+            }
 
         }
+    }
+
+    func loadSuccess(model:ArticleDetailModel)  {
+        var html = "<html> <head>"
+//        html += "<link rel=\"stylesheet\" href="
+//        html += cssStr
+//        html += "</head>"
+        html += model.content ?? ""
+        html += "</body> </html>"
+
+        webView.loadHTMLString(html, baseURL: nil)
+        navTitleStr = model.title
+
+        let url = URL(string: (model.poster) ?? "")
+        if url == nil {
+            headerView.image = KPlaceImg
+        }else{
+            headerView.yy_setImage(with: url, placeholder: KPlaceImg, options:  .setImageWithFadeAnimation, completion: nil)// .progressiveBlur |
+        }
+
+
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-}
 
-
-extension ArticleDetailModel : UIWebViewDelegate {
     //MARK - webView的代理
+
     func webViewDidStartLoad(_ webView: UIWebView) {
         print(#function)
     }
 
     func webViewDidFinishLoad(_ webView: UIWebView) {
         print(#function)
+        self.errorType = .None
     }
 
     func webView(_ webView: UIWebView, didFailLoadWithError error: Error) {
         print(#function)
+        self.errorType = .Default
     }
 
-    func scrollViewDidScroll(scrollView: UIScrollView) {
-        let offsetY = scrollView.contentOffset.y
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+
+        let offsetY = scrollView.contentOffset.y - ( -200 )
         print("offsetY:\(offsetY)")
-    }
+        let h = 200 - offsetY
+        headerView.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: h)
 
+        navBarView.alpha = scrollView.contentOffset.y / (200-64)
+
+    }
 }
+
+
+//extension ArticleDetailModel : UIWebViewDelegate {
+//
+//
+//}
 
 
 

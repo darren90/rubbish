@@ -33,7 +33,7 @@ class ScheduleViewController: BaseViewController,UICollectionViewDelegate,UIColl
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        title = "Schedule"
+        navTitleStr = "Schedule"
 
         setUpCollectionView()
         addLoadingView()//这个需要手动添加

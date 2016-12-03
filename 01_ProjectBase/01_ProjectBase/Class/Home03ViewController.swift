@@ -16,6 +16,13 @@ class Home03ViewController: BaseViewController {
         // Do any additional setup after loading the view.
 
         navTitleStr = "Home03"
+
+        rightTitle = "PushWebView"
+    }
+
+    override func rightBtnClick() {
+        let vc = TestWebViewController()
+        navigationController?.pushViewController(vc, animated: true)
     }
 
     override func didReceiveMemoryWarning() {

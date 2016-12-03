@@ -22,5 +22,24 @@ class BaseTabBarController: UITabBarController {
     }
     
 
+    override var shouldAutorotate: Bool {
+        return true
+    }
+
+    override var supportedInterfaceOrientations: UIInterfaceOrientationMask{
+        if selectedViewController != nil {
+            return (selectedViewController!.supportedInterfaceOrientations)
+        }
+        return .portrait
+    }
+
+
+    override var preferredInterfaceOrientationForPresentation: UIInterfaceOrientation {
+        if selectedViewController != nil {
+            return (selectedViewController!.preferredInterfaceOrientationForPresentation)
+        }
+        return .portrait
+    }
+
 
 }

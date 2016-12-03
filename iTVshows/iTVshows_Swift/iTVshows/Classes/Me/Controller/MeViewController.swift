@@ -15,7 +15,7 @@ class MeViewController: BaseTableViewController {
 
         // Do any additional setup after loading the view.
 
-        title = "我的"
+        navTitleStr = "我的"
     }
 
     override func didReceiveMemoryWarning() {

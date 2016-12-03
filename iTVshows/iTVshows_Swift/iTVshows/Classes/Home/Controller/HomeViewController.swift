@@ -32,7 +32,8 @@ class HomeViewController: BaseTableViewController {
 
 //        Thread.sleep(forTimeInterval: 3.0) //延长程序启动时间为：3秒
         
-        title = "首页"
+        navTitleStr = "首页"
+
         tableView.rowHeight = 120
 
         view.backgroundColor = KBgViewColor

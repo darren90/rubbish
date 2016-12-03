@@ -20,8 +20,11 @@ class Home01ViewController: BaseViewController {
     }
 
     override func rightBtnClick() {
-        let vc = Home03ViewController()
+//        let vc = Home03ViewController()
+//        navigationController?.pushViewController(vc, animated: true)
+        let vc = TestWebViewController()
         navigationController?.pushViewController(vc, animated: true)
+
     }
 
     override func didReceiveMemoryWarning() {

@@ -31,7 +31,7 @@
         <!--Item-->
         <scene sceneID="aye-B5-3gZ">
             <objects>
-                <navigationController id="RI0-ZP-cDN" sceneMemberID="viewController">
+                <navigationController id="RI0-ZP-cDN" customClass="BaseNavigationController" customModule="iTVshows" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="dsl-Ox-07o"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="aFQ-ze-jzJ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -67,7 +67,7 @@
         <!--Schedule-->
         <scene sceneID="Sne-es-Gs1">
             <objects>
-                <navigationController id="oyK-nC-uUm" sceneMemberID="viewController">
+                <navigationController id="oyK-nC-uUm" customClass="BaseNavigationController" customModule="iTVshows" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Schedule" id="u5r-dh-omK"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="9yF-m6-4Rh">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -103,7 +103,7 @@
         <!--Item-->
         <scene sceneID="LeU-R6-551">
             <objects>
-                <navigationController id="ABO-sy-k6M" sceneMemberID="viewController">
+                <navigationController id="ABO-sy-k6M" customClass="BaseNavigationController" customModule="iTVshows" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="lhr-Kd-In8"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="zKO-N2-vkq">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -139,7 +139,7 @@
         <!--Film-->
         <scene sceneID="l8x-jj-cfG">
             <objects>
-                <navigationController id="oRD-8D-1Lx" sceneMemberID="viewController">
+                <navigationController id="oRD-8D-1Lx" customClass="BaseNavigationController" customModule="iTVshows" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Film" id="yDY-le-Woc"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="6hV-rl-n2Y">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>

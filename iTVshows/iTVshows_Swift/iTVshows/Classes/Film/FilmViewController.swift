@@ -28,7 +28,8 @@ class FilmViewController: BaseTableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        title = "Film"
+        navTitleStr = "Film"
+
         tableView.rowHeight = 120
 
         view.backgroundColor = KBgViewColor

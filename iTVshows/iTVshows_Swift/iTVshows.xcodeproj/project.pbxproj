@@ -11,6 +11,9 @@
 		894A65A61DEEE2B5004FC2F9 /* FilmListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 894A65A41DEEE2B5004FC2F9 /* FilmListCell.xib */; };
 		894A65C41DEFE215004FC2F9 /* ArticleDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894A65C31DEFE215004FC2F9 /* ArticleDetailViewController.swift */; };
 		895993471DF04D24009BBDB0 /* FilmDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 895993461DF04D24009BBDB0 /* FilmDetailViewController.swift */; };
+		895993E11DF274A9009BBDB0 /* TestWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 895993E01DF274A9009BBDB0 /* TestWebViewController.swift */; };
+		895993E31DF274CF009BBDB0 /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 895993E21DF274CF009BBDB0 /* UIImage+Extension.swift */; };
+		895993E51DF274E1009BBDB0 /* BaseNaviBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 895993E41DF274E1009BBDB0 /* BaseNaviBar.swift */; };
 		8972EC651DE42898009F0C58 /* MJRefreshAutoFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 8972EC391DE42898009F0C58 /* MJRefreshAutoFooter.m */; };
 		8972EC661DE42898009F0C58 /* MJRefreshBackFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 8972EC3B1DE42898009F0C58 /* MJRefreshBackFooter.m */; };
 		8972EC671DE42898009F0C58 /* MJRefreshComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 8972EC3D1DE42898009F0C58 /* MJRefreshComponent.m */; };
@@ -145,6 +148,9 @@
 		894A65A41DEEE2B5004FC2F9 /* FilmListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FilmListCell.xib; sourceTree = "<group>"; };
 		894A65C31DEFE215004FC2F9 /* ArticleDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleDetailViewController.swift; sourceTree = "<group>"; };
 		895993461DF04D24009BBDB0 /* FilmDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilmDetailViewController.swift; sourceTree = "<group>"; };
+		895993E01DF274A9009BBDB0 /* TestWebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestWebViewController.swift; sourceTree = "<group>"; };
+		895993E21DF274CF009BBDB0 /* UIImage+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
+		895993E41DF274E1009BBDB0 /* BaseNaviBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseNaviBar.swift; sourceTree = "<group>"; };
 		8972EC381DE42898009F0C58 /* MJRefreshAutoFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefreshAutoFooter.h; sourceTree = "<group>"; };
 		8972EC391DE42898009F0C58 /* MJRefreshAutoFooter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJRefreshAutoFooter.m; sourceTree = "<group>"; };
 		8972EC3A1DE42898009F0C58 /* MJRefreshBackFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefreshBackFooter.h; sourceTree = "<group>"; };
@@ -592,6 +598,7 @@
 			children = (
 				89C5DF931DE31CB700A39210 /* HomeViewController.swift */,
 				894A65C31DEFE215004FC2F9 /* ArticleDetailViewController.swift */,
+				895993E01DF274A9009BBDB0 /* TestWebViewController.swift */,
 				8972EC791DE428C3009F0C58 /* TestRefreshController.swift */,
 			);
 			path = Controller;
@@ -623,6 +630,7 @@
 			isa = PBXGroup;
 			children = (
 				89C5DF8B1DE3103C00A39210 /* BaseTabBarController.swift */,
+				895993E41DF274E1009BBDB0 /* BaseNaviBar.swift */,
 				89C5DF8D1DE3107C00A39210 /* BaseNavigationController.swift */,
 				89C5DF8F1DE3108B00A39210 /* BaseViewController.swift */,
 				89C5DF911DE31B3700A39210 /* BaseTableViewController.swift */,
@@ -687,6 +695,7 @@
 		FE69C40F1DE14EC3002AA9E5 /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				895993E21DF274CF009BBDB0 /* UIImage+Extension.swift */,
 				89837C5E1DEC3A43009932DA /* String-Extension.swift */,
 			);
 			path = Category;
@@ -1088,6 +1097,7 @@
 				8972EC6A1DE42898009F0C58 /* MJRefreshAutoGifFooter.m in Sources */,
 				89837CCE1DEDABC9009932DA /* LinkModel.swift in Sources */,
 				89837C971DEC557E009932DA /* ScheduleModel.swift in Sources */,
+				895993E11DF274A9009BBDB0 /* TestWebViewController.swift in Sources */,
 				8972EC701DE42898009F0C58 /* MJRefreshGifHeader.m in Sources */,
 				8972EC681DE42898009F0C58 /* MJRefreshFooter.m in Sources */,
 				89C5DFA21DE31E1700A39210 /* MeViewController.swift in Sources */,
@@ -1104,6 +1114,8 @@
 				8972EC691DE42898009F0C58 /* MJRefreshHeader.m in Sources */,
 				FEDE0EF61DDF5B0C00266EF3 /* ViewController.swift in Sources */,
 				FEA4EB3B1DEF188B0077DDA1 /* ErrorView.swift in Sources */,
+				895993E51DF274E1009BBDB0 /* BaseNaviBar.swift in Sources */,
+				895993E31DF274CF009BBDB0 /* UIImage+Extension.swift in Sources */,
 				8972EC721DE42898009F0C58 /* MJRefreshStateHeader.m in Sources */,
 				8972EC761DE42898009F0C58 /* UIScrollView+MJExtension.m in Sources */,
 				8972EC6F1DE42898009F0C58 /* MJRefreshBackStateFooter.m in Sources */,
