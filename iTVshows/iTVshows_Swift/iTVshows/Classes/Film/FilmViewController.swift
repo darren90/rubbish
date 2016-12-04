@@ -92,6 +92,7 @@ extension FilmViewController  {
         let model = dataArray![indexPath.row]
         detailVc.filmId = model.id
         navigationController?.pushViewController(detailVc, animated: true)
+        tableView.deselectRow(at: indexPath, animated: true)
     }
 }
 

@@ -18,7 +18,7 @@ class BaseTableViewController: BaseViewController,UITableViewDelegate,UITableVie
         // Do any additional setup after loading the view.
 
         addTableView()
-        addLoadingView()
+//        addLoadingView()
     }
 
     func addTableView() {

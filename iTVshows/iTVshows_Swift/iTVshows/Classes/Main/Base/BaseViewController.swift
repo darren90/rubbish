@@ -65,6 +65,8 @@ class BaseViewController: UIViewController,UIGestureRecognizerDelegate {
         navBarView.leftButton.addTarget(self, action: #selector(BaseViewController.leftBtnClick), for: .touchUpInside)
         navBarView.rightButton.addTarget(self, action: #selector(BaseViewController.rightBtnClick), for: .touchUpInside)
         view.addSubview(navBarView)
+        
+        addLoadingView()
     }
     
     func request(){
