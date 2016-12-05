@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FilmDetailViewController: BaseViewController {
+class FilmDetailViewController: BaseTableViewController {
 
     var filmId:String?
 
@@ -28,7 +28,6 @@ class FilmDetailViewController: BaseViewController {
         }
     }
 
-    
 
 
 }
