@@ -44,6 +44,12 @@ class BaseViewController: UIViewController,UIGestureRecognizerDelegate {
             }
         }
     }
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+
+        view.bringSubview(toFront: navBarView);
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()

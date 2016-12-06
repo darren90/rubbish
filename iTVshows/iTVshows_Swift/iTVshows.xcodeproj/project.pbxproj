@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		894A01C01DF6E4D300B9EA34 /* ShareView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894A01BC1DF6E4D300B9EA34 /* ShareView.swift */; };
+		894A01C11DF6E4D300B9EA34 /* ShareViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894A01BD1DF6E4D300B9EA34 /* ShareViewCell.swift */; };
+		894A01C21DF6E4D300B9EA34 /* ShareViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 894A01BE1DF6E4D300B9EA34 /* ShareViewCell.xib */; };
+		894A01C31DF6E4D300B9EA34 /* TFShareView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894A01BF1DF6E4D300B9EA34 /* TFShareView.swift */; };
 		894A65A51DEEE2B5004FC2F9 /* FilmListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894A65A31DEEE2B5004FC2F9 /* FilmListCell.swift */; };
 		894A65A61DEEE2B5004FC2F9 /* FilmListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 894A65A41DEEE2B5004FC2F9 /* FilmListCell.xib */; };
 		894A65C41DEFE215004FC2F9 /* ArticleDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894A65C31DEFE215004FC2F9 /* ArticleDetailViewController.swift */; };
@@ -33,10 +37,6 @@
 		896EB6341DF699F700F54156 /* UMShareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 896EB5F51DF699F600F54156 /* UMShareViewController.m */; };
 		896EB6351DF699F700F54156 /* UMSPlatformListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 896EB5F71DF699F600F54156 /* UMSPlatformListViewController.m */; };
 		896EB6361DF699F700F54156 /* UMSRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 896EB5F91DF699F600F54156 /* UMSRootViewController.m */; };
-		896EB63D1DF6A37B00F54156 /* TFShareView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 896EB63C1DF6A37B00F54156 /* TFShareView.swift */; };
-		896EB63F1DF6BB6700F54156 /* ShareView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 896EB63E1DF6BB6700F54156 /* ShareView.swift */; };
-		896EB6421DF6BFB500F54156 /* ShareViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 896EB6401DF6BFB500F54156 /* ShareViewCell.swift */; };
-		896EB6431DF6BFB500F54156 /* ShareViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 896EB6411DF6BFB500F54156 /* ShareViewCell.xib */; };
 		896EB6AB1DF6DEB900F54156 /* libSocialEmail.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 896EB6881DF6DEB900F54156 /* libSocialEmail.a */; };
 		896EB6AC1DF6DEB900F54156 /* libSocialQQ.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 896EB68B1DF6DEB900F54156 /* libSocialQQ.a */; };
 		896EB6AD1DF6DEB900F54156 /* TencentOpenAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 896EB68C1DF6DEB900F54156 /* TencentOpenAPI.framework */; };
@@ -165,6 +165,10 @@
 /* Begin PBXFileReference section */
 		3D1BBDE993ABBB2CD5027313 /* Pods-iTVshows.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iTVshows.release.xcconfig"; path = "Pods/Target Support Files/Pods-iTVshows/Pods-iTVshows.release.xcconfig"; sourceTree = "<group>"; };
 		49BEA2AC4A54A516466B63C4 /* Pods_iTVshows.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iTVshows.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		894A01BC1DF6E4D300B9EA34 /* ShareView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShareView.swift; sourceTree = "<group>"; };
+		894A01BD1DF6E4D300B9EA34 /* ShareViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShareViewCell.swift; sourceTree = "<group>"; };
+		894A01BE1DF6E4D300B9EA34 /* ShareViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShareViewCell.xib; sourceTree = "<group>"; };
+		894A01BF1DF6E4D300B9EA34 /* TFShareView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TFShareView.swift; sourceTree = "<group>"; };
 		894A65A31DEEE2B5004FC2F9 /* FilmListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilmListCell.swift; sourceTree = "<group>"; };
 		894A65A41DEEE2B5004FC2F9 /* FilmListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FilmListCell.xib; sourceTree = "<group>"; };
 		894A65C31DEFE215004FC2F9 /* ArticleDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleDetailViewController.swift; sourceTree = "<group>"; };
@@ -196,10 +200,6 @@
 		896EB5F71DF699F600F54156 /* UMSPlatformListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UMSPlatformListViewController.m; sourceTree = "<group>"; };
 		896EB5F81DF699F600F54156 /* UMSRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UMSRootViewController.h; sourceTree = "<group>"; };
 		896EB5F91DF699F600F54156 /* UMSRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UMSRootViewController.m; sourceTree = "<group>"; };
-		896EB63C1DF6A37B00F54156 /* TFShareView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TFShareView.swift; sourceTree = "<group>"; };
-		896EB63E1DF6BB6700F54156 /* ShareView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShareView.swift; sourceTree = "<group>"; };
-		896EB6401DF6BFB500F54156 /* ShareViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShareViewCell.swift; sourceTree = "<group>"; };
-		896EB6411DF6BFB500F54156 /* ShareViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShareViewCell.xib; sourceTree = "<group>"; };
 		896EB6881DF6DEB900F54156 /* libSocialEmail.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libSocialEmail.a; sourceTree = "<group>"; };
 		896EB6891DF6DEB900F54156 /* UMSocialEmailHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UMSocialEmailHandler.h; sourceTree = "<group>"; };
 		896EB68B1DF6DEB900F54156 /* libSocialQQ.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libSocialQQ.a; sourceTree = "<group>"; };
@@ -618,10 +618,10 @@
 				89837CD61DEE90A7009932DA /* ArticleListCell.xib */,
 				89837C9C1DED3AA2009932DA /* ArticleModel.swift */,
 				89837C9E1DED47E9009932DA /* ArticleDetailModel.swift */,
-				896EB63C1DF6A37B00F54156 /* TFShareView.swift */,
-				896EB63E1DF6BB6700F54156 /* ShareView.swift */,
-				896EB6401DF6BFB500F54156 /* ShareViewCell.swift */,
-				896EB6411DF6BFB500F54156 /* ShareViewCell.xib */,
+				894A01BF1DF6E4D300B9EA34 /* TFShareView.swift */,
+				894A01BC1DF6E4D300B9EA34 /* ShareView.swift */,
+				894A01BD1DF6E4D300B9EA34 /* ShareViewCell.swift */,
+				894A01BE1DF6E4D300B9EA34 /* ShareViewCell.xib */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -1126,10 +1126,10 @@
 				FE239E291DF5C587008603FE /* MJRefresh.bundle in Resources */,
 				FE69C4731DE1C464002AA9E5 /* _0000_Settings_tap.png in Resources */,
 				FE69C4761DE1C464002AA9E5 /* icon.png in Resources */,
-				896EB6431DF6BFB500F54156 /* ShareViewCell.xib in Resources */,
 				FE69C4851DE1C464002AA9E5 /* yinxing0.jpg in Resources */,
 				FE69C47A1DE1C464002AA9E5 /* res6.gif in Resources */,
 				FE69C47C1DE1C464002AA9E5 /* umengFile.txt in Resources */,
+				894A01C21DF6E4D300B9EA34 /* ShareViewCell.xib in Resources */,
 				FE69C4801DE1C464002AA9E5 /* UMS_mutilBar@2x.png in Resources */,
 				896EB6B11DF6DEB900F54156 /* WeiboSDK.bundle in Resources */,
 				FE69C4871DE1C464002AA9E5 /* yinxing2.jpg in Resources */,
@@ -1238,7 +1238,6 @@
 				FE239E2D1DF5C587008603FE /* UIScrollView+MJRefresh.m in Sources */,
 				FE239E1C1DF5C587008603FE /* MJRefreshBackFooter.m in Sources */,
 				89837C9F1DED47E9009932DA /* ArticleDetailModel.swift in Sources */,
-				896EB6421DF6BFB500F54156 /* ShareViewCell.swift in Sources */,
 				89837C5F1DEC3A43009932DA /* String-Extension.swift in Sources */,
 				FE239E2B1DF5C587008603FE /* NSBundle+MJRefresh.m in Sources */,
 				FE239E201DF5C587008603FE /* MJRefreshAutoGifFooter.m in Sources */,
@@ -1251,28 +1250,29 @@
 				89C5DF921DE31B3700A39210 /* BaseTableViewController.swift in Sources */,
 				89837CCE1DEDABC9009932DA /* LinkModel.swift in Sources */,
 				89837C971DEC557E009932DA /* ScheduleModel.swift in Sources */,
-				896EB63D1DF6A37B00F54156 /* TFShareView.swift in Sources */,
 				895993E11DF274A9009BBDB0 /* TestWebViewController.swift in Sources */,
 				FE239E241DF5C587008603FE /* MJRefreshBackNormalFooter.m in Sources */,
 				FE239E271DF5C587008603FE /* MJRefreshNormalHeader.m in Sources */,
 				89C5DFA21DE31E1700A39210 /* MeViewController.swift in Sources */,
+				894A01C01DF6E4D300B9EA34 /* ShareView.swift in Sources */,
 				89C5DF901DE3108B00A39210 /* BaseViewController.swift in Sources */,
 				FE239E251DF5C587008603FE /* MJRefreshBackStateFooter.m in Sources */,
 				894A65A51DEEE2B5004FC2F9 /* FilmListCell.swift in Sources */,
 				FE239E261DF5C587008603FE /* MJRefreshGifHeader.m in Sources */,
 				FE239E211DF5C587008603FE /* MJRefreshAutoNormalFooter.m in Sources */,
 				FEA4EB3D1DEF188B0077DDA1 /* LoadingView.swift in Sources */,
+				894A01C11DF6E4D300B9EA34 /* ShareViewCell.swift in Sources */,
 				894A65C41DEFE215004FC2F9 /* ArticleDetailViewController.swift in Sources */,
 				FE239E231DF5C587008603FE /* MJRefreshBackGifFooter.m in Sources */,
 				89C5DF941DE31CB700A39210 /* HomeViewController.swift in Sources */,
 				FEDE0EF61DDF5B0C00266EF3 /* ViewController.swift in Sources */,
 				FE239E2A1DF5C587008603FE /* MJRefreshConst.m in Sources */,
-				896EB63F1DF6BB6700F54156 /* ShareView.swift in Sources */,
 				FEA4EB3B1DEF188B0077DDA1 /* ErrorView.swift in Sources */,
 				895993E51DF274E1009BBDB0 /* BaseNaviBar.swift in Sources */,
 				896EB6331DF699F700F54156 /* UMShareTypeViewController.m in Sources */,
 				895993E31DF274CF009BBDB0 /* UIImage+Extension.swift in Sources */,
 				89837CD71DEE90A7009932DA /* ArticleListCell.swift in Sources */,
+				894A01C31DF6E4D300B9EA34 /* TFShareView.swift in Sources */,
 				8972EC7A1DE428C3009F0C58 /* TestRefreshController.swift in Sources */,
 				89837CDA1DEE934B009932DA /* TFCommon.swift in Sources */,
 				89837C9D1DED3AA2009932DA /* ArticleModel.swift in Sources */,

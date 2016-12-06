@@ -33,7 +33,7 @@ class LoadingView: UIView {
     }
 
     override func draw(_ rect: CGRect) {
-        print("progress--draw:\(progress),--:\(progress % 3)")
+//        print("progress--draw:\(progress),--:\(progress % 3)")
 
         
         let point2 = self.center

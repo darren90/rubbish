@@ -22,13 +22,17 @@ class ShareViewCell: UICollectionViewCell {
             let image = UIImage(named: model?.name ?? "")
             iconBtn.setImage(image, for: .normal)
 
+            let bgImage = UIImage(named: model?.name ?? "" + "_hover")
+            iconBtn.setBackgroundImage(bgImage, for: .normal)
+
             titleL.text = model?.title
         }
     }
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+
+        self.iconBtn.imageView?.contentMode = .scaleAspectFill
     }
 
 

@@ -86,29 +86,30 @@ class HomeViewController: BaseTableViewController {
     func shareText (){
 
         //授权
-        UMSocialManager.default().getUserInfo(with: .sina, currentViewController: self){(data , error ) in
-            if error == nil && data != nil {
-                let resp : UMSocialUserInfoResponse = data as! UMSocialUserInfoResponse
-                //授权信息
-                print("---Sina,uid\(resp.uid)")
-                print("---Sina,accessToken\(resp.accessToken)")
-                print("---Sina,refreshToken\(resp.refreshToken)")
-
-                //用户信息
-                print("---Sina,name\(resp.name)")
-                print("---Sina,iconurl\(resp.iconurl)")
-                print("---Sina,gender\(resp.gender)")
-
-                //第三方平台SDK源数据
-                print("---Sina,originalResponse\(resp.originalResponse)")
-
-            }
-        }
-
-//        let shareView = TFShareView.init(frame: CGRect(x: 0, y: 0, width: SCREEN_WIDTH, height: SCREEN_HEIGHT))
-//        shareView.setShareModel(UMENG_INVITE_SHARE_TEXT, image: UIImage(named: "share_logo")!, url: ABOUT_US_URL, title: UMENG_SHARE_TEXT)
+//        UMSocialManager.default().getUserInfo(with: .sina, currentViewController: self){(data , error ) in
+//            if error == nil && data != nil {
+//                let resp : UMSocialUserInfoResponse = data as! UMSocialUserInfoResponse
+//                //授权信息
+//                print("---Sina,uid\(resp.uid)")
+//                print("---Sina,accessToken\(resp.accessToken)")
+//                print("---Sina,refreshToken\(resp.refreshToken)")
 //
-//        shareView.showInViewController(self)
+//                //用户信息
+//                print("---Sina,name\(resp.name)")
+//                print("---Sina,iconurl\(resp.iconurl)")
+//                print("---Sina,gender\(resp.gender)")
+//
+//                //第三方平台SDK源数据
+//                print("---Sina,originalResponse\(resp.originalResponse)")
+//
+//            }
+//        }
+
+        let shareView = TFShareView.init(frame: CGRect(x: 0, y: 0, width: SCREEN_WIDTH, height: SCREEN_HEIGHT))
+        shareView.setShareModel(UMENG_INVITE_SHARE_TEXT, image: UIImage(named: "share_logo")!, url: ABOUT_US_URL, title: UMENG_SHARE_TEXT)
+
+
+        shareView.showInView(UIApplication.shared.keyWindow!)
 
 
 //        let text = "share社会化组件U-Share将各大社交平台接入您的应用";
