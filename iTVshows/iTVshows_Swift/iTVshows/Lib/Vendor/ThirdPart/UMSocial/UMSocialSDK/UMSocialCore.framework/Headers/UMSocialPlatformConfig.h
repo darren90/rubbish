@@ -21,6 +21,11 @@ extern NSString *const  UMSPlatformNameSina;
 extern NSString *const  UMSPlatformNameTencentWb;
 
 /**
+ 钉钉
+ */
+extern NSString *const  UMSPlatformNameDingDing;
+
+/**
  人人网
  */
 extern NSString *const  UMSPlatformNameRenren;
@@ -285,6 +290,7 @@ typedef NS_ENUM(NSInteger,UMSocialPlatformType)
     UMSocialPlatformType_Tumblr             = 24,//Tumblr
     UMSocialPlatformType_Instagram          = 25,//Instagram
     UMSocialPlatformType_Whatsapp           = 26,//Whatsapp
+    UMSocialPlatformType_DingDing           = 27,//钉钉
     UMSocialPlatformType_Predefine_end      = 999,
     
     //用户自定义的平台

@@ -14,9 +14,17 @@
 
 #import "UMMobClick/MobClick.h"
 
-#import <UMSocialCore/UMSocialCore.h>
+
+//友盟
+//#import <UMSocialCore/UMSocialCore.h>
 //#import "UMSocialUIManager.h"
 #import "UMSocialSinaHandler.h"
+//#import "UMSocialUIManager.h"
+#import <UMSocialCore/UMSocialCore.h>
+#import <UShareUI/UShareUI.h>
+//#import "UMSocialUserInfoResponse.h"
+#import "WXApi.h"
+#import <TencentOpenAPI/TencentOAuth.h>
 
 
 

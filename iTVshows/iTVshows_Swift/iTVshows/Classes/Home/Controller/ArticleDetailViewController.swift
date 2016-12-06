@@ -60,9 +60,8 @@ class ArticleDetailViewController: BaseViewController,UIScrollViewDelegate ,UIWe
         }
 
         ArticleDetailModel.getArticleDetail(id: articleId!){ (model : ArticleDetailModel?, error : NSError?) in
-//            print("detailModel:\(model)")
             if error == nil {
-//                self.errorType = .None
+                self.errorType = .None
                 self.loadSuccess(model: model!)
             }else{
                 self.errorType = .Default

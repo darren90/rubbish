@@ -28,8 +28,6 @@ class FilmDetailViewController: BaseTableViewController {
         }
     }
 
-
-
 }
 
 extension FilmDetailViewController {

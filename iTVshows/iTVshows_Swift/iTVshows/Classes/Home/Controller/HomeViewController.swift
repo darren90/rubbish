@@ -36,6 +36,8 @@ class HomeViewController: BaseTableViewController {
         
         navTitleStr = "首页"
 
+        rightTitle = "Share"
+
         tableView.rowHeight = 120
 
         view.backgroundColor = KBgViewColor
@@ -68,11 +70,67 @@ class HomeViewController: BaseTableViewController {
             }
         }
     }
+
+    override func rightBtnClick() {
+        shareText()
+    }
+
+    let UMENG_SHARE_TEXT = "分享标题"
+    let UMENG_INVITE_SHARE_TEXT = "分享内容"
+    let ABOUT_US_URL = "http://www.baidu.com"
+
+    //获取屏幕的 高度、宽度
+    let SCREEN_WIDTH = UIScreen.main.bounds.size.width
+    let SCREEN_HEIGHT = UIScreen.main.bounds.size.height
+
+    func shareText (){
+
+        //授权
+        UMSocialManager.default().getUserInfo(with: .sina, currentViewController: self){(data , error ) in
+            if error == nil && data != nil {
+                let resp : UMSocialUserInfoResponse = data as! UMSocialUserInfoResponse
+                //授权信息
+                print("---Sina,uid\(resp.uid)")
+                print("---Sina,accessToken\(resp.accessToken)")
+                print("---Sina,refreshToken\(resp.refreshToken)")
+
+                //用户信息
+                print("---Sina,name\(resp.name)")
+                print("---Sina,iconurl\(resp.iconurl)")
+                print("---Sina,gender\(resp.gender)")
+
+                //第三方平台SDK源数据
+                print("---Sina,originalResponse\(resp.originalResponse)")
+
+            }
+        }
+
+//        let shareView = TFShareView.init(frame: CGRect(x: 0, y: 0, width: SCREEN_WIDTH, height: SCREEN_HEIGHT))
+//        shareView.setShareModel(UMENG_INVITE_SHARE_TEXT, image: UIImage(named: "share_logo")!, url: ABOUT_US_URL, title: UMENG_SHARE_TEXT)
+//
+//        shareView.showInViewController(self)
+
+
+//        let text = "share社会化组件U-Share将各大社交平台接入您的应用";
+//        let messageObject = UMSocialMessageObject.init()
+//        messageObject.text = text;
+//        UMSocialManager.default().share(to: .wechatSession, messageObject: messageObject, currentViewController: self){(data , error) in
+//            var msg = "分享成功"
+//            if (error != nil){
+//                msg = "分享失败"
+//            }else{
+//                print("share error:\(error)")
+//            }
+////            UIAlertView(title: "share", message: msg, delegate: nil, cancelButtonTitle: "sure", otherButtonTitles: "sss", nil)
+//
+//        }
+    }
+
 }
 
 // MARK: -- 刷新控件相关
 extension HomeViewController {
-    
+
     func addReFreshControl() {
         //下拉刷新相关设置
         header.setRefreshingTarget(self, refreshingAction: #selector(HomeViewController.headerRefresh))
@@ -125,9 +183,7 @@ extension HomeViewController  {
 
         tableView.deselectRow(at: indexPath, animated: true)
     }
-
 }
-
 
 extension HomeViewController {
     //播放启动画面动画
