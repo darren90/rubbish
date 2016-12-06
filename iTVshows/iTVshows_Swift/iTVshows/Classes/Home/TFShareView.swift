@@ -12,7 +12,7 @@ class TFShareView: UIView , UICollectionViewDelegate,UICollectionViewDataSource 
 
     //外部参数
     fileprivate var shareContent:String!
-    fileprivate var shareImage:UIImage!
+    fileprivate var shareImage:String!
     fileprivate var shareUrl:String!
     fileprivate var shareTitle:String!
 
@@ -33,19 +33,28 @@ class TFShareView: UIView , UICollectionViewDelegate,UICollectionViewDataSource 
         self.bgView.backgroundColor = UIColor.black
         self.bgView.alpha = 0.0
         self.addSubview(self.bgView)
-
+        
+        // 制作数据源
+        setUpArray()
+        
+        let marign:CGFloat = 30
+        let width = (self.frame.width - (3 + 1) * marign - 20) / 3
+        let height:CGFloat = (width + 20)
+        
+        let row:CGFloat = dataArray.count > 3 ? 2: 1
+        
+        let containViewH = height * row + 18
+        
+        self.contentHeight = containViewH + 44 + 1
+        let containViewY = self.contentHeight - (containViewH + 44 + 1);
+        
         let tapGesture = UITapGestureRecognizer.init(target: self, action: #selector(self.bgViewTapped))
         self.bgView.addGestureRecognizer(tapGesture)
 
         self.contentView = UIView.init(frame: CGRect(x: 0, y: frame.height, width: frame.width, height: contentHeight))
         self.contentView.backgroundColor = UIColor.groupTableViewBackground
+//        self.contentView.backgroundColor = UIColor.brown
         self.addSubview(self.contentView)
-
-        let sharePaltformArray = [
-            [ "share_weixin", "share_friend", "share_sina" , "share_qq", "share_zone"],
-            [ "微信","朋友圈", "微博", "QQ", "QQ空间"]
-        ]
-
 
         // 1 - add CancleBtn
         let cancelBtn = UIButton(type:.custom)
@@ -65,30 +74,25 @@ class TFShareView: UIView , UICollectionViewDelegate,UICollectionViewDataSource 
         self.containView?.addSubview(lienView)
 
         // 3 - addCollection
-        let marign:CGFloat = 10
-        let width = (self.frame.width - (3 + 1) * marign) / 3
-        let height:CGFloat = (width + 20)
 
-        let containViewY = self.contentView.frame.height - (height * 2 + cancelBtn.frame.height + lienView.frame.height);
 
         let layout = UICollectionViewFlowLayout()
-        layout.minimumLineSpacing = 0
+        layout.minimumLineSpacing = 5
         layout.minimumInteritemSpacing = 10
         layout.itemSize = CGSize(width: width, height: height)
-        layout.sectionInset = UIEdgeInsets(top: marign, left: marign, bottom: marign, right: marign)
-
-        let rect = CGRect(x: 0, y: containViewY, width: self.contentView.frame.width, height: height * 2)
+        layout.sectionInset = UIEdgeInsets(top: 10, left: marign + 10, bottom: marign, right: marign + 10)
+        
+        let rect = CGRect(x: 0, y: containViewY, width: self.contentView.frame.width, height: containViewH)
         containView = UICollectionView(frame: rect, collectionViewLayout: layout)
         containView?.delegate = self
         containView?.dataSource = self
         containView?.backgroundColor = KBgViewColor
-//        containView?.backgroundColor = UIColor.w
+        containView?.isScrollEnabled = false
 
         containView?.register(UINib(nibName: "ShareViewCell", bundle: nil), forCellWithReuseIdentifier: "ShareViewCell")
         self.contentView.addSubview(containView!)
-
-        // 制作数据源
-        setUpArray()
+ 
+        containView?.reloadData()
     }
 
     func setUpArray(){
@@ -110,15 +114,13 @@ class TFShareView: UIView , UICollectionViewDelegate,UICollectionViewDataSource 
         }
 
         let sina = ShareModel.share(name: "share_sina", title: "微博" , type: .sina)
-        let copy = ShareModel.share(name: "share_logo", title: "拷贝",type: .facebook)
+        let copy = ShareModel.share(name: "share_friend-1", title: "拷贝",type: .facebook)
         dataArray.append(sina)
         dataArray.append(copy)
-
-        containView?.reloadData()
     }
 
 
-    func setShareModel(_ content:String , image:UIImage , url:String , title:String) {
+    func setShareModel(_ content:String , image:String , url:String , title:String) {
 
         self.shareContent = content
         self.shareImage = image
@@ -146,9 +148,43 @@ class TFShareView: UIView , UICollectionViewDelegate,UICollectionViewDataSource 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let model = dataArray[indexPath.item]
 
-//        shareText(model: model)
-
+        shareText(model: model)
     }
+    
+    // MARK:-- 分享开始
+    func shareText(model:ShareModel) {
+        
+        if model.type == .facebook {
+            let board = UIPasteboard.general
+            board.string = "复制了，，，"
+            
+            return;
+        }
+        let title = shareTitle
+        let content = shareContent
+        let imagUrl = shareImage
+        let shareUrl = self.shareUrl
+        
+        let messageObject = UMSocialMessageObject.init()
+        let shareObject = UMShareWebpageObject.shareObject(withTitle: title, descr: content, thumImage: imagUrl)
+        shareObject?.webpageUrl = shareUrl
+        
+        if imagUrl?.characters.count == 0 {
+            shareObject?.thumbImage = UIImage(named: "share_friend_hover")
+        }
+        
+        messageObject.shareObject = shareObject;
+        UMSocialManager.default().share(to: model.type!, messageObject: messageObject, currentViewController: self){(data , error) in
+            var msg = "分享成功"
+            if (error != nil){
+                msg = "分享失败"
+                print(msg)
+            }else{
+                print("share error:\(error)")
+            }
+        }
+    }
+
 
     /**
      遮罩背景响应事件

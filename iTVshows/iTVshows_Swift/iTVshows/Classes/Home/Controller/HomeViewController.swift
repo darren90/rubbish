@@ -106,7 +106,7 @@ class HomeViewController: BaseTableViewController {
 //        }
 
         let shareView = TFShareView.init(frame: CGRect(x: 0, y: 0, width: SCREEN_WIDTH, height: SCREEN_HEIGHT))
-        shareView.setShareModel(UMENG_INVITE_SHARE_TEXT, image: UIImage(named: "share_logo")!, url: ABOUT_US_URL, title: UMENG_SHARE_TEXT)
+        shareView.setShareModel(UMENG_INVITE_SHARE_TEXT, image: "share_logo", url: ABOUT_US_URL, title: UMENG_SHARE_TEXT)
 
 
         shareView.showInView(UIApplication.shared.keyWindow!)

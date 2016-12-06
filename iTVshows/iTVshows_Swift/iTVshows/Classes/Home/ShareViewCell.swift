@@ -8,23 +8,29 @@
 
 import UIKit
 
+ 
+
 class ShareViewCell: UICollectionViewCell {
-    @IBOutlet weak var iconBtn: UIButton!
+    
+    @IBOutlet weak var iconView: UIImageView!
+//    @IBOutlet weak var iconBtn: UIButton!
 
     @IBOutlet weak var titleL: UILabel!
     
-    @IBAction func iconBtnClick(_ sender: UIButton) {
-
-    }
+//    @IBAction func iconBtnClick(_ sender: UIButton) {
+//
+//    }
 
     var model:ShareModel?{
         didSet{
-            let image = UIImage(named: model?.name ?? "")
-            iconBtn.setImage(image, for: .normal)
+//            let image = UIImage(named: model?.name ?? "")
+//            iconBtn.setImage(image, for: .normal)
+//
+//            let bgImage = UIImage(named: model?.name ?? "" + "_hover")
+//            iconBtn.setBackgroundImage(bgImage, for: .normal)
+//            iconBtn.backgroundColor = KRandomColor
 
-            let bgImage = UIImage(named: model?.name ?? "" + "_hover")
-            iconBtn.setBackgroundImage(bgImage, for: .normal)
-
+            iconView.image = UIImage(named: model?.name ?? "")
             titleL.text = model?.title
         }
     }
@@ -32,7 +38,7 @@ class ShareViewCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
 
-        self.iconBtn.imageView?.contentMode = .scaleAspectFill
+//        self.iconBtn.imageView?.contentMode = .scaleAspectFill
     }
 
 
