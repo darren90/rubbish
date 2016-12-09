@@ -85,6 +85,12 @@ class HomeViewController: BaseTableViewController {
 
     func shareText (){
 
+//        let murmur = Murmur(title: "This is a permanent whistle...",
+//                            backgroundColor: UIColor.red,
+//                            titleColor: UIColor.white)
+//
+//        Whisper.show(whistle: murmur, action: .present)
+
         //授权
 //        UMSocialManager.default().getUserInfo(with: .sina, currentViewController: self){(data , error ) in
 //            if error == nil && data != nil {
@@ -127,6 +133,9 @@ class HomeViewController: BaseTableViewController {
 //        }
     }
 
+
+//    http://djyde.github.io/2016/02/16/how-do-i-detect-app-price/
+//    http://www.jianshu.com/p/662dd49d82b6
 }
 
 // MARK: -- 刷新控件相关

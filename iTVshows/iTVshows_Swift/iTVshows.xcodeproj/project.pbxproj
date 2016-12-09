@@ -11,6 +11,15 @@
 		894A01C11DF6E4D300B9EA34 /* ShareViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894A01BD1DF6E4D300B9EA34 /* ShareViewCell.swift */; };
 		894A01C21DF6E4D300B9EA34 /* ShareViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 894A01BE1DF6E4D300B9EA34 /* ShareViewCell.xib */; };
 		894A01C31DF6E4D300B9EA34 /* TFShareView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894A01BF1DF6E4D300B9EA34 /* TFShareView.swift */; };
+		894A01D21DF9415100B9EA34 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894A01C81DF9415100B9EA34 /* Config.swift */; };
+		894A01D31DF9415100B9EA34 /* ColorList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894A01CA1DF9415100B9EA34 /* ColorList.swift */; };
+		894A01D41DF9415100B9EA34 /* FontList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894A01CB1DF9415100B9EA34 /* FontList.swift */; };
+		894A01D51DF9415100B9EA34 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894A01CC1DF9415100B9EA34 /* Message.swift */; };
+		894A01D61DF9415100B9EA34 /* ShoutFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894A01CD1DF9415100B9EA34 /* ShoutFactory.swift */; };
+		894A01D71DF9415100B9EA34 /* Showing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894A01CE1DF9415100B9EA34 /* Showing.swift */; };
+		894A01D81DF9415100B9EA34 /* WhisperFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894A01CF1DF9415100B9EA34 /* WhisperFactory.swift */; };
+		894A01D91DF9415100B9EA34 /* WhisperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894A01D01DF9415100B9EA34 /* WhisperView.swift */; };
+		894A01DA1DF9415100B9EA34 /* WhistleFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894A01D11DF9415100B9EA34 /* WhistleFactory.swift */; };
 		894A65A51DEEE2B5004FC2F9 /* FilmListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894A65A31DEEE2B5004FC2F9 /* FilmListCell.swift */; };
 		894A65A61DEEE2B5004FC2F9 /* FilmListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 894A65A41DEEE2B5004FC2F9 /* FilmListCell.xib */; };
 		894A65C41DEFE215004FC2F9 /* ArticleDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894A65C31DEFE215004FC2F9 /* ArticleDetailViewController.swift */; };
@@ -159,6 +168,15 @@
 		894A01BD1DF6E4D300B9EA34 /* ShareViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShareViewCell.swift; sourceTree = "<group>"; };
 		894A01BE1DF6E4D300B9EA34 /* ShareViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShareViewCell.xib; sourceTree = "<group>"; };
 		894A01BF1DF6E4D300B9EA34 /* TFShareView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TFShareView.swift; sourceTree = "<group>"; };
+		894A01C81DF9415100B9EA34 /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		894A01CA1DF9415100B9EA34 /* ColorList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorList.swift; sourceTree = "<group>"; };
+		894A01CB1DF9415100B9EA34 /* FontList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontList.swift; sourceTree = "<group>"; };
+		894A01CC1DF9415100B9EA34 /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		894A01CD1DF9415100B9EA34 /* ShoutFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShoutFactory.swift; sourceTree = "<group>"; };
+		894A01CE1DF9415100B9EA34 /* Showing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Showing.swift; sourceTree = "<group>"; };
+		894A01CF1DF9415100B9EA34 /* WhisperFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WhisperFactory.swift; sourceTree = "<group>"; };
+		894A01D01DF9415100B9EA34 /* WhisperView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WhisperView.swift; sourceTree = "<group>"; };
+		894A01D11DF9415100B9EA34 /* WhistleFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WhistleFactory.swift; sourceTree = "<group>"; };
 		894A65A31DEEE2B5004FC2F9 /* FilmListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilmListCell.swift; sourceTree = "<group>"; };
 		894A65A41DEEE2B5004FC2F9 /* FilmListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FilmListCell.xib; sourceTree = "<group>"; };
 		894A65C31DEFE215004FC2F9 /* ArticleDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleDetailViewController.swift; sourceTree = "<group>"; };
@@ -398,6 +416,30 @@
 				3D1BBDE993ABBB2CD5027313 /* Pods-iTVshows.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		894A01C71DF9415100B9EA34 /* Whisper */ = {
+			isa = PBXGroup;
+			children = (
+				894A01C81DF9415100B9EA34 /* Config.swift */,
+				894A01C91DF9415100B9EA34 /* Configuration */,
+				894A01CC1DF9415100B9EA34 /* Message.swift */,
+				894A01CD1DF9415100B9EA34 /* ShoutFactory.swift */,
+				894A01CE1DF9415100B9EA34 /* Showing.swift */,
+				894A01CF1DF9415100B9EA34 /* WhisperFactory.swift */,
+				894A01D01DF9415100B9EA34 /* WhisperView.swift */,
+				894A01D11DF9415100B9EA34 /* WhistleFactory.swift */,
+			);
+			path = Whisper;
+			sourceTree = "<group>";
+		};
+		894A01C91DF9415100B9EA34 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				894A01CA1DF9415100B9EA34 /* ColorList.swift */,
+				894A01CB1DF9415100B9EA34 /* FontList.swift */,
+			);
+			path = Configuration;
 			sourceTree = "<group>";
 		};
 		89837C931DEC5287009932DA /* Schedule */ = {
@@ -817,6 +859,7 @@
 		FE69C4111DE14EC3002AA9E5 /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
+				894A01C71DF9415100B9EA34 /* Whisper */,
 				FE239DBB1DF5C587008603FE /* ThirdPart */,
 			);
 			path = Vendor;
@@ -1181,6 +1224,7 @@
 				FE239E2D1DF5C587008603FE /* UIScrollView+MJRefresh.m in Sources */,
 				FE239E1C1DF5C587008603FE /* MJRefreshBackFooter.m in Sources */,
 				89837C9F1DED47E9009932DA /* ArticleDetailModel.swift in Sources */,
+				894A01D71DF9415100B9EA34 /* Showing.swift in Sources */,
 				89837C5F1DEC3A43009932DA /* String-Extension.swift in Sources */,
 				FE239E2B1DF5C587008603FE /* NSBundle+MJRefresh.m in Sources */,
 				FE239E201DF5C587008603FE /* MJRefreshAutoGifFooter.m in Sources */,
@@ -1190,6 +1234,7 @@
 				FE239E2C1DF5C587008603FE /* UIScrollView+MJExtension.m in Sources */,
 				FE239E881DF6FF6A008603FE /* UMShareViewController.m in Sources */,
 				89837C951DEC52B9009932DA /* ScheduleViewController.swift in Sources */,
+				894A01D61DF9415100B9EA34 /* ShoutFactory.swift in Sources */,
 				89837CA21DED49D5009932DA /* FilmResModel.swift in Sources */,
 				89C5DF921DE31B3700A39210 /* BaseTableViewController.swift in Sources */,
 				89837CCE1DEDABC9009932DA /* LinkModel.swift in Sources */,
@@ -1204,9 +1249,11 @@
 				FE239E251DF5C587008603FE /* MJRefreshBackStateFooter.m in Sources */,
 				894A65A51DEEE2B5004FC2F9 /* FilmListCell.swift in Sources */,
 				FE239E261DF5C587008603FE /* MJRefreshGifHeader.m in Sources */,
+				894A01DA1DF9415100B9EA34 /* WhistleFactory.swift in Sources */,
 				FE239E211DF5C587008603FE /* MJRefreshAutoNormalFooter.m in Sources */,
 				FEA4EB3D1DEF188B0077DDA1 /* LoadingView.swift in Sources */,
 				894A01C11DF6E4D300B9EA34 /* ShareViewCell.swift in Sources */,
+				894A01D31DF9415100B9EA34 /* ColorList.swift in Sources */,
 				FE239E891DF6FF6A008603FE /* UMSPlatformListViewController.m in Sources */,
 				FE239E871DF6FF6A008603FE /* UMShareTypeViewController.m in Sources */,
 				894A65C41DEFE215004FC2F9 /* ArticleDetailViewController.swift in Sources */,
@@ -1220,17 +1267,22 @@
 				895993E31DF274CF009BBDB0 /* UIImage+Extension.swift in Sources */,
 				89837CD71DEE90A7009932DA /* ArticleListCell.swift in Sources */,
 				894A01C31DF6E4D300B9EA34 /* TFShareView.swift in Sources */,
+				894A01D91DF9415100B9EA34 /* WhisperView.swift in Sources */,
 				8972EC7A1DE428C3009F0C58 /* TestRefreshController.swift in Sources */,
 				89837CDA1DEE934B009932DA /* TFCommon.swift in Sources */,
 				89837C9D1DED3AA2009932DA /* ArticleModel.swift in Sources */,
 				FE239E2E1DF5C587008603FE /* UIView+MJExtension.m in Sources */,
+				894A01D51DF9415100B9EA34 /* Message.swift in Sources */,
 				FEDE0EF41DDF5B0C00266EF3 /* AppDelegate.swift in Sources */,
 				89837CCA1DED8D3D009932DA /* FilmViewController.swift in Sources */,
 				FE239E1F1DF5C587008603FE /* MJRefreshHeader.m in Sources */,
+				894A01D81DF9415100B9EA34 /* WhisperFactory.swift in Sources */,
 				FE239E281DF5C587008603FE /* MJRefreshStateHeader.m in Sources */,
 				89837C9A1DED31CF009932DA /* ScheduleCell.swift in Sources */,
+				894A01D41DF9415100B9EA34 /* FontList.swift in Sources */,
 				FE239E1B1DF5C587008603FE /* MJRefreshAutoFooter.m in Sources */,
 				89C5DFA51DE3F15200A39210 /* APINetTools.swift in Sources */,
+				894A01D21DF9415100B9EA34 /* Config.swift in Sources */,
 				FE239E1E1DF5C587008603FE /* MJRefreshFooter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
