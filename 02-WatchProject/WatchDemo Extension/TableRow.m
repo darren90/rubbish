@@ -10,11 +10,20 @@
 
 @interface TableRow()
 
-@property (unsafe_unretained, nonatomic) IBOutlet WKInterfaceTable *tab;
-@property (nonatomic, strong) NSMutableArray *bookArray;
+
+@property (unsafe_unretained, nonatomic) IBOutlet WKInterfaceLabel *titleL;
+@property (unsafe_unretained, nonatomic) IBOutlet WKInterfaceLabel *numLab;
 
 @end
 
 @implementation TableRow
+
+-(void)setTableModel:(TableModel *)tableModel
+{
+    _tableModel = tableModel;
+    
+    [_titleL setText:tableModel.title];
+    [_numLab setText:tableModel.price];
+}
 
 @end

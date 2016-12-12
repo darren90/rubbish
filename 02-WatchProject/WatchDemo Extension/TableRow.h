@@ -8,9 +8,10 @@
 
 #import <Foundation/Foundation.h>
 #import <WatchKit/WatchKit.h>
+#import "TableModel.h"
 
 @interface TableRow : NSObject
 
-@property (unsafe_unretained, nonatomic) IBOutlet WKInterfaceLabel *titleL;
+@property (nonatomic, strong) TableModel *tableModel;
 
 @end

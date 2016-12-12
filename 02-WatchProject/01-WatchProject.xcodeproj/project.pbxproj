@@ -27,6 +27,7 @@
 		894A02831DFC052F00B9EA34 /* ThreeInterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 894A02821DFC052F00B9EA34 /* ThreeInterfaceController.m */; };
 		894A02861DFC057F00B9EA34 /* TableRow.m in Sources */ = {isa = PBXBuildFile; fileRef = 894A02851DFC057F00B9EA34 /* TableRow.m */; };
 		89572F191DFED333007FC9BC /* TableModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 89572F181DFED333007FC9BC /* TableModel.m */; };
+		FE1343B81DFEFC8D00D531F6 /* TableDetailInterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE1343B71DFEFC8D00D531F6 /* TableDetailInterfaceController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -124,6 +125,8 @@
 		894A02851DFC057F00B9EA34 /* TableRow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableRow.m; sourceTree = "<group>"; };
 		89572F171DFED333007FC9BC /* TableModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableModel.h; sourceTree = "<group>"; };
 		89572F181DFED333007FC9BC /* TableModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableModel.m; sourceTree = "<group>"; };
+		FE1343B61DFEFC8D00D531F6 /* TableDetailInterfaceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableDetailInterfaceController.h; sourceTree = "<group>"; };
+		FE1343B71DFEFC8D00D531F6 /* TableDetailInterfaceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableDetailInterfaceController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -239,6 +242,8 @@
 			children = (
 				894A02671DFA4CD500B9EA34 /* InterfaceController.h */,
 				894A02681DFA4CD500B9EA34 /* InterfaceController.m */,
+				FE1343B61DFEFC8D00D531F6 /* TableDetailInterfaceController.h */,
+				FE1343B71DFEFC8D00D531F6 /* TableDetailInterfaceController.m */,
 				894A02841DFC057F00B9EA34 /* TableRow.h */,
 				894A02851DFC057F00B9EA34 /* TableRow.m */,
 				89572F171DFED333007FC9BC /* TableModel.h */,
@@ -494,6 +499,7 @@
 				894A02801DFC01AD00B9EA34 /* TwoInterfaceController.m in Sources */,
 				89572F191DFED333007FC9BC /* TableModel.m in Sources */,
 				894A02831DFC052F00B9EA34 /* ThreeInterfaceController.m in Sources */,
+				FE1343B81DFEFC8D00D531F6 /* TableDetailInterfaceController.m in Sources */,
 				894A026F1DFA4CD500B9EA34 /* NotificationController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -17,12 +17,17 @@
                         <table alignment="left" id="Ott-sp-qUA">
                             <items>
                                 <tableRow identifier="TableRow" id="g3h-1a-CYD" customClass="TableRow">
-                                    <group key="rootItem" width="1" alignment="left" id="vFz-XF-pi3">
+                                    <group key="rootItem" width="1" alignment="left" layout="vertical" id="vFz-XF-pi3">
                                         <items>
-                                            <label alignment="left" text="Label" id="NS8-9B-JMq"/>
+                                            <label alignment="left" text="Label" minimumScaleFactor="0.69999999999999996" id="NS8-9B-JMq"/>
+                                            <label alignment="left" text="Label" id="6xm-Mi-1It"/>
                                         </items>
+                                        <connections>
+                                            <segue destination="Fge-9v-mxA" kind="push" id="kzD-TY-rve"/>
+                                        </connections>
                                     </group>
                                     <connections>
+                                        <outlet property="numLab" destination="6xm-Mi-1It" id="94z-SN-vqT"/>
                                         <outlet property="titleL" destination="NS8-9B-JMq" id="Wyt-Ui-tve"/>
                                     </connections>
                                 </tableRow>
@@ -64,6 +69,13 @@
             </objects>
             <point key="canvasLocation" x="214" y="-85"/>
         </scene>
+        <!--Interface Controller-->
+        <scene sceneID="OIs-Pd-9ln">
+            <objects>
+                <controller id="Gpi-xH-CN8"/>
+            </objects>
+            <point key="canvasLocation" x="466" y="-1012"/>
+        </scene>
         <!--ThreeInterfaceController-->
         <scene sceneID="5Xg-lO-s66">
             <objects>
@@ -79,7 +91,23 @@
                     </items>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="497" y="-314"/>
+            <point key="canvasLocation" x="459" y="-544"/>
+        </scene>
+        <!--Table Detail Interface Controller-->
+        <scene sceneID="AQv-vn-nLB">
+            <objects>
+                <controller id="Fge-9v-mxA" customClass="TableDetailInterfaceController">
+                    <items>
+                        <label alignment="left" text="Label" id="Hs6-jv-cNC"/>
+                        <label alignment="left" text="Label" id="dCi-tE-Zqp"/>
+                    </items>
+                    <connections>
+                        <outlet property="numL" destination="dCi-tE-Zqp" id="Zwx-XB-EyR"/>
+                        <outlet property="titleL" destination="Hs6-jv-cNC" id="BQF-DI-PH4"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="489" y="-272"/>
         </scene>
         <!--TwoInterfaceController-->
         <scene sceneID="0eJ-ib-xV5">
