@@ -8,6 +8,13 @@
 
 #import "TableRow.h"
 
+@interface TableRow()
+
+@property (unsafe_unretained, nonatomic) IBOutlet WKInterfaceTable *tab;
+@property (nonatomic, strong) NSMutableArray *bookArray;
+
+@end
+
 @implementation TableRow
 
 @end

@@ -16,8 +16,15 @@
                     <items>
                         <table alignment="left" id="Ott-sp-qUA">
                             <items>
-                                <tableRow id="g3h-1a-CYD">
-                                    <group key="rootItem" width="1" alignment="left" id="vFz-XF-pi3"/>
+                                <tableRow identifier="TableRow" id="g3h-1a-CYD" customClass="TableRow">
+                                    <group key="rootItem" width="1" alignment="left" id="vFz-XF-pi3">
+                                        <items>
+                                            <label alignment="left" text="Label" id="NS8-9B-JMq"/>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="titleL" destination="NS8-9B-JMq" id="Wyt-Ui-tve"/>
+                                    </connections>
                                 </tableRow>
                             </items>
                         </table>
@@ -43,6 +50,16 @@
                         <map height="100" alignment="left" id="pWA-d5-4fP"/>
                         <timer alignment="left" id="pnV-hi-gQP"/>
                     </items>
+                    <menu key="menu" id="IuK-km-35F">
+                        <items>
+                            <menuItem title="Menu Item" icon="info" id="CVM-vc-cVw"/>
+                            <menuItem title="Menu Item" icon="play" id="jpk-ZR-7rd"/>
+                            <menuItem title="Menu Item" icon="pause" id="5Oc-O3-jXl"/>
+                        </items>
+                    </menu>
+                    <connections>
+                        <outlet property="table" destination="Ott-sp-qUA" id="bMq-Qw-5Pw"/>
+                    </connections>
                 </controller>
             </objects>
             <point key="canvasLocation" x="214" y="-85"/>

@@ -10,7 +10,8 @@
 
 
 @interface InterfaceController()
-
+@property (unsafe_unretained, nonatomic) IBOutlet WKInterfaceTable *table;
+@property (nonatomic, strong) NSMutableArray *bookArray;
 @end
 
 

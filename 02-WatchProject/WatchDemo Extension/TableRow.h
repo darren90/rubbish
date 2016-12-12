@@ -7,7 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <WatchKit/WatchKit.h>
 
 @interface TableRow : NSObject
+
+@property (unsafe_unretained, nonatomic) IBOutlet WKInterfaceLabel *titleL;
 
 @end
