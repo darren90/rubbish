@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="11542" systemVersion="16B2657" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+    <device id="watch38" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="watchOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="11508"/>
+    </dependencies>
+    <scenes>
+        <!--Interface Controller-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController">
+                    <items>
+                        <table alignment="left" id="Ott-sp-qUA">
+                            <items>
+                                <tableRow id="g3h-1a-CYD">
+                                    <group key="rootItem" width="1" alignment="left" id="vFz-XF-pi3"/>
+                                </tableRow>
+                            </items>
+                        </table>
+                        <button width="1" alignment="left" title="跳转" id="Z9K-vl-pEt">
+                            <connections>
+                                <action selector="clickAction" destination="AgC-eL-Hgc" id="KHS-or-cSV"/>
+                            </connections>
+                        </button>
+                        <button width="1" alignment="left" title="Table" id="7Qs-vO-w9U">
+                            <connections>
+                                <action selector="goToTable" destination="AgC-eL-Hgc" id="Qx1-8d-lhK"/>
+                            </connections>
+                        </button>
+                        <paymentButton width="1" alignment="left" id="7un-K9-DPn"/>
+                        <imageView alignment="left" id="kUB-Lu-wE6"/>
+                        <switch width="1" alignment="left" value="YES" title="Switch" id="Yq1-c3-PnY"/>
+                        <slider width="1" alignment="left" value="1" maximum="3" steps="3" id="osw-kZ-nKh"/>
+                        <activity alignment="left" id="X4F-Ps-TvD"/>
+                        <dateLabel alignment="left" id="OY4-da-xOQ">
+                            <dateFormatterStyle key="dateStyle" short="YES"/>
+                            <dateFormatterStyle key="timeStyle" short="YES"/>
+                        </dateLabel>
+                        <map height="100" alignment="left" id="pWA-d5-4fP"/>
+                        <timer alignment="left" id="pnV-hi-gQP"/>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="214" y="-85"/>
+        </scene>
+        <!--ThreeInterfaceController-->
+        <scene sceneID="5Xg-lO-s66">
+            <objects>
+                <controller identifier="ThreeInterfaceController" id="lso-ao-qyS" customClass="ThreeInterfaceController">
+                    <items>
+                        <table alignment="left" id="w0t-Tg-w46">
+                            <items>
+                                <tableRow id="l7V-Ww-NHj">
+                                    <group key="rootItem" width="1" alignment="left" id="cHq-2N-aZk"/>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="497" y="-314"/>
+        </scene>
+        <!--TwoInterfaceController-->
+        <scene sceneID="0eJ-ib-xV5">
+            <objects>
+                <controller identifier="TwoInterfaceController" id="v8K-tT-4dn" customClass="TwoInterfaceController">
+                    <items>
+                        <slider width="1" alignment="left" value="1" maximum="3" steps="3" id="bcz-5q-seU"/>
+                        <label alignment="left" text="Label" id="EyE-YK-KCh"/>
+                    </items>
+                    <connections>
+                        <outlet property="titleL" destination="EyE-YK-KCh" id="CG9-jn-5tn"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="483" y="-5"/>
+        </scene>
+        <!--Static Notification Interface Controller-->
+        <scene sceneID="AEw-b0-oYE">
+            <objects>
+                <notificationController id="YCC-NB-fut">
+                    <items>
+                        <label alignment="left" text="Alert Label" id="IdU-wH-bcW"/>
+                    </items>
+                    <notificationCategory key="notificationCategory" identifier="myCategory" id="JfB-70-Muf"/>
+                    <connections>
+                        <outlet property="notificationAlertLabel" destination="IdU-wH-bcW" id="JKC-fr-R95"/>
+                        <segue destination="4sK-HA-Art" kind="relationship" relationship="dynamicNotificationInterface" id="kXh-Jw-8B1"/>
+                    </connections>
+                </notificationController>
+            </objects>
+            <point key="canvasLocation" x="220" y="643"/>
+        </scene>
+        <!--Notification Controller-->
+        <scene sceneID="ZPc-GJ-vnh">
+            <objects>
+                <controller id="4sK-HA-Art" customClass="NotificationController"/>
+            </objects>
+            <point key="canvasLocation" x="663" y="652"/>
+        </scene>
+    </scenes>
+</document>
