@@ -43,16 +43,18 @@
                                 <action selector="goToTable" destination="AgC-eL-Hgc" id="Qx1-8d-lhK"/>
                             </connections>
                         </button>
+                        <button width="1" alignment="left" title="音乐" id="VOH-u0-M7R">
+                            <connections>
+                                <action selector="playMp3" destination="AgC-eL-Hgc" id="5NW-Pt-HWx"/>
+                            </connections>
+                        </button>
                         <paymentButton width="1" alignment="left" id="7un-K9-DPn"/>
                         <imageView alignment="left" id="kUB-Lu-wE6"/>
                         <switch width="1" alignment="left" value="YES" title="Switch" id="Yq1-c3-PnY"/>
-                        <slider width="1" alignment="left" value="1" maximum="3" steps="3" id="osw-kZ-nKh"/>
-                        <activity alignment="left" id="X4F-Ps-TvD"/>
                         <dateLabel alignment="left" id="OY4-da-xOQ">
                             <dateFormatterStyle key="dateStyle" short="YES"/>
                             <dateFormatterStyle key="timeStyle" short="YES"/>
                         </dateLabel>
-                        <map height="100" alignment="left" id="pWA-d5-4fP"/>
                         <timer alignment="left" id="pnV-hi-gQP"/>
                     </items>
                     <menu key="menu" id="IuK-km-35F">

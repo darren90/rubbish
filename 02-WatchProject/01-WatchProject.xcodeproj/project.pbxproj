@@ -27,6 +27,8 @@
 		894A02831DFC052F00B9EA34 /* ThreeInterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 894A02821DFC052F00B9EA34 /* ThreeInterfaceController.m */; };
 		894A02861DFC057F00B9EA34 /* TableRow.m in Sources */ = {isa = PBXBuildFile; fileRef = 894A02851DFC057F00B9EA34 /* TableRow.m */; };
 		89572F191DFED333007FC9BC /* TableModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 89572F181DFED333007FC9BC /* TableModel.m */; };
+		89572F1D1DFFB7F5007FC9BC /* 林海 - 琵琶语.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 89572F1C1DFFB7F5007FC9BC /* 林海 - 琵琶语.mp3 */; };
+		89572F1F1DFFB835007FC9BC /* jack.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 89572F1E1DFFB835007FC9BC /* jack.mp4 */; };
 		FE1343B81DFEFC8D00D531F6 /* TableDetailInterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE1343B71DFEFC8D00D531F6 /* TableDetailInterfaceController.m */; };
 /* End PBXBuildFile section */
 
@@ -125,6 +127,8 @@
 		894A02851DFC057F00B9EA34 /* TableRow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableRow.m; sourceTree = "<group>"; };
 		89572F171DFED333007FC9BC /* TableModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableModel.h; sourceTree = "<group>"; };
 		89572F181DFED333007FC9BC /* TableModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableModel.m; sourceTree = "<group>"; };
+		89572F1C1DFFB7F5007FC9BC /* 林海 - 琵琶语.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "林海 - 琵琶语.mp3"; sourceTree = "<group>"; };
+		89572F1E1DFFB835007FC9BC /* jack.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = jack.mp4; sourceTree = "<group>"; };
 		FE1343B61DFEFC8D00D531F6 /* TableDetailInterfaceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableDetailInterfaceController.h; sourceTree = "<group>"; };
 		FE1343B71DFEFC8D00D531F6 /* TableDetailInterfaceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableDetailInterfaceController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -240,6 +244,8 @@
 		894A02641DFA4CD500B9EA34 /* WatchDemo Extension */ = {
 			isa = PBXGroup;
 			children = (
+				89572F1E1DFFB835007FC9BC /* jack.mp4 */,
+				89572F1C1DFFB7F5007FC9BC /* 林海 - 琵琶语.mp3 */,
 				894A02671DFA4CD500B9EA34 /* InterfaceController.h */,
 				894A02681DFA4CD500B9EA34 /* InterfaceController.m */,
 				FE1343B61DFEFC8D00D531F6 /* TableDetailInterfaceController.h */,
@@ -457,6 +463,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				894A02711DFA4CD500B9EA34 /* Assets.xcassets in Resources */,
+				89572F1F1DFFB835007FC9BC /* jack.mp4 in Resources */,
+				89572F1D1DFFB7F5007FC9BC /* 林海 - 琵琶语.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

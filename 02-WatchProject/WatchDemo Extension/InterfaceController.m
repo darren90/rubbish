@@ -22,9 +22,25 @@
     [super awakeWithContext:context];
 
     // Configure interface objects here.
-    
+
     [self reloadTable];
 }
+
+
+-(IBAction)playMp3{
+    //.mp3 or .mp4
+    NSURL *url = [[NSBundle mainBundle] URLForResource:@"林海 - 琵琶语" withExtension:@".mp3"];
+//    url = [[NSBundle mainBundle] URLForResource:@"jack" withExtension:@".mp4"];
+    NSDictionary *options = @{WKMediaPlayerControllerOptionsAutoplayKey:@YES};
+    [self presentMediaPlayerControllerWithURL:url options:options completion:^(BOOL didPlayToEnd, NSTimeInterval endTime, NSError * _Nullable error) {
+        if (error) {
+            NSLog(@"error = %@",error);
+            return ;
+        }
+        NSLog(@"endTime = %f",endTime);
+    }];
+}
+
 - (IBAction)clickAction {
     NSLog(@"--clickAction---");
 //    TwoInterfaceController
