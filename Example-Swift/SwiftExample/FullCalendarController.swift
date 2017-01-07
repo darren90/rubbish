@@ -30,6 +30,7 @@ class FullCalendarController: UIViewController {
 
 
         loadCalendar()
+        initUI()
     }
 
     override func didReceiveMemoryWarning() {
@@ -67,6 +68,35 @@ extension FullCalendarController {
 //        calendar.appearance.caseOptions = [ .headerUsesUpperCase | .weekdayUsesUpperCase]
         view.addSubview(calendar)
     }
+
+
+    func initUI(){
+        let todayItem = UIBarButtonItem(title: "Today", style: .plain, target: self, action: #selector(self.todayItemClicked))
+
+        let lunarItem = UIBarButtonItem(title: "Today", style: .plain, target: self, action: #selector(self.lunarItemClicked))
+
+        let eventItem = UIBarButtonItem(title: "Today", style: .plain, target: self, action: #selector(self.eventItemClicked))
+
+        navigationItem.rightBarButtonItems = [todayItem,lunarItem,eventItem]
+    }
+
+//MARK: --- 回到今天
+    func todayItemClicked(){
+        calendar.setCurrentPage(Date(), animated: false)
+    }
+
+//MARK: --- 显示农历
+    func lunarItemClicked(){
+
+    }
+
+//MARK: --- 回到事件
+    func eventItemClicked(){
+
+    }
+
+
+
 }
 
 
