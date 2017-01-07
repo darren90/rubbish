@@ -56,24 +56,23 @@ class ScheduleViewController: BaseViewController,UICollectionViewDelegate,UIColl
         }
     }
     
-    
     // MARK:-- CollectionView
     func setUpCollectionView() {
         let marign:CGFloat = 10
-        let width = (self.view.frame.width - 3 * marign) / 2
+        let edgeMargin:CGFloat = 20;
+        let width = (self.view.frame.width -  marign - 2*edgeMargin) / 2
         let height:CGFloat = width * 321 / 240
         
         let layout = UICollectionViewFlowLayout()
         layout.minimumLineSpacing = 10
         layout.minimumInteritemSpacing = 10
         layout.itemSize = CGSize(width: width, height: height)
-        layout.sectionInset = UIEdgeInsets(top: marign, left: marign, bottom: marign, right: marign)
+        layout.sectionInset = UIEdgeInsets(top: marign, left: edgeMargin, bottom: marign+49, right: edgeMargin)
 
         let rect = CGRect(x: 0, y: 64, width: view.frame.width, height: view.frame.height - 64)
         watherView = UICollectionView(frame: rect, collectionViewLayout: layout)
         watherView?.delegate = self
         watherView?.dataSource = self
-//        watherView?.contentInset = UIEdgeInsets(top: 0, left: marign, bottom: 10, right: marign)
         watherView?.backgroundColor = KBgViewColor
         watherView?.register(UINib(nibName: "ScheduleListCell", bundle: nil), forCellWithReuseIdentifier: "ScheduleListCell")
         view.addSubview(watherView!)
