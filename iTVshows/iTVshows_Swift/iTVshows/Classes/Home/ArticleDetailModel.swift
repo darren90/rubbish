@@ -69,8 +69,8 @@ class ArticleDetailModel: NSObject {
         let url = "http://api.ousns.net/article/getinfo?id=\(id)"
 
         APINetTools.GET(urlStr: url, parms: nil) {(result : AnyObject?, error : NSError?) -> () in
-            print("----\(result)")
-            print("----\(error)")
+//            print("----\(result)")
+//            print("----\(error)")
 
             if (error != nil){
                 finish(nil,error)

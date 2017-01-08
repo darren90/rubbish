@@ -13,7 +13,6 @@ class ArticleDetailViewController: BaseViewController,UIScrollViewDelegate ,UIWe
     //MARK: --- 暴露出来的参数
     var articleId:String?
 
-
     //MARK: --- 内部要用的参数
 
     lazy var webView : UIWebView = {
@@ -71,8 +70,15 @@ class ArticleDetailViewController: BaseViewController,UIScrollViewDelegate ,UIWe
     }
 
     func loadSuccess(model:ArticleDetailModel)  {
+        // 加载css的URL路径
+        let css = Bundle.main.url(forResource: "iTVShows", withExtension: "css");
+        // 创建html标签
+        let cssHtml = "<link href=\"\(css!)\" rel=\"stylesheet\">"
+        
+        
         var html = "<html> <head>"
 //        html += "<link rel=\"stylesheet\" href="
+        html += cssHtml
 //        htm l += cssStr
 //        html += "</head>"
         html += "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />"

@@ -76,6 +76,7 @@
 		FE239E2C1DF5C587008603FE /* UIScrollView+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = FE239DEC1DF5C587008603FE /* UIScrollView+MJExtension.m */; };
 		FE239E2D1DF5C587008603FE /* UIScrollView+MJRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = FE239DEE1DF5C587008603FE /* UIScrollView+MJRefresh.m */; };
 		FE239E2E1DF5C587008603FE /* UIView+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = FE239DF01DF5C587008603FE /* UIView+MJExtension.m */; };
+		FE4827521E21FDBB00BC012A /* iTVShows.css in Resources */ = {isa = PBXBuildFile; fileRef = FE4827511E21FDBB00BC012A /* iTVShows.css */; };
 		FE69C4731DE1C464002AA9E5 /* _0000_Settings_tap.png in Resources */ = {isa = PBXBuildFile; fileRef = FE69C45D1DE1C464002AA9E5 /* _0000_Settings_tap.png */; };
 		FE69C4741DE1C464002AA9E5 /* Default-568h@2x-1.png in Resources */ = {isa = PBXBuildFile; fileRef = FE69C45E1DE1C464002AA9E5 /* Default-568h@2x-1.png */; };
 		FE69C4751DE1C464002AA9E5 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FE69C45F1DE1C464002AA9E5 /* Default-568h@2x.png */; };
@@ -237,6 +238,7 @@
 		FE239DEE1DF5C587008603FE /* UIScrollView+MJRefresh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+MJRefresh.m"; sourceTree = "<group>"; };
 		FE239DEF1DF5C587008603FE /* UIView+MJExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+MJExtension.h"; sourceTree = "<group>"; };
 		FE239DF01DF5C587008603FE /* UIView+MJExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+MJExtension.m"; sourceTree = "<group>"; };
+		FE4827511E21FDBB00BC012A /* iTVShows.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = iTVShows.css; sourceTree = "<group>"; };
 		FE69C45D1DE1C464002AA9E5 /* _0000_Settings_tap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = _0000_Settings_tap.png; sourceTree = "<group>"; };
 		FE69C45E1DE1C464002AA9E5 /* Default-568h@2x-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x-1.png"; sourceTree = "<group>"; };
 		FE69C45F1DE1C464002AA9E5 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
@@ -529,6 +531,7 @@
 			isa = PBXGroup;
 			children = (
 				89C5DFA41DE3F15200A39210 /* APINetTools.swift */,
+				FE4827511E21FDBB00BC012A /* iTVShows.css */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -924,6 +927,7 @@
 				FEA4EB3C1DEF188B0077DDA1 /* ErrorView.xib in Resources */,
 				FE69C4771DE1C464002AA9E5 /* iPhone6PlusPortrait.png in Resources */,
 				89837CD81DEE90A7009932DA /* ArticleListCell.xib in Resources */,
+				FE4827521E21FDBB00BC012A /* iTVShows.css in Resources */,
 				FE69C4841DE1C464002AA9E5 /* wechat.jpg in Resources */,
 				FE69C4751DE1C464002AA9E5 /* Default-568h@2x.png in Resources */,
 				FE69C47B1DE1C464002AA9E5 /* test.gif in Resources */,
