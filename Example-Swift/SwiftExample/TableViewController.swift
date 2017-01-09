@@ -17,4 +17,24 @@ class TableViewController: UITableViewController {
         }
     }
 
+    var current = Date()
+    
+    @IBAction func pickAction(_ sender: UIBarButtonItem) {
+        let min = Date().addingTimeInterval(-60 * 60 * 24 * 15)
+        let max = Date().addingTimeInterval(60 * 60 * 24 * 15)
+        let picker = DateTimePicker.show(selected: current, minimumDate: min, maximumDate: max)
+        picker.highlightColor = UIColor(red: 255.0/255.0, green: 138.0/255.0, blue: 138.0/255.0, alpha: 1)
+        picker.doneButtonTitle = "!! DONE DONE !!"
+        picker.todayButtonTitle = "Today"
+        picker.completionHandler = { date in
+            self.current = date
+            let formatter = DateFormatter()
+            formatter.dateFormat = "dd/MM/YYYY" //"HH:mm dd/MM/YYYY"
+            let selectDateStr = formatter.string(from: date)
+            print("selct date :\(selectDateStr)")
+            self.title = formatter.string(from: date)
+        }
+
+    }
+
 }

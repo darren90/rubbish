@@ -31,6 +31,9 @@
 		891D1EB51E20E84A007FEE63 /* FSCalendarStickyHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 891D1EA31E20E84A007FEE63 /* FSCalendarStickyHeader.m */; };
 		891D1EB61E20E84A007FEE63 /* FSCalendarWeekdayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 891D1EA51E20E84A007FEE63 /* FSCalendarWeekdayView.m */; };
 		891D1EB71E20E84A007FEE63 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 891D1EA61E20E84A007FEE63 /* Info.plist */; };
+		895DA0AC1E23AA5A00DF29BD /* DateCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 895DA0A91E23AA5A00DF29BD /* DateCollectionViewCell.swift */; };
+		895DA0AD1E23AA5A00DF29BD /* DateTimePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 895DA0AA1E23AA5A00DF29BD /* DateTimePicker.swift */; };
+		895DA0AE1E23AA5A00DF29BD /* StepCollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 895DA0AB1E23AA5A00DF29BD /* StepCollectionViewFlowLayout.swift */; };
 		EE0954AD1B97DDE0007F6964 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE0954AC1B97DDE0007F6964 /* AppDelegate.swift */; };
 		EE0954AF1B97DDE0007F6964 /* InterfaceBuilderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE0954AE1B97DDE0007F6964 /* InterfaceBuilderViewController.swift */; };
 		EE0954B21B97DDE0007F6964 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE0954B01B97DDE0007F6964 /* Main.storyboard */; };
@@ -90,6 +93,9 @@
 		891D1EA41E20E84A007FEE63 /* FSCalendarWeekdayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSCalendarWeekdayView.h; sourceTree = "<group>"; };
 		891D1EA51E20E84A007FEE63 /* FSCalendarWeekdayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSCalendarWeekdayView.m; sourceTree = "<group>"; };
 		891D1EA61E20E84A007FEE63 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		895DA0A91E23AA5A00DF29BD /* DateCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateCollectionViewCell.swift; sourceTree = "<group>"; };
+		895DA0AA1E23AA5A00DF29BD /* DateTimePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateTimePicker.swift; sourceTree = "<group>"; };
+		895DA0AB1E23AA5A00DF29BD /* StepCollectionViewFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StepCollectionViewFlowLayout.swift; sourceTree = "<group>"; };
 		EE0954A71B97DDE0007F6964 /* SwiftExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE0954AB1B97DDE0007F6964 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EE0954AC1B97DDE0007F6964 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -161,6 +167,16 @@
 			path = FSCalendar;
 			sourceTree = "<group>";
 		};
+		895DA0A81E23AA5A00DF29BD /* DatePicker */ = {
+			isa = PBXGroup;
+			children = (
+				895DA0AA1E23AA5A00DF29BD /* DateTimePicker.swift */,
+				895DA0A91E23AA5A00DF29BD /* DateCollectionViewCell.swift */,
+				895DA0AB1E23AA5A00DF29BD /* StepCollectionViewFlowLayout.swift */,
+			);
+			path = DatePicker;
+			sourceTree = "<group>";
+		};
 		EE09549E1B97DDE0007F6964 = {
 			isa = PBXGroup;
 			children = (
@@ -182,6 +198,7 @@
 		EE0954A91B97DDE0007F6964 /* SwiftExample */ = {
 			isa = PBXGroup;
 			children = (
+				895DA0A81E23AA5A00DF29BD /* DatePicker */,
 				891D1E851E20E84A007FEE63 /* FSCalendar */,
 				EE0954AC1B97DDE0007F6964 /* AppDelegate.swift */,
 				303478381DB520C8007BBD2E /* TableViewController.swift */,
@@ -276,6 +293,7 @@
 				TargetAttributes = {
 					EE0954A61B97DDE0007F6964 = {
 						CreatedOnToolsVersion = 6.4;
+						DevelopmentTeam = 68539G8D3N;
 						LastSwiftMigration = 0800;
 					};
 					EE0954BB1B97DDE0007F6964 = {
@@ -342,6 +360,7 @@
 				891D1EAB1E20E84A007FEE63 /* FSCalendarCalculator.m in Sources */,
 				3024AF171E164F8C008B6001 /* DelegateAppearanceViewController.swift in Sources */,
 				305282C91E1608A100CC2877 /* FSCalendarScopeViewController.swift in Sources */,
+				895DA0AC1E23AA5A00DF29BD /* DateCollectionViewCell.swift in Sources */,
 				891D1EB61E20E84A007FEE63 /* FSCalendarWeekdayView.m in Sources */,
 				891D1EB11E20E84A007FEE63 /* FSCalendarDelegationProxy.m in Sources */,
 				891D1EAF1E20E84A007FEE63 /* FSCalendarConstants.m in Sources */,
@@ -351,8 +370,10 @@
 				891D1EA91E20E84A007FEE63 /* FSCalendarAnimator.m in Sources */,
 				891D1EB31E20E84A007FEE63 /* FSCalendarHeaderView.m in Sources */,
 				EE0954AD1B97DDE0007F6964 /* AppDelegate.swift in Sources */,
+				895DA0AE1E23AA5A00DF29BD /* StepCollectionViewFlowLayout.swift in Sources */,
 				EE0954AF1B97DDE0007F6964 /* InterfaceBuilderViewController.swift in Sources */,
 				891D1EB41E20E84A007FEE63 /* FSCalendarScopeHandle.m in Sources */,
+				895DA0AD1E23AA5A00DF29BD /* DateTimePicker.swift in Sources */,
 				891D1EB51E20E84A007FEE63 /* FSCalendarStickyHeader.m in Sources */,
 				891D1EAD1E20E84A007FEE63 /* FSCalendarCollectionView.m in Sources */,
 			);
@@ -488,10 +509,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				DEVELOPMENT_TEAM = 68539G8D3N;
 				INFOPLIST_FILE = SwiftExample/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.wenchao.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.wenchao.SwiftExample6;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "$SRCROOT/SwiftExample/Objc-Bridge-Header.h";
 				SWIFT_VERSION = 3.0;
@@ -503,10 +525,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				DEVELOPMENT_TEAM = 68539G8D3N;
 				INFOPLIST_FILE = SwiftExample/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.wenchao.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.wenchao.SwiftExample6;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "$SRCROOT/SwiftExample/Objc-Bridge-Header.h";
 				SWIFT_VERSION = 3.0;
