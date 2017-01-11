@@ -19,9 +19,11 @@ class ScheduleViewController: BaseViewController,UICollectionViewDelegate,UIColl
     // 顶部刷新
     let header = MJRefreshNormalHeader()
     
-//    let footer = MJRefreshAutoNormalFooter()
+//  let footer = MJRefreshAutoNormalFooter()
 
     var watherView:UICollectionView?
+
+    lazy var dateBtn:UIButton = UIButton()
     
     var dataArray:[ScheduleModel]? {
         didSet{
@@ -34,7 +36,7 @@ class ScheduleViewController: BaseViewController,UICollectionViewDelegate,UIColl
         super.viewDidLoad()
 
         navBarView.leftButton.isHidden = true
-        navTitleStr = "Schedule"
+        navTitleStr = ""
 
         setUpCollectionView()
         addLoadingView()//这个需要手动添加
@@ -43,9 +45,14 @@ class ScheduleViewController: BaseViewController,UICollectionViewDelegate,UIColl
     }
     
     override func request() {
+        getDatas(date: Date())
+    }
+
+    func getDatas(date:Date){
+//        self.watherView!.mj_header.beginRefreshing()
         //获取数据
-        ScheduleModel.getScheduleList(offsetDate: 0) {(list : [ScheduleModel]?, error : NSError? ) -> () in
-//            print("list:\(list)")
+        ScheduleModel.getScheduleList(date: date) {(list : [ScheduleModel]?, error : NSError? ) -> () in
+            //            print("list:\(list)")
             self.endRefresh()
             if error == nil {
                 self.errorType = .None
@@ -76,6 +83,21 @@ class ScheduleViewController: BaseViewController,UICollectionViewDelegate,UIColl
         watherView?.backgroundColor = KBgViewColor
         watherView?.register(UINib(nibName: "ScheduleListCell", bundle: nil), forCellWithReuseIdentifier: "ScheduleListCell")
         view.addSubview(watherView!)
+
+
+        navBarView.navTitle.isUserInteractionEnabled = true
+        navBarView.navTitle.addSubview(dateBtn)
+        dateBtn.setTitleColor(UIColor.black, for: .normal)
+        dateBtn.titleLabel?.font = UIFont.systemFont(ofSize: 15)
+        dateBtn.addTarget(self, action: #selector(self.datePickAction), for: .touchUpInside)
+        dateBtn.frame = navBarView.navTitle.bounds
+//        dateBtn.frame.size = CGSize(width: 100, height: 44);
+//        dateBtn.backgroundColor = UIColor.brown
+
+        let formatter = DateFormatter()
+        formatter.dateFormat = "YYYY/MM/dd"
+        let selectDateStr = formatter.string(from: Date())
+        dateBtn.setTitle(selectDateStr, for: .normal)
     }
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -92,8 +114,8 @@ class ScheduleViewController: BaseViewController,UICollectionViewDelegate,UIColl
         cell.model = model
         return cell
     }
-
 }
+
 
 // MARK: -- 网络请求 extension OAuthViewController : UIWebViewDelegate
 //extension ScheduleViewController : UICollectionViewDelegate,UICollectionViewDataSource {
@@ -154,6 +176,32 @@ extension ScheduleViewController {
         //结束刷新
         self.watherView!.mj_header.endRefreshing()
     }
+
+
+
+    func datePickAction() {
+        let current = Date()
+        let min = Date().addingTimeInterval(-60 * 60 * 24 * 15)
+        let max = Date().addingTimeInterval(60 * 60 * 24 * 15)
+        let picker = DateTimePicker.show(selected: current, minimumDate: min, maximumDate: max)
+        picker.highlightColor = UIColor(red: 255.0/255.0, green: 138.0/255.0, blue: 138.0/255.0, alpha: 1)
+        picker.doneButtonTitle = "!! DONE DONE !!"
+        picker.todayButtonTitle = "Today"
+        picker.completionHandler = { date in
+//            self.current = date
+
+            //刷新数据
+            self.getDatas(date: date)
+
+            let formatter = DateFormatter()
+            formatter.dateFormat = "YYYY/MM/dd" //"HH:mm dd/MM/YYYY"
+            let selectDateStr = formatter.string(from: date)
+            print("selct date :\(selectDateStr)")
+            self.dateBtn.setTitle(selectDateStr, for: .normal)
+        }
+
+    }
+
 }
 
 

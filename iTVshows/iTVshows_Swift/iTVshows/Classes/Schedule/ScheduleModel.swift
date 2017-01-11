@@ -45,6 +45,53 @@ class ScheduleModel: NSObject {
     }
 
     //偏差日期
+    class func getScheduleList(date:Date,finish:@escaping(_ models:[ScheduleModel]?,_ error:NSError?)->()){
+
+        let formate = DateFormatter()
+        formate.dateFormat = "yyyyMMdd"
+
+        let dateStr = formate.string(from: date as Date)
+        formate.dateFormat = "yyyy-MM-dd"
+
+        let dateDiv = formate.string(from: date as Date)
+
+        //        print("---dateStr:\(dateStr),--dateDiv:\(dateDiv)")
+        let url = "http://api.ousns.net/tv/schedule?end=\(dateStr)&start=\(dateStr)"
+
+        APINetTools.GET(urlStr: url, parms: nil) {(result : AnyObject?, error : NSError?) -> () in
+            print("----\(result)")
+            print("----\(error)")
+
+            if (error != nil){
+                finish(nil,error)
+            }else{
+                let status = result?["status"] as! Int
+                if (status != 1){
+                    finish(nil,NSError.init(domain: "错误的status值", code: 9999, userInfo: ["status码值错误" : "status值不等于1"]))
+                }
+                let dataDic :[String:AnyObject]? = result?["data"] as? [String:AnyObject]
+
+                if(dataDic == nil){
+                    finish(nil,NSError.init(domain: "没有可用的数据", code: 9999, userInfo: ["status码值错误" : "status值不等于1"]))
+                }else{
+                    let dataDiv :[[String:AnyObject]]? = dataDic?[dateDiv] as? [[String:AnyObject]]
+
+                    if(dataDiv == nil){
+                        finish(nil,NSError.init(domain: "没有可用的数据", code: 9999, userInfo: ["字典为空" : "status值不等于1"]))
+                    }else{
+                        var models = [ScheduleModel]()
+                        for dic in dataDiv! {
+                            let model = ScheduleModel.init(dict: dic)
+                            models.append(model)
+                        }
+                        finish(models,nil)
+                    }
+                }
+            }
+        }
+    }
+
+    //偏差日期
     class func getScheduleList(offsetDate:Int,finish:@escaping(_ models:[ScheduleModel]?,_ error:NSError?)->()){
         
 //        start(必选) 开始时间,标准的时间格式,如:2015-02-03或2015-2-3或20150203
