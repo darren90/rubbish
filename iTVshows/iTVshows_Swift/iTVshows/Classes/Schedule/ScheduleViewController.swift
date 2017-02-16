@@ -90,9 +90,18 @@ class ScheduleViewController: BaseViewController,UICollectionViewDelegate,UIColl
         dateBtn.setTitleColor(UIColor.black, for: .normal)
         dateBtn.titleLabel?.font = UIFont.systemFont(ofSize: 15)
         dateBtn.addTarget(self, action: #selector(self.datePickAction), for: .touchUpInside)
-        dateBtn.frame = navBarView.navTitle.bounds
+//        dateBtn.frame = navBarView.navTitle.bounds
+//        let normal = UIColor.createImageWithColor(KCommonColor)
+//        dateBtn .setBackgroundImage(normal, for: .normal)
+//        dateBtn.layer.shadowOffset = CGSize(width: 20, height: 20)
+//        dateBtn.layer.shadowColor = UIColor.red.cgColor
+        dateBtn.layer.cornerRadius = 6
+        dateBtn.clipsToBounds = true
 //        dateBtn.frame.size = CGSize(width: 100, height: 44);
-//        dateBtn.backgroundColor = UIColor.brown
+//        dateBtn.center = navBarView.center
+        dateBtn.frame = CGRect(x: (navBarView.navTitle.frame.width-100)/2, y: 0, width: 100, height: 40)
+        dateBtn.backgroundColor = KCommonColor
+        
 
         let formatter = DateFormatter()
         formatter.dateFormat = "YYYY/MM/dd"

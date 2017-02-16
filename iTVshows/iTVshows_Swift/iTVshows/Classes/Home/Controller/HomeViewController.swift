@@ -36,7 +36,7 @@ class HomeViewController: BaseTableViewController {
         
         navTitleStr = "首页"
 
-        rightTitle = "Share"
+//        rightTitle = "Share"
 
         tableView.rowHeight = 120
 
