@@ -26,6 +26,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GeTuiSdkDelegate,UNUserNo
     
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        
+        //设置全局的tabbar的默认颜色 rgb(61, 168, 245)
+        UITabBar.appearance().tintColor = KCommonColor
+        UINavigationBar.appearance().tintColor = KCommonColor
+        
+        
         umengTrack()
         setupBugly()
         setupUMsocial()

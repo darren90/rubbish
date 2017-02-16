@@ -764,12 +764,12 @@
 				FEDE0F281DDF646800266EF3 /* iTVshows-Bridging-Header.h */,
 				FEDE0EF31DDF5B0C00266EF3 /* AppDelegate.swift */,
 				FEDE0EF51DDF5B0C00266EF3 /* ViewController.swift */,
+				FEDE0EFA1DDF5B0C00266EF3 /* Assets.xcassets */,
 				89837CD91DEE934B009932DA /* TFCommon.swift */,
 				FEDE0EF71DDF5B0C00266EF3 /* Main.storyboard */,
 				FE69C40E1DE14EC3002AA9E5 /* Lib */,
 				89C5DF841DE3102500A39210 /* Classes */,
 				FE69C45C1DE1C464002AA9E5 /* DemoImages */,
-				FEDE0EFA1DDF5B0C00266EF3 /* Assets.xcassets */,
 				FEDE0EFC1DDF5B0C00266EF3 /* LaunchScreen.storyboard */,
 				FEDE0EFF1DDF5B0C00266EF3 /* Info.plist */,
 			);

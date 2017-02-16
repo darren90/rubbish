@@ -39,8 +39,8 @@ let KHeight = UIScreen.main.bounds.height
 let KPlaceImg = UIImage(named: "kplace")
 
 
-
-
+//rgb(45, 165, 252)
+let KCommonColor = UIColor(colorLiteralRed: 45/255.0, green: 165/255.0, blue: 252/255.0, alpha: 1.0)
 
 
 

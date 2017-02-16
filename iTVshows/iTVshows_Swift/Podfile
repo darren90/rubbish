@@ -20,6 +20,4 @@ target 'iTVshows' do
     pod 'UMengUShare/Social/WeChat'
     pod 'UMengUShare/Social/QQ'
     pod 'UMengAnalytics'
-
-
 end
