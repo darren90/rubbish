@@ -40,14 +40,26 @@ class FilmResDetailModel: NSObject {
 
     var poster_s:String?
 
-    var premiere:Int = 0
+    var premiere:String?
 
     var score:Double = 0.0
 
     var remark:String?
 
     var views:Int = 0
+    
+    
+    //分享相关
+    var shareTitle:String?
+    
+    var shareContent:String?
+    
+    var shareImage:String?
+    
+    var shareUrl:String?
 
+    
+    //方法
     init(dict:[String:AnyObject]) {
         super.init()
 
@@ -59,8 +71,8 @@ class FilmResDetailModel: NSObject {
     }
 
     class func getFilmDetail(id:String,finish:@escaping(_ models:FilmResDetailModel?,_ error:NSError?)->()){
-
-        let url = "http://api.ousns.net/resource/getinfo?id=\(id)"
+        //影视资源详情
+        let url = "http://api.ousns.net/resource/getinfo?id=\(id)&share=1"
 
         APINetTools.GET(urlStr: url, parms: nil) {(result : AnyObject?, error : NSError?) -> () in
             print("----\(result)")

@@ -59,7 +59,6 @@ class APINetTools: NSObject {
     static func getUrl(urlStr:String) -> String {
         let timestamp = Int(NSDate().timeIntervalSince1970)
         let md5Str = "\(cid)$$\(accesskey)&&\(timestamp)".md5!
-        //        print("md5Str:\(md5Str),after:\(md5Str.md5!)")
 
         var url = urlStr
         if (urlStr.contains("?")){

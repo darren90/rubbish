@@ -29,7 +29,7 @@ class FilmViewController: BaseTableViewController {
         super.viewDidLoad()
 
         navBarView.leftButton.isHidden = true
-        navTitleStr = "Film"
+        navTitleStr = "Films"
 
         tableView.rowHeight = 120
 
@@ -88,7 +88,8 @@ extension FilmViewController  {
     }
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let detailVc = FilmDetailViewController()
+        let detailVc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "FilmDetailViewController") as! FilmDetailViewController
+//        let detailVc = FilmDetailViewController()
         let model = dataArray![indexPath.row]
         detailVc.filmId = model.id
         navigationController?.pushViewController(detailVc, animated: true)

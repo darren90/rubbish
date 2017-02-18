@@ -93,13 +93,14 @@ class ScheduleViewController: BaseViewController,UICollectionViewDelegate,UIColl
 //        dateBtn.frame = navBarView.navTitle.bounds
 //        let normal = UIColor.createImageWithColor(KCommonColor)
 //        dateBtn .setBackgroundImage(normal, for: .normal)
-//        dateBtn.layer.shadowOffset = CGSize(width: 20, height: 20)
-//        dateBtn.layer.shadowColor = UIColor.red.cgColor
-        dateBtn.layer.cornerRadius = 6
-        dateBtn.clipsToBounds = true
+        dateBtn.layer.shadowOffset = CGSize(width: 2, height: 2)
+        dateBtn.layer.shadowColor = UIColor.black.cgColor
+        dateBtn.layer.cornerRadius = 8
+        dateBtn.layer.shadowOpacity = 0.8
+//        dateBtn.clipsToBounds = true
 //        dateBtn.frame.size = CGSize(width: 100, height: 44);
 //        dateBtn.center = navBarView.center
-        dateBtn.frame = CGRect(x: (navBarView.navTitle.frame.width-100)/2, y: 0, width: 100, height: 40)
+        dateBtn.frame = CGRect(x: (navBarView.navTitle.frame.width-100)/2, y: 2, width: 100, height: 35)
         dateBtn.backgroundColor = KCommonColor
         
 
@@ -122,6 +123,13 @@ class ScheduleViewController: BaseViewController,UICollectionViewDelegate,UIColl
         let model = dataArray![indexPath.item]
         cell.model = model
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let detailVc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "FilmDetailViewController") as! FilmDetailViewController
+        let model = dataArray![indexPath.row]
+        detailVc.filmId = model.id
+        navigationController?.pushViewController(detailVc, animated: true)
     }
 }
 
