@@ -35,6 +35,12 @@ class ArticleModel: NSObject {
     var translator:String?
 
     var views:String?
+    
+    var isAdmob:Bool = false
+    
+    override init() {
+        super.init()
+    }
 
     init(dict:[String:AnyObject]) {
         super.init()
@@ -68,10 +74,22 @@ class ArticleModel: NSObject {
                 if(dataDiv == nil){
                     finish(nil,NSError.init(domain: "没有可用的数据", code: 9999, userInfo: ["字典为空" : "status值不等于1"]))
                 }else{
+                    
+                    let adIndex = Int(arc4random()%15)+5
+                    
                     var models = [ArticleModel]()
+                    var index = 0
                     for dic in dataDiv! {
                         let model = ArticleModel.init(dict: dic)
                         models.append(model)
+                        
+                    //MARK: -- 加入广告model
+                        if index == adIndex {
+                            let adM = ArticleModel()
+                            adM.isAdmob = true
+                            models.append(adM)
+                        }
+                        index = index + 1
                     }
 //                    print("--ms-:\(models)")
                     finish(models,nil)

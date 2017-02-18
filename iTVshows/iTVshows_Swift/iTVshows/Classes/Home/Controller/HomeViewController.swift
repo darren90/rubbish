@@ -51,19 +51,20 @@ class HomeViewController: BaseTableViewController {
     override func request() {
         ArticleModel.getArticleList(page: page) { (list : [ArticleModel]?, error : NSError?) in
             //            print("--list-:\(list)")
+
             self.endRefresh()
             if error == nil {
                 self.errorType = .None
                 if(self.page == 1){
                     self.dataArray = list
-                     print("-1-arrcount:\(self.dataArray?.count)")
+//                     print("-1-arrcount:\(self.dataArray?.count)")
                 }else{
                     var tempArr = self.dataArray
                     for m in list! {
                         tempArr?.append(m)
                     }
                     self.dataArray = tempArr
-                    print("-2-arrcount:\(self.dataArray?.count)")
+//                    print("-2-arrcount:\(self.dataArray?.count)")
                 }
             }else{
                 self.errorType = .Default
@@ -179,19 +180,36 @@ extension HomeViewController  {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = ArticleListCell.cellWithTableView(tableView: tableView)
         let model = dataArray![indexPath.row]
+        if model.isAdmob {
+            let cell = AdmobCell.cellWithTableView(tableView: tableView)
+            cell.rootVc = self
+            return cell;
+        }
+        let cell = ArticleListCell.cellWithTableView(tableView: tableView)
         cell.model = model
         return cell;
     }
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let detailVc = ArticleDetailViewController()
         let model = dataArray![indexPath.row]
+        if model.isAdmob {
+            return
+        }
+        let detailVc = ArticleDetailViewController()
         detailVc.articleId = model.id
         navigationController?.pushViewController(detailVc, animated: true)
 
         tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        let model = dataArray![indexPath.row]
+        if model.isAdmob {
+            return 50
+        }else{
+            return 120
+        }
     }
 }
 
