@@ -23,22 +23,21 @@ class AdmobCell: UITableViewCell,GADBannerViewDelegate {
         return cell!
     }
 
-
     override func awakeFromNib() {
         super.awakeFromNib()
- 
         
-        let deviceId = UIDevice.current.identifierForVendor?.uuidString
+//        let deviceId = UIDevice.current.identifierForVendor?.uuidString
         
         print("Google Mobile Ads SDK version: \(GADRequest.sdkVersion())")
         GADRequest.description()
         bannerView.adUnitID = "ca-app-pub-8145075793156354/6180651822"
         bannerView.rootViewController = rootVc
+//        bannerView.isAutoloadEnabled = true
         bannerView.delegate = self
         let request = GADRequest()
-        if deviceId != nil {
-            request.testDevices = [deviceId!]
-        }
+//        if deviceId != nil {
+//            request.testDevices = [deviceId!]
+//        }
         bannerView.load(request)
     }
     
