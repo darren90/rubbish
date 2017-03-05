@@ -1,0 +1,45 @@
+PODS:
+  - Alamofire (4.0.1)
+  - Masonry (1.0.2)
+  - SnapKit (3.2.0)
+  - SwiftyJSON (3.1.4)
+  - UMengAnalytics (4.2.4)
+  - UMengUShare/Core (6.3.0):
+    - UMengUShare/Network
+  - UMengUShare/Network (6.3.0)
+  - UMengUShare/Social/QQ (6.3.0):
+    - UMengUShare/Core
+  - UMengUShare/Social/Sina (6.3.0):
+    - UMengUShare/Core
+  - UMengUShare/Social/WeChat (6.3.0):
+    - UMengUShare/Core
+  - UMengUShare/UI (6.3.0):
+    - UMengUShare/Core
+  - YYKit (1.0.9):
+    - YYKit/no-arc (= 1.0.9)
+  - YYKit/no-arc (1.0.9)
+
+DEPENDENCIES:
+  - Alamofire (~> 4.0.0)
+  - Masonry
+  - SnapKit (~> 3.2.0)
+  - SwiftyJSON (~> 3.1.1)
+  - UMengAnalytics
+  - UMengUShare/Social/QQ
+  - UMengUShare/Social/Sina
+  - UMengUShare/Social/WeChat
+  - UMengUShare/UI
+  - YYKit (~> 1.0.9)
+
+SPEC CHECKSUMS:
+  Alamofire: 7682d43245de14874acd142ec137b144aa1dd335
+  Masonry: 7c429b56da9d4ee0bbb3ed77a5ea710d6a5df39e
+  SnapKit: 1ca44df72cfa543218d177cb8aab029d10d86ea7
+  SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
+  UMengAnalytics: ef8d45f94c0e5771dc364cf6a5731d9d3b101da2
+  UMengUShare: b208ac3bcf1f63d11a100b359990e9d77a0f2085
+  YYKit: 7cda43304a8dc3696c449041e2cb3107b4e236e7
+
+PODFILE CHECKSUM: 0c989ea4752c06afa1132de446533ec842139e13
+
+COCOAPODS: 1.1.1
