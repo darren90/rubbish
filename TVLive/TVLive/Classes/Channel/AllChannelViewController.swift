@@ -57,7 +57,6 @@ class AllChannelViewController: BaseViewController {
         layout.sectionInset = UIEdgeInsetsMake(0, margin, 0, margin)
     }
  
-
 }
 
 extension AllChannelViewController : UICollectionViewDataSource,UICollectionViewDelegate,ChannelViewCellDelegate {
