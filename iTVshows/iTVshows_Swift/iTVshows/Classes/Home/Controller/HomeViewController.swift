@@ -44,6 +44,7 @@ class HomeViewController: BaseTableViewController {
 
         addReFreshControl()
 
+        TimeTools.timedToDate(time: 1488648360)
     }
 
     

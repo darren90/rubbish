@@ -1,0 +1,29 @@
+# Uncomment this line to define a global platform for your project
+# source 'https://github.com/CocoaPods/Specs.git'
+platform :ios, ‘9.0’
+inhibit_all_warnings!
+use_frameworks!
+
+target 'iTVLive' do
+    pod 'Alamofire', '~> 4.0.0'
+    pod 'SwiftyJSON', '~> 3.1.1'
+    
+    pod 'Masonry'
+    pod 'SnapKit', '~> 3.2.0'
+  
+    pod 'YYKit', '~> 1.0.9'
+
+    #pod 'YYWebImage'
+    #pod 'YYImage'
+
+    # 集成新浪微博 + 微信 + QQ
+    pod 'UMengUShare/UI'
+    pod 'UMengUShare/Social/Sina'
+    pod 'UMengUShare/Social/WeChat'
+    pod 'UMengUShare/Social/QQ'
+    pod 'UMengAnalytics'
+
+    # 集成http server
+#    pod 'CocoaHTTPServer', '~> 2.3'
+
+end

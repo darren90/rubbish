@@ -80,6 +80,10 @@
 		FE239E2D1DF5C587008603FE /* UIScrollView+MJRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = FE239DEE1DF5C587008603FE /* UIScrollView+MJRefresh.m */; };
 		FE239E2E1DF5C587008603FE /* UIView+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = FE239DF01DF5C587008603FE /* UIView+MJExtension.m */; };
 		FE4827521E21FDBB00BC012A /* iTVShows.css in Resources */ = {isa = PBXBuildFile; fileRef = FE4827511E21FDBB00BC012A /* iTVShows.css */; };
+		FE5371EF1E6BFEED00FDF9FC /* TimeTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5371EE1E6BFEED00FDF9FC /* TimeTools.swift */; };
+		FE5371F11E6C037600FDF9FC /* ApiTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5371F01E6C037600FDF9FC /* ApiTools.swift */; };
+		FE5371F31E6C0F2700FDF9FC /* TVListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5371F21E6C0F2700FDF9FC /* TVListModel.swift */; };
+		FE5371F51E6C11F300FDF9FC /* TVDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5371F41E6C11F300FDF9FC /* TVDetailModel.swift */; };
 		FE69C4731DE1C464002AA9E5 /* _0000_Settings_tap.png in Resources */ = {isa = PBXBuildFile; fileRef = FE69C45D1DE1C464002AA9E5 /* _0000_Settings_tap.png */; };
 		FE69C4741DE1C464002AA9E5 /* Default-568h@2x-1.png in Resources */ = {isa = PBXBuildFile; fileRef = FE69C45E1DE1C464002AA9E5 /* Default-568h@2x-1.png */; };
 		FE69C4751DE1C464002AA9E5 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FE69C45F1DE1C464002AA9E5 /* Default-568h@2x.png */; };
@@ -249,6 +253,10 @@
 		FE239DEF1DF5C587008603FE /* UIView+MJExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+MJExtension.h"; sourceTree = "<group>"; };
 		FE239DF01DF5C587008603FE /* UIView+MJExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+MJExtension.m"; sourceTree = "<group>"; };
 		FE4827511E21FDBB00BC012A /* iTVShows.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = iTVShows.css; sourceTree = "<group>"; };
+		FE5371EE1E6BFEED00FDF9FC /* TimeTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeTools.swift; sourceTree = "<group>"; };
+		FE5371F01E6C037600FDF9FC /* ApiTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiTools.swift; sourceTree = "<group>"; };
+		FE5371F21E6C0F2700FDF9FC /* TVListModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TVListModel.swift; sourceTree = "<group>"; };
+		FE5371F41E6C11F300FDF9FC /* TVDetailModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TVDetailModel.swift; sourceTree = "<group>"; };
 		FE69C45D1DE1C464002AA9E5 /* _0000_Settings_tap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = _0000_Settings_tap.png; sourceTree = "<group>"; };
 		FE69C45E1DE1C464002AA9E5 /* Default-568h@2x-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x-1.png"; sourceTree = "<group>"; };
 		FE69C45F1DE1C464002AA9E5 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
@@ -559,6 +567,10 @@
 			children = (
 				89C5DFA41DE3F15200A39210 /* APINetTools.swift */,
 				FE4827511E21FDBB00BC012A /* iTVShows.css */,
+				FE5371EE1E6BFEED00FDF9FC /* TimeTools.swift */,
+				FE5371F01E6C037600FDF9FC /* ApiTools.swift */,
+				FE5371F21E6C0F2700FDF9FC /* TVListModel.swift */,
+				FE5371F41E6C11F300FDF9FC /* TVDetailModel.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -1106,11 +1118,15 @@
 				FE239E271DF5C587008603FE /* MJRefreshNormalHeader.m in Sources */,
 				89C5DFA21DE31E1700A39210 /* MeViewController.swift in Sources */,
 				894A01C01DF6E4D300B9EA34 /* ShareView.swift in Sources */,
+				FE5371F51E6C11F300FDF9FC /* TVDetailModel.swift in Sources */,
 				89C5DF901DE3108B00A39210 /* BaseViewController.swift in Sources */,
 				FE239E251DF5C587008603FE /* MJRefreshBackStateFooter.m in Sources */,
+				FE5371F11E6C037600FDF9FC /* ApiTools.swift in Sources */,
 				895DA0B31E23B92000DF29BD /* DateCollectionViewCell.swift in Sources */,
+				FE5371EF1E6BFEED00FDF9FC /* TimeTools.swift in Sources */,
 				899046E01E152A8E006AF20B /* SureWebViewController.m in Sources */,
 				894A65A51DEEE2B5004FC2F9 /* FilmListCell.swift in Sources */,
+				FE5371F31E6C0F2700FDF9FC /* TVListModel.swift in Sources */,
 				FE239E261DF5C587008603FE /* MJRefreshGifHeader.m in Sources */,
 				895DA0B51E23B92000DF29BD /* StepCollectionViewFlowLayout.swift in Sources */,
 				894A01DA1DF9415100B9EA34 /* WhistleFactory.swift in Sources */,
