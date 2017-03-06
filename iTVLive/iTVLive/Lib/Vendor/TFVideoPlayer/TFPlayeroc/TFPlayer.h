@@ -12,7 +12,7 @@
 
 //引入RRPlayer的头文件
 
-#import "TFVideoPlayerView.h"
-#import "TFVideoPlayer.h"
+#import "TTFVideoPlayerView.h"
+#import "TTFVideoPlayer.h"
 
 #endif /* RRPlayer_h */

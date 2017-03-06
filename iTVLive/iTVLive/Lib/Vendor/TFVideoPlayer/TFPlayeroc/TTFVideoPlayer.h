@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "TFVideoPlayerView.h"
+#import "TTFVideoPlayerView.h"
 #import "Vitamio.h"
 
 
@@ -69,39 +69,39 @@ typedef enum {
 } TFVideoPlayerControlEvent;
 
 
-@class TFVideoPlayer;
+@class TTFVideoPlayer;
 @protocol TFVideoPlayerDelegate <NSObject>
 @optional
-- (BOOL)shouldVideoPlayer:(TFVideoPlayer*)videoPlayer changeStateTo:(TFVideoPlayerState)toState;
-- (void)videoPlayer:(TFVideoPlayer*)videoPlayer willChangeStateTo:(TFVideoPlayerState)toState;
+- (BOOL)shouldVideoPlayer:(TTFVideoPlayer*)videoPlayer changeStateTo:(TFVideoPlayerState)toState;
+- (void)videoPlayer:(TTFVideoPlayer*)videoPlayer willChangeStateTo:(TFVideoPlayerState)toState;
 
-- (void)videoPlayer:(TFVideoPlayer*)videoPlayer didControlByEvent:(TFVideoPlayerControlEvent)event;
-- (void)videoPlayer:(TFVideoPlayer*)videoPlayer didChangeSubtitleFrom:(NSString*)fronLang to:(NSString*)toLang;
-- (void)videoPlayer:(TFVideoPlayer*)videoPlayer willChangeOrientationTo:(UIInterfaceOrientation)orientation;
-- (void)videoPlayer:(TFVideoPlayer*)videoPlayer didChangeOrientationFrom:(UIInterfaceOrientation)orientation;
+- (void)videoPlayer:(TTFVideoPlayer*)videoPlayer didControlByEvent:(TFVideoPlayerControlEvent)event;
+- (void)videoPlayer:(TTFVideoPlayer*)videoPlayer didChangeSubtitleFrom:(NSString*)fronLang to:(NSString*)toLang;
+- (void)videoPlayer:(TTFVideoPlayer*)videoPlayer willChangeOrientationTo:(UIInterfaceOrientation)orientation;
+- (void)videoPlayer:(TTFVideoPlayer*)videoPlayer didChangeOrientationFrom:(UIInterfaceOrientation)orientation;
 
 //use
 
 
-- (void)videoPlayer:(TFVideoPlayer*)videoPlayer didChangeStateFrom:(TFVideoPlayerState)fromState;
+- (void)videoPlayer:(TTFVideoPlayer*)videoPlayer didChangeStateFrom:(TFVideoPlayerState)fromState;
 
-- (void)videoPlayer:(TFVideoPlayer*)videoPlayer didPlayToEnd:(VMediaPlayer *)player;//播放结束
+- (void)videoPlayer:(TTFVideoPlayer*)videoPlayer didPlayToEnd:(VMediaPlayer *)player;//播放结束
 
 - (void)handleErrorCode:(TFVideoPlayerErrorCode)errorCode customMessage:(NSString*)customMessage;//播放出错
 
 @end
 
 
-@interface TFVideoPlayer : NSObject<VMediaPlayerDelegate>
+@interface TTFVideoPlayer : NSObject<VMediaPlayerDelegate>
 
-@property (nonatomic, strong) TFVideoPlayerView *view;
+@property (nonatomic, strong) TTFVideoPlayerView *view;
 
 @property (nonatomic, strong) VMediaPlayer       *mMPayer;
 
 @property (nonatomic, weak) id<TFVideoPlayerDelegate> delegate;
 
 /** 单例的方式创建播放器 */
-+(TFVideoPlayer *) sharedPlayer;
++(TTFVideoPlayer *) sharedPlayer;
 
 
 
@@ -111,7 +111,7 @@ typedef enum {
 //当前播放到第几秒
 @property (nonatomic,assign)double currentDuraion;
 
-- (id)initWithVideoPlayerView:(TFVideoPlayerView*)videoPlayerView;
+- (id)initWithVideoPlayerView:(TTFVideoPlayerView*)videoPlayerView;
 
 //正常播放视频的时候调用这个  时间：秒
 -(void)playStreamUrl:(NSURL*)url title:(NSString*)title seekToPos:(long)pos;

@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "TFUtilities.h"
-#import "TFVSegmentSlider.h"
+#import "TTFVSegmentSlider.h"
 #import <MediaPlayer/MediaPlayer.h>
 #import "ForwardBackView.h"
 
@@ -80,7 +80,7 @@
 
 #pragma mark - TFVideoPlayerView
 
-@interface TFVideoPlayerView : UIView
+@interface TTFVideoPlayerView : UIView
 /** 初始化播放控件 */
 +(instancetype)videoPlayerView;
 
@@ -97,7 +97,7 @@
 @property (nonatomic, weak) IBOutlet UIButton *nextBtn;
 @property (nonatomic, weak) IBOutlet UIButton *modeBtn;
 @property (nonatomic, weak) IBOutlet UIButton *reset;
-@property (nonatomic, weak) IBOutlet TFVSegmentSlider *progressSld;
+@property (nonatomic, weak) IBOutlet TTFVSegmentSlider *progressSld;
 @property (nonatomic, weak) IBOutlet UILabel  *curPosLbl;
 @property (nonatomic, weak) IBOutlet UILabel  *durationLbl;
 @property (nonatomic, weak) IBOutlet UILabel  *bubbleMsgLbl;//

@@ -27,9 +27,28 @@ class HomeCell: UITableViewCell {
     
     var model:TVListModel?{
         didSet{
-            titleL.text = model?.title
-            playingL.text = model?.t
-            guard let url = model?.iconUrl else {
+            guard let model = model else {
+                return
+            }
+
+            titleL.text = model.title
+
+            switch model.modelType {
+            case .YES:
+                playingL.text = model.t
+                stateL.textColor = UIColor.red
+                playingL.isHidden = false
+            case .NO:
+                stateL.text = "暂无节目"
+                stateL.textColor = UIColor.lightGray
+                playingL.isHidden = true
+            default:
+                stateL.text = "正在播放..."
+                stateL.textColor = UIColor.red
+                playingL.isHidden = false
+            }
+
+            guard let url = model.iconUrl else {
                 return
             }
             self.iconView.setImageWith(url, placeholder: KPlaceImg, options: .setImageWithFadeAnimation, completion: nil)

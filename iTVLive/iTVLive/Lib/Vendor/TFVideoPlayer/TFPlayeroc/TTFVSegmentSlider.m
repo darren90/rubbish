@@ -6,10 +6,10 @@
 //
 //
 
-#import "TFVSegmentSlider.h"
+#import "TTFVSegmentSlider.h"
 
 
-@implementation TFVSegmentSlider
+@implementation TTFVSegmentSlider
 
 @dynamic segments;
 

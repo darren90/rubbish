@@ -48,10 +48,10 @@ class AdmobCell: UITableViewCell,GADBannerViewDelegate {
     }
     
     func adView(_ bannerView: GADBannerView, didFailToReceiveAdWithError error: GADRequestError) {
-        print("--GADBannerView-file:\(error)");
+//        print("--GADBannerView-file:\(error)");
     }
     
     func adViewDidReceiveAd(_ bannerView: GADBannerView) {
-        print("--GADBannerView--success")
+//        print("--GADBannerView--success")
     }
 }

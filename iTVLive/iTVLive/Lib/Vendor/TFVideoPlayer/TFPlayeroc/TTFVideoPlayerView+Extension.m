@@ -6,7 +6,7 @@
 //  Copyright © 2016年 tengfei. All rights reserved.
 //
 
-#import "TFVideoPlayerView+Extension.h"
+#import "TTFVideoPlayerView+Extension.h"
 
 static CGFloat BTNWIDTH = 40.0;
 static CGFloat BTNHIGHT = 40.0;
@@ -31,7 +31,7 @@ static CGFloat LABELHIGHT = 20.0;
 #define  KWidth     [UIScreen mainScreen].bounds.size.width
 
 
-@implementation TFVideoPlayerView (Extension)
+@implementation TTFVideoPlayerView (Extension)
 
 - (void)allHidden{
 

@@ -10,7 +10,7 @@ import UIKit
 
 class TFMoviePlayerViewController: UIViewController {
     
-    var player:TFVideoPlayer = TFVideoPlayer()
+    var player:TTFVideoPlayer = TTFVideoPlayer()
     
     var playUrl:String?{
         didSet{
@@ -47,7 +47,7 @@ class TFMoviePlayerViewController: UIViewController {
 
 extension TFMoviePlayerViewController : TFVideoPlayerDelegate{
     
-    func videoPlayer(_ videoPlayer: TFVideoPlayer!, didControlBy event: TFVideoPlayerControlEvent) {
+    func videoPlayer(_ videoPlayer: TTFVideoPlayer!, didControlBy event: TFVideoPlayerControlEvent) {
         switch event {
         case TFVideoPlayerControlEventTapDone:
             unInstalPlayer()
@@ -59,7 +59,7 @@ extension TFMoviePlayerViewController : TFVideoPlayerDelegate{
     }
     
     //播放结束
-    func videoPlayer(_ videoPlayer: TFVideoPlayer!, didPlayToEnd player: VMediaPlayer!) {
+    func videoPlayer(_ videoPlayer: TTFVideoPlayer!, didPlayToEnd player: VMediaPlayer!) {
          print("播放结束")
     }
     

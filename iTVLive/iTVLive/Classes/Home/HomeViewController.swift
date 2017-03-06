@@ -19,7 +19,8 @@ class HomeViewController: BaseTableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-       
+
+        tableView.frame = CGRect(x: 0, y: 64, width: view.width, height: view.height-64-49)
         navTitleStr = "节目"
         tableView.rowHeight = 100
         
@@ -44,6 +45,13 @@ extension HomeViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = HomeCell.cellWithTableView(tableView: tableView)
         let model = datas?[indexPath.row]
+        if model?.modelType == .NotLoading{
+            TVListModel.getTVLiveNow(liveModel: model!,indexPath:indexPath, finish: { (nowModel, error) in
+//                if error == nil {
+                    self.tableView.reloadRow(at: indexPath, with: .automatic)
+//                }
+             })
+        }
         cell.model = model
         return cell
     }

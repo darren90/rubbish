@@ -6,10 +6,10 @@
 //  Copyright © 2016年 tengfei. All rights reserved.
 //
 
-#import "TFVideoPlayer.h"
+#import "TTFVideoPlayer.h"
 
 #import "TFUtilities.h"
-#import "TFVSegmentSlider.h"
+#import "TTFVSegmentSlider.h"
 #import <MediaPlayer/MediaPlayer.h>
 #import "ForwardBackView.h"
 #import "UIView+RRFoundation.h"
@@ -22,7 +22,7 @@
 #define WS(weakSelf)    __weak __typeof(&*self)weakSelf = self;
 
 
-@interface TFVideoPlayer ()<TFVideoPlayerViewDelegate,UIAlertViewDelegate>
+@interface TTFVideoPlayer ()<TFVideoPlayerViewDelegate,UIAlertViewDelegate>
 {
     long               mDuration;
     long               mCurPostion;
@@ -48,7 +48,7 @@
 
 @end
 
-@implementation TFVideoPlayer
+@implementation TTFVideoPlayer
 
 //异步线程更改
 void TFRUN_ON_UI_THREAD(dispatch_block_t block) {
@@ -59,9 +59,9 @@ void TFRUN_ON_UI_THREAD(dispatch_block_t block) {
     }
 }
 
-static   TFVideoPlayer *tfVideoPlayer = nil;
+static   TTFVideoPlayer *tfVideoPlayer = nil;
 
-+(TFVideoPlayer *) sharedPlayer
++(TTFVideoPlayer *) sharedPlayer
 {
     @synchronized(self){
         if (tfVideoPlayer == nil) {
@@ -74,13 +74,13 @@ static   TFVideoPlayer *tfVideoPlayer = nil;
 - (id)init {
     self = [super init];
     if (self) {
-        self.view = [TFVideoPlayerView videoPlayerView];
+        self.view = [TTFVideoPlayerView videoPlayerView];
         [self initialize];
     }
     return self;
 }
 
-- (id)initWithVideoPlayerView:(TFVideoPlayerView*)videoPlayerView {
+- (id)initWithVideoPlayerView:(TTFVideoPlayerView*)videoPlayerView {
     self = [super init];
     if (self) {
         self.view = videoPlayerView;

@@ -12,7 +12,7 @@ class ApiTools: NSObject {
     
     
     // 央视
-    let URL_YS = "http://serv.cbox.cntv.cn/json/zhibo/yangshipindao/ysmc/index.json"
+    static let URL_YS = "http://serv.cbox.cntv.cn/json/zhibo/yangshipindao/ysmc/index.json"
     
     // 卫视
     static let URL_WS = "http://serv.cbox.cntv.cn/json/zhibo/weishipindao/wsmc/index.json"

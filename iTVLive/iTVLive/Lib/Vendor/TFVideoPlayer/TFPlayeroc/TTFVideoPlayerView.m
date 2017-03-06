@@ -7,11 +7,11 @@
 //
 
 
-#import "TFVideoPlayerView.h"
+#import "TTFVideoPlayerView.h"
 #import <AVFoundation/AVFoundation.h>
 #import "Masonry.h"
 #import "UIView+RRFoundation.h"
-#import "TFVideoPlayerView+Extension.h"
+#import "TTFVideoPlayerView+Extension.h"
 #import "BrightnessView.h"
 
 #define PADDING 8
@@ -23,7 +23,7 @@ typedef NS_ENUM(NSInteger,PanDirection) {
 } ;
 
 
-@interface TFVideoPlayerView ()
+@interface TTFVideoPlayerView ()
 
 /** 调节声音，亮度；快进快推的手势 */
 @property (nonatomic,strong)UIPanGestureRecognizer * panGesture;
@@ -41,7 +41,7 @@ typedef NS_ENUM(NSInteger,PanDirection) {
 
 @end
 
-@implementation TFVideoPlayerView
+@implementation TTFVideoPlayerView
 
 +(instancetype)videoPlayerView
 {
@@ -51,7 +51,7 @@ typedef NS_ENUM(NSInteger,PanDirection) {
 -(instancetype)init
 {
     if (self = [super init]) {
-        self = [TFVideoPlayerView videoPlayerView];
+        self = [TTFVideoPlayerView videoPlayerView];
     }
     return self;
 }

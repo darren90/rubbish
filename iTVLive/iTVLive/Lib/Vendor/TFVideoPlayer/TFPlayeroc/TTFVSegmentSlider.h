@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TFVSegmentSlider : UISlider
+@interface TTFVSegmentSlider : UISlider
 {
 	NSArray *_segments;
 }

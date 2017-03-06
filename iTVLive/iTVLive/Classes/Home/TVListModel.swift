@@ -8,6 +8,14 @@
 
 import UIKit
 
+enum TVListModelType:String{
+    case NotLoading = "NotLoading"  //还没有请求
+    case YES  = "YES"   //请求了 - 请求到数据
+    case NO = "NO"      //请求了 - 没有请求到数据
+}
+
+
+
 class TVListModel: NSObject {
     
     //有用的
@@ -16,6 +24,8 @@ class TVListModel: NSObject {
     var channelId:String?
     var t:String?//正在播放的视频
     var iconUrl:URL?//显示的图片
+    var modelType: TVListModelType = .NotLoading
+
     
     //无用的
     var channelImg:String?
@@ -27,8 +37,7 @@ class TVListModel: NSObject {
     var liveUrl:String?
     var autoImg:String?
     var newChannelImg:String?
-    
-    
+
     init(dict:[String:AnyObject]) {
         super.init()
         
@@ -47,7 +56,7 @@ class TVListModel: NSObject {
     
     
     class func getTVList(finish:@escaping(_ models:[TVListModel]?,_ error:NSError?)->()){
-        let url = "http://serv.cbox.cntv.cn/json/zhibo/yangshipindao/ysmc/index.json"
+        let url = ApiTools.URL_YS //"http://serv.cbox.cntv.cn/json/zhibo/yangshipindao/ysmc/index.json"
         
         APINetTools.GET(urlStr: url, parms: nil) { (result, error) in
             if error != nil {
@@ -77,6 +86,38 @@ class TVListModel: NSObject {
  
             }
             
+        }
+    }
+
+    //获取正在播放的视频的标题
+    class func getTVLiveNow(liveModel: TVListModel ,indexPath: IndexPath , finish:@escaping(_ models:TVListModel?,_ error:NSError?)->()){
+
+        let url = ApiTools.getNowPlayShow(channelId: liveModel.channelId ?? "")
+
+        APINetTools.GET(urlStr: url, parms: nil) { (result, error) in
+            if error != nil {
+                liveModel.modelType = .NO
+//                finish(nil,error)
+            }else{
+//                "t": "新闻联播",
+//                "s": "19:00:00",
+//                "d": 1488798742,
+//                "c": "cctv1",
+//                "n": "CCTV-1 综合",
+//                "e": "19:44:00",
+//                "ints": 1488798000,
+//                "inte": 1488800640
+                let dict = result as? [String:AnyObject]
+                if(dict == nil){
+                    liveModel.modelType = .NO
+                }else{
+                    liveModel.modelType = .YES
+                    let t: String = (dict!["t"] as? String) ?? ""
+                    liveModel.t = t
+                }
+            }
+
+             finish(liveModel,error)
         }
     }
     
