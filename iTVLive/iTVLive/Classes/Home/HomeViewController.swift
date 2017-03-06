@@ -57,11 +57,10 @@ extension HomeViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        let playVc = TFMoviePlayerViewController()
-//        let model = datas[indexPath.row]
-//        playVc.playUrl = model.tvPlayUrlStr
-//        playVc.titleStr = model.tvName
-//        navigationController?.present(playVc, animated: true, completion: nil)
+        let detailVc = DetailViewController()
+        let model = datas?[indexPath.row]
+        detailVc.channelId = model?.channelId
+        navigationController?.pushViewController(detailVc, animated: true)
     }
     
 }

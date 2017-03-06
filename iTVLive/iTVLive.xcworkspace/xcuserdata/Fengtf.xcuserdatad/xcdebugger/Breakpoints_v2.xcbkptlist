@@ -9,13 +9,29 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "iTVLive/Classes/Home/TVListModel.swift"
-            timestampString = "510494046.870178"
+            filePath = "iTVLive/Classes/Home/TVDetailModel.swift"
+            timestampString = "510496119.958959"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "111"
-            endingLineNumber = "111"
-            landmarkName = "getTVLiveNow(liveModel:indexPath:finish:)"
+            startingLineNumber = "57"
+            endingLineNumber = "57"
+            landmarkName = "getDetailShowList(channelId:finish:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "iTVLive/Classes/Home/TVDetailModel.swift"
+            timestampString = "510496151.0549"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "38"
+            endingLineNumber = "38"
+            landmarkName = "getDetailShowList(channelId:finish:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
