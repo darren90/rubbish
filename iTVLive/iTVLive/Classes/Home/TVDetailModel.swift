@@ -28,8 +28,8 @@ class TVDetailModel: NSObject {
     }
 
 
-
     class func getDetailShowList(channelId: String ,finish:@escaping(_ models:[TVDetailModel]?,_ error:NSError?)->()){
+        
         let url = ApiTools.getDetailUrl(channelId: channelId)
 
         APINetTools.GET(urlStr: url, parms: nil) { (result, error) in
@@ -40,7 +40,7 @@ class TVDetailModel: NSObject {
                 if(dict == nil){
                     finish(nil,NSError.init(domain: "错误的status值", code: 9999, userInfo: ["status码值错误" : "status值不等于1"]))
                 }
-                let dataDict = dict?["channelId"] as? [String:AnyObject]
+                let dataDict = dict?["\(channelId)"] as? [String:AnyObject]
                 if(dataDict == nil){
                     finish(nil,NSError.init(domain: "错误的status值", code: 9999, userInfo: ["status码值错误" : "status值不等于1"]))
                 }

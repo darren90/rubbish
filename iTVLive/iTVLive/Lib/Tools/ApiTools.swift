@@ -61,8 +61,9 @@ class ApiTools: NSObject {
     
     class func getDetailUrl(channelId:String) -> String{
         let fmt = TimeTools.getDateFmt()
+        fmt.dateFormat = "yyyyMMdd"
         let dateStr = fmt.string(from: Date())
-        let url = " http://api.cntv.cn/epg/epginfo?serviceId=cbox&c=\(channelId)&d=\(dateStr)"
+        let url = "http://api.cntv.cn/epg/epginfo?serviceId=cbox&c=\(channelId)&d=\(dateStr)"
         return url
     }
     

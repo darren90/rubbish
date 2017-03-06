@@ -35,10 +35,8 @@ class DetailViewController: BaseTableViewController {
                 self.errorType = .Default
             }
         }
-        
 
     }
-
 }
 
 

@@ -19,7 +19,7 @@ class HomeViewController: BaseTableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-
+        navBarView.leftButton.isHidden = true
         tableView.frame = CGRect(x: 0, y: 64, width: view.width, height: view.height-64-49)
         navTitleStr = "节目"
         tableView.rowHeight = 100
@@ -61,6 +61,8 @@ extension HomeViewController {
         let model = datas?[indexPath.row]
         detailVc.channelId = model?.channelId
         navigationController?.pushViewController(detailVc, animated: true)
+        
+        tableView.deselectRow(at: indexPath, animated: true)
     }
     
 }
