@@ -36,7 +36,16 @@ class DetailListCell: UITableViewCell {
             }
 
             titleL.text = model.t
-            timeL.text = "\(model.duration)"
+            timeL.text = "\(model.showTime ?? "")"
+            
+            switch model.modelType {
+            case .Living:
+                self.stateL.text = "直播中"
+            case .Back:
+                self.stateL.text = "回放"
+            case.Appoint:
+                self.stateL.text = ""//预约
+            }
         }
     }
 

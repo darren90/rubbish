@@ -10,6 +10,7 @@ import UIKit
 
 class DetailViewController: BaseTableViewController {
 
+    var titleStr:String?
     var datas:[TVDetailModel]?{
         didSet{
             tableView.reloadData()
@@ -19,12 +20,11 @@ class DetailViewController: BaseTableViewController {
 
     var channelId:String?
 
-
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        tableView.frame = CGRect(x: 0, y: 64, width: view.width, height: view.height-64-49)
-        navTitleStr = "节目"
+        tableView.frame = CGRect(x: 0, y: 64, width: view.width, height: view.height-64)
+        navTitleStr = titleStr
         tableView.rowHeight = 50
 
         TVDetailModel.getDetailShowList(channelId: channelId ?? "") { (lists , error) in
@@ -55,8 +55,24 @@ extension DetailViewController {
     }
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-
+        let playVc = PlayerViewController()
+        let model = datas?[indexPath.row]
+        playVc.model = model
+        playVc.channelId = channelId
+        navigationController?.pushViewController(playVc, animated: true)
+        
+        tableView.deselectRow(at: indexPath, animated: true)
     }
     
 }
+
+
+
+
+
+
+
+
+
+
 

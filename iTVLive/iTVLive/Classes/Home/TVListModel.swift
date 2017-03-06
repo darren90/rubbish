@@ -15,7 +15,6 @@ enum TVListModelType:String{
 }
 
 
-
 class TVListModel: NSObject {
     
     //有用的

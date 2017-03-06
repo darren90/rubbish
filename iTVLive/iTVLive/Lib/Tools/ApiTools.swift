@@ -46,7 +46,6 @@ class ApiTools: NSObject {
     static let URL_PANDA = "http://cbox.cntv.cn/json2015/global/ipanda/live/index.json"
     
     
-    
     //详情页面
     
     //eg:   http://api.cntv.cn/epg/epginfo?serviceId=cbox&c=cctv1&d=20170305

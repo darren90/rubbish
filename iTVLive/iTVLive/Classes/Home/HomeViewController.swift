@@ -60,6 +60,7 @@ extension HomeViewController {
         let detailVc = DetailViewController()
         let model = datas?[indexPath.row]
         detailVc.channelId = model?.channelId
+        detailVc.titleStr = model?.t
         navigationController?.pushViewController(detailVc, animated: true)
         
         tableView.deselectRow(at: indexPath, animated: true)

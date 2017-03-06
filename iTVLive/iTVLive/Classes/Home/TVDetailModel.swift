@@ -8,6 +8,13 @@
 
 import UIKit
 
+enum TVDetailModelType:String{
+    case Living = "Living"  // 直播
+    case Back  = "Back"   //  回放
+    case Appoint = "Appoint"      //预约
+ }
+
+ 
 class TVDetailModel: NSObject {
     
     var t:String?
@@ -15,17 +22,36 @@ class TVDetailModel: NSObject {
     var et:Double = 0
     var showTime:String?
     var duration:Int = 0
+    var modelType: TVDetailModelType = .Living
     
     
     init(dict:[String:AnyObject]) {
         super.init()
         
         setValuesForKeys(dict)
+        
+        setLiveType()
     }
     
     override func setValue(_ value: Any?, forUndefinedKey key: String) {
         
     }
+    
+    
+    func setLiveType(){
+        let date = Date()
+        let now:Double = date.timeIntervalSince1970
+        
+        if now < st {
+            self.modelType = .Appoint //预约
+        }else if now >= st , now <= et {
+            self.modelType = .Living
+        }else{
+            self.modelType = .Back
+        }
+        
+    }
+    
 
 
     class func getDetailShowList(channelId: String ,finish:@escaping(_ models:[TVDetailModel]?,_ error:NSError?)->()){

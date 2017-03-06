@@ -141,6 +141,8 @@
 		FE53732A1E6C15A800FDF9FC /* TimeTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5373281E6C15A800FDF9FC /* TimeTools.swift */; };
 		FE53732D1E6C15B200FDF9FC /* TVDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE53732B1E6C15B200FDF9FC /* TVDetailModel.swift */; };
 		FE53732E1E6C15B200FDF9FC /* TVListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE53732C1E6C15B200FDF9FC /* TVListModel.swift */; };
+		FE5373331E6DB0D100FDF9FC /* PlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5373321E6DB0D100FDF9FC /* PlayerViewController.swift */; };
+		FE5373351E6DB20B00FDF9FC /* GetPlayUrlTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5373341E6DB20B00FDF9FC /* GetPlayUrlTool.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -355,6 +357,8 @@
 		FE5373281E6C15A800FDF9FC /* TimeTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeTools.swift; sourceTree = "<group>"; };
 		FE53732B1E6C15B200FDF9FC /* TVDetailModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TVDetailModel.swift; sourceTree = "<group>"; };
 		FE53732C1E6C15B200FDF9FC /* TVListModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TVListModel.swift; sourceTree = "<group>"; };
+		FE5373321E6DB0D100FDF9FC /* PlayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerViewController.swift; sourceTree = "<group>"; };
+		FE5373341E6DB20B00FDF9FC /* GetPlayUrlTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetPlayUrlTool.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -515,10 +519,12 @@
 			children = (
 				FE5372051E6C13EA00FDF9FC /* HomeViewController.swift */,
 				8945ACD41E6D86C000B3E3DE /* DetailViewController.swift */,
+				FE5373321E6DB0D100FDF9FC /* PlayerViewController.swift */,
 				8945ACD61E6D8B3300B3E3DE /* DetailListCell.swift */,
 				8945ACD71E6D8B3300B3E3DE /* DetailListCell.xib */,
 				FE53732C1E6C15B200FDF9FC /* TVListModel.swift */,
 				FE53732B1E6C15B200FDF9FC /* TVDetailModel.swift */,
+				FE5373341E6DB20B00FDF9FC /* GetPlayUrlTool.swift */,
 				FE5372011E6C13EA00FDF9FC /* AdmobCell.swift */,
 				FE5372021E6C13EA00FDF9FC /* AdmobCell.xib */,
 				FE5372031E6C13EA00FDF9FC /* HomeCell.swift */,
@@ -1146,6 +1152,7 @@
 				FE53732D1E6C15B200FDF9FC /* TVDetailModel.swift in Sources */,
 				FE5372AF1E6C13EA00FDF9FC /* ChannelViewCell.swift in Sources */,
 				FE53730C1E6C13EA00FDF9FC /* TTFVSegmentSlider.m in Sources */,
+				FE5373351E6DB20B00FDF9FC /* GetPlayUrlTool.swift in Sources */,
 				FE5372C11E6C13EA00FDF9FC /* TFMoviePlayerViewController.swift in Sources */,
 				FE5372B61E6C13EA00FDF9FC /* RMDBTools.swift in Sources */,
 				FE5372D71E6C13EA00FDF9FC /* MJRefreshBackNormalFooter.m in Sources */,
@@ -1163,6 +1170,7 @@
 				FE53732E1E6C15B200FDF9FC /* TVListModel.swift in Sources */,
 				FE5371C11E6BFA5E00FDF9FC /* ViewController.swift in Sources */,
 				FE5371BF1E6BFA5E00FDF9FC /* AppDelegate.swift in Sources */,
+				FE5373331E6DB0D100FDF9FC /* PlayerViewController.swift in Sources */,
 				FE53730A1E6C13EA00FDF9FC /* TTFVideoPlayerView.m in Sources */,
 				8945ACD51E6D86C000B3E3DE /* DetailViewController.swift in Sources */,
 				FE5372BC1E6C13EA00FDF9FC /* BaseTableViewController.swift in Sources */,
