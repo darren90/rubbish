@@ -19,6 +19,23 @@ class HomeCell: UITableViewCell {
         return cell!
     }
 
+    @IBOutlet weak var iconView: UIImageView!
+    @IBOutlet weak var titleL: UILabel!
+    @IBOutlet weak var stateL: UILabel!
+    @IBOutlet weak var playingL: UILabel!
+    
+    
+    var model:TVListModel?{
+        didSet{
+            titleL.text = model?.title
+            playingL.text = model?.t
+            guard let url = model?.iconUrl else {
+                return
+            }
+            self.iconView.setImageWith(url, placeholder: KPlaceImg, options: .setImageWithFadeAnimation, completion: nil)
+        }
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

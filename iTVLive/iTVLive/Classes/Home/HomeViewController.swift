@@ -10,47 +10,50 @@ import UIKit
 
 class HomeViewController: BaseTableViewController {
     
-    let datas = TVLiveTools.getData()
+    var datas:[TVListModel]?{
+        didSet{
+            tableView.reloadData()
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.errorType = .None
+       
         navTitleStr = "节目"
+        tableView.rowHeight = 100
         
-//        print(datas)
-        RMDBTools.shareInstance.addData()
+        TVListModel.getTVList { (lists, error) in
+            if error == nil{
+                 self.errorType = .None
+                self.datas = lists
+            }else{
+                 self.errorType = .Default
+            }
+        }
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-    
-//    lazy var dataArray:
 
 }
 
 
 extension HomeViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return datas.count
+        return datas?.count ?? 0
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = HomeCell.cellWithTableView(tableView: tableView)
-        let model = datas[indexPath.row]
-        cell.textLabel?.text = model.tvName
+        let model = datas?[indexPath.row]
+        cell.model = model
         return cell
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let playVc = TFMoviePlayerViewController()
-        let model = datas[indexPath.row]
-        playVc.playUrl = model.tvPlayUrlStr
-        playVc.titleStr = model.tvName
-        navigationController?.present(playVc, animated: true, completion: nil)
+//        let playVc = TFMoviePlayerViewController()
+//        let model = datas[indexPath.row]
+//        playVc.playUrl = model.tvPlayUrlStr
+//        playVc.titleStr = model.tvName
+//        navigationController?.present(playVc, animated: true, completion: nil)
     }
     
 }

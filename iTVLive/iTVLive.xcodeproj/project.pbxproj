@@ -130,6 +130,10 @@
 		FE5373221E6C147E00FDF9FC /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE5372581E6C13EA00FDF9FC /* RealmSwift.framework */; };
 		FE5373231E6C147E00FDF9FC /* RealmSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FE5372581E6C13EA00FDF9FC /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		FE5373261E6C149800FDF9FC /* TFLiveCommon.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5373251E6C149800FDF9FC /* TFLiveCommon.swift */; };
+		FE5373291E6C15A800FDF9FC /* ApiTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5373271E6C15A800FDF9FC /* ApiTools.swift */; };
+		FE53732A1E6C15A800FDF9FC /* TimeTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5373281E6C15A800FDF9FC /* TimeTools.swift */; };
+		FE53732D1E6C15B200FDF9FC /* TVDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE53732B1E6C15B200FDF9FC /* TVDetailModel.swift */; };
+		FE53732E1E6C15B200FDF9FC /* TVListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE53732C1E6C15B200FDF9FC /* TVListModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -333,6 +337,10 @@
 		FE53731C1E6C143500FDF9FC /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		FE53731E1E6C143E00FDF9FC /* libbz2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libbz2.tbd; path = usr/lib/libbz2.tbd; sourceTree = SDKROOT; };
 		FE5373251E6C149800FDF9FC /* TFLiveCommon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TFLiveCommon.swift; sourceTree = "<group>"; };
+		FE5373271E6C15A800FDF9FC /* ApiTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiTools.swift; sourceTree = "<group>"; };
+		FE5373281E6C15A800FDF9FC /* TimeTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeTools.swift; sourceTree = "<group>"; };
+		FE53732B1E6C15B200FDF9FC /* TVDetailModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TVDetailModel.swift; sourceTree = "<group>"; };
+		FE53732C1E6C15B200FDF9FC /* TVListModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TVListModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -458,9 +466,9 @@
 		FE5371FA1E6C13EA00FDF9FC /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				FE5371FB1E6C13EA00FDF9FC /* Channel */,
-				FE5372001E6C13EA00FDF9FC /* Home */,
 				FE5372091E6C13EA00FDF9FC /* Main */,
+				FE5372001E6C13EA00FDF9FC /* Home */,
+				FE5371FB1E6C13EA00FDF9FC /* Channel */,
 				FE5372131E6C13EA00FDF9FC /* Me */,
 			);
 			path = Classes;
@@ -480,11 +488,13 @@
 		FE5372001E6C13EA00FDF9FC /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				FE5372051E6C13EA00FDF9FC /* HomeViewController.swift */,
+				FE53732C1E6C15B200FDF9FC /* TVListModel.swift */,
+				FE53732B1E6C15B200FDF9FC /* TVDetailModel.swift */,
 				FE5372011E6C13EA00FDF9FC /* AdmobCell.swift */,
 				FE5372021E6C13EA00FDF9FC /* AdmobCell.xib */,
 				FE5372031E6C13EA00FDF9FC /* HomeCell.swift */,
 				FE5372041E6C13EA00FDF9FC /* HomeCell.xib */,
-				FE5372051E6C13EA00FDF9FC /* HomeViewController.swift */,
 				FE5372061E6C13EA00FDF9FC /* RMDBTools.swift */,
 				FE5372071E6C13EA00FDF9FC /* TVLiveModel.swift */,
 				FE5372081E6C13EA00FDF9FC /* TVLiveTools.swift */,
@@ -539,6 +549,8 @@
 		FE53721A1E6C13EA00FDF9FC /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				FE5373271E6C15A800FDF9FC /* ApiTools.swift */,
+				FE5373281E6C15A800FDF9FC /* TimeTools.swift */,
 				FE53721B1E6C13EA00FDF9FC /* APINetTools.swift */,
 				FE53721C1E6C13EA00FDF9FC /* iTVShows.css */,
 			);
@@ -1078,6 +1090,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FE5372BB1E6C13EA00FDF9FC /* BaseTabBarController.swift in Sources */,
+				FE53732A1E6C15A800FDF9FC /* TimeTools.swift in Sources */,
 				FE5373071E6C13EA00FDF9FC /* TFUtilities.m in Sources */,
 				FE5373051E6C13EA00FDF9FC /* BrightnessView.m in Sources */,
 				FE5372D31E6C13EA00FDF9FC /* MJRefreshAutoGifFooter.m in Sources */,
@@ -1104,6 +1117,7 @@
 				FE5372C81E6C13EA00FDF9FC /* DateCollectionViewCell.swift in Sources */,
 				FE5373081E6C13EA00FDF9FC /* TFVideoPlayer.m in Sources */,
 				FE5372C51E6C13EA00FDF9FC /* UIImage+Extension.swift in Sources */,
+				FE53732D1E6C15B200FDF9FC /* TVDetailModel.swift in Sources */,
 				FE5372AF1E6C13EA00FDF9FC /* ChannelViewCell.swift in Sources */,
 				FE53730C1E6C13EA00FDF9FC /* TFVSegmentSlider.m in Sources */,
 				FE5372C11E6C13EA00FDF9FC /* TFMoviePlayerViewController.swift in Sources */,
@@ -1120,11 +1134,13 @@
 				FE5372D41E6C13EA00FDF9FC /* MJRefreshAutoNormalFooter.m in Sources */,
 				FE53730E1E6C13EA00FDF9FC /* CHANGELOG.md in Sources */,
 				FE5372D61E6C13EA00FDF9FC /* MJRefreshBackGifFooter.m in Sources */,
+				FE53732E1E6C15B200FDF9FC /* TVListModel.swift in Sources */,
 				FE5371C11E6BFA5E00FDF9FC /* ViewController.swift in Sources */,
 				FE5371BF1E6BFA5E00FDF9FC /* AppDelegate.swift in Sources */,
 				FE53730A1E6C13EA00FDF9FC /* TFVideoPlayerView.m in Sources */,
 				FE5372BC1E6C13EA00FDF9FC /* BaseTableViewController.swift in Sources */,
 				FE5373091E6C13EA00FDF9FC /* TFVideoPlayerView+Extension.m in Sources */,
+				FE5373291E6C15A800FDF9FC /* ApiTools.swift in Sources */,
 				FE5372BD1E6C13EA00FDF9FC /* BaseViewController.swift in Sources */,
 				FE5372AE1E6C13EA00FDF9FC /* ChannelModel.swift in Sources */,
 				FE5372DB1E6C13EA00FDF9FC /* MJRefreshStateHeader.m in Sources */,
