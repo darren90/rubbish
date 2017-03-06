@@ -10,7 +10,7 @@ import UIKit
 
 class GetPlayUrlTool: NSObject {
     
-    class func getLiveBackUrl(channelId:String ,st: Double , et: Double, finish:@escaping(_ models:[TVDetailModel]?,_ error:NSError?)->()){
+    class func getLiveBackUrl(channelId:String ,st: Double , et: Double, finish:@escaping(_ models:[String]?,_ error:NSError?)->()){
         
         let url = ApiTools.getLiveBackUrl(channelId: channelId, st: st, et: et)
         
@@ -31,10 +31,10 @@ class GetPlayUrlTool: NSObject {
                 if(dicts == nil){
                     finish(nil,NSError.init(domain: "错误的status值", code: 9999, userInfo: ["status码值错误" : "status值不等于1"]))
                 }else{
-                    var models = [TVDetailModel]()
+                    var models = [String]()
                     for ddic in dicts! {
-                        let model = TVDetailModel(dict: ddic)
-                        models.append(model)
+                        let url = ddic["url"]
+                        models.append(url as! String)
                     }
                     finish(models,error)
                 }

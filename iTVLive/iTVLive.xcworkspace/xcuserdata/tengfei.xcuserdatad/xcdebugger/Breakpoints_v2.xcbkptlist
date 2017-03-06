@@ -10,12 +10,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "iTVLive/Classes/Home/GetPlayUrlTool.swift"
-            timestampString = "510505779.839792"
+            timestampString = "510505872.213376"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "31"
-            endingLineNumber = "31"
-            landmarkName = "getLiveBackUrl(channelId:st:et:finish:)"
+            startingLineNumber = "54"
+            endingLineNumber = "54"
+            landmarkName = "getLiveUrl(channelId:finish:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -26,12 +26,60 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "iTVLive/Classes/Home/GetPlayUrlTool.swift"
-            timestampString = "510505872.213376"
+            timestampString = "510506472.369213"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "54"
-            endingLineNumber = "54"
-            landmarkName = "getLiveUrl(channelId:finish:)"
+            startingLineNumber = "17"
+            endingLineNumber = "17"
+            landmarkName = "getLiveBackUrl(channelId:st:et:finish:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "static iTVLive.GetPlayUrlTool.getLiveBackUrl (channelId : Swift.String, st : Swift.Double, et : Swift.Double, finish : (Swift.Optional&lt;Swift.Array&lt;Swift.String&gt;&gt;, Swift.Optional&lt;__ObjC.NSError&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "iTVLive"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tengfei/github/rubbish/iTVLive/iTVLive/Classes/Home/GetPlayUrlTool.swift"
+                  timestampString = "510506695.387722"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "17"
+                  endingLineNumber = "17"
+                  offsetFromSymbolStart = "184">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "static iTVLive.GetPlayUrlTool.(getLiveBackUrl (channelId : Swift.String, st : Swift.Double, et : Swift.Double, finish : (Swift.Optional&lt;Swift.Array&lt;Swift.String&gt;&gt;, Swift.Optional&lt;__ObjC.NSError&gt;) -&gt; ()) -&gt; ()).(closure #1)"
+                  moduleName = "iTVLive"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tengfei/github/rubbish/iTVLive/iTVLive/Classes/Home/GetPlayUrlTool.swift"
+                  timestampString = "510506695.390746"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "18"
+                  endingLineNumber = "18"
+                  offsetFromSymbolStart = "27">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "iTVLive/Classes/Home/GetPlayUrlTool.swift"
+            timestampString = "510506681.272411"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "39"
+            endingLineNumber = "39"
+            landmarkName = "getLiveBackUrl(channelId:st:et:finish:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
