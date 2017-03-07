@@ -36,8 +36,7 @@ class TVDetailModel: NSObject {
     override func setValue(_ value: Any?, forUndefinedKey key: String) {
         
     }
-    
-    
+
     func setLiveType(){
         let date = Date()
         let now:Double = date.timeIntervalSince1970
@@ -49,7 +48,6 @@ class TVDetailModel: NSObject {
         }else{
             self.modelType = .Back
         }
-        
     }
     
 

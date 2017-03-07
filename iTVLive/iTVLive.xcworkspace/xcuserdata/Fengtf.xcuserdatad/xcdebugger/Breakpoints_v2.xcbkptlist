@@ -9,13 +9,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "iTVLive/Classes/Home/TVDetailModel.swift"
-            timestampString = "510496119.958959"
+            filePath = "iTVLive/Lib/Vendor/TFVideoPlayer/TFVideoPlayer/TFVideoPlayerView.swift"
+            timestampString = "510580793.230926"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "57"
-            endingLineNumber = "57"
-            landmarkName = "getDetailShowList(channelId:finish:)"
+            startingLineNumber = "100"
+            endingLineNumber = "100"
+            landmarkName = "startPauseButtonAcion(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -25,13 +25,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "iTVLive/Classes/Home/TVDetailModel.swift"
-            timestampString = "510496151.0549"
+            filePath = "iTVLive/Lib/Vendor/TFVideoPlayer/TFVideoPlayer/TFVideoPlayerView.swift"
+            timestampString = "510580793.230926"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "38"
-            endingLineNumber = "38"
-            landmarkName = "getDetailShowList(channelId:finish:)"
+            startingLineNumber = "169"
+            endingLineNumber = "169"
+            landmarkName = "handleSingleTap(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

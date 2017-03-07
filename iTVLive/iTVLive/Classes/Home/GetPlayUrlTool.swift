@@ -33,8 +33,10 @@ class GetPlayUrlTool: NSObject {
                 }else{
                     var models = [String]()
                     for ddic in dicts! {
-                        let url = ddic["url"]
-                        models.append(url as! String)
+                        let url = ddic["url"] as! String
+                        if (url.characters.count > 0){
+                            models.append(url)
+                        }
                     }
                     finish(models,error)
                 }
@@ -42,7 +44,7 @@ class GetPlayUrlTool: NSObject {
         }
     }
     
-    class func getLiveUrl(channelId:String , finish:@escaping(_ models:[TVDetailModel]?,_ error:NSError?)->()){
+    class func getLiveUrl(channelId:String , finish:@escaping(_ models:[String]?,_ error:NSError?)->()){
         
         let url = ApiTools.getLiveUrl(channelId: channelId)
         
@@ -59,14 +61,15 @@ class GetPlayUrlTool: NSObject {
 //                    finish(nil,NSError.init(domain: "错误的status值", code: 9999, userInfo: ["status码值错误" : "status值不等于1"]))
 //                }
                 
-                let dicts = dict?["hls_url"] as? [[String:AnyObject]]
+                let dicts = dict!["hls_url"] as? [String:String]
                 if(dicts == nil){
                     finish(nil,NSError.init(domain: "错误的status值", code: 9999, userInfo: ["status码值错误" : "status值不等于1"]))
                 }else{
-                    var models = [TVDetailModel]()
-                    for ddic in dicts! {
-                        let model = TVDetailModel(dict: ddic)
-                        models.append(model)
+                    var models = [String]()
+                    for (_, value) in dicts! {
+                        if (value.characters.count > 0){
+                            models.append(value)
+                        }
                     }
                     finish(models,error)
                 }
@@ -76,5 +79,4 @@ class GetPlayUrlTool: NSObject {
         
 
     }
-
 }
