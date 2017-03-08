@@ -24,8 +24,9 @@ class PlayerViewController: BaseTableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        tableView.frame = CGRect(x: 0, y: 64, width: view.width, height: view.height-64)
-        navTitleStr = model?.t
+        navBarView.isHidden = true
+        tableView.frame = CGRect(x: 0, y: 0, width: view.width, height: view.height-64)
+//        navTitleStr = model?.t
         tableView.rowHeight = 50
 
         initPlayView()
@@ -37,13 +38,12 @@ class PlayerViewController: BaseTableViewController {
         tableView.contentInset = UIEdgeInsetsMake(190, 0, 0, 0)
         view.addSubview(playerView)
         playerView.snp.makeConstraints { (make) in
-            make.top.equalTo(self.view).offset(64)
+            make.top.equalTo(self.view).offset(0)
             make.left.equalTo(self.view)
             make.right.equalTo(self.view)
             make.height.equalTo(190)
         }
         playerView.delegate = self
-
     }
 
 
