@@ -113,6 +113,8 @@ extension PlayerViewController : TTVideoPlayerViewDelegate{
         switch event {
         case .Back:
             print("---")
+            playerView.unInstallPlayer()
+            let _ = navigationController?.popViewController(animated: true)
         case .FullScreen:
             UIView.animate(withDuration: 0.5, animations: { 
                 self.playerView.snp.makeConstraints({ (make) in
