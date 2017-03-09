@@ -116,10 +116,25 @@ extension PlayerViewController : TTVideoPlayerViewDelegate{
             playerView.unInstallPlayer()
             let _ = navigationController?.popViewController(animated: true)
         case .FullScreen:
+//            UIView.animate(withDuration: 0.5, animations: {
+//                self.playerView.transform = CGAffineTransform(rotationAngle: CGFloat(M_PI_2))
+//            })
+            
             UIView.animate(withDuration: 0.5, animations: { 
+//                self.playerView.transform = CGAffineTransform(rotationAngle: CGFloat(M_PI_2))
+                
                 self.playerView.snp.makeConstraints({ (make) in
-                    
+                    self.playerView.snp.makeConstraints { (make) in
+                        make.top.equalTo(self.view).offset(0)
+                        make.left.equalTo(self.view)
+                        make.right.equalTo(self.view)
+                        //                        make.height.equalTo(payerH)
+                        make.bottom.equalTo(self.view)
+                    }
                 })
+            }, completion: { (_) in
+                
+
             })
 
         default: break
