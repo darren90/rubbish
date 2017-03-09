@@ -116,10 +116,7 @@ extension PlayerViewController : TTVideoPlayerViewDelegate{
             playerView.unInstallPlayer()
             let _ = navigationController?.popViewController(animated: true)
         case .FullScreen:
-//            UIView.animate(withDuration: 0.5, animations: {
-//                self.playerView.transform = CGAffineTransform(rotationAngle: CGFloat(M_PI_2))
-//            })
-            
+ 
             UIView.animate(withDuration: 0.5, animations: { 
 //                self.playerView.transform = CGAffineTransform(rotationAngle: CGFloat(M_PI_2))
                 
