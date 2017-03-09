@@ -25,7 +25,7 @@ class PlayerViewController: BaseTableViewController {
         super.viewDidLoad()
 
         navBarView.isHidden = true
-        tableView.frame = CGRect(x: 0, y: 0, width: view.width, height: view.height-64)
+        tableView.frame = CGRect(x: 0, y: 0, width: view.width, height: view.height)
 //        navTitleStr = model?.t
         tableView.rowHeight = 50
 
@@ -35,13 +35,14 @@ class PlayerViewController: BaseTableViewController {
     }
 
     func initPlayView(){
-        tableView.contentInset = UIEdgeInsetsMake(190, 0, 0, 0)
+        let payerH: CGFloat = view.width * 10.0 / 16
+        tableView.contentInset = UIEdgeInsetsMake(payerH, 0, 0, 0)
         view.addSubview(playerView)
         playerView.snp.makeConstraints { (make) in
             make.top.equalTo(self.view).offset(0)
             make.left.equalTo(self.view)
             make.right.equalTo(self.view)
-            make.height.equalTo(190)
+            make.height.equalTo(payerH)
         }
         playerView.delegate = self
     }
@@ -151,7 +152,7 @@ extension PlayerViewController {
 //        playVc.channelId = channelId
 //        navigationController?.pushViewController(playVc, animated: true)
 
-        tableView.deselectRow(at: indexPath, animated: true)
+//        tableView.deselectRow(at: indexPath, animated: true)
     }
     
 }
