@@ -132,8 +132,10 @@ class TFVideoPlayerView: UIView {
 
     //MARK: --- 全屏-切换
     @IBAction func fullscreenButtonTapped(_ sender: UIButton) {
-        delegate?.videoPlayerDidControlByEvent(event: .FullScreen)
+//        delegate?.videoPlayerDidControlByEvent(event: .FullScreen)
         sender.isSelected = !sender.isSelected
+
+        fulllScreenAtion()
     }
 
     //MARK: --- 返回
@@ -201,6 +203,8 @@ extension TFVideoPlayerView {
         progressSld.setThumbImage(UIImage(named: "pb-seek-bar-btn@2x.png"), for: .normal)
         progressSld.minimumTrackTintColor = UIColor.green
         progressSld.maximumTrackTintColor = UIColor.lightGray
+
+        NotificationCenter.default.addObserver(self, selector: #selector(self.onOrientationChanged), name: NSNotification.Name.UIApplicationDidChangeStatusBarOrientation, object: nil)
     }
 
     func stopActivity(){
@@ -548,6 +552,49 @@ extension TFVideoPlayerView : VMediaPlayerDelegate {
 
 }
 
+//MARK: -- 旋转屏幕
+//https://github.com/BrikerMan/BMPlayer
+extension TFVideoPlayerView {
+
+    //MARK: --- 重力感应
+    @objc fileprivate func onOrientationChanged() {
+        print("--重力感应-");
+    }
+
+    func fulllScreenAtion(){
+
+        let orientation = UIDevice.current.orientation
+        guard let interfaceOrientation = UIInterfaceOrientation(rawValue: orientation.rawValue) else{
+            return
+        }
+
+        switch interfaceOrientation {
+
+        case .portraitUpsideDown:
+            self.interfaceOrientation(orientation: .portraitUpsideDown)
+        case .portrait:
+            self.interfaceOrientation(orientation: .portrait)
+        case .landscapeLeft:
+            self.interfaceOrientation(orientation: .landscapeLeft)
+        case .landscapeRight:
+            self.interfaceOrientation(orientation: .landscapeRight)
+        case .unknown:
+            self.interfaceOrientation(orientation: .landscapeRight)
+
+        }
+
+    }
+
+
+    func interfaceOrientation(orientation: UIInterfaceOrientation){
+
+        if(UIDevice.current.responds(to: Selector(stringLiteral: "setOrientation:"))){
+            let selector = Selector(stringLiteral: "setOrientation:")
+
+        }
+    }
+
+}
 
 
 

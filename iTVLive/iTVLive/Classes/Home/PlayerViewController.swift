@@ -101,6 +101,18 @@ class PlayerViewController: BaseTableViewController {
     override func leftBtnClick() {
         unInstallPlayerView()
     }
+
+    override var supportedInterfaceOrientations: UIInterfaceOrientationMask{
+        return .landscape
+    }
+
+    override var shouldAutorotate: Bool {
+        return false
+    }
+
+    override var preferredInterfaceOrientationForPresentation: UIInterfaceOrientation {
+        return .portrait
+    }
 }
 
 
