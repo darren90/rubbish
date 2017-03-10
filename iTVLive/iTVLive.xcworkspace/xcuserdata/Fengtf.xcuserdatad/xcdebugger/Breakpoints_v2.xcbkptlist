@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "iTVLive/Lib/Vendor/TFVideoPlayer/TFVideoPlayer/TFVideoPlayerView.swift"
-            timestampString = "510580793.230926"
+            timestampString = "510830477.464982"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "169"
-            endingLineNumber = "169"
+            startingLineNumber = "171"
+            endingLineNumber = "171"
             landmarkName = "handleSingleTap(_:)"
             landmarkType = "7">
          </BreakpointContent>
