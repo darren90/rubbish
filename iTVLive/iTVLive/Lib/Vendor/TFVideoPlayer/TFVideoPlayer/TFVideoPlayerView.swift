@@ -215,6 +215,8 @@ extension TFVideoPlayerView {
         progressSld.setThumbImage(UIImage(named: "pb-seek-bar-btn@2x.png"), for: .normal)
         progressSld.minimumTrackTintColor = UIColor.green
         progressSld.maximumTrackTintColor = UIColor.lightGray
+        downloadRateLabel.isHidden = true
+        downloadRateLabel.textColor = UIColor.clear
 
         NotificationCenter.default.addObserver(self, selector: #selector(self.onOrientationChanged), name: NSNotification.Name.UIApplicationDidChangeStatusBarOrientation, object: nil)
     }
@@ -459,7 +461,7 @@ extension TFVideoPlayerView : VMediaPlayerDelegate {
 
     //MARK: --- 播放失败
     func mediaPlayer(_ player: VMediaPlayer!, error arg: Any!) {
-        print("--mediaPlayer-播放出错");
+        print("--mediaPlayer-播放出错:\(arg)");
         stopActivity()
         delegate?.videoPlayerHandleErrorCode(errorMsg: "播放出错")
     }

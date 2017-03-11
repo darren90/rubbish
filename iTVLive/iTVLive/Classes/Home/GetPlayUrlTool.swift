@@ -56,11 +56,7 @@ class GetPlayUrlTool: NSObject {
                 if(dict == nil){
                     finish(nil,NSError.init(domain: "错误的status值", code: 9999, userInfo: ["status码值错误" : "status值不等于1"]))
                 }
-//                let dataDict = dict?["hls_url"] as? [String:AnyObject]
-//                if(dataDict == nil){
-//                    finish(nil,NSError.init(domain: "错误的status值", code: 9999, userInfo: ["status码值错误" : "status值不等于1"]))
-//                }
-                
+ 
                 let dicts = dict!["hls_url"] as? [String:String]
                 if(dicts == nil){
                     finish(nil,NSError.init(domain: "错误的status值", code: 9999, userInfo: ["status码值错误" : "status值不等于1"]))

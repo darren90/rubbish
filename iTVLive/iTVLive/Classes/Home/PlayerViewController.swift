@@ -93,7 +93,6 @@ class PlayerViewController: BaseTableViewController {
     }
 
     func playView(url:String){
-
         guard let uurl = URL(string: url) else {
             return
         }

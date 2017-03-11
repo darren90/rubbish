@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16B2657" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -44,9 +44,17 @@
                                         <constraint firstItem="Oup-rF-CRJ" firstAttribute="centerY" secondItem="PkR-vJ-Bbq" secondAttribute="centerY" id="qPq-SW-kbd"/>
                                     </constraints>
                                 </view>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12k/s" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Llz-zq-Vi9">
+                                    <rect key="frame" x="419" y="104" width="24" height="11"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="9"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
                             </subviews>
                             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             <constraints>
+                                <constraint firstItem="Llz-zq-Vi9" firstAttribute="centerY" secondItem="4wn-QU-XOu" secondAttribute="centerY" id="1Dh-vM-0VE"/>
+                                <constraint firstAttribute="trailing" secondItem="Llz-zq-Vi9" secondAttribute="trailing" constant="20" id="VYG-Wc-NSk"/>
                                 <constraint firstAttribute="bottom" secondItem="PkR-vJ-Bbq" secondAttribute="bottom" constant="60" id="fIc-5w-fvK"/>
                                 <constraint firstItem="PkR-vJ-Bbq" firstAttribute="centerX" secondItem="4wn-QU-XOu" secondAttribute="centerX" id="jOa-2l-Ith"/>
                             </constraints>
@@ -219,6 +227,7 @@
                 <outlet property="carrierView" destination="4wn-QU-XOu" id="nXh-Tp-nB7"/>
                 <outlet property="curPosLabel" destination="z7Q-QX-5eR" id="fNa-oL-KXo"/>
                 <outlet property="doubleGesture" destination="czU-jM-vup" id="cLn-Sq-o0f"/>
+                <outlet property="downloadRateLabel" destination="Llz-zq-Vi9" id="LQW-7F-wO0"/>
                 <outlet property="durationLabel" destination="BuT-Oj-Qx2" id="hog-gp-0bg"/>
                 <outlet property="fullscreenBtn" destination="FJU-H1-N1Z" id="YFF-8q-bUa"/>
                 <outlet property="loadbgView" destination="PkR-vJ-Bbq" id="dHK-KE-tlY"/>

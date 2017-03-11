@@ -1397,6 +1397,7 @@
 					"$(PROJECT_DIR)/iTVLive/Lib/Vendor/ThirdPart/Bugly2.4.6",
 				);
 				INFOPLIST_FILE = iTVLive/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1426,6 +1427,7 @@
 					"$(PROJECT_DIR)/iTVLive/Lib/Vendor/ThirdPart/Bugly2.4.6",
 				);
 				INFOPLIST_FILE = iTVLive/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
