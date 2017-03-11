@@ -54,8 +54,15 @@ extension DetailViewController {
     }
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let playVc = PlayerViewController()
         let model = datas?[indexPath.row]
+        
+        if model?.modelType == .Appoint {
+        self.view.makeToast("节目还未开播", duration: 1.5, position: .center)
+            tableView.deselectRow(at: indexPath, animated: true)
+            return
+        }
+        
+        let playVc = PlayerViewController()
         playVc.model = model
         playVc.channelId = channelId
         navigationController?.pushViewController(playVc, animated: true)

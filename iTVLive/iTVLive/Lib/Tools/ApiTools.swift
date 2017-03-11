@@ -22,8 +22,8 @@ class ApiTools: NSObject {
     // 地方
     static let URL_DIFANG = "http://serv.cbox.cntv.cn/json/zhibo/difangpindao/dfmc/index.json"
     
-    
     static let URL_DIFANG_OK = "http://cbox.cntv.cn/json2015/zhiboshy/pdfl/difang/index.json"
+    
     
     //我拿到的api
     

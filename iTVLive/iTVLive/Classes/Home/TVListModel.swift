@@ -113,12 +113,54 @@ class TVListModel: NSObject {
                     liveModel.modelType = .YES
                     let t: String = (dict!["t"] as? String) ?? ""
                     liveModel.t = t
+                    if t.characters.count == 0 {
+                        liveModel.modelType = .NO
+                    }
                 }
             }
 
              finish(liveModel,error)
         }
     }
+    
+    
+    class func getTVChannelList(url: String? ,finish:@escaping(_ models:[TVListModel]?,_ error:NSError?)->()){
+//        let url = ApiTools.URL_YS
+        guard let url = url else {
+            return
+        }
+        
+        APINetTools.GET(urlStr: url, parms: nil) { (result, error) in
+            if error != nil {
+                finish(nil,error)
+            }else{
+                let dict = result as? [String:AnyObject]
+                if(dict == nil){
+                    finish(nil,NSError.init(domain: "错误的status值", code: 9999, userInfo: ["status码值错误" : "status值不等于1"]))
+                }
+                let dataDict = dict?["data"] as? [String:AnyObject]
+                if(dataDict == nil){
+                    finish(nil,NSError.init(domain: "错误的status值", code: 9999, userInfo: ["status码值错误" : "status值不等于1"]))
+                }
+                
+                let dicts = dataDict?["items"] as? [[String:AnyObject]]
+                if(dicts == nil){
+                    finish(nil,NSError.init(domain: "错误的status值", code: 9999, userInfo: ["status码值错误" : "status值不等于1"]))
+                }else{
+                    var models = [TVListModel]()
+                    for ddic in dicts! {
+                        let model = TVListModel(dict: ddic)
+                        models.append(model)
+                    }
+                    finish(models,error)
+                }
+                
+                
+            }
+            
+        }
+    }
+
     
 }
 

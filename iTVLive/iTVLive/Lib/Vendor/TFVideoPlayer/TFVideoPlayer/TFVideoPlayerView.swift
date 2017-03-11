@@ -147,6 +147,11 @@ class TFVideoPlayerView: UIView {
 
     //MARK: --- 返回
     @IBAction func goBackButtonAction(_ sender: UIButton) {
+        if isFullScreen {
+            self.interfaceOrientation(orientation: .portrait)
+            return
+        }
+        
         delegate?.videoPlayerDidControlByEvent(event: .Back)
     }
  
@@ -341,9 +346,9 @@ extension TFVideoPlayerView{
         let m = Int(seconds - h * 3600) / 60
         let s = Int(seconds - h * 3600 - m * 60)
 
-        var result = String(format: "%02x", h) + ":" + String(format: "%02x", m) + ":" +  String(format: "%.2x", s);
+        var result = String(format: "%02d", h) + ":" + String(format: "%02d", m) + ":" +  String(format: "%02d", s);
         if h <= 0{
-            result = String(format: "%02x", m) + ":" + String(format: "%02x", s)
+            result = String(format: "%02d", m) + ":" + String(format: "%02d", s)
         }
 //        print("-timeToHumanStr--\(result)")
         return result

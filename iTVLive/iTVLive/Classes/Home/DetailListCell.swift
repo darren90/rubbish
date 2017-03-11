@@ -34,7 +34,8 @@ class DetailListCell: UITableViewCell {
             guard let model = model else {
                 return
             }
-
+            
+            titleL.textColor = UIColor.black
             titleL.text = model.t
             timeL.text = "\(model.showTime ?? "")"
             
@@ -45,6 +46,7 @@ class DetailListCell: UITableViewCell {
                 self.stateL.text = "回放"
             case.Appoint:
                 self.stateL.text = ""//预约
+                titleL.textColor = UIColor.lightGray
             }
         }
     }

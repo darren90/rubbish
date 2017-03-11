@@ -68,7 +68,7 @@ class ChannelBtn: UIButton {
         
         let w = self.width
 
-        
+        self.imageView?.contentMode = .center
         self.imageView?.frame = CGRect(x: 0, y: 0, width: w, height: w-30)
         self.titleLabel?.frame = CGRect(x: 0, y: (self.imageView?.height)! - 15, width: w, height: 30)
     }

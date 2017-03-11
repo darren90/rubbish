@@ -25,8 +25,7 @@ class PlayerViewController: BaseTableViewController {
         super.viewDidLoad()
 
         navBarView.isHidden = true
-//        tableView.frame = CGRect(x: 0, y: 0, width: view.width, height: view.height)
-//        navTitleStr = model?.t
+
         tableView.snp.makeConstraints { (make) in
             make.edges.equalTo(self.view)
         }
@@ -68,8 +67,7 @@ class PlayerViewController: BaseTableViewController {
                     self.errorType = .None
                     self.datas = lists
 //                    self.playView(url: (lists?.first)!)
-                    let indexPath = IndexPath(row: 0, section: 0)
-                    self.tableView.selectRow(at: indexPath, animated: true, scrollPosition: .bottom)
+                    self.initSelcet()
                 }else{
                     self.errorType = .Default
                 }
@@ -80,13 +78,18 @@ class PlayerViewController: BaseTableViewController {
                     self.errorType = .None
                     self.datas = lists
 //                    self.playView(url: (lists?.first)!)
-                    let indexPath = IndexPath(row: 0, section: 0)
-                    self.tableView.selectRow(at: indexPath, animated: true, scrollPosition: .bottom)
+                    self.initSelcet()
                 }else{
                     self.errorType = .Default
                 }
             })
         }
+    }
+    
+    func initSelcet(){
+        let indexPath = IndexPath(row: 0, section: 0)
+        self.tableView.selectRow(at: indexPath, animated: true, scrollPosition: .bottom)
+        self.playView(url: (datas?.first)!)
     }
 
     func playView(url:String){
@@ -94,7 +97,7 @@ class PlayerViewController: BaseTableViewController {
         guard let uurl = URL(string: url) else {
             return
         }
-        print("");
+        
         playerView.playVideo(url: uurl, title: (model?.t)!, seekPos: 0.0)
     }
 
@@ -133,7 +136,6 @@ extension PlayerViewController : TTVideoPlayerViewDelegate{
     func videoPlayerDidControlByEvent(event: TTVideoPlayerControlEvent) {
         switch event {
         case .Back:
-            print("---")
             playerView.unInstallPlayer()
             let _ = navigationController?.popViewController(animated: true)
         case .FullScreen:

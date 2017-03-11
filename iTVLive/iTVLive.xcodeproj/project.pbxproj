@@ -151,6 +151,8 @@
 		FE53732E1E6C15B200FDF9FC /* TVListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE53732C1E6C15B200FDF9FC /* TVListModel.swift */; };
 		FE5373331E6DB0D100FDF9FC /* PlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5373321E6DB0D100FDF9FC /* PlayerViewController.swift */; };
 		FE5373351E6DB20B00FDF9FC /* GetPlayUrlTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5373341E6DB20B00FDF9FC /* GetPlayUrlTool.swift */; };
+		FEDA82E41E73E5AE00D23C85 /* ChannelListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEDA82E31E73E5AE00D23C85 /* ChannelListViewController.swift */; };
+		FEDA82E71E7411D000D23C85 /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEDA82E61E7411D000D23C85 /* Toast.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -375,6 +377,8 @@
 		FE53732C1E6C15B200FDF9FC /* TVListModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TVListModel.swift; sourceTree = "<group>"; };
 		FE5373321E6DB0D100FDF9FC /* PlayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerViewController.swift; sourceTree = "<group>"; };
 		FE5373341E6DB20B00FDF9FC /* GetPlayUrlTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetPlayUrlTool.swift; sourceTree = "<group>"; };
+		FEDA82E31E73E5AE00D23C85 /* ChannelListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChannelListViewController.swift; sourceTree = "<group>"; };
+		FEDA82E61E7411D000D23C85 /* Toast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Toast.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -521,6 +525,7 @@
 			isa = PBXGroup;
 			children = (
 				FE5371FC1E6C13EA00FDF9FC /* AllChannelViewController.swift */,
+				FEDA82E31E73E5AE00D23C85 /* ChannelListViewController.swift */,
 				FE5371FD1E6C13EA00FDF9FC /* ChannelModel.swift */,
 				FE5371FE1E6C13EA00FDF9FC /* ChannelViewCell.swift */,
 				FE5371FF1E6C13EA00FDF9FC /* ChannelViewCell.xib */,
@@ -867,6 +872,7 @@
 		FE5372A11E6C13EA00FDF9FC /* ThirdPart */ = {
 			isa = PBXGroup;
 			children = (
+				FEDA82E51E7411D000D23C85 /* Toast */,
 				FE5372A21E6C13EA00FDF9FC /* Admob */,
 				FE5372A41E6C13EA00FDF9FC /* Bugly2.4.6 */,
 				FE5372A61E6C13EA00FDF9FC /* GtSdkLib */,
@@ -907,6 +913,14 @@
 				FE5372AC1E6C13EA00FDF9FC /* tv.plist */,
 			);
 			path = Resource;
+			sourceTree = "<group>";
+		};
+		FEDA82E51E7411D000D23C85 /* Toast */ = {
+			isa = PBXGroup;
+			children = (
+				FEDA82E61E7411D000D23C85 /* Toast.swift */,
+			);
+			path = Toast;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1173,6 +1187,7 @@
 				FE5372C31E6C13EA00FDF9FC /* String-Extension.swift in Sources */,
 				FE5372D21E6C13EA00FDF9FC /* MJRefreshHeader.m in Sources */,
 				FE5372B91E6C13EA00FDF9FC /* BaseNaviBar.swift in Sources */,
+				FEDA82E41E73E5AE00D23C85 /* ChannelListViewController.swift in Sources */,
 				FE5372DE1E6C13EA00FDF9FC /* NSBundle+MJRefresh.m in Sources */,
 				FE5372CA1E6C13EA00FDF9FC /* StepCollectionViewFlowLayout.swift in Sources */,
 				FE5372E01E6C13EA00FDF9FC /* UIScrollView+MJRefresh.m in Sources */,
@@ -1217,6 +1232,7 @@
 				FE5372DA1E6C13EA00FDF9FC /* MJRefreshNormalHeader.m in Sources */,
 				8945ACD81E6D8B3300B3E3DE /* DetailListCell.swift in Sources */,
 				89C86AF01E6EB4A20036C68D /* PlayerViewCell.swift in Sources */,
+				FEDA82E71E7411D000D23C85 /* Toast.swift in Sources */,
 				FE5372D01E6C13EA00FDF9FC /* MJRefreshComponent.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

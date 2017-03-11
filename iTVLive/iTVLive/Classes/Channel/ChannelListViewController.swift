@@ -1,42 +1,51 @@
 //
-//  HomeViewController.swift
-//  TVLive
+//  ChannelListViewController.swift
+//  iTVLive
 //
-//  Created by Tengfei on 2017/3/4.
+//  Created by Tengfei on 2017/3/11.
 //  Copyright © 2017年 tengfei. All rights reserved.
 //
 
 import UIKit
 
-class HomeViewController: BaseTableViewController {
+
+class ChannelListViewController: BaseTableViewController {
+    
+    var channenlUrl:String?
+    var titleStr:String?{
+        didSet{
+            navTitleStr = titleStr
+        }
+    }
     
     var datas:[TVListModel]?{
         didSet{
             tableView.reloadData()
         }
     }
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        navBarView.leftButton.isHidden = true
-        tableView.frame = CGRect(x: 0, y: 64, width: view.width, height: view.height-64-49)
-        navTitleStr = "节目"
+        
+        tableView.snp.makeConstraints { (make) in
+            make.bottom.left.right.equalTo(self.view)
+            make.top.equalTo(self.view.top).offset(64)
+        }
         tableView.rowHeight = 100
         
-        TVListModel.getTVList { (lists, error) in
+        TVListModel.getTVChannelList(url: channenlUrl) {(lists, error) in
             if error == nil{
-                 self.errorType = .None
+                self.errorType = .None
                 self.datas = lists
             }else{
-                 self.errorType = .Default
+                self.errorType = .Default
             }
         }
     }
 }
 
 
-extension HomeViewController {
+extension ChannelListViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return datas?.count ?? 0
     }
@@ -46,10 +55,10 @@ extension HomeViewController {
         let model = datas?[indexPath.row]
         if model?.modelType == .NotLoading{
             TVListModel.getTVLiveNow(liveModel: model!,indexPath:indexPath, finish: { (nowModel, error) in
-//                if error == nil {
-                    self.tableView.reloadRow(at: indexPath, with: .automatic)
-//                }
-             })
+                //                if error == nil {
+                self.tableView.reloadRow(at: indexPath, with: .automatic)
+                //                }
+            })
         }
         cell.model = model
         return cell
@@ -73,25 +82,3 @@ extension HomeViewController {
     }
     
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
