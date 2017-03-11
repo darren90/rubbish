@@ -69,6 +69,13 @@ class TFVideoPlayerView: UIView {
     var isPlayLocalFile: Bool = false
     var lastWatchPos: Int = 0
     var isLockBtnEnable: Bool = false
+    fileprivate var isFullScreen:Bool {
+        get {
+            return UIApplication.shared.statusBarOrientation.isLandscape
+        }
+    }
+    
+    var fatherView: UIView?
 
 //MARK: --- 系统方法
 
@@ -559,19 +566,16 @@ extension TFVideoPlayerView {
     //MARK: --- 重力感应
     @objc fileprivate func onOrientationChanged() {
         print("--重力感应-");
-    }
-
-    func fulllScreenAtion(){
-
+        
         let orientation = UIDevice.current.orientation
         guard let interfaceOrientation = UIInterfaceOrientation(rawValue: orientation.rawValue) else{
             return
         }
-
+        
         switch interfaceOrientation {
-
+            
         case .portraitUpsideDown:
-            self.interfaceOrientation(orientation: .portraitUpsideDown)
+            self.interfaceOrientation(orientation: .landscapeRight)
         case .portrait:
             self.interfaceOrientation(orientation: .portrait)
         case .landscapeLeft:
@@ -580,18 +584,56 @@ extension TFVideoPlayerView {
             self.interfaceOrientation(orientation: .landscapeRight)
         case .unknown:
             self.interfaceOrientation(orientation: .landscapeRight)
-
+            
         }
+     
+        
+    }
+
+    func fulllScreenAtion(){
+        
+
+//        let orientation = UIDevice.current.orientation
+//        guard let interfaceOrientation = UIInterfaceOrientation(rawValue: orientation.rawValue) else{
+//            return
+//        }
+        
+//        isFullScreen = !isFullScreen
+
+        if isFullScreen == true {
+            self.interfaceOrientation(orientation: .portrait)
+        }else{
+            self.interfaceOrientation(orientation: .landscapeRight)
+        }
+        
 
     }
 
 
     func interfaceOrientation(orientation: UIInterfaceOrientation){
 
-        if(UIDevice.current.responds(to: Selector(stringLiteral: "setOrientation:"))){
-            let selector = Selector(stringLiteral: "setOrientation:")
-
+//        UIDevice.current.setValue(UIInterfaceOrientation.landscapeLeft.rawValue, forKey: "orientation")
+        
+        guard let fatherView = fatherView else {
+            return
         }
+        
+        UIDevice.current.setValue(orientation.rawValue, forKey: "orientation")
+        if orientation == .landscapeLeft || orientation == .landscapeRight{
+            
+            self.snp.makeConstraints({ (make) in
+                make.edges.equalTo(fatherView)
+            })
+
+        }else{
+            self.snp.makeConstraints { (make) in
+                make.top.equalTo(fatherView).offset(0)
+                make.left.equalTo(fatherView)
+                make.right.equalTo(fatherView)
+                make.height.equalTo(fatherView).multipliedBy(9.0/16.0)
+            }            
+        }
+
     }
 
 }

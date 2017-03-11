@@ -25,13 +25,29 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "iTVLive/Classes/Home/GetPlayUrlTool.swift"
-            timestampString = "510506681.272411"
+            filePath = "iTVLive/Lib/Vendor/TFVideoPlayer/TFVideoPlayer/TFVideoPlayerView.swift"
+            timestampString = "510909637.538405"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "39"
-            endingLineNumber = "39"
-            landmarkName = "getLiveBackUrl(channelId:st:et:finish:)"
+            startingLineNumber = "580"
+            endingLineNumber = "580"
+            landmarkName = "onOrientationChanged()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "iTVLive/Lib/Vendor/TFVideoPlayer/TFVideoPlayer/TFVideoPlayerView.swift"
+            timestampString = "510909649.396621"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "577"
+            endingLineNumber = "577"
+            landmarkName = "onOrientationChanged()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

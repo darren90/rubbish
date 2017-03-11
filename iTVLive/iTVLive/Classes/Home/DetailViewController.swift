@@ -17,7 +17,6 @@ class DetailViewController: BaseTableViewController {
         }
     }
 
-
     var channelId:String?
 
     override func viewDidLoad() {

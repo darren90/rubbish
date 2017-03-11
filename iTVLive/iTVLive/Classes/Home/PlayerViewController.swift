@@ -25,8 +25,11 @@ class PlayerViewController: BaseTableViewController {
         super.viewDidLoad()
 
         navBarView.isHidden = true
-        tableView.frame = CGRect(x: 0, y: 0, width: view.width, height: view.height)
+//        tableView.frame = CGRect(x: 0, y: 0, width: view.width, height: view.height)
 //        navTitleStr = model?.t
+        tableView.snp.makeConstraints { (make) in
+            make.edges.equalTo(self.view)
+        }
         tableView.rowHeight = 50
 
         initPlayView()
@@ -35,14 +38,16 @@ class PlayerViewController: BaseTableViewController {
     }
 
     func initPlayView(){
-        let payerH: CGFloat = view.width * 10.0 / 16
+        let payerH: CGFloat = view.width * 9.0 / 16
         tableView.contentInset = UIEdgeInsetsMake(payerH, 0, 0, 0)
         view.addSubview(playerView)
+        playerView.fatherView = view
         playerView.snp.makeConstraints { (make) in
             make.top.equalTo(self.view).offset(0)
             make.left.equalTo(self.view)
             make.right.equalTo(self.view)
-            make.height.equalTo(payerH)
+//            make.height.equalTo(payerH)
+            make.height.equalTo(view.snp.width).multipliedBy(9.0/16.0)
         }
         playerView.delegate = self
     }
@@ -62,7 +67,9 @@ class PlayerViewController: BaseTableViewController {
                 if error == nil{
                     self.errorType = .None
                     self.datas = lists
-                    self.playView(url: (lists?.first)!)
+//                    self.playView(url: (lists?.first)!)
+                    let indexPath = IndexPath(row: 0, section: 0)
+                    self.tableView.selectRow(at: indexPath, animated: true, scrollPosition: .bottom)
                 }else{
                     self.errorType = .Default
                 }
@@ -72,7 +79,9 @@ class PlayerViewController: BaseTableViewController {
                 if error == nil{
                     self.errorType = .None
                     self.datas = lists
-                    self.playView(url: (lists?.first)!)
+//                    self.playView(url: (lists?.first)!)
+                    let indexPath = IndexPath(row: 0, section: 0)
+                    self.tableView.selectRow(at: indexPath, animated: true, scrollPosition: .bottom)
                 }else{
                     self.errorType = .Default
                 }
@@ -103,7 +112,7 @@ class PlayerViewController: BaseTableViewController {
     }
 
     override var supportedInterfaceOrientations: UIInterfaceOrientationMask{
-        return .landscape
+        return .allButUpsideDown
     }
 
     override var shouldAutorotate: Bool {
@@ -173,7 +182,8 @@ extension PlayerViewController {
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 //        let playVc = PlayerViewController()
-//        let model = datas?[indexPath.row]
+        let urlModel = datas?[indexPath.row]
+        self.playView(url:urlModel!)
 //        playVc.model = model
 //        playVc.channelId = channelId
 //        navigationController?.pushViewController(playVc, animated: true)
