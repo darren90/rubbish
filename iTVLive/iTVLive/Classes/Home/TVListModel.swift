@@ -36,6 +36,12 @@ class TVListModel: NSObject {
     var liveUrl:String?
     var autoImg:String?
     var newChannelImg:String?
+    
+    var isAdmob: Bool = false //是否是广告
+    
+    override init() {
+        super.init()
+    }
 
     init(dict:[String:AnyObject]) {
         super.init()
@@ -75,9 +81,17 @@ class TVListModel: NSObject {
                     finish(nil,NSError.init(domain: "错误的status值", code: 9999, userInfo: ["status码值错误" : "status值不等于1"]))
                 }else{
                     var models = [TVListModel]()
+                    var index = 0
                     for ddic in dicts! {
                         let model = TVListModel(dict: ddic)
                         models.append(model)
+                        
+                        if index == 12 { //加入广告逻辑
+                            let adM = TVListModel()
+                            adM.isAdmob = true
+                            models.append(adM)
+                        }
+                        index = index + 1
                     }
                     finish(models,error)
                 }

@@ -42,8 +42,14 @@ extension HomeViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = HomeCell.cellWithTableView(tableView: tableView)
         let model = datas?[indexPath.row]
+        if model?.isAdmob == true {
+            let cell = AdmobCell.cellWithTableView(tableView: tableView)
+            cell.rootVc = self
+            return cell;
+        }
+        
+        let cell = HomeCell.cellWithTableView(tableView: tableView)
         if model?.modelType == .NotLoading{
             TVListModel.getTVLiveNow(liveModel: model!,indexPath:indexPath, finish: { (nowModel, error) in
 //                if error == nil {
@@ -55,9 +61,21 @@ extension HomeViewController {
         return cell
     }
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        let model = datas?[indexPath.row]
+        if model?.isAdmob == true {
+            return 50
+        }else{
+            return 100
+        }
+    }
+    
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let model = datas?[indexPath.row]
-        
+        if model?.isAdmob == true {
+            return
+        }
+    
         if model?.modelType != .YES {
             self.view.makeToast("暂无节目，请稍后重试", duration: 1.5, position: .center)
             tableView.deselectRow(at: indexPath, animated: true)

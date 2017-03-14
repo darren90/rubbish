@@ -23,8 +23,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
+        
         //配置admob
-        GADMobileAds.configure(withApplicationID: "ca-app-pub-8145075793156354~4703918622")//"ca-app-pub-3940256099942544~1458002511"
+        GADMobileAds.configure(withApplicationID: "ca-app-pub-8145075793156354~3387878624")//"ca-app-pub-3940256099942544~1458002511"
         
         //设置全局的tabbar的默认颜色 rgb(61, 168, 245)
         UITabBar.appearance().tintColor = KCommonColor

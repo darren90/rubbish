@@ -23,6 +23,7 @@
 		89FB58881E6D3BDA004C1B6A /* TFVideoPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89FB58871E6D3BDA004C1B6A /* TFVideoPlayerView.swift */; };
 		89FB588A1E6D3BE9004C1B6A /* TFVideoPlayerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 89FB58891E6D3BE9004C1B6A /* TFVideoPlayerView.xib */; };
 		EBD479E038D41CE47F140926 /* Pods_iTVLive.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 867D2DF55CB836D5184E9389 /* Pods_iTVLive.framework */; };
+		FE299FEE1E78270100564CE0 /* iTVLive.sh in Resources */ = {isa = PBXBuildFile; fileRef = FE299FED1E78270100564CE0 /* iTVLive.sh */; };
 		FE5371BF1E6BFA5E00FDF9FC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5371BE1E6BFA5E00FDF9FC /* AppDelegate.swift */; };
 		FE5371C11E6BFA5E00FDF9FC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5371C01E6BFA5E00FDF9FC /* ViewController.swift */; };
 		FE5371C41E6BFA5E00FDF9FC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE5371C21E6BFA5E00FDF9FC /* Main.storyboard */; };
@@ -206,6 +207,7 @@
 		89FB58871E6D3BDA004C1B6A /* TFVideoPlayerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TFVideoPlayerView.swift; sourceTree = "<group>"; };
 		89FB58891E6D3BE9004C1B6A /* TFVideoPlayerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TFVideoPlayerView.xib; sourceTree = "<group>"; };
 		F3C21D59E18713CEAA346FD6 /* Pods-iTVLive.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iTVLive.release.xcconfig"; path = "Pods/Target Support Files/Pods-iTVLive/Pods-iTVLive.release.xcconfig"; sourceTree = "<group>"; };
+		FE299FED1E78270100564CE0 /* iTVLive.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = iTVLive.sh; sourceTree = "<group>"; };
 		FE5371BB1E6BFA5E00FDF9FC /* iTVLive.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iTVLive.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE5371BE1E6BFA5E00FDF9FC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FE5371C01E6BFA5E00FDF9FC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = ../iTVLive/ViewController.swift; sourceTree = "<group>"; };
@@ -478,6 +480,7 @@
 			isa = PBXGroup;
 			children = (
 				FE5371BE1E6BFA5E00FDF9FC /* AppDelegate.swift */,
+				FE299FED1E78270100564CE0 /* iTVLive.sh */,
 				FE5371F61E6C13D800FDF9FC /* iTVLive-Bridging-Header.h */,
 				FE5373251E6C149800FDF9FC /* TFLiveCommon.swift */,
 				FE5371C21E6BFA5E00FDF9FC /* Main.storyboard */,
@@ -1064,6 +1067,7 @@
 				FE5372FF1E6C13EA00FDF9FC /* VKVideoPlayer_pause_big@2x.png in Resources */,
 				FE5371C61E6BFA5E00FDF9FC /* Assets.xcassets in Resources */,
 				FE5372F01E6C13EA00FDF9FC /* left@2x.png in Resources */,
+				FE299FEE1E78270100564CE0 /* iTVLive.sh in Resources */,
 				FE5371C41E6BFA5E00FDF9FC /* Main.storyboard in Resources */,
 				89FB588A1E6D3BE9004C1B6A /* TFVideoPlayerView.xib in Resources */,
 				89C86B001E6ED2E00036C68D /* icon_player_unlock-nor@2x.png in Resources */,

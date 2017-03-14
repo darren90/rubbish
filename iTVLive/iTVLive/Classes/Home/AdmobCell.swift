@@ -30,9 +30,8 @@ class AdmobCell: UITableViewCell,GADBannerViewDelegate {
         
         print("Google Mobile Ads SDK version: \(GADRequest.sdkVersion())")
         GADRequest.description()
-        bannerView.adUnitID = "ca-app-pub-8145075793156354/6180651822"
+        bannerView.adUnitID = "ca-app-pub-8145075793156354/6341345022"
         bannerView.rootViewController = rootVc
-//        bannerView.isAutoloadEnabled = true
         bannerView.delegate = self
         let request = GADRequest()
 //        if deviceId != nil {
