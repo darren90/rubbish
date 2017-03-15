@@ -9,38 +9,6 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "iTVLive/Lib/Vendor/TFVideoPlayer/TFVideoPlayer/TFVideoPlayerView.swift"
-            timestampString = "510945648.760582"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "587"
-            endingLineNumber = "587"
-            landmarkName = "onOrientationChanged()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "iTVLive/Lib/Vendor/TFVideoPlayer/TFVideoPlayer/TFVideoPlayerView.swift"
-            timestampString = "510945648.760582"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "584"
-            endingLineNumber = "584"
-            landmarkName = "onOrientationChanged()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "iTVLive/Classes/Home/HomeCell.swift"
             timestampString = "510923641.736166"
             startingColumnNumber = "9223372036854775807"
@@ -49,70 +17,6 @@
             endingLineNumber = "43"
             landmarkName = "HomeCell"
             landmarkType = "3">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "iTVLive/Classes/Home/GetPlayUrlTool.swift"
-            timestampString = "510924326.460288"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "17"
-            endingLineNumber = "17"
-            landmarkName = "getLiveBackUrl(channelId:st:et:finish:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "static iTVLive.GetPlayUrlTool.getLiveBackUrl (channelId : Swift.String, st : Swift.Double, et : Swift.Double, finish : (Swift.Optional&lt;Swift.Array&lt;Swift.String&gt;&gt;, Swift.Optional&lt;__ObjC.NSError&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "iTVLive"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/tengfei/github/rubbish/iTVLive/iTVLive/Classes/Home/GetPlayUrlTool.swift"
-                  timestampString = "510945740.857911"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "17"
-                  endingLineNumber = "17"
-                  offsetFromSymbolStart = "184">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "static iTVLive.GetPlayUrlTool.(getLiveBackUrl (channelId : Swift.String, st : Swift.Double, et : Swift.Double, finish : (Swift.Optional&lt;Swift.Array&lt;Swift.String&gt;&gt;, Swift.Optional&lt;__ObjC.NSError&gt;) -&gt; ()) -&gt; ()).(closure #1)"
-                  moduleName = "iTVLive"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/tengfei/github/rubbish/iTVLive/iTVLive/Classes/Home/GetPlayUrlTool.swift"
-                  timestampString = "510945740.859235"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "18"
-                  endingLineNumber = "18"
-                  offsetFromSymbolStart = "27">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "iTVLive/Lib/Vendor/TFVideoPlayer/TFVideoPlayer/TFVideoPlayerView.swift"
-            timestampString = "510945648.760582"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "326"
-            endingLineNumber = "326"
-            landmarkName = "quickStopVideo()"
-            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

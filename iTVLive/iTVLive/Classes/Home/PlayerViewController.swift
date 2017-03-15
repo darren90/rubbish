@@ -20,6 +20,13 @@ class PlayerViewController: BaseTableViewController {
             tableView.reloadData()
         }
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+       UIApplication.shared.setStatusBarStyle(.lightContent, animated: false)
+        UIApplication.shared.setStatusBarHidden(false, with: .fade)
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
