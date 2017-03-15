@@ -36,6 +36,7 @@ class HomeCell: UITableViewCell {
             switch model.modelType {
             case .YES:
                 playingL.text = model.t
+                stateL.text = "正在播放..."
                 stateL.textColor = UIColor.red
                 playingL.isHidden = false
             case .NO:

@@ -56,7 +56,7 @@ class TFVideoPlayerView: UIView {
     @IBOutlet weak var doubleGesture: UITapGestureRecognizer!
 
     //播放器对象
-    lazy var mMPayer: VMediaPlayer = VMediaPlayer.sharedInstance()
+    var mMPayer: VMediaPlayer = VMediaPlayer.sharedInstance()
 
     var mSyncSeekTimer: Timer?
 
@@ -313,6 +313,7 @@ extension TFVideoPlayerView{
         setBtnEnableStatus(enable: false)
 
         mMPayer.setDataSource(url)
+        
 
         titleLabel.text = title
         var seek = 0.0

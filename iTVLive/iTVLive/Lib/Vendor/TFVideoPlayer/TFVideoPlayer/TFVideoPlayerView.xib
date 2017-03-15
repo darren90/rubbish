@@ -86,7 +86,7 @@
                             </connections>
                         </button>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zGb-CV-jMC">
-                            <rect key="frame" x="42" y="20" width="375" height="20"/>
+                            <rect key="frame" x="36" y="20" width="381" height="20"/>
                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                             <color key="textColor" red="0.97254901959999995" green="0.97254901959999995" blue="0.97254901959999995" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
@@ -103,7 +103,7 @@
                     <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="43" id="7tJ-PQ-zBg"/>
-                        <constraint firstItem="zGb-CV-jMC" firstAttribute="leading" secondItem="7eh-Oj-klG" secondAttribute="trailing" constant="-10" id="BMM-Lh-mPU"/>
+                        <constraint firstItem="zGb-CV-jMC" firstAttribute="leading" secondItem="7eh-Oj-klG" secondAttribute="trailing" constant="-16" id="BMM-Lh-mPU"/>
                         <constraint firstAttribute="bottom" secondItem="zGb-CV-jMC" secondAttribute="bottom" constant="3" id="D6k-y4-DDd"/>
                         <constraint firstItem="7eh-Oj-klG" firstAttribute="top" secondItem="29A-tI-Edz" secondAttribute="top" constant="16" id="EsO-8x-IZw"/>
                         <constraint firstItem="7eh-Oj-klG" firstAttribute="leading" secondItem="29A-tI-Edz" secondAttribute="leading" constant="-18" id="Gq4-UW-Yem"/>
