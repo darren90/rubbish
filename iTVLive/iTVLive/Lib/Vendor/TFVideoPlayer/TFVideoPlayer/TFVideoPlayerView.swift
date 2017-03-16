@@ -498,14 +498,14 @@ extension TFVideoPlayerView : VMediaPlayerDelegate {
 
     //
     func mediaPlayer(_ player: VMediaPlayer!, setupManagerPreference arg: Any!) {
-        player.decodingSchemeHint = VMDecodingSchemeQuickTime
-        player.autoSwitchDecodingScheme = true
+        player.decodingSchemeHint = VMDecodingSchemeSoftware
+        player.autoSwitchDecodingScheme = false
     }
 
     func mediaPlayer(_ player: VMediaPlayer!, setupPlayerPreference arg: Any!) {
         player.setBufferSize(512*1024*1024)
         player.setAdaptiveStream(true)
-        player.setVideoQuality(VMVideoQualityMedium)
+        player.setVideoQuality(VMVideoQualityHigh)
         player.useCache = true
 
         let cachePath = NSHomeDirectory() + "/Library/Caches/MediasCaches"

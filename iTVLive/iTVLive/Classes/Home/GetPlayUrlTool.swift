@@ -62,17 +62,26 @@ class GetPlayUrlTool: NSObject {
                     finish(nil,NSError.init(domain: "错误的status值", code: 9999, userInfo: ["status码值错误" : "status值不等于1"]))
                 }else{
                     var models = [String]()
-                    for (_, value) in dicts! {
-                        if (value.characters.count > 0){
-                            models.append(value)
+                    let array =  dicts?.keys.sorted(by: <)
+                    if array == nil {
+                        finish(nil,NSError.init(domain: "错误的status值", code: 9999, userInfo: ["status码值错误" : "status值不等于1"]))
+                    }else{
+                        for item in array! {
+                            let value = (dicts?[item])! as String
+                            if (value.characters.count > 0){
+                                models.append(value)
+                            }
+                        }
+//                        for (_, value) in dicts! {
+//                            if (value.characters.count > 0){
+//                                models.append(value)
+//                            }
+                        finish(models,error)
                         }
                     }
-                    finish(models,error)
                 }
             }
         }
 
-        
-
     }
-}
+
