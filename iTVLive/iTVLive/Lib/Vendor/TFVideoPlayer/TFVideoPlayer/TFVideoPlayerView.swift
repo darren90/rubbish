@@ -56,7 +56,7 @@ class TFVideoPlayerView: UIView {
     @IBOutlet weak var doubleGesture: UITapGestureRecognizer!
 
     //播放器对象
-    lazy var mMPayer: VMediaPlayer = VMediaPlayer.sharedInstance()
+    var mMPayer: VMediaPlayer = VMediaPlayer.sharedInstance()
 
     var mSyncSeekTimer: Timer?
 
@@ -81,6 +81,7 @@ class TFVideoPlayerView: UIView {
 
     override func awakeFromNib() {
         super.awakeFromNib()
+        UIApplication.shared.setStatusBarHidden(false, with: .fade)
 
         initialize()
         initializeView()
@@ -186,6 +187,12 @@ class TFVideoPlayerView: UIView {
         }else{
             topControl.isHidden = !topControl.isHidden
             bottomControl.isHidden = !bottomControl.isHidden
+            
+            if isFullScreen {
+                UIApplication.shared.setStatusBarHidden(bottomControl.isHidden, with: .fade)
+            }else{
+                UIApplication.shared.setStatusBarHidden(false, with: .fade)
+            }
 //            self.topControl.isHidden = !self.topControl.isHidden
         }
 
@@ -306,6 +313,7 @@ extension TFVideoPlayerView{
         setBtnEnableStatus(enable: false)
 
         mMPayer.setDataSource(url)
+        
 
         titleLabel.text = title
         var seek = 0.0
@@ -585,9 +593,14 @@ extension TFVideoPlayerView {
             self.interfaceOrientation(orientation: .landscapeRight)
         case .portrait:
             self.interfaceOrientation(orientation: .portrait)
+            UIApplication.shared.setStatusBarHidden(false, with: .fade)
         case .landscapeLeft:
+            UIApplication.shared.setStatusBarHidden(bottomControl.isHidden, with: .fade)
             self.interfaceOrientation(orientation: .landscapeLeft)
+            
         case .landscapeRight:
+            
+            UIApplication.shared.setStatusBarHidden(bottomControl.isHidden, with: .fade)
             self.interfaceOrientation(orientation: .landscapeRight)
         case .unknown:
             self.interfaceOrientation(orientation: .landscapeRight)
@@ -608,8 +621,10 @@ extension TFVideoPlayerView {
 //        isFullScreen = !isFullScreen
 
         if isFullScreen == true {
+            UIApplication.shared.setStatusBarHidden(false, with: .fade)
             self.interfaceOrientation(orientation: .portrait)
         }else{
+            UIApplication.shared.setStatusBarHidden(bottomControl.isHidden, with: .fade)
             self.interfaceOrientation(orientation: .landscapeRight)
         }
         
