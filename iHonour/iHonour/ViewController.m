@@ -28,7 +28,7 @@
 
 - (void)testHonour
 {
-    NSURL *uurl = [NSURL URLWithString:@"http://m.news.4399.com/wzlm/"];
+    NSURL *uurl = [NSURL URLWithString:@"http://m.news.4399.com/gonglue/wzlm/yingxiong/"];
 
     NSURLRequest *request = [NSURLRequest requestWithURL:uurl cachePolicy:NSURLRequestReloadIgnoringLocalCacheData timeoutInterval:120.0];
     NSURLSessionDataTask *task = [[NSURLSession sharedSession] dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
@@ -36,7 +36,7 @@
             //3.创建数据解析对象
             TFHpple *xpathParser = [[TFHpple alloc]initWithHTMLData:data];
             //4.通过Xpath定位到指定位置并获取数据
-            NSArray *elements = [xpathParser searchWithXPathQuery:@"//div[@id='news']"];
+            NSArray *elements = [xpathParser searchWithXPathQuery:@"//ul[@class='plist2 cf ulList']"];
             if (elements.count > 0){
                 //5.使用数据
                 //NSLog(@"elements=%@",elements[0]);
@@ -44,9 +44,46 @@
                 NSArray *chiledrens = [element children];
                 if (chiledrens.count > 0) {
                     for (TFHppleElement *el in chiledrens) {
-                        NSString *text = [el text];
-                        NSString *content = [[el content] stringByReplacingOccurrencesOfString:@" " withString:@""];
-                        NSLog(@"--text-:%@,content: %@",text,content);
+                        NSString *title = @"";
+                        //NSString *content = @"";
+                        NSString *href = @"";
+                        NSString *imgUrl = @"";
+
+                        NSArray *elChs = el.children;
+
+                        if (elChs.count > 0) {
+                            for (TFHppleElement *ell in elChs) {
+                                NSString *etext = [ell text];
+                                //NSString *econtent = [[ell content] stringByReplacingOccurrencesOfString:@" " withString:@""];
+                                NSString *ehref = [ell objectForKey:@"href"];
+                                //NSString *eimg = [ell objectForKey:@"img"];
+                                if (etext) {
+                                    title = etext;
+                                    href = ehref;
+                                }
+                                //NSLog(@"--eeeetext-:%@,content: %@ , href: %@ , img: %@",etext,econtent,ehref,eimg);
+
+                                if (ell.hasChildren){
+                                    //if ([title isEqualToString:@"老夫子"]) {
+                                    //    NSLog(@"");
+                                    //}
+                                    TFHppleElement *imgEl = ell.firstChild;
+                                    NSDictionary *imgDic = imgEl.attributes;
+                                    if (imgDic) {
+                                        imgUrl = imgDic[@"src"];//部分用的字段是lz_src
+                                        if (imgUrl.length == 0) {
+                                            //NSLog(@"---img:%@",imgDic);
+                                            imgUrl = imgDic[@"lz_src"];
+                                        }
+                                        //NSLog(@"--imgUrl:%@",imgDic[@"src"]);
+                                    }
+                                }
+
+                            }
+                        }
+                        if (title.length > 0) {
+                            NSLog(@"--title-:%@ , href: %@ , img: %@",title,href,imgUrl);
+                        }
                     }
                 }
             }
