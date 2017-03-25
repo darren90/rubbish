@@ -1,0 +1,36 @@
+PODS:
+  - Masonry (1.0.2)
+  - UMengAnalytics (4.2.4)
+  - UMengUShare/Core (6.3.0):
+    - UMengUShare/Network
+  - UMengUShare/Network (6.3.0)
+  - UMengUShare/Social/QQ (6.3.0):
+    - UMengUShare/Core
+  - UMengUShare/Social/Sina (6.3.0):
+    - UMengUShare/Core
+  - UMengUShare/Social/WeChat (6.3.0):
+    - UMengUShare/Core
+  - UMengUShare/UI (6.3.0):
+    - UMengUShare/Core
+  - YYKit (1.0.9):
+    - YYKit/no-arc (= 1.0.9)
+  - YYKit/no-arc (1.0.9)
+
+DEPENDENCIES:
+  - Masonry
+  - UMengAnalytics
+  - UMengUShare/Social/QQ
+  - UMengUShare/Social/Sina
+  - UMengUShare/Social/WeChat
+  - UMengUShare/UI
+  - YYKit (~> 1.0.9)
+
+SPEC CHECKSUMS:
+  Masonry: 7c429b56da9d4ee0bbb3ed77a5ea710d6a5df39e
+  UMengAnalytics: ef8d45f94c0e5771dc364cf6a5731d9d3b101da2
+  UMengUShare: b208ac3bcf1f63d11a100b359990e9d77a0f2085
+  YYKit: 7cda43304a8dc3696c449041e2cb3107b4e236e7
+
+PODFILE CHECKSUM: 0a7d3c4e0fae4f24ad132a0b1438b884ce529262
+
+COCOAPODS: 1.1.1
