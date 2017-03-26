@@ -113,11 +113,10 @@
         
         if (!error) {
             
-            TFHpple *xpathParser = [[TFHpple alloc]initWithHTMLData:data encoding:@"gbk"];
+            TFHpple *xpathParser = [[TFHpple alloc]initWithHTMLData:data encoding:@"utf-8"];
 //            NSString *strs = [[NSString alloc] initWithData:xpathParser.data encoding:NSASCIIStringEncoding];
             
-            NSArray *elements = [xpathParser searchWithXPathQuery:@"//div[@class='liebiao']//li/*"];
-            TFHppleElement *ee = [xpathParser peekAtSearchWithXPathQuery:@"//div[@class='liebiao']/*"];
+            NSArray *elements = [xpathParser searchWithXPathQuery:@"//div[@class='liebiao']//ul/*"];
             if (elements.count > 0){
                 if (self.page == 1) {
                     [weakSelf.datas removeAllObjects];
@@ -126,17 +125,17 @@
                 for (TFHppleElement *li in elements) {
                     //find title
                     NSArray *tags = [li childrenWithTagName:@"div"];
-                    TFHppleElement *element = tags.lastObject;
+                    TFHppleElement *element = tags.firstObject;
                     NSDictionary *dd = [NSDictionary dictionaryWithXMLString:element.raw];
                     NSDictionary *ad = dd[@"a"];
                     
                     NSString *href = ad[@"_href"];
-                    NSString *hreff = [NSString stringWithFormat:@"%@%@",@"http://m.news.4399.com",href];
+//                    NSString *hreff = [NSString stringWithFormat:@"%@%@",@"http://m.news.4399.com",href];
                     NSString *src = ad[@"img"][@"_src"];
-                    NSString *titles = ad[@"img"][@"_alt"];
-                    //                    NSLog(@"title: %@,href:%@,src:%@",titles,hreff,src);
+                    NSString *title = ad[@"_title"];
+                    NSLog(@"title: %@,href:%@,src:%@",title,href,src);
                     NSLog(@"--数据解析成功-:%d",self.page);
-                    NewsModel *m = [NewsModel modelWith:titles url:hreff imgUrl:src];
+                    NewsModel *m = [NewsModel modelWith:title url:href imgUrl:src];
                     
                     [weakSelf.datas addObject:m];
                 }
