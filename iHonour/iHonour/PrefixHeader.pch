@@ -34,6 +34,17 @@
 #define KAppid                  @"1090434597"  //App Store Id
 
 
+//Google广告应用id
+#define kGoogleAdmobAppId @"ca-app-pub-8145075793156354~7773085427"
+//资讯底部
+#define kGoogleAdmobNews_Bottom_01 @"ca-app-pub-8145075793156354/1726551827"
+//攻略底部
+#define kGoogleAdmobCheats_Bottom_01 @"ca-app-pub-8145075793156354/3203285029"
+//英雄底部
+#define kGoogleAdmobHeros_Bottom_01 @"ca-app-pub-8145075793156354/4680018221"
+
+
+
 // 2.获得RGB颜色
 #define KColor(r, g, b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1.0]
 

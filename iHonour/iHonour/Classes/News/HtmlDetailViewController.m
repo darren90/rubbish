@@ -10,6 +10,7 @@
 #import "TFWebView.h"
 #import "HTMLParser.h"
 #import "TFHpple.h"
+#import "AdmobView.h"
 
 @interface HtmlDetailViewController ()<WKNavigationDelegate>
 @property (weak, nonatomic) TFWebView *webView;
@@ -38,6 +39,7 @@
     self.title = self.titleStr;
     [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:self.detailUrl]]];
 
+    [self initAdView];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -59,10 +61,8 @@
 }
 
 
-
-
 - (void)webView:(WKWebView *)webView didFinishNavigation:(null_unspecified WKNavigation *)navigation{
-    NSLog(@"---");
+//    NSLog(@"---");
     
  
     
@@ -94,7 +94,34 @@
 }
 
 
+#pragma mark --- 添加广告
 
+-(void)initAdView{
+    NSString *adUnitID = kGoogleAdmobNews_Bottom_01;
+    switch (self.adType) {
+        case Admob_News_Bottom:
+            adUnitID = kGoogleAdmobNews_Bottom_01;
+            break;
+        case Admob_Cheats_Bottom:
+            adUnitID = kGoogleAdmobCheats_Bottom_01;
+            break;
+        case Admob_Heros_Bottom:
+            adUnitID = kGoogleAdmobHeros_Bottom_01;
+            break;
+            
+        default:
+            break;
+    }
+    
+    AdmobView *adView = [[AdmobView alloc]init];
+    adView.adUnitID = adUnitID;
+    [self.view addSubview:adView];
+    adView.bannerView.rootViewController = self;
+    [adView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.bottom.left.right.equalTo(self.view);
+        make.height.equalTo(@55);
+    }];
+}
 
 
 

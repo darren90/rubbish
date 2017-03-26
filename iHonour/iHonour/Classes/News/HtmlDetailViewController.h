@@ -8,6 +8,12 @@
 
 #import "BaseViewController.h"
 
+typedef enum {
+    Admob_News_Bottom,
+    Admob_Cheats_Bottom,
+    Admob_Heros_Bottom,
+} AdmobType;
+
 @interface HtmlDetailViewController : BaseViewController
 
 
@@ -17,6 +23,6 @@
 @property (nonatomic,copy)NSString * detailUrl;
 
 
-
+@property (nonatomic,assign)AdmobType adType;
 
 @end

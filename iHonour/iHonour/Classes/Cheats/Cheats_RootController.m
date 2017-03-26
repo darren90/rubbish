@@ -29,7 +29,7 @@
     [self initTableview];
     
     self.page = 1;
-    self.title = @"游戏资讯";
+    self.title = @"攻略秘籍";
     self.tableView.rowHeight = 100;
     
     self.tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(loadNewData)];
@@ -73,6 +73,7 @@
     HtmlDetailViewController *vc = [[HtmlDetailViewController alloc]init];
     vc.detailUrl = m.url;
     vc.titleStr = m.title;
+    vc.adType = Admob_Cheats_Bottom;
     [self.navigationController pushViewController:vc animated:YES];
     
     [tableView deselectRowAtIndexPath:indexPath animated:YES];

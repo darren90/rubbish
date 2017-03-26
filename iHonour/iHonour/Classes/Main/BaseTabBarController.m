@@ -31,7 +31,7 @@
     
     [self  initViewControllers];
     
-    self.selectedIndex = 1;
+    self.selectedIndex = 2;
 }
 
 - (void)didReceiveMemoryWarning {

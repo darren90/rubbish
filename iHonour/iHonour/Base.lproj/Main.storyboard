@@ -134,9 +134,44 @@
                     <view key="view" contentMode="scaleToFill" id="eXk-wq-4nD">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Wzx-IM-aVM">
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Bqf-Ha-fGa">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Jbz-pL-KgI">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </view>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="7qs-sh-cWo" id="fQo-sz-6gi"/>
+                                    <outlet property="delegate" destination="7qs-sh-cWo" id="TzV-0p-zsh"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Wzx-IM-aVM" secondAttribute="trailing" id="1RF-Rx-HSt"/>
+                            <constraint firstItem="Wzx-IM-aVM" firstAttribute="top" secondItem="Dwz-nN-ZAx" secondAttribute="bottom" id="ASv-kt-CT7"/>
+                            <constraint firstItem="xPC-Ci-Ci5" firstAttribute="top" secondItem="Wzx-IM-aVM" secondAttribute="bottom" id="Q4D-Yu-IBD"/>
+                            <constraint firstItem="Wzx-IM-aVM" firstAttribute="leading" secondItem="eXk-wq-4nD" secondAttribute="leading" id="xPv-rC-us4"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="TWc-zQ-zf1"/>
+                    <connections>
+                        <outlet property="waterView" destination="Wzx-IM-aVM" id="nvD-u0-j8b"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KLR-Sm-Xmk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

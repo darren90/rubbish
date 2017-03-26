@@ -11,6 +11,7 @@
 #import "BaseTabBarController.h"
 #import <UMengAnalytics/UMMobClick/MobClick.h>
 #import <Bugly/Bugly.h>
+#import <GoogleMobileAds/GoogleMobileAds.h>
 
 @interface AppDelegate ()
 
@@ -22,6 +23,8 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleDefault;
+
+    [GADMobileAds configureWithApplicationID:kGoogleAdmobAppId];
 
     
     [self setupBugly];// Init the Bugly sdk

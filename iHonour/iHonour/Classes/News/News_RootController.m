@@ -78,6 +78,7 @@
     HtmlDetailViewController *vc = [[HtmlDetailViewController alloc]init];
     vc.detailUrl = m.url;
     vc.titleStr = m.title;
+    vc.adType = Admob_News_Bottom;
     [self.navigationController pushViewController:vc animated:YES];
     
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
