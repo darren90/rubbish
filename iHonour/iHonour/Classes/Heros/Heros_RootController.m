@@ -163,7 +163,7 @@ referenceSizeForHeaderInSection:(NSInteger)section
                     
                     //find title
                     NSArray *lis = [ul childrenWithTagName:@"li"];
-                    
+
                     for (TFHppleElement *li in lis) {
                         NSDictionary *dd = [NSDictionary dictionaryWithXMLString:li.raw];
                         NSDictionary *ad = dd[@"a"];
@@ -175,7 +175,7 @@ referenceSizeForHeaderInSection:(NSInteger)section
                         if (imgUrl == nil) {
                             imgUrl = ad[@"img"][@"_lz_src"];
                         }
-                        
+ 
                         HerosModel *m = [HerosModel modelWith:name url:url imgUrl:imgUrl type:cate];
                         [cats addObject:m];
                     }

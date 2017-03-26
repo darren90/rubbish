@@ -59,6 +59,9 @@
 #define  KHeight    [UIScreen mainScreen].bounds.size.height
 #define  KWidth     [UIScreen mainScreen].bounds.size.width
 
+#define KplaceholderImg         [UIImage imageNamed:@"kplace"]  //占位图
+
+
 
 /** DEBUG LOG **/
 #ifdef DEBUG

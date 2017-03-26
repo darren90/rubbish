@@ -41,9 +41,8 @@
 
 -(void)setModel:(NewsModel *)model{
     _model = model;
-//    [imageView yy_setImageWithURL:url options:YYWebImageOptionProgressiveBlur ｜ YYWebImageOptionSetImageWithFadeAnimation];
-
-    [self.imgView setImageWithURL:[NSURL URLWithString:model.imgUrl] options:YYWebImageOptionProgressiveBlur|YYWebImageOptionSetImageWithFadeAnimation];
+ 
+    [self.imgView setImageWithURL:[NSURL URLWithString:model.imgUrl] placeholder:KplaceholderImg options:YYWebImageOptionProgressiveBlur|YYWebImageOptionSetImageWithFadeAnimation completion:nil];
     self.titleL.text = model.title;
 }
 

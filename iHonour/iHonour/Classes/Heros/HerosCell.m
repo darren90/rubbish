@@ -27,7 +27,7 @@
 -(void)setModel:(HerosModel *)model{
     _model = model;
     
-    [self.imgView setImageWithURL:[NSURL URLWithString:model.imgUrl] options:YYWebImageOptionProgressiveBlur|YYWebImageOptionSetImageWithFadeAnimation];
+    [self.imgView setImageWithURL:[NSURL URLWithString:model.imgUrl] placeholder:KplaceholderImg options:YYWebImageOptionProgressiveBlur|YYWebImageOptionSetImageWithFadeAnimation completion:nil];
     self.titleL.text = model.name;
 }
 
