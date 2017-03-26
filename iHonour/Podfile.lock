@@ -1,4 +1,5 @@
 PODS:
+  - Bugly (2.4.6)
   - Masonry (1.0.2)
   - UMengAnalytics (4.2.4)
   - UMengUShare/Core (6.3.0):
@@ -17,6 +18,7 @@ PODS:
   - YYKit/no-arc (1.0.9)
 
 DEPENDENCIES:
+  - Bugly
   - Masonry
   - UMengAnalytics
   - UMengUShare/Social/QQ
@@ -26,11 +28,12 @@ DEPENDENCIES:
   - YYKit (~> 1.0.9)
 
 SPEC CHECKSUMS:
+  Bugly: 7756e72c59387b0d490f46e83ab458ae94ee7fba
   Masonry: 7c429b56da9d4ee0bbb3ed77a5ea710d6a5df39e
   UMengAnalytics: ef8d45f94c0e5771dc364cf6a5731d9d3b101da2
   UMengUShare: b208ac3bcf1f63d11a100b359990e9d77a0f2085
   YYKit: 7cda43304a8dc3696c449041e2cb3107b4e236e7
 
-PODFILE CHECKSUM: 0a7d3c4e0fae4f24ad132a0b1438b884ce529262
+PODFILE CHECKSUM: b8db07114bf0566569145fa8488959c9dbb375fd
 
 COCOAPODS: 1.1.1

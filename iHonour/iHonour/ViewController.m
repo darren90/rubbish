@@ -36,7 +36,7 @@
             //3.创建数据解析对象
             TFHpple *xpathParser = [[TFHpple alloc]initWithHTMLData:data];
             //4.通过Xpath定位到指定位置并获取数据
-            NSArray *elements = [xpathParser searchWithXPathQuery:@"//ul[@class='plist2 cf ulList']"];
+            NSArray *elements = [xpathParser searchWithXPathQuery:@"//ul[@class = 'plist2 cf ulList']"];
             if (elements.count > 0){
                 //5.使用数据
                 //NSLog(@"elements=%@",elements[0]);

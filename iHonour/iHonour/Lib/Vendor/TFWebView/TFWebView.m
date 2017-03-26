@@ -40,7 +40,6 @@
 
     self.progressView.frame = CGRectMake(0, 0, CGRectGetWidth(self.frame), 3);
 
-    NSLog(@"--self:%@",NSStringFromCGRect(self.frame));
 }
 
 -(void)setUpProgress{
@@ -57,7 +56,8 @@
 
     CALayer *layer = [CALayer layer];
     layer.frame = CGRectMake(0, 0, 0, 3);
-    layer.backgroundColor = [UIColor blueColor].CGColor;
+//    rgb(45, 165, 252)
+    layer.backgroundColor = [UIColor colorWithRed:45/255.0 green:165/255.0 blue:252/255.0 alpha:1.0].CGColor;
     [progress.layer addSublayer:layer];
     self.progresslayer = layer;
 }
@@ -65,7 +65,7 @@
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSString *,id> *)change context:(void *)context{
     if ([keyPath isEqualToString:@"estimatedProgress"]) {
-        NSLog(@"%@", change);
+//        NSLog(@"%@", change);
         self.progresslayer.opacity = 1;
         self.progresslayer.frame = CGRectMake(0, 0, self.bounds.size.width * [change[NSKeyValueChangeNewKey] floatValue], 3);
         if ([change[NSKeyValueChangeNewKey] floatValue] == 1) {

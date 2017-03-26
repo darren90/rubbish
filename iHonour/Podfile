@@ -13,7 +13,10 @@ target 'iHonour' do
 
     #pod 'YYWebImage'
     #pod 'YYImage'
-
+    
+    pod 'UMengAnalytics' ##标准SDK，含IDFA
+    pod 'Bugly'
+    
     # 集成新浪微博 + 微信 + QQ
     pod 'UMengUShare/UI'
     pod 'UMengUShare/Social/Sina'
