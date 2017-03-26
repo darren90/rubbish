@@ -34,6 +34,12 @@
     }
     return self;
 }
+-(instancetype)initWithFrame:(CGRect)frame configuration:(WKWebViewConfiguration *)configuration{
+    if (self = [super initWithFrame:frame configuration:configuration]) {
+        [self setUpProgress];
+    }
+    return self;
+}
 
 -(void)layoutSubviews{
     [super layoutSubviews];

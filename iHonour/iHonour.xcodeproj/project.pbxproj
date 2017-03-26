@@ -49,7 +49,6 @@
 		FE4D1BA11E86B4000032ED29 /* BaseTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE4D1B981E86B4000032ED29 /* BaseTabBarController.m */; };
 		FE4D1BA21E86B4000032ED29 /* BaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE4D1B9A1E86B4000032ED29 /* BaseTableViewController.m */; };
 		FE4D1BA31E86B4000032ED29 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE4D1B9C1E86B4000032ED29 /* BaseViewController.m */; };
-		FE4D1BA41E86B4000032ED29 /* Home_RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE4D1B9E1E86B4000032ED29 /* Home_RootViewController.m */; };
 		FE4D1BAC1E86B43B0032ED29 /* RDVTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = FE4D1BA71E86B43B0032ED29 /* RDVTabBar.m */; };
 		FE4D1BAD1E86B43B0032ED29 /* RDVTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE4D1BA91E86B43B0032ED29 /* RDVTabBarController.m */; };
 		FE4D1BAE1E86B43B0032ED29 /* RDVTabBarItem.m in Sources */ = {isa = PBXBuildFile; fileRef = FE4D1BAB1E86B43B0032ED29 /* RDVTabBarItem.m */; };
@@ -58,6 +57,13 @@
 		FE4D1BB71E86B8C40032ED29 /* Heros_RootController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE4D1BB61E86B8C40032ED29 /* Heros_RootController.m */; };
 		FE4D1BC31E86B92F0032ED29 /* UIImage+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = FE4D1BC01E86B92F0032ED29 /* UIImage+Category.m */; };
 		FE4D1BC41E86B92F0032ED29 /* UIImage+Tint.m in Sources */ = {isa = PBXBuildFile; fileRef = FE4D1BC21E86B92F0032ED29 /* UIImage+Tint.m */; };
+		FE4D1BC81E875E470032ED29 /* XMLDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = FE4D1BC71E875E470032ED29 /* XMLDictionary.m */; };
+		FE4D1BCB1E87630A0032ED29 /* NewsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FE4D1BCA1E87630A0032ED29 /* NewsModel.m */; };
+		FE4D1BCF1E8765B80032ED29 /* NewsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FE4D1BCD1E8765B80032ED29 /* NewsCell.m */; };
+		FE4D1BD01E8765B80032ED29 /* NewsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE4D1BCE1E8765B80032ED29 /* NewsCell.xib */; };
+		FE4D1BD31E878F460032ED29 /* HtmlDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE4D1BD21E878F460032ED29 /* HtmlDetailViewController.m */; };
+		FE4D1BDC1E87915B0032ED29 /* ObjcRuntime.m in Sources */ = {isa = PBXBuildFile; fileRef = FE4D1BD91E87915B0032ED29 /* ObjcRuntime.m */; };
+		FE4D1BDD1E87915B0032ED29 /* UIViewController+Swizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = FE4D1BDB1E87915B0032ED29 /* UIViewController+Swizzle.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -162,8 +168,6 @@
 		FE4D1B9A1E86B4000032ED29 /* BaseTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTableViewController.m; sourceTree = "<group>"; };
 		FE4D1B9B1E86B4000032ED29 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
 		FE4D1B9C1E86B4000032ED29 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
-		FE4D1B9D1E86B4000032ED29 /* Home_RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Home_RootViewController.h; sourceTree = "<group>"; };
-		FE4D1B9E1E86B4000032ED29 /* Home_RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Home_RootViewController.m; sourceTree = "<group>"; };
 		FE4D1BA61E86B43B0032ED29 /* RDVTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RDVTabBar.h; sourceTree = "<group>"; };
 		FE4D1BA71E86B43B0032ED29 /* RDVTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RDVTabBar.m; sourceTree = "<group>"; };
 		FE4D1BA81E86B43B0032ED29 /* RDVTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RDVTabBarController.h; sourceTree = "<group>"; };
@@ -180,6 +184,19 @@
 		FE4D1BC01E86B92F0032ED29 /* UIImage+Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Category.m"; sourceTree = "<group>"; };
 		FE4D1BC11E86B92F0032ED29 /* UIImage+Tint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Tint.h"; sourceTree = "<group>"; };
 		FE4D1BC21E86B92F0032ED29 /* UIImage+Tint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Tint.m"; sourceTree = "<group>"; };
+		FE4D1BC61E875E470032ED29 /* XMLDictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLDictionary.h; sourceTree = "<group>"; };
+		FE4D1BC71E875E470032ED29 /* XMLDictionary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLDictionary.m; sourceTree = "<group>"; };
+		FE4D1BC91E87630A0032ED29 /* NewsModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsModel.h; sourceTree = "<group>"; };
+		FE4D1BCA1E87630A0032ED29 /* NewsModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsModel.m; sourceTree = "<group>"; };
+		FE4D1BCC1E8765B80032ED29 /* NewsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsCell.h; sourceTree = "<group>"; };
+		FE4D1BCD1E8765B80032ED29 /* NewsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsCell.m; sourceTree = "<group>"; };
+		FE4D1BCE1E8765B80032ED29 /* NewsCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewsCell.xib; sourceTree = "<group>"; };
+		FE4D1BD11E878F460032ED29 /* HtmlDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HtmlDetailViewController.h; sourceTree = "<group>"; };
+		FE4D1BD21E878F460032ED29 /* HtmlDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HtmlDetailViewController.m; sourceTree = "<group>"; };
+		FE4D1BD81E87915B0032ED29 /* ObjcRuntime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjcRuntime.h; sourceTree = "<group>"; };
+		FE4D1BD91E87915B0032ED29 /* ObjcRuntime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ObjcRuntime.m; sourceTree = "<group>"; };
+		FE4D1BDA1E87915B0032ED29 /* UIViewController+Swizzle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Swizzle.h"; sourceTree = "<group>"; };
+		FE4D1BDB1E87915B0032ED29 /* UIViewController+Swizzle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Swizzle.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -317,6 +334,7 @@
 		8937FE9D1E864F4B00B6D0CD /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
+				FE4D1BC51E875E470032ED29 /* XMLDictionary */,
 				FE4D1BA51E86B43B0032ED29 /* RDVTabBarController */,
 				8937FEF11E86511300B6D0CD /* Hpple */,
 				8937FEE81E8650BF00B6D0CD /* Objective-C-HMTL-Parser-master */,
@@ -478,6 +496,13 @@
 			children = (
 				FE4D1BAF1E86B8A60032ED29 /* News_RootController.h */,
 				FE4D1BB01E86B8A60032ED29 /* News_RootController.m */,
+				FE4D1BD11E878F460032ED29 /* HtmlDetailViewController.h */,
+				FE4D1BD21E878F460032ED29 /* HtmlDetailViewController.m */,
+				FE4D1BCC1E8765B80032ED29 /* NewsCell.h */,
+				FE4D1BCD1E8765B80032ED29 /* NewsCell.m */,
+				FE4D1BCE1E8765B80032ED29 /* NewsCell.xib */,
+				FE4D1BC91E87630A0032ED29 /* NewsModel.h */,
+				FE4D1BCA1E87630A0032ED29 /* NewsModel.m */,
 			);
 			path = News;
 			sourceTree = "<group>";
@@ -495,8 +520,6 @@
 				FE4D1B9A1E86B4000032ED29 /* BaseTableViewController.m */,
 				FE4D1B9B1E86B4000032ED29 /* BaseViewController.h */,
 				FE4D1B9C1E86B4000032ED29 /* BaseViewController.m */,
-				FE4D1B9D1E86B4000032ED29 /* Home_RootViewController.h */,
-				FE4D1B9E1E86B4000032ED29 /* Home_RootViewController.m */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -504,6 +527,7 @@
 		FE4D1BA51E86B43B0032ED29 /* RDVTabBarController */ = {
 			isa = PBXGroup;
 			children = (
+				FE4D1BD71E87915B0032ED29 /* ObjcRuntime */,
 				FE4D1BA61E86B43B0032ED29 /* RDVTabBar.h */,
 				FE4D1BA71E86B43B0032ED29 /* RDVTabBar.m */,
 				FE4D1BA81E86B43B0032ED29 /* RDVTabBarController.h */,
@@ -523,6 +547,26 @@
 				FE4D1BC21E86B92F0032ED29 /* UIImage+Tint.m */,
 			);
 			path = Category;
+			sourceTree = "<group>";
+		};
+		FE4D1BC51E875E470032ED29 /* XMLDictionary */ = {
+			isa = PBXGroup;
+			children = (
+				FE4D1BC61E875E470032ED29 /* XMLDictionary.h */,
+				FE4D1BC71E875E470032ED29 /* XMLDictionary.m */,
+			);
+			path = XMLDictionary;
+			sourceTree = "<group>";
+		};
+		FE4D1BD71E87915B0032ED29 /* ObjcRuntime */ = {
+			isa = PBXGroup;
+			children = (
+				FE4D1BD81E87915B0032ED29 /* ObjcRuntime.h */,
+				FE4D1BD91E87915B0032ED29 /* ObjcRuntime.m */,
+				FE4D1BDA1E87915B0032ED29 /* UIViewController+Swizzle.h */,
+				FE4D1BDB1E87915B0032ED29 /* UIViewController+Swizzle.m */,
+			);
+			path = ObjcRuntime;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -637,6 +681,7 @@
 			files = (
 				8937FE751E864D7700B6D0CD /* LaunchScreen.storyboard in Resources */,
 				8937FE721E864D7700B6D0CD /* Assets.xcassets in Resources */,
+				FE4D1BD01E8765B80032ED29 /* NewsCell.xib in Resources */,
 				8937FEDB1E864F5900B6D0CD /* MJRefresh.bundle in Resources */,
 				8937FE701E864D7700B6D0CD /* Main.storyboard in Resources */,
 			);
@@ -719,6 +764,7 @@
 				8937FEF81E86511300B6D0CD /* TFHpple.m in Sources */,
 				8937FED21E864F5900B6D0CD /* MJRefreshAutoGifFooter.m in Sources */,
 				8937FEDE1E864F5900B6D0CD /* UIScrollView+MJExtension.m in Sources */,
+				FE4D1BD31E878F460032ED29 /* HtmlDetailViewController.m in Sources */,
 				FE4D1BA31E86B4000032ED29 /* BaseViewController.m in Sources */,
 				FE4D1BB41E86B8B40032ED29 /* Cheats_RootController.m in Sources */,
 				8937FEF91E86511300B6D0CD /* TFHppleElement.m in Sources */,
@@ -730,7 +776,7 @@
 				FE4D1BAD1E86B43B0032ED29 /* RDVTabBarController.m in Sources */,
 				FE4D1BB11E86B8A60032ED29 /* News_RootController.m in Sources */,
 				FE4D1B9F1E86B4000032ED29 /* Base_TableViewController.m in Sources */,
-				FE4D1BA41E86B4000032ED29 /* Home_RootViewController.m in Sources */,
+				FE4D1BDD1E87915B0032ED29 /* UIViewController+Swizzle.m in Sources */,
 				8937FEEE1E8650BF00B6D0CD /* HTMLNode.m in Sources */,
 				8937FEE01E864F5900B6D0CD /* UIView+MJExtension.m in Sources */,
 				8937FED71E864F5900B6D0CD /* MJRefreshBackStateFooter.m in Sources */,
@@ -740,8 +786,10 @@
 				8937FEF01E8650BF00B6D0CD /* README.md in Sources */,
 				8937FEEF1E8650BF00B6D0CD /* HTMLParser.m in Sources */,
 				FE4D1BC41E86B92F0032ED29 /* UIImage+Tint.m in Sources */,
+				FE4D1BC81E875E470032ED29 /* XMLDictionary.m in Sources */,
 				FE4D1BB71E86B8C40032ED29 /* Heros_RootController.m in Sources */,
 				8937FED51E864F5900B6D0CD /* MJRefreshBackGifFooter.m in Sources */,
+				FE4D1BCF1E8765B80032ED29 /* NewsCell.m in Sources */,
 				8937FED91E864F5900B6D0CD /* MJRefreshNormalHeader.m in Sources */,
 				8937FED41E864F5900B6D0CD /* MJRefreshAutoStateFooter.m in Sources */,
 				FE4D1BAC1E86B43B0032ED29 /* RDVTabBar.m in Sources */,
@@ -750,6 +798,8 @@
 				8937FE671E864D7700B6D0CD /* main.m in Sources */,
 				8937FEDC1E864F5900B6D0CD /* MJRefreshConst.m in Sources */,
 				FE4D1BA21E86B4000032ED29 /* BaseTableViewController.m in Sources */,
+				FE4D1BCB1E87630A0032ED29 /* NewsModel.m in Sources */,
+				FE4D1BDC1E87915B0032ED29 /* ObjcRuntime.m in Sources */,
 				FE4D1BA11E86B4000032ED29 /* BaseTabBarController.m in Sources */,
 				8937FED61E864F5900B6D0CD /* MJRefreshBackNormalFooter.m in Sources */,
 				8937FEDA1E864F5900B6D0CD /* MJRefreshStateHeader.m in Sources */,

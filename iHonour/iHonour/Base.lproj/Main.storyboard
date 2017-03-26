@@ -20,9 +20,28 @@
                     <view key="view" contentMode="scaleToFill" id="N0s-XM-4aE">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="NWx-tO-Ow6">
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="WhF-DD-eXM" id="W27-sL-qGv"/>
+                                    <outlet property="delegate" destination="WhF-DD-eXM" id="yfV-Va-Xjz"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="NWx-tO-Ow6" firstAttribute="top" secondItem="oLw-tK-gtP" secondAttribute="bottom" id="adt-NG-ZiH"/>
+                            <constraint firstAttribute="trailing" secondItem="NWx-tO-Ow6" secondAttribute="trailing" id="hZ8-Lu-c55"/>
+                            <constraint firstItem="vjZ-xd-fah" firstAttribute="top" secondItem="NWx-tO-Ow6" secondAttribute="bottom" id="kDL-Wu-rQh"/>
+                            <constraint firstItem="NWx-tO-Ow6" firstAttribute="leading" secondItem="N0s-XM-4aE" secondAttribute="leading" id="tRh-fz-aiB"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="KLp-tW-vNo"/>
+                    <connections>
+                        <outlet property="tableView" destination="NWx-tO-Ow6" id="Dg6-f9-r0W"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WiG-bg-5ej" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

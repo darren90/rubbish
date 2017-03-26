@@ -18,6 +18,11 @@
 #import <UMengAnalytics/UMMobClick/MobClick.h>   //友盟 统计
 #import "HTMLParser.h"
 #import "TFHpple.h"
+#import "XMLDictionary.h"
+#import "MJRefresh.h"
+
+
+
 
 //1:腾讯bugly
 #define KBuglyAPPID     @"beb77a91e7"

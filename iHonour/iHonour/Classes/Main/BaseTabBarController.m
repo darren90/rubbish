@@ -30,6 +30,8 @@
     //    [self.rdv_tabBarController setTabBarHidden:YES animated:YES];
     
     [self  initViewControllers];
+    
+    self.selectedIndex = 1;
 }
 
 - (void)didReceiveMemoryWarning {

@@ -7,7 +7,7 @@
 //
 
 #import "BaseViewController.h"
-
-@interface News_RootController : BaseViewController
+#import "Base_TableViewController.h"
+@interface News_RootController :BaseViewController
 
 @end

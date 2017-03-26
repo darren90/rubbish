@@ -8,10 +8,19 @@
 
 #import "News_RootController.h"
 #import "TFWebView.h"
+#import "NewsModel.h"
+#import "NewsCell.h"
+#import "HtmlDetailViewController.h"
 
-@interface News_RootController ()<WKNavigationDelegate>
+@interface News_RootController ()<WKNavigationDelegate,UITableViewDelegate,UITableViewDataSource>
 @property (weak, nonatomic) TFWebView *webView;
 
+//@property (nonatomic,weak)UITableView * tableView;
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
+
+@property (nonatomic,strong)NSMutableArray * datas;
+
+@property (nonatomic,assign)int page;
 @end
 
 @implementation News_RootController
@@ -19,10 +28,83 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+//    [self initTableview];
+    
+    self.page = 1;
     self.title = @"游戏资讯";
+    self.tableView.rowHeight = 100;
  
-    [self testWebView];
-    [self testHonour];
+    self.tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(loadNewData)];
+    self.tableView.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingTarget:self refreshingAction:@selector(loadMoreData)];
+    [self.tableView.mj_header beginRefreshing];
+    
+//    [self testWebView];
+//    [self testHonour];
+}
+
+-(void)initTableview
+{
+    UITableView *tableView = [[UITableView alloc]init];
+    [self.view addSubview:tableView];
+    
+    self.tableView = tableView;
+    tableView.delegate = self;
+    tableView.dataSource = self;
+    [tableView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.bottom.left.right.equalTo(self.view);
+    }];
+//    tableView.contentInset = UIEdgeInsetsMake(0, 0, 20, 0);
+}
+
+
+-(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
+    return 1;
+}
+
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return self.datas.count;
+}
+
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    NewsCell *cell = [NewsCell cellWithTableview:tableView];
+    NewsModel *m = self.datas[indexPath.row];
+    cell.model = m;
+    return cell;
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    NewsModel *m = self.datas[indexPath.row];
+    
+    HtmlDetailViewController *vc = [[HtmlDetailViewController alloc]init];
+    vc.detailUrl = m.url;
+    vc.titleStr = m.title;
+    [self.navigationController pushViewController:vc animated:YES];
+    
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+}
+
+-(void)loadNewData{
+    self.page = 1;
+    [self loadData];
+}
+
+-(void)loadMoreData{
+    self.page ++;
+    [self loadData];
+}
+
+-(void)stopRefresh{
+    [self.tableView.mj_header endRefreshing];
+    [self.tableView.mj_footer endRefreshing];
+}
+
+-(NSString *)requestUrl{
+    NSString *result = [NSString stringWithFormat:@"http://news.4399.com/gonglue/wzlm/zixun/44038-%d.html",self.page];
+    if (self.page == 1) {
+        result = @"http://news.4399.com/gonglue/wzlm/zixun/";
+    }
+    NSLog(@"load-Url:%@",result);
+    return result;
 }
 
 -(void)testWebView{
@@ -42,79 +124,52 @@
 }
 
 
-- (void)testHonour
-{
-    NSURL *uurl = [NSURL URLWithString:@"http://news.4399.com/gonglue/wzlm/zixun/"];
-//    NSData *dd = [NSData dataWithContentsOfURL:uurl];
-//    NSString *ss = [[NSString alloc]initWithData:dd encoding:0];
-//    NSLog(@"--ss:%@",ss);
+- (void)loadData{
+    NSString *url = [self requestUrl];
+    NSURL *uurl = [NSURL URLWithString:url];
+ 
+    __weak __typeof(self) weakSelf = self;
+
     NSURLRequest *request = [NSURLRequest requestWithURL:uurl cachePolicy:NSURLRequestReloadIgnoringLocalCacheData timeoutInterval:120.0];
     NSURLSessionDataTask *task = [[NSURLSession sharedSession] dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+        
         if (!error) {
-//            NSString *str = [[NSString alloc] initWithData:data encoding:0];
-//            NSLog(@"---rrr:%@",str);
-            //3.创建数据解析对象
-//            TFHpple *xpathParser = [[TFHpple alloc]initWithHTMLData:data];
-            TFHpple *xpathParser = [[TFHpple alloc]initWithHTMLData:data encoding:@"utf-8"];
-            NSString *strs = [[NSString alloc] initWithData:xpathParser.data encoding:NSASCIIStringEncoding];
+ 
+            TFHpple *xpathParser = [[TFHpple alloc]initWithHTMLData:data encoding:@"gbk"];
+//            NSString *strs = [[NSString alloc] initWithData:xpathParser.data encoding:NSASCIIStringEncoding];
 
-            //4.通过Xpath定位到指定位置并获取数据
-            
-            NSArray *elements2 = [xpathParser searchWithXPathQuery:@"//a[starts-with(@class,'title')]"];
-
-            NSArray *elements = [xpathParser searchWithXPathQuery:@"//ul[@class='txt-list cf']//li"];
+            NSArray *elements = [xpathParser searchWithXPathQuery:@"//ul[@class='txt-list cf']/*"];
             if (elements.count > 0){
-                //5.使用数据
-                //NSLog(@"elements=%@",elements[0]);
-                TFHppleElement *element = elements[0];
-                NSArray *chiledrens = [element children];
-                if (chiledrens.count > 0) {
-                    for (TFHppleElement *el in chiledrens) {
-                        NSString *title = @"";
-                        //NSString *content = @"";
-                        NSString *href = @"";
-                        NSString *imgUrl = @"";
-                        
-                        NSArray *elChs = el.children;
-                        
-                        if (elChs.count > 0) {
-                            for (TFHppleElement *ell in elChs) {
-                                NSString *etext = [ell text];
-                                //NSString *econtent = [[ell content] stringByReplacingOccurrencesOfString:@" " withString:@""];
-                                NSString *ehref = [ell objectForKey:@"href"];
-                                //NSString *eimg = [ell objectForKey:@"img"];
-                                if (etext) {
-                                    title = etext;
-                                    href = ehref;
-                                }
-                                //NSLog(@"--eeeetext-:%@,content: %@ , href: %@ , img: %@",etext,econtent,ehref,eimg);
-                                
-                                if (ell.hasChildren){
-                                    //if ([title isEqualToString:@"老夫子"]) {
-                                    //    NSLog(@"");
-                                    //}
-                                    TFHppleElement *imgEl = ell.firstChild;
-                                    NSDictionary *imgDic = imgEl.attributes;
-                                    if (imgDic) {
-                                        imgUrl = imgDic[@"src"];//部分用的字段是lz_src
-                                        if (imgUrl.length == 0) {
-                                            //NSLog(@"---img:%@",imgDic);
-                                            imgUrl = imgDic[@"lz_src"];
-                                        }
-                                        //NSLog(@"--imgUrl:%@",imgDic[@"src"]);
-                                    }
-                                }
-                                
-                            }
-                        }
-                        if (title.length > 0) {
-                            NSLog(@"--title-:%@ , href: %@ , img: %@",title,href,imgUrl);
-                        }
-                    }
+                if (self.page == 1) {
+                    [weakSelf.datas removeAllObjects];
                 }
+                
+                for (TFHppleElement *li in elements) {
+                    //find title
+                    NSArray *tags = [li childrenWithTagName:@"div"];
+                    TFHppleElement *element = tags.lastObject;
+                    NSDictionary *dd = [NSDictionary dictionaryWithXMLString:element.raw];
+                    NSDictionary *ad = dd[@"a"];
+                    
+                    NSString *href = ad[@"_href"];
+                    NSString *hreff = [NSString stringWithFormat:@"%@%@",@"http://m.news.4399.com",href];
+                    NSString *src = ad[@"img"][@"_src"];
+                    NSString *titles = ad[@"img"][@"_alt"];
+//                    NSLog(@"title: %@,href:%@,src:%@",titles,hreff,src);
+                    NSLog(@"--数据解析成功-:%d",self.page);
+                    NewsModel *m = [NewsModel modelWith:titles url:hreff imgUrl:src];
+
+                    [weakSelf.datas addObject:m];
+                }
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    [weakSelf stopRefresh];
+                    [weakSelf.tableView reloadData];
+                    
+                });
             }
             
         }else{//下载失败
+            [weakSelf stopRefresh];
             NSLog(@"---:网页下载失败：%@",error);
         }
     }];
@@ -122,10 +177,12 @@
     [task resume];
 }
 
--(void)ttt{
-    NSString *str = @"";
+-(NSMutableArray *)datas{
+    if (!_datas) {
+        _datas = [NSMutableArray array];
+    }
+    return _datas;
 }
-
 
 
 @end
