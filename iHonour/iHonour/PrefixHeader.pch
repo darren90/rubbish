@@ -42,7 +42,10 @@
 #define kGoogleAdmobCheats_Bottom_01 @"ca-app-pub-8145075793156354/3203285029"
 //英雄底部
 #define kGoogleAdmobHeros_Bottom_01 @"ca-app-pub-8145075793156354/4680018221"
-
+//资讯Cell
+#define kGoogleAdmobNews_Cell_01 @"ca-app-pub-8145075793156354/9762692628"
+//攻略Cell
+#define kGoogleAdmobHeros_Cell_01 @"ca-app-pub-8145075793156354/8285959421"
 
 
 // 2.获得RGB颜色

@@ -11,6 +11,7 @@
 #import "NewsModel.h"
 #import "NewsCell.h"
 #import "HtmlDetailViewController.h"
+#import "AdmobCell.h"
 
 @interface News_RootController ()<WKNavigationDelegate,UITableViewDelegate,UITableViewDataSource>
 @property (weak, nonatomic) TFWebView *webView;
@@ -66,14 +67,25 @@
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    NewsCell *cell = [NewsCell cellWithTableview:tableView];
     NewsModel *m = self.datas[indexPath.row];
+    
+    if (m.isAdmob) {
+        AdmobCell *adCell = [AdmobCell cellWithTableview:tableView];
+        adCell.adUnitID = kGoogleAdmobNews_Cell_01;
+        adCell.bannerView.rootViewController = self;
+        return adCell;
+    }
+    
+    NewsCell *cell = [NewsCell cellWithTableview:tableView];
     cell.model = m;
     return cell;
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     NewsModel *m = self.datas[indexPath.row];
+    if (m.isAdmob) {
+        return;
+    }
     
     HtmlDetailViewController *vc = [[HtmlDetailViewController alloc]init];
     vc.detailUrl = m.url;
@@ -82,6 +94,14 @@
     [self.navigationController pushViewController:vc animated:YES];
     
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+}
+
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    NewsModel *m = self.datas[indexPath.row];
+    if (m.isAdmob) {
+        return 50;
+    }
+    return 100;
 }
 
 -(void)loadNewData{
@@ -145,6 +165,7 @@
                     [weakSelf.datas removeAllObjects];
                 }
                 
+                int admobIndex = 0;
                 for (TFHppleElement *li in elements) {
                     //find title
                     NSArray *tags = [li childrenWithTagName:@"div"];
@@ -159,6 +180,13 @@
 //                    NSLog(@"title: %@,href:%@,src:%@",titles,hreff,src);
                     NSLog(@"--数据解析成功-:%d",self.page);
                     NewsModel *m = [NewsModel modelWith:titles url:hreff imgUrl:src];
+                    
+                    if (admobIndex == 8) {
+                        NewsModel *adM = [[NewsModel alloc]init];
+                        adM.isAdmob = YES;
+                        [self.datas addObject:adM];
+                    }
+                    admobIndex ++;
 
                     [weakSelf.datas addObject:m];
                 }

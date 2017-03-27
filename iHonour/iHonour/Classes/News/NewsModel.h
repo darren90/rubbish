@@ -16,9 +16,10 @@
 
 @property (nonatomic,copy)NSString * url;
 
-
 @property (nonatomic,copy)NSString * imgUrl;
 
+//是否为广告
+@property (nonatomic,assign)BOOL isAdmob;
 
 -(instancetype)initWith:(NSString *)title url:(NSString *)url imgUrl:(NSString *)imgUrl;
 

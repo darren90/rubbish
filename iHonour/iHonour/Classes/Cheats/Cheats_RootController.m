@@ -10,6 +10,7 @@
 #import "NewsModel.h"
 #import "NewsCell.h"
 #import "HtmlDetailViewController.h"
+#import "AdmobCell.h"
 
 @interface Cheats_RootController ()<UITableViewDelegate,UITableViewDataSource>
 
@@ -61,15 +62,24 @@
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    NewsCell *cell = [NewsCell cellWithTableview:tableView];
     NewsModel *m = self.datas[indexPath.row];
+    if (m.isAdmob) {
+        AdmobCell *adCell = [AdmobCell cellWithTableview:tableView];
+        adCell.adUnitID = kGoogleAdmobHeros_Cell_01;
+        adCell.bannerView.rootViewController = self;
+        return adCell;
+    }
+    
+    NewsCell *cell = [NewsCell cellWithTableview:tableView];
     cell.model = m;
     return cell;
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     NewsModel *m = self.datas[indexPath.row];
-    
+    if (m.isAdmob) {
+        return;
+    }
     HtmlDetailViewController *vc = [[HtmlDetailViewController alloc]init];
     vc.detailUrl = m.url;
     vc.titleStr = m.title;
@@ -78,6 +88,15 @@
     
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
+
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    NewsModel *m = self.datas[indexPath.row];
+    if (m.isAdmob) {
+        return 50;
+    }
+    return 100;
+}
+
 
 -(void)loadNewData{
     self.page = 1;
@@ -123,6 +142,7 @@
                     [weakSelf.datas removeAllObjects];
                 }
                 
+                int admobIndex = 0;
                 for (TFHppleElement *li in elements) {
                     //find title
                     NSArray *tags = [li childrenWithTagName:@"div"];
@@ -134,7 +154,14 @@
 //                    NSString *hreff = [NSString stringWithFormat:@"%@%@",@"http://m.news.4399.com",href];
                     NSString *src = ad[@"img"][@"_src"];
                     NSString *title = ad[@"_title"];
-                    NSLog(@"title: %@,href:%@,src:%@",title,href,src);
+//                    NSLog(@"title: %@,href:%@,src:%@",title,href,src);
+                    
+                    if (admobIndex == 8) {
+                        NewsModel *adM = [[NewsModel alloc]init];
+                        adM.isAdmob = YES;
+                        [self.datas addObject:adM];
+                    }
+                    admobIndex ++;
                     NSLog(@"--数据解析成功-:%d",self.page);
                     NewsModel *m = [NewsModel modelWith:title url:href imgUrl:src];
                     
