@@ -156,7 +156,7 @@
                     NSString *title = ad[@"_title"];
 //                    NSLog(@"title: %@,href:%@,src:%@",title,href,src);
                     
-                    if (admobIndex == 8) {
+                    if (admobIndex == 8 && self.page == 1) {
                         NewsModel *adM = [[NewsModel alloc]init];
                         adM.isAdmob = YES;
                         [self.datas addObject:adM];

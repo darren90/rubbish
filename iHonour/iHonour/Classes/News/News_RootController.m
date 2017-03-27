@@ -22,6 +22,7 @@
 @property (nonatomic,strong)NSMutableArray * datas;
 
 @property (nonatomic,assign)int page;
+
 @end
 
 @implementation News_RootController
@@ -181,7 +182,7 @@
                     NSLog(@"--数据解析成功-:%d",self.page);
                     NewsModel *m = [NewsModel modelWith:titles url:hreff imgUrl:src];
                     
-                    if (admobIndex == 8) {
+                    if (admobIndex == 8 && self.page == 1) {
                         NewsModel *adM = [[NewsModel alloc]init];
                         adM.isAdmob = YES;
                         [self.datas addObject:adM];
