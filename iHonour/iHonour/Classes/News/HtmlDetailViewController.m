@@ -40,6 +40,13 @@
     [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:self.detailUrl]]];
 
     [self initAdView];
+    
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"like_n"] style:UIBarButtonItemStyleDone target:self action:@selector(likeAction)];
+}
+
+-(void)likeAction{
+    NSLog(@"---aaa");
+    self.navigationItem.rightBarButtonItem.image = [UIImage imageNamed:@"home_sc_n"];
 }
 
 - (void)didReceiveMemoryWarning {

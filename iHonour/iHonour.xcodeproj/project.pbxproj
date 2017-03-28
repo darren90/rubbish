@@ -74,6 +74,7 @@
 		FE4D1BDC1E87915B0032ED29 /* ObjcRuntime.m in Sources */ = {isa = PBXBuildFile; fileRef = FE4D1BD91E87915B0032ED29 /* ObjcRuntime.m */; };
 		FE4D1BDD1E87915B0032ED29 /* UIViewController+Swizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = FE4D1BDB1E87915B0032ED29 /* UIViewController+Swizzle.m */; };
 		FEC5E7031E895C8700FA7B64 /* AdmobCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FEC5E7021E895C8700FA7B64 /* AdmobCell.m */; };
+		FEC5E7071E8AA89D00FA7B64 /* Me_RootController.m in Sources */ = {isa = PBXBuildFile; fileRef = FEC5E7061E8AA89D00FA7B64 /* Me_RootController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -222,6 +223,8 @@
 		FE4D1BDB1E87915B0032ED29 /* UIViewController+Swizzle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Swizzle.m"; sourceTree = "<group>"; };
 		FEC5E7011E895C8700FA7B64 /* AdmobCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdmobCell.h; sourceTree = "<group>"; };
 		FEC5E7021E895C8700FA7B64 /* AdmobCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdmobCell.m; sourceTree = "<group>"; };
+		FEC5E7051E8AA89D00FA7B64 /* Me_RootController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Me_RootController.h; sourceTree = "<group>"; };
+		FEC5E7061E8AA89D00FA7B64 /* Me_RootController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Me_RootController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -343,6 +346,7 @@
 				FE4D1B901E86B3410032ED29 /* News */,
 				FE4D1B8E1E86B3410032ED29 /* Cheats */,
 				FE4D1B8F1E86B3410032ED29 /* Heros */,
+				FEC5E7041E8AA88700FA7B64 /* Me */,
 				FE4D1B921E86B4000032ED29 /* Main */,
 			);
 			path = Classes;
@@ -618,6 +622,15 @@
 			path = ObjcRuntime;
 			sourceTree = "<group>";
 		};
+		FEC5E7041E8AA88700FA7B64 /* Me */ = {
+			isa = PBXGroup;
+			children = (
+				FEC5E7051E8AA89D00FA7B64 /* Me_RootController.h */,
+				FEC5E7061E8AA89D00FA7B64 /* Me_RootController.m */,
+			);
+			path = Me;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -852,6 +865,7 @@
 				FE4D1BAC1E86B43B0032ED29 /* RDVTabBar.m in Sources */,
 				8937FEFA1E86511300B6D0CD /* XPathQuery.m in Sources */,
 				8937FECE1E864F5900B6D0CD /* MJRefreshBackFooter.m in Sources */,
+				FEC5E7071E8AA89D00FA7B64 /* Me_RootController.m in Sources */,
 				8937FE671E864D7700B6D0CD /* main.m in Sources */,
 				8937FEDC1E864F5900B6D0CD /* MJRefreshConst.m in Sources */,
 				FE4D1BA21E86B4000032ED29 /* BaseTableViewController.m in Sources */,
