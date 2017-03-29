@@ -35,6 +35,7 @@
     self.page = 1;
     self.title = @"游戏资讯";
     self.tableView.rowHeight = 100;
+    self.noDataView.hidden = YES;
  
     self.tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(loadNewData)];
     self.tableView.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingTarget:self refreshingAction:@selector(loadMoreData)];
@@ -64,6 +65,7 @@
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+//     self.noDataView.hidden = (self.datas.count != 0);
     return self.datas.count;
 }
 
@@ -92,6 +94,8 @@
     vc.detailUrl = m.url;
     vc.titleStr = m.title;
     vc.adType = Admob_News_Bottom;
+    vc.newsModel = m;
+    vc.listType = RMListNews;
     [self.navigationController pushViewController:vc animated:YES];
     
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
@@ -193,6 +197,8 @@
                 }
                 dispatch_async(dispatch_get_main_queue(), ^{
                     [weakSelf stopRefresh];
+                    self.noDataView.hidden = (self.datas.count != 0);
+
                     [weakSelf.tableView reloadData];
                     
                 });
@@ -200,6 +206,7 @@
             
         }else{//下载失败
             [weakSelf stopRefresh];
+            self.noDataView.hidden = (self.datas.count != 0);
             NSLog(@"---:网页下载失败：%@",error);
         }
     }];

@@ -8,11 +8,23 @@
 
 #import <Realm/Realm.h>
 
+typedef enum {
+    RMListNews,
+    RMListCheats,
+//    RMListType,
+} RMListType;
+
 @interface RMListModel : RLMObject
 
-//@property (nonatomic,copy)NSString * name;
+@property NSInteger ID;
 
-@property NSString * name;
+@property NSString * title;
+
+@property NSString * url;
+
+@property NSString  * imgUrl;
+
+@property RMListType listType;
 
 @property NSDate *date;
 

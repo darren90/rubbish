@@ -41,11 +41,12 @@
 
     [self initAdView];
     
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"like_n"] style:UIBarButtonItemStyleDone target:self action:@selector(likeAction)];
+//    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"like_n"] style:UIBarButtonItemStyleDone target:self action:@selector(likeAction)];
 }
 
 -(void)likeAction{
     NSLog(@"---aaa");
+    [[RMLTools shareTools] addCollect:self.newsModel listType:self.listType];
     self.navigationItem.rightBarButtonItem.image = [UIImage imageNamed:@"home_sc_n"];
 }
 

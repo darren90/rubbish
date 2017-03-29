@@ -29,6 +29,7 @@
     
     [self initTableview];
     
+    self.noDataView.hidden = YES;
     self.page = 1;
     self.title = @"攻略秘籍";
     self.tableView.rowHeight = 100;
@@ -58,6 +59,7 @@
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    
     return self.datas.count;
 }
 
@@ -84,6 +86,8 @@
     vc.detailUrl = m.url;
     vc.titleStr = m.title;
     vc.adType = Admob_Cheats_Bottom;
+    vc.newsModel = m;
+    vc.listType = RMListCheats;
     [self.navigationController pushViewController:vc animated:YES];
     
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
@@ -169,6 +173,7 @@
                 }
                 dispatch_async(dispatch_get_main_queue(), ^{
                     [weakSelf stopRefresh];
+                    self.noDataView.hidden = (self.datas.count != 0);
                     [weakSelf.tableView reloadData];
                     
                 });
@@ -176,6 +181,7 @@
             
         }else{//下载失败
             [weakSelf stopRefresh];
+            self.noDataView.hidden = (self.datas.count != 0);
             NSLog(@"---:网页下载失败：%@",error);
         }
     }];

@@ -20,7 +20,7 @@
 #import "TFHpple.h"
 #import "XMLDictionary.h"
 #import "MJRefresh.h"
-
+#import "RMLTools.h"
 
 
 
@@ -31,7 +31,7 @@
 //2.友盟
 #define KUmegnAppKey    @"58d67e2b99f0c7164f0011ea"
 
-#define KAppid                  @"1090434597"  //App Store Id
+#define KAppid                  @"1219659153"  //App Store Id
 
 
 //Google广告应用id
@@ -63,6 +63,10 @@
 #define  KWidth     [UIScreen mainScreen].bounds.size.width
 
 #define KplaceholderImg         [UIImage imageNamed:@"kplace"]  //占位图
+
+
+
+#define isApplePad                (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
 
 
 

@@ -28,7 +28,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    
+    self.noDataView.hidden = YES;
     self.page = 1;
     self.title = @"英雄大全";
 //    self.tableView.rowHeight = 100;
@@ -185,6 +185,7 @@ referenceSizeForHeaderInSection:(NSInteger)section
                 dispatch_async(dispatch_get_main_queue(), ^{
                     [weakSelf stopRefresh];
                     [self.datas removeObjectAtIndex:0];
+                    self.noDataView.hidden = (self.datas.count != 0);
                     [weakSelf.waterView reloadData];
                     
                 });
@@ -192,6 +193,7 @@ referenceSizeForHeaderInSection:(NSInteger)section
             
         }else{//下载失败
             [weakSelf stopRefresh];
+            self.noDataView.hidden = (self.datas.count != 0);
             NSLog(@"---:网页下载失败：%@",error);
         }
     }];

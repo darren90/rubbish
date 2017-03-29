@@ -23,7 +23,6 @@
 @property (nonatomic,copy)NSString * typeStr;
 
 
-
 +(instancetype)modelWith:(NSString *)name url:(NSString *)url imgUrl:(NSString *)imgUrl type:(NSString *)type;
 
 

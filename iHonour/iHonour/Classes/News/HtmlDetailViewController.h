@@ -7,6 +7,8 @@
 //
 
 #import "BaseViewController.h"
+#import "NewsModel.h"
+#import "RMListModel.h"
 
 typedef enum {
     Admob_News_Bottom,
@@ -19,10 +21,12 @@ typedef enum {
 
 @property (nonatomic,copy)NSString * titleStr;
 
-
 @property (nonatomic,copy)NSString * detailUrl;
 
-
 @property (nonatomic,assign)AdmobType adType;
+
+@property (nonatomic,strong)NewsModel *newsModel;
+
+@property (nonatomic,assign)RMListType listType;
 
 @end

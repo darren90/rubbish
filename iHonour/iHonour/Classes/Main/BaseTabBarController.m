@@ -54,8 +54,9 @@
     BaseNavigationController *settingNav = [[BaseNavigationController alloc]initWithRootViewController:settingVc];
 
     Me_RootController *meVC = [sb instantiateViewControllerWithIdentifier:@"me"];
-
-    [self setViewControllers:@[allNav,movielistNav, settingNav]];
+    BaseNavigationController *meNav = [[BaseNavigationController alloc]initWithRootViewController:meVC];
+    
+    [self setViewControllers:@[allNav,movielistNav, settingNav,meNav]];
     
     [self initTabBarForController];
     self.delegate = self;
@@ -63,8 +64,8 @@
 
 -(void)initTabBarForController
 {
-    NSArray *tabBarItemImages = @[@"tab_new2",@"tabbar_cheats",@"tabbar_heros"];
-    NSArray *tabBarItemTitles = @[@"游戏资讯",@"攻略秘籍",@"英雄大全"];
+    NSArray *tabBarItemImages = @[@"tab_new2",@"tabbar_cheats",@"tabbar_heros",@"tab_mine"];
+    NSArray *tabBarItemTitles = @[@"游戏资讯",@"攻略秘籍",@"英雄大全",@"我的"];
     
     NSInteger index = 0;
     for (RDVTabBarItem *item in self.tabBar.items) {

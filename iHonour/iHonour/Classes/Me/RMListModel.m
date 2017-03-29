@@ -10,4 +10,8 @@
 
 @implementation RMListModel
 
+//+ (NSString *)primaryKey {
+//    return @"ID";
+//}
+
 @end
