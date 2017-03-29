@@ -1,0 +1,19 @@
+//
+//  RMListModel.h
+//  RealmOCDemo
+//
+//  Created by Fengtf on 2017/3/29.
+//  Copyright © 2017年 ftf. All rights reserved.
+//
+
+#import <Realm/Realm.h>
+
+@interface RMListModel : RLMObject
+
+//@property (nonatomic,copy)NSString * name;
+
+@property NSString * name;
+
+@property NSDate *date;
+
+@end

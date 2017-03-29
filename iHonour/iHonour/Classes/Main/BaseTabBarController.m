@@ -16,6 +16,7 @@
 #import "News_RootController.h"
 #import "Cheats_RootController.h"
 #import "Heros_RootController.h"
+#import "Me_RootController.h"
 
 @interface BaseTabBarController ()
 
@@ -48,10 +49,11 @@
     
     Cheats_RootController *movieListVc = [sb instantiateViewControllerWithIdentifier:@"cheats"];
     BaseNavigationController *movielistNav = [[BaseNavigationController alloc]initWithRootViewController:movieListVc];
- 
-    
+
     Heros_RootController *settingVc = [sb instantiateViewControllerWithIdentifier:@"heros"];
     BaseNavigationController *settingNav = [[BaseNavigationController alloc]initWithRootViewController:settingVc];
+
+    Me_RootController *meVC = [sb instantiateViewControllerWithIdentifier:@"me"];
 
     [self setViewControllers:@[allNav,movielistNav, settingNav]];
     

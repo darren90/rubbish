@@ -7,6 +7,8 @@
 //
 
 #import "Me_RootController.h"
+#import <Realm/Realm.h>
+#import "RMListModel.h"
 
 @interface Me_RootController ()
 
@@ -24,14 +26,35 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
+-(void)initDB{
+    NSArray *docPath = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *path = [docPath objectAtIndex:0];
+    NSString *filePath = [path stringByAppendingPathComponent:@"Tengfei.realm"];
+    NSLog(@"数据库目录 = %@",filePath);
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    RLMRealmConfiguration *config = [RLMRealmConfiguration defaultConfiguration];
+    config.fileURL = [NSURL fileURLWithPath:filePath];
+
+    //    RLMRealm *realm = [RLMRealm realmWithConfiguration:config error:nil];
+
+    [RLMRealmConfiguration setDefaultConfiguration:config];
 }
-*/
+
+-(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+    [self addOne];
+}
+
+-(void)addOne{
+    RLMRealm *realm = [RLMRealm defaultRealm];
+
+    RMListModel *m = [[RMListModel alloc]init];
+    m.name = @"rrmj001";
+    m.date = [NSDate new];
+    [realm beginWriteTransaction];
+    //    [realm addOrUpdateObject:m];
+    [realm addObject:m];
+    [realm commitWriteTransaction];
+}
+
 
 @end

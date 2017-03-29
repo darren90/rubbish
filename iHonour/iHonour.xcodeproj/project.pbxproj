@@ -43,6 +43,10 @@
 		8937FEF91E86511300B6D0CD /* TFHppleElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 8937FEF51E86511300B6D0CD /* TFHppleElement.m */; };
 		8937FEFA1E86511300B6D0CD /* XPathQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 8937FEF71E86511300B6D0CD /* XPathQuery.m */; };
 		8937FEFC1E86515C00B6D0CD /* libxml2.2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 8937FEFB1E86515C00B6D0CD /* libxml2.2.tbd */; };
+		894144A01E8B654700C8DD59 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8941449F1E8B654700C8DD59 /* Realm.framework */; };
+		894144A11E8B657300C8DD59 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8941449F1E8B654700C8DD59 /* Realm.framework */; };
+		894144A21E8B657300C8DD59 /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8941449F1E8B654700C8DD59 /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		894144A61E8B812000C8DD59 /* RMListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 894144A51E8B812000C8DD59 /* RMListModel.m */; };
 		A6766D774B331362860E4058 /* libPods-iHonour.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9139FFD7184FD129985C629C /* libPods-iHonour.a */; };
 		FE1877491E87A40400A37B64 /* HerosModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FE1877481E87A40400A37B64 /* HerosModel.m */; };
 		FE18774E1E87DD3400A37B64 /* HerosBackUp.js in Resources */ = {isa = PBXBuildFile; fileRef = FE18774D1E87DD3400A37B64 /* HerosBackUp.js */; };
@@ -93,6 +97,20 @@
 			remoteInfo = iHonour;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		894144A31E8B657300C8DD59 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				894144A21E8B657300C8DD59 /* Realm.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		3C1F6592B0D64DBAE5940729 /* Pods-iHonour.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iHonour.release.xcconfig"; path = "Pods/Target Support Files/Pods-iHonour/Pods-iHonour.release.xcconfig"; sourceTree = "<group>"; };
@@ -167,6 +185,9 @@
 		8937FEF61E86511300B6D0CD /* XPathQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPathQuery.h; sourceTree = "<group>"; };
 		8937FEF71E86511300B6D0CD /* XPathQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPathQuery.m; sourceTree = "<group>"; };
 		8937FEFB1E86515C00B6D0CD /* libxml2.2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.2.tbd; path = usr/lib/libxml2.2.tbd; sourceTree = SDKROOT; };
+		8941449F1E8B654700C8DD59 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = "<group>"; };
+		894144A41E8B812000C8DD59 /* RMListModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMListModel.h; sourceTree = "<group>"; };
+		894144A51E8B812000C8DD59 /* RMListModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMListModel.m; sourceTree = "<group>"; };
 		9139FFD7184FD129985C629C /* libPods-iHonour.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-iHonour.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE1877471E87A40400A37B64 /* HerosModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HerosModel.h; sourceTree = "<group>"; };
 		FE1877481E87A40400A37B64 /* HerosModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HerosModel.m; sourceTree = "<group>"; };
@@ -232,9 +253,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				894144A01E8B654700C8DD59 /* Realm.framework in Frameworks */,
 				FE18775F1E87F68D00A37B64 /* GoogleMobileAds.framework in Frameworks */,
 				8937FEFC1E86515C00B6D0CD /* libxml2.2.tbd in Frameworks */,
 				A6766D774B331362860E4058 /* libPods-iHonour.a in Frameworks */,
+				894144A11E8B657300C8DD59 /* Realm.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -364,6 +387,7 @@
 		8937FE9D1E864F4B00B6D0CD /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
+				8941449E1E8B654700C8DD59 /* realm-objc-2.4.4 */,
 				FE18775C1E87F68D00A37B64 /* GoogleMobileAdsSdkiOS-7.19.0 */,
 				FE4D1BC51E875E470032ED29 /* XMLDictionary */,
 				FE4D1BA51E86B43B0032ED29 /* RDVTabBarController */,
@@ -504,6 +528,14 @@
 			path = Hpple;
 			sourceTree = "<group>";
 		};
+		8941449E1E8B654700C8DD59 /* realm-objc-2.4.4 */ = {
+			isa = PBXGroup;
+			children = (
+				8941449F1E8B654700C8DD59 /* Realm.framework */,
+			);
+			path = "realm-objc-2.4.4";
+			sourceTree = "<group>";
+		};
 		FE18775C1E87F68D00A37B64 /* GoogleMobileAdsSdkiOS-7.19.0 */ = {
 			isa = PBXGroup;
 			children = (
@@ -627,6 +659,8 @@
 			children = (
 				FEC5E7051E8AA89D00FA7B64 /* Me_RootController.h */,
 				FEC5E7061E8AA89D00FA7B64 /* Me_RootController.m */,
+				894144A41E8B812000C8DD59 /* RMListModel.h */,
+				894144A51E8B812000C8DD59 /* RMListModel.m */,
 			);
 			path = Me;
 			sourceTree = "<group>";
@@ -644,6 +678,7 @@
 				8937FE601E864D7700B6D0CD /* Resources */,
 				D9CC50E65DFE407EBB4DA502 /* [CP] Embed Pods Frameworks */,
 				6AEA58DBF34DED11693FC605 /* [CP] Copy Pods Resources */,
+				894144A31E8B657300C8DD59 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -839,6 +874,7 @@
 				8937FE6A1E864D7700B6D0CD /* AppDelegate.m in Sources */,
 				8937FECF1E864F5900B6D0CD /* MJRefreshComponent.m in Sources */,
 				8937FED11E864F5900B6D0CD /* MJRefreshHeader.m in Sources */,
+				894144A61E8B812000C8DD59 /* RMListModel.m in Sources */,
 				8937FEE71E864FC000B6D0CD /* TFWebView.m in Sources */,
 				FE4D1BAD1E86B43B0032ED29 /* RDVTabBarController.m in Sources */,
 				FE4D1BB11E86B8A60032ED29 /* News_RootController.m in Sources */,
@@ -1029,6 +1065,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/iHonour/Lib/Vendor/GoogleMobileAdsSdkiOS-7.19.0",
+					"$(PROJECT_DIR)/iHonour/Lib/Vendor/realm-objc-2.4.4",
 				);
 				GCC_PREFIX_HEADER = "$(SRCROOT)/iHonour/PrefixHeader.pch";
 				HEADER_SEARCH_PATHS = (
@@ -1057,6 +1094,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/iHonour/Lib/Vendor/GoogleMobileAdsSdkiOS-7.19.0",
+					"$(PROJECT_DIR)/iHonour/Lib/Vendor/realm-objc-2.4.4",
 				);
 				GCC_PREFIX_HEADER = "$(SRCROOT)/iHonour/PrefixHeader.pch";
 				HEADER_SEARCH_PATHS = (
