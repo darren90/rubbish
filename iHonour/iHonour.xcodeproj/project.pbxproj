@@ -47,6 +47,10 @@
 		894144A11E8B657300C8DD59 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8941449F1E8B654700C8DD59 /* Realm.framework */; };
 		894144A21E8B657300C8DD59 /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8941449F1E8B654700C8DD59 /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		894144A61E8B812000C8DD59 /* RMListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 894144A51E8B812000C8DD59 /* RMListModel.m */; };
+		894145EA1E8E550400C8DD59 /* UIScrollView+EmptyDataSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 894145E31E8E550400C8DD59 /* UIScrollView+EmptyDataSet.m */; };
+		894145EB1E8E550400C8DD59 /* DGActivityIndicatorRotatingTrigonAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 894145E71E8E550400C8DD59 /* DGActivityIndicatorRotatingTrigonAnimation.m */; };
+		894145EC1E8E550400C8DD59 /* DGActivityIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 894145E91E8E550400C8DD59 /* DGActivityIndicatorView.m */; };
+		894145EF1E8E551700C8DD59 /* UIColor+Hexadecimal.m in Sources */ = {isa = PBXBuildFile; fileRef = 894145EE1E8E551700C8DD59 /* UIColor+Hexadecimal.m */; };
 		A6766D774B331362860E4058 /* libPods-iHonour.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9139FFD7184FD129985C629C /* libPods-iHonour.a */; };
 		FE1877491E87A40400A37B64 /* HerosModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FE1877481E87A40400A37B64 /* HerosModel.m */; };
 		FE18774E1E87DD3400A37B64 /* HerosBackUp.js in Resources */ = {isa = PBXBuildFile; fileRef = FE18774D1E87DD3400A37B64 /* HerosBackUp.js */; };
@@ -210,6 +214,15 @@
 		8941449F1E8B654700C8DD59 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = "<group>"; };
 		894144A41E8B812000C8DD59 /* RMListModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMListModel.h; sourceTree = "<group>"; };
 		894144A51E8B812000C8DD59 /* RMListModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMListModel.m; sourceTree = "<group>"; };
+		894145E21E8E550400C8DD59 /* UIScrollView+EmptyDataSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+EmptyDataSet.h"; sourceTree = "<group>"; };
+		894145E31E8E550400C8DD59 /* UIScrollView+EmptyDataSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+EmptyDataSet.m"; sourceTree = "<group>"; };
+		894145E51E8E550400C8DD59 /* DGActivityIndicatorAnimationProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DGActivityIndicatorAnimationProtocol.h; sourceTree = "<group>"; };
+		894145E61E8E550400C8DD59 /* DGActivityIndicatorRotatingTrigonAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DGActivityIndicatorRotatingTrigonAnimation.h; sourceTree = "<group>"; };
+		894145E71E8E550400C8DD59 /* DGActivityIndicatorRotatingTrigonAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DGActivityIndicatorRotatingTrigonAnimation.m; sourceTree = "<group>"; };
+		894145E81E8E550400C8DD59 /* DGActivityIndicatorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DGActivityIndicatorView.h; sourceTree = "<group>"; };
+		894145E91E8E550400C8DD59 /* DGActivityIndicatorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DGActivityIndicatorView.m; sourceTree = "<group>"; };
+		894145ED1E8E551700C8DD59 /* UIColor+Hexadecimal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Hexadecimal.h"; sourceTree = "<group>"; };
+		894145EE1E8E551700C8DD59 /* UIColor+Hexadecimal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Hexadecimal.m"; sourceTree = "<group>"; };
 		9139FFD7184FD129985C629C /* libPods-iHonour.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-iHonour.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE1877471E87A40400A37B64 /* HerosModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HerosModel.h; sourceTree = "<group>"; };
 		FE1877481E87A40400A37B64 /* HerosModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HerosModel.m; sourceTree = "<group>"; };
@@ -450,6 +463,8 @@
 		8937FE9D1E864F4B00B6D0CD /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
+				894145E11E8E550400C8DD59 /* DZNEmptyDataSet */,
+				894145E41E8E550400C8DD59 /* Loading */,
 				FEC5E7401E8C046900FA7B64 /* SVProgressHUD */,
 				FEC5E7391E8C038E00FA7B64 /* ClearCache */,
 				8941449E1E8B654700C8DD59 /* realm-objc-2.4.4 */,
@@ -599,6 +614,29 @@
 				8941449F1E8B654700C8DD59 /* Realm.framework */,
 			);
 			path = "realm-objc-2.4.4";
+			sourceTree = "<group>";
+		};
+		894145E11E8E550400C8DD59 /* DZNEmptyDataSet */ = {
+			isa = PBXGroup;
+			children = (
+				894145ED1E8E551700C8DD59 /* UIColor+Hexadecimal.h */,
+				894145EE1E8E551700C8DD59 /* UIColor+Hexadecimal.m */,
+				894145E21E8E550400C8DD59 /* UIScrollView+EmptyDataSet.h */,
+				894145E31E8E550400C8DD59 /* UIScrollView+EmptyDataSet.m */,
+			);
+			path = DZNEmptyDataSet;
+			sourceTree = "<group>";
+		};
+		894145E41E8E550400C8DD59 /* Loading */ = {
+			isa = PBXGroup;
+			children = (
+				894145E51E8E550400C8DD59 /* DGActivityIndicatorAnimationProtocol.h */,
+				894145E61E8E550400C8DD59 /* DGActivityIndicatorRotatingTrigonAnimation.h */,
+				894145E71E8E550400C8DD59 /* DGActivityIndicatorRotatingTrigonAnimation.m */,
+				894145E81E8E550400C8DD59 /* DGActivityIndicatorView.h */,
+				894145E91E8E550400C8DD59 /* DGActivityIndicatorView.m */,
+			);
+			path = Loading;
 			sourceTree = "<group>";
 		};
 		FE18775C1E87F68D00A37B64 /* GoogleMobileAdsSdkiOS-7.19.0 */ = {
@@ -1039,6 +1077,7 @@
 				FEC5E7351E8C036F00FA7B64 /* SettingSwitchCell.m in Sources */,
 				FEC5E7331E8C036F00FA7B64 /* SettingCell.m in Sources */,
 				FEC5E7321E8C036F00FA7B64 /* MeHeaderView.m in Sources */,
+				894145EA1E8E550400C8DD59 /* UIScrollView+EmptyDataSet.m in Sources */,
 				FE4D1BD31E878F460032ED29 /* HtmlDetailViewController.m in Sources */,
 				FEC5E74C1E8C046900FA7B64 /* SVProgressAnimatedView.m in Sources */,
 				FE4D1BA31E86B4000032ED29 /* BaseViewController.m in Sources */,
@@ -1058,12 +1097,14 @@
 				FEC5E73E1E8C038E00FA7B64 /* Global.m in Sources */,
 				FE4D1B9F1E86B4000032ED29 /* Base_TableViewController.m in Sources */,
 				FEC5E7031E895C8700FA7B64 /* AdmobCell.m in Sources */,
+				894145EF1E8E551700C8DD59 /* UIColor+Hexadecimal.m in Sources */,
 				FE4D1BDD1E87915B0032ED29 /* UIViewController+Swizzle.m in Sources */,
 				8937FEEE1E8650BF00B6D0CD /* HTMLNode.m in Sources */,
 				8937FEE01E864F5900B6D0CD /* UIView+MJExtension.m in Sources */,
 				8937FED71E864F5900B6D0CD /* MJRefreshBackStateFooter.m in Sources */,
 				FEC5E7371E8C036F00FA7B64 /* SettingSwitchCell2.m in Sources */,
 				FE4D1BC31E86B92F0032ED29 /* UIImage+Category.m in Sources */,
+				894145EB1E8E550400C8DD59 /* DGActivityIndicatorRotatingTrigonAnimation.m in Sources */,
 				8937FECD1E864F5900B6D0CD /* MJRefreshAutoFooter.m in Sources */,
 				FE1877491E87A40400A37B64 /* HerosModel.m in Sources */,
 				FE1877521E87DD8C00A37B64 /* HerosCell.m in Sources */,
@@ -1081,6 +1122,7 @@
 				8937FED91E864F5900B6D0CD /* MJRefreshNormalHeader.m in Sources */,
 				8937FED41E864F5900B6D0CD /* MJRefreshAutoStateFooter.m in Sources */,
 				FEC5E7301E8C036F00FA7B64 /* SettingItem.m in Sources */,
+				894145EC1E8E550400C8DD59 /* DGActivityIndicatorView.m in Sources */,
 				FEC5E7521E8C048500FA7B64 /* CollectionViewController.m in Sources */,
 				FE4D1BAC1E86B43B0032ED29 /* RDVTabBar.m in Sources */,
 				8937FEFA1E86511300B6D0CD /* XPathQuery.m in Sources */,
