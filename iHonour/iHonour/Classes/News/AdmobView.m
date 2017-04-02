@@ -47,7 +47,7 @@
 - (void)adViewDidReceiveAd:(GADBannerView *)bannerView{
     self.hidden = NO;
  
-    KLog(@"--adViewDidReceiveAd-:successs");
+//    KLog(@"--adViewDidReceiveAd-:successs");
 }
 - (void)adView:(GADBannerView *)bannerView didFailToReceiveAdWithError:(GADRequestError *)error{
     KLog(@"footer-error:%@",error);

@@ -124,8 +124,7 @@
         AboutViewController *aboutVc = [sb instantiateViewControllerWithIdentifier:@"AboutView"];
         [self.navigationController pushViewController:aboutVc animated:YES];
     }else if  ([model.title isEqualToString:@"我的收藏"]){
-        UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-        CollectionViewController *colVC = [sb instantiateViewControllerWithIdentifier:@"CollectionVC"];
+        CollectionViewController *colVC = [[CollectionViewController alloc]init];
         [self.navigationController pushViewController:colVC animated:YES];
     }else if  ([model.title isEqualToString:@"清除缓存"]){
         NSString * path = [WdCleanCaches CachesDirectory];
@@ -166,7 +165,7 @@
         SettingItem *m31 = [SettingItem itemWithIcon:@"abouts" title:@"关于"];
         
 //        [_dataArray addObjectsFromArray:@[@[m10],@[m20,m21],@[m30,m31]]];
-        [_dataArray addObjectsFromArray:@[@[m20],@[m30,m31]]];
+        [_dataArray addObjectsFromArray:@[@[m10],@[m20],@[m30,m31]]];
     }
     return _dataArray;
 }

@@ -25,7 +25,7 @@
 }
 
 +(void)initDB{
-    return;
+    
     NSArray *docPath = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     NSString *path = [docPath objectAtIndex:0];
     NSString *filePath = [path stringByAppendingPathComponent:@"iHonour.realm"];
@@ -41,7 +41,7 @@
 
  
 -(void)addOne{
-    return;
+    
     RLMRealm *realm = [RLMRealm defaultRealm];
     
     RMListModel *m = [[RMListModel alloc]init];
@@ -54,7 +54,7 @@
 }
 
 -(void)addCollect:(NewsModel *)newsModel listType:(RMListType)listType{
-    return;
+    
     RMListModel *m = [self getRMLModel:newsModel];
     if (!m) {
         return;
@@ -70,7 +70,12 @@
 }
 
 -(void)delCollect:(RMListModel *)model{
+    RLMRealm *realm = [RLMRealm defaultRealm];
+//    RMListModel *m = [self getRMLModel:model];
     
+    [realm beginWriteTransaction];
+    [realm deleteObject:model];
+    [realm commitWriteTransaction];
 }
 
 -(void)delCollectWithTitle:(NSString *)title{
@@ -83,14 +88,31 @@
     return NO;
 }
 
-
+//返回NewsModel 的数组
 -(NSArray *)getAll{
-    RLMRealm *realm = [RLMRealm defaultRealm];
-//    [realm allObjects:nil];
+//    RLMRealm *realm = [RLMRealm defaultRealm];
+    RLMResults *sets = [RMListModel allObjects];
+//    NSMutableArray *res = [NSMutableArray arrayWithCapacity:sets.count];
+//    for (RMListModel *rml in sets) {
+//        NewsModel *m = [self getNesModel:rml];
+//        [res addObject:m];
+//    }
     
-    
-    return nil;
+    NSMutableArray *res = [NSMutableArray arrayWithCapacity:sets.count];
+    for (RMListModel *rml in sets) {
+        [res addObject:rml];
+    }
+    return res;
 }
+
+-(NewsModel *)getNesModel:(RMListModel *)newsModel{
+    NewsModel *m = [[NewsModel alloc]init];
+    m.title = newsModel.title;
+    m.url = newsModel.url;
+    m.imgUrl = newsModel.imgUrl;
+    return m;
+}
+
 
 -(RMListModel *)getRMLModel:(NewsModel *)newsModel{
     RMListModel *m = [[RMListModel alloc]init];

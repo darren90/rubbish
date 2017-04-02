@@ -41,7 +41,112 @@
 
     [self initAdView];
     
-//    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"like_n"] style:UIBarButtonItemStyleDone target:self action:@selector(likeAction)];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"like_n"] style:UIBarButtonItemStyleDone target:self action:@selector(likeAction)];
+    
+    //KVO
+    [self.webView addObserver:self
+                   forKeyPath:@"loading"
+                      options:NSKeyValueObservingOptionNew
+                      context:nil];
+}
+
+
+#pragma mark - KVO
+- (void)observeValueForKeyPath:(NSString *)keyPath
+                      ofObject:(id)object
+                        change:(NSDictionary<NSString *,id> *)change
+                       context:(void *)context {
+    if ([keyPath isEqualToString:@"loading"]) {
+//        NSLog(@"loading");
+        // 加载完成
+        if (!self.webView.loading) {
+            [self injectJSCode];
+        }
+        
+    }
+}
+
+#pragma mark -- WKWebView代理
+
+-(void)webView:(WKWebView *)webView didFinishNavigation:(WKNavigation *)navigation{
+//    NSLog(@"-didFinishNavigation--");
+    [self injectJSCode];
+    
+}
+
+-(void)webView:(WKWebView *)webView didFailNavigation:(WKNavigation *)navigation withError:(NSError *)error{
+    NSLog(@"--网页加载失败--");
+}
+
+-(void)injectJSCode{
+    // 1 - 资讯需要删除的地方
+    
+    // 手动调用JS代码
+    NSMutableString *js = [NSMutableString string];
+    
+    if (self.listType == RMListNews) {
+        //删除header
+        [js appendString:@"var header = document.getElementsByClassName('header')[0];"];
+        [js appendString:@"header.parentNode.removeChild(header);"];
+        
+        //删除网站导航
+        [js appendString:@"var header = document.getElementsByClassName('srcmenuwp')[0];"];
+        [js appendString:@"header.parentNode.removeChild(header);"];
+        
+        //删除引导下载王者荣耀的链接
+        [js appendString:@"var header = document.getElementsByClassName('gamehbtn mt15 head-wp')[0];"];
+        [js appendString:@"header.parentNode.removeChild(header);"];
+        
+        //删除 热门游戏专区
+        [js appendString:@"var header = document.getElementsByClassName('area tit12')[0];"];
+        [js appendString:@"header.parentNode.removeChild(header);"];
+        
+        //删除最底部
+        [js appendString:@"var header = document.getElementsByClassName('footwp ftinner')[0];"];
+        [js appendString:@"header.parentNode.removeChild(header);"];
+        
+    }else{
+        
+        // 2 - 攻略需要删除的地方
+        [js appendString:@"$(\"#AQ_B_CONTAINER_47\").remove();"];
+
+        //删除最顶部
+        [js appendString:@"var header1 = document.getElementsByClassName('header tac re ov')[0];"];
+        [js appendString:@"header1.parentNode.removeChild(header1);"];
+
+        //删除底部
+        
+        [js appendString:@"var header6 = document.getElementsByClassName('wz-title pl10 pr10')[0];"];
+        [js appendString:@"header6.parentNode.removeChild(header6);"];
+        
+        [js appendString:@"var header7 = document.getElementsByClassName('game-ul mb25')[0];"];
+        [js appendString:@"header7.parentNode.removeChild(header7);"];
+        
+        [js appendString:@"var header8 = document.getElementsByClassName('pt15 pb15 pl20 pr20 huiBG mb30')[0];"];
+        [js appendString:@"header8.parentNode.removeChild(header8);"];
+        
+        //游戏推荐
+        [js appendString:@"var header8 = document.getElementsByClassName('imgsc-fixed')[0];"];
+        [js appendString:@"header8.parentNode.removeChild(header8);"];
+        
+        [js appendString:@"var header8 = document.getElementsByClassName('game-ul mb25')[0];"];
+        [js appendString:@"header8.parentNode.removeChild(header8);"];
+        
+        [js appendString:@"var header8 = document.getElementsByClassName('mt30')[0];"];
+        [js appendString:@"header8.parentNode.removeChild(header8);"];
+        
+        //删除广告
+//        [js appendString:@"$(\"#71414\").remove();"];
+
+        [js appendString:@"var iframes = document.getElementsByTagName('iframe'); for (var i = 0; i < iframes.length; i++) { iframes[i].parentNode.removeChild(iframes[i]); };"];
+        
+    }
+    
+    
+    [self.webView evaluateJavaScript:js completionHandler:^(id _Nullable response, NSError * _Nullable error) {
+        NSLog(@"--注入-response: %@ error: %@", response, error);
+    }];
+
 }
 
 -(void)likeAction{
@@ -69,35 +174,11 @@
 }
 
 
-- (void)webView:(WKWebView *)webView didFinishNavigation:(null_unspecified WKNavigation *)navigation{
-//    NSLog(@"---");
-    
- 
-    
-//    [webView stringByEvaluatingJavaScriptFromString:js];
-}
-
 
 -(WKWebViewConfiguration *)webConfig{
-    NSMutableString *js = [NSMutableString string];
-    //删除header
-    [js appendString:@"var header = document.getElementsByTagName('header')[0];"];
-    [js appendString:@"header.parentNode.removeChild(header);"];
-    
-    //删除购买
-    [js appendString:@"var top = document.getElementsByClassName('cost-box')[0];"];
-    [js appendString:@"top.parentNode.removeChild(top);"];
-    
-    //删除header
-    [js appendString:@"var bottom = document.getElementsByClassName('buy-now')[0];"];
-    [js appendString:@"bottom.parentNode.removeChild(bottom);"];
-    
-    // 根据JS字符串初始化WKUserScript对象
-    WKUserScript *script = [[WKUserScript alloc] initWithSource:js injectionTime:WKUserScriptInjectionTimeAtDocumentEnd forMainFrameOnly:YES];
-    
-    // 根据生成的WKUserScript对象，初始化WKWebViewConfiguration
+     // 根据生成的WKUserScript对象，初始化WKWebViewConfiguration
     WKWebViewConfiguration *config = [[WKWebViewConfiguration alloc] init];
-    [config.userContentController addUserScript:script];
+//    [config.userContentController addUserScript:script];
     return config;
 }
 
@@ -132,7 +213,9 @@
 }
 
 
-
+-(void)dealloc{
+    [self.webView removeObserver:self forKeyPath:@"loading"];
+}
 
 
 

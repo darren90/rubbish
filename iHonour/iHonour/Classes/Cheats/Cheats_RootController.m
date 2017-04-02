@@ -37,7 +37,7 @@
     self.tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(loadNewData)];
     self.tableView.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingTarget:self refreshingAction:@selector(loadMoreData)];
     [self.tableView.mj_header beginRefreshing];
-    
+    self.tableView.tableFooterView = [UIView new];
 }
 
 -(void)initTableview
@@ -155,6 +155,8 @@
                     NSDictionary *ad = dd[@"a"];
                     
                     NSString *href = ad[@"_href"];
+                    //转成手机网站
+                    href = [href stringByReplacingOccurrencesOfString:@"//www." withString:@"//m."];
 //                    NSString *hreff = [NSString stringWithFormat:@"%@%@",@"http://m.news.4399.com",href];
                     NSString *src = ad[@"img"][@"_src"];
                     NSString *title = ad[@"_title"];
@@ -166,7 +168,7 @@
                         [self.datas addObject:adM];
                     }
                     admobIndex ++;
-                    NSLog(@"--数据解析成功-:%d",self.page);
+//                    NSLog(@"--数据解析成功-:%d",self.page);
                     NewsModel *m = [NewsModel modelWith:title url:href imgUrl:src];
                     
                     [weakSelf.datas addObject:m];

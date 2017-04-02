@@ -43,6 +43,7 @@
     
 //    [self testWebView];
 //    [self testHonour];
+    self.tableView.tableFooterView = [UIView new];
 }
 
 -(void)initTableview
@@ -183,7 +184,7 @@
                     NSString *src = ad[@"img"][@"_src"];
                     NSString *titles = ad[@"img"][@"_alt"];
 //                    NSLog(@"title: %@,href:%@,src:%@",titles,hreff,src);
-                    NSLog(@"--数据解析成功-:%d",self.page);
+//                    NSLog(@"--数据解析成功-:%d",self.page);
                     NewsModel *m = [NewsModel modelWith:titles url:hreff imgUrl:src];
                     
                     if (admobIndex == 8 && self.page == 1) {

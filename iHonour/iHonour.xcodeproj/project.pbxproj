@@ -81,6 +81,7 @@
 		FE4D1BD31E878F460032ED29 /* HtmlDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE4D1BD21E878F460032ED29 /* HtmlDetailViewController.m */; };
 		FE4D1BDC1E87915B0032ED29 /* ObjcRuntime.m in Sources */ = {isa = PBXBuildFile; fileRef = FE4D1BD91E87915B0032ED29 /* ObjcRuntime.m */; };
 		FE4D1BDD1E87915B0032ED29 /* UIViewController+Swizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = FE4D1BDB1E87915B0032ED29 /* UIViewController+Swizzle.m */; };
+		FEB5BB471E90A9E700E151BC /* CollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FEB5BB461E90A9E700E151BC /* CollectionViewController.m */; };
 		FEC5E7031E895C8700FA7B64 /* AdmobCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FEC5E7021E895C8700FA7B64 /* AdmobCell.m */; };
 		FEC5E7071E8AA89D00FA7B64 /* Me_RootController.m in Sources */ = {isa = PBXBuildFile; fileRef = FEC5E7061E8AA89D00FA7B64 /* Me_RootController.m */; };
 		FEC5E70A1E8BF70C00FA7B64 /* RMLTools.m in Sources */ = {isa = PBXBuildFile; fileRef = FEC5E7091E8BF70C00FA7B64 /* RMLTools.m */; };
@@ -104,7 +105,6 @@
 		FEC5E74D1E8C046900FA7B64 /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = FEC5E7461E8C046900FA7B64 /* SVProgressHUD.bundle */; };
 		FEC5E74E1E8C046900FA7B64 /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = FEC5E7481E8C046900FA7B64 /* SVProgressHUD.m */; };
 		FEC5E74F1E8C046900FA7B64 /* SVRadialGradientLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = FEC5E74A1E8C046900FA7B64 /* SVRadialGradientLayer.m */; };
-		FEC5E7521E8C048500FA7B64 /* CollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FEC5E7511E8C048500FA7B64 /* CollectionViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -277,6 +277,8 @@
 		FE4D1BD91E87915B0032ED29 /* ObjcRuntime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ObjcRuntime.m; sourceTree = "<group>"; };
 		FE4D1BDA1E87915B0032ED29 /* UIViewController+Swizzle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Swizzle.h"; sourceTree = "<group>"; };
 		FE4D1BDB1E87915B0032ED29 /* UIViewController+Swizzle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Swizzle.m"; sourceTree = "<group>"; };
+		FEB5BB451E90A9E700E151BC /* CollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionViewController.h; sourceTree = "<group>"; };
+		FEB5BB461E90A9E700E151BC /* CollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionViewController.m; sourceTree = "<group>"; };
 		FEC5E7011E895C8700FA7B64 /* AdmobCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdmobCell.h; sourceTree = "<group>"; };
 		FEC5E7021E895C8700FA7B64 /* AdmobCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdmobCell.m; sourceTree = "<group>"; };
 		FEC5E7051E8AA89D00FA7B64 /* Me_RootController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Me_RootController.h; sourceTree = "<group>"; };
@@ -320,8 +322,6 @@
 		FEC5E7481E8C046900FA7B64 /* SVProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVProgressHUD.m; sourceTree = "<group>"; };
 		FEC5E7491E8C046900FA7B64 /* SVRadialGradientLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVRadialGradientLayer.h; sourceTree = "<group>"; };
 		FEC5E74A1E8C046900FA7B64 /* SVRadialGradientLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVRadialGradientLayer.m; sourceTree = "<group>"; };
-		FEC5E7501E8C048500FA7B64 /* CollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionViewController.h; sourceTree = "<group>"; };
-		FEC5E7511E8C048500FA7B64 /* CollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -653,8 +653,6 @@
 			children = (
 				FE4D1BB21E86B8B40032ED29 /* Cheats_RootController.h */,
 				FE4D1BB31E86B8B40032ED29 /* Cheats_RootController.m */,
-				FEC5E7501E8C048500FA7B64 /* CollectionViewController.h */,
-				FEC5E7511E8C048500FA7B64 /* CollectionViewController.m */,
 			);
 			path = Cheats;
 			sourceTree = "<group>";
@@ -765,6 +763,8 @@
 				FEC5E70B1E8C036F00FA7B64 /* Setting */,
 				FEC5E7051E8AA89D00FA7B64 /* Me_RootController.h */,
 				FEC5E7061E8AA89D00FA7B64 /* Me_RootController.m */,
+				FEB5BB451E90A9E700E151BC /* CollectionViewController.h */,
+				FEB5BB461E90A9E700E151BC /* CollectionViewController.m */,
 				894144A41E8B812000C8DD59 /* RMListModel.h */,
 				894144A51E8B812000C8DD59 /* RMListModel.m */,
 				FEC5E7081E8BF70C00FA7B64 /* RMLTools.h */,
@@ -1123,10 +1123,10 @@
 				8937FED41E864F5900B6D0CD /* MJRefreshAutoStateFooter.m in Sources */,
 				FEC5E7301E8C036F00FA7B64 /* SettingItem.m in Sources */,
 				894145EC1E8E550400C8DD59 /* DGActivityIndicatorView.m in Sources */,
-				FEC5E7521E8C048500FA7B64 /* CollectionViewController.m in Sources */,
 				FE4D1BAC1E86B43B0032ED29 /* RDVTabBar.m in Sources */,
 				8937FEFA1E86511300B6D0CD /* XPathQuery.m in Sources */,
 				8937FECE1E864F5900B6D0CD /* MJRefreshBackFooter.m in Sources */,
+				FEB5BB471E90A9E700E151BC /* CollectionViewController.m in Sources */,
 				FEC5E7071E8AA89D00FA7B64 /* Me_RootController.m in Sources */,
 				8937FE671E864D7700B6D0CD /* main.m in Sources */,
 				8937FEDC1E864F5900B6D0CD /* MJRefreshConst.m in Sources */,
