@@ -18,7 +18,6 @@ typedef enum {
 
 @interface HtmlDetailViewController : BaseViewController
 
-
 @property (nonatomic,copy)NSString * titleStr;
 
 @property (nonatomic,copy)NSString * detailUrl;

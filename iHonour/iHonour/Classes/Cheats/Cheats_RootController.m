@@ -28,8 +28,8 @@
     [super viewDidLoad];
     
     [self initTableview];
+    [self startAnimate];
     
-    self.noDataView.hidden = YES;
     self.page = 1;
     self.title = @"攻略秘籍";
     self.tableView.rowHeight = 100;
@@ -101,6 +101,9 @@
     return 100;
 }
 
+-(void)request{
+    [self loadNewData];
+}
 
 -(void)loadNewData{
     self.page = 1;
@@ -138,7 +141,6 @@
         if (!error) {
             
             TFHpple *xpathParser = [[TFHpple alloc]initWithHTMLData:data encoding:@"utf-8"];
-//            NSString *strs = [[NSString alloc] initWithData:xpathParser.data encoding:NSASCIIStringEncoding];
             
             NSArray *elements = [xpathParser searchWithXPathQuery:@"//div[@class='liebiao']//ul/*"];
             if (elements.count > 0){
@@ -175,15 +177,17 @@
                 }
                 dispatch_async(dispatch_get_main_queue(), ^{
                     [weakSelf stopRefresh];
-                    self.noDataView.hidden = (self.datas.count != 0);
+                    self.requestState = (self.datas.count == 0) ? RequestStateNoData : RequestStateNone;
                     [weakSelf.tableView reloadData];
                     
                 });
+            }else{
+                self.requestState = RequestStateNoData;
             }
             
         }else{//下载失败
             [weakSelf stopRefresh];
-            self.noDataView.hidden = (self.datas.count != 0);
+            self.requestState = (self.datas.count == 0) ? RequestStateNoData : RequestStateNone;
             NSLog(@"---:网页下载失败：%@",error);
         }
     }];

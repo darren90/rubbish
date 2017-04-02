@@ -27,15 +27,15 @@
     [super viewDidLoad];
     
     [self initTableview];
+    [self startAnimate];
     
     self.title = @"我的收藏";
     self.view.backgroundColor = [UIColor whiteColor];
     
-    self.noDataView.hidden = YES;
     self.tableView.rowHeight = 100;
     
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemTrash target:self action:@selector(delItem)];
-    self.tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(loadingData)];
+    self.tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(request)];
     [self.tableView.mj_header beginRefreshing];
     self.tableView.tableFooterView = [UIView new];
 }
@@ -101,26 +101,24 @@
         [self.datas removeObjectAtIndex:indexPath.row];
         [self.tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
         
-        [self.view sendSubviewToBack:self.noDataView];
+ 
         if (self.datas.count == 0) {
-            self.noDataView.hidden = NO;
-            [self.view bringSubviewToFront:self.noDataView];
+            self.requestState = RequestStateNoData;
         }
     }
 }
 
-
--(void)loadingData{
+-(void)request{
     NSArray *arr = [[RMLTools shareTools] getAll];
     [self.datas removeAllObjects];
     [self.datas addObjectsFromArray:arr];
     [self.tableView reloadData];
     [self stopRefresh];
     
-     [self.view sendSubviewToBack:self.noDataView];
     if (self.datas.count == 0) {
-        self.noDataView.hidden = NO;
-         [self.view bringSubviewToFront:self.noDataView];
+        self.requestState = RequestStateNoData;
+    }else{
+        self.requestState = RequestStateNone;
     }
 }
 

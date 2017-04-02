@@ -35,6 +35,7 @@
     // Do any additional setup after loading the view.
     
     [self initWebView];
+    [self startAnimate];
     
     self.title = self.titleStr;
     [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:self.detailUrl]]];
@@ -71,10 +72,11 @@
 -(void)webView:(WKWebView *)webView didFinishNavigation:(WKNavigation *)navigation{
 //    NSLog(@"-didFinishNavigation--");
     [self injectJSCode];
-    
+    self.requestState = RequestStateNone;
 }
 
 -(void)webView:(WKWebView *)webView didFailNavigation:(WKNavigation *)navigation withError:(NSError *)error{
+    self.requestState = RequestStateNoData;
     NSLog(@"--网页加载失败--");
 }
 

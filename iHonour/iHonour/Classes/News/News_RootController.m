@@ -35,7 +35,6 @@
     self.page = 1;
     self.title = @"游戏资讯";
     self.tableView.rowHeight = 100;
-    self.noDataView.hidden = YES;
  
     self.tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(loadNewData)];
     self.tableView.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingTarget:self refreshingAction:@selector(loadMoreData)];
@@ -108,6 +107,10 @@
         return 50;
     }
     return 100;
+}
+
+-(void)request{
+    [self loadNewData];
 }
 
 -(void)loadNewData{
@@ -198,16 +201,17 @@
                 }
                 dispatch_async(dispatch_get_main_queue(), ^{
                     [weakSelf stopRefresh];
-                    self.noDataView.hidden = (self.datas.count != 0);
-
+                    self.requestState = (self.datas.count == 0) ? RequestStateNoData : RequestStateNone;
                     [weakSelf.tableView reloadData];
                     
                 });
+            }else{
+                self.requestState = RequestStateNoData;
             }
             
         }else{//下载失败
             [weakSelf stopRefresh];
-            self.noDataView.hidden = (self.datas.count != 0);
+            self.requestState = (self.datas.count == 0) ? RequestStateNoData : RequestStateNone;
             NSLog(@"---:网页下载失败：%@",error);
         }
     }];
