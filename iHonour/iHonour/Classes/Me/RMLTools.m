@@ -7,6 +7,7 @@
 //
 
 #import "RMLTools.h"
+#import "SVProgressHUD.h"
 
 @implementation RMLTools
 
@@ -60,6 +61,15 @@
         return;
     }
     
+    BOOL had = [self isThisCollected:newsModel listType:listType];
+    if (had) {
+        return;
+    }
+    
+    [SVProgressHUD setDefaultStyle:SVProgressHUDStyleDark];
+    SVProgressHUD.minimumDismissTimeInterval = 0.6;
+    [SVProgressHUD showSuccessWithStatus:@"收藏成功!"];
+
     RLMRealm *realm = [RLMRealm defaultRealm];
     m.listType = listType;
    
@@ -78,25 +88,31 @@
     [realm commitWriteTransaction];
 }
 
--(void)delCollectWithTitle:(NSString *)title{
+-(void)delCollectWithUrl:(NSString *)url{
     
+    RLMResults *sets = [RMListModel objectsWhere:@"url = %@",url];
+    
+    if (sets.count > 0) {
+        [SVProgressHUD setDefaultStyle:SVProgressHUDStyleDark];
+        SVProgressHUD.minimumDismissTimeInterval = 0.6;
+        [SVProgressHUD showSuccessWithStatus:@"删除收藏成功!"];
+        [self delCollect:sets.firstObject];
+    }
 }
 
 -(BOOL)isThisCollected:(NewsModel *)newsModel listType:(RMListType)listType{
-    
+    RLMResults *sets = [RMListModel objectsWhere:@"url = %@",newsModel.url];
+    NSLog(@"--RLMResults-:%lu",(unsigned long)sets.count);
+    if (sets.count > 0) {
+        return YES;
+    }
     
     return NO;
 }
 
 //返回NewsModel 的数组
 -(NSArray *)getAll{
-//    RLMRealm *realm = [RLMRealm defaultRealm];
     RLMResults *sets = [RMListModel allObjects];
-//    NSMutableArray *res = [NSMutableArray arrayWithCapacity:sets.count];
-//    for (RMListModel *rml in sets) {
-//        NewsModel *m = [self getNesModel:rml];
-//        [res addObject:m];
-//    }
     
     NSMutableArray *res = [NSMutableArray arrayWithCapacity:sets.count];
     for (RMListModel *rml in sets) {

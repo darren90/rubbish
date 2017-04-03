@@ -42,7 +42,13 @@
 
     [self initAdView];
     
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"like_n"] style:UIBarButtonItemStyleDone target:self action:@selector(likeAction)];
+    BOOL result = [[RMLTools shareTools] isThisCollected:self.newsModel listType:self.listType];
+    if (result) {
+        self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"home_sc_n"] style:UIBarButtonItemStyleDone target:self action:@selector(likeAction)];
+    }else{
+        self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"like_n"] style:UIBarButtonItemStyleDone target:self action:@selector(likeAction)];
+    }
+    
     
     //KVO
     [self.webView addObserver:self
@@ -152,9 +158,16 @@
 }
 
 -(void)likeAction{
-    NSLog(@"---aaa");
-    [[RMLTools shareTools] addCollect:self.newsModel listType:self.listType];
-    self.navigationItem.rightBarButtonItem.image = [UIImage imageNamed:@"home_sc_n"];
+
+    BOOL result = [[RMLTools shareTools] isThisCollected:self.newsModel listType:self.listType];
+
+    if (result) {
+        [[RMLTools shareTools] delCollectWithUrl:self.detailUrl];
+        self.navigationItem.rightBarButtonItem.image = [UIImage imageNamed:@"like_n"];
+    }else{
+        [[RMLTools shareTools] addCollect:self.newsModel listType:self.listType];
+        self.navigationItem.rightBarButtonItem.image = [UIImage imageNamed:@"home_sc_n"];
+    }
 }
 
 - (void)didReceiveMemoryWarning {

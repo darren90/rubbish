@@ -21,9 +21,11 @@
 
 -(void)delCollect:(RMListModel *)model;
 
--(void)delCollectWithTitle:(NSString *)title;
+-(void)delCollectWithUrl:(NSString *)url;
 
 -(BOOL)isThisCollected:(NewsModel *)newsModel listType:(RMListType)listType;
+
+
 
 -(NSArray *)getAll;
 
