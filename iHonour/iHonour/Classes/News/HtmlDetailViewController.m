@@ -42,12 +42,17 @@
 
     [self initAdView];
     
-    BOOL result = [[RMLTools shareTools] isThisCollected:self.newsModel listType:self.listType];
-    if (result) {
-        self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"home_sc_n"] style:UIBarButtonItemStyleDone target:self action:@selector(likeAction)];
-    }else{
-        self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"like_n"] style:UIBarButtonItemStyleDone target:self action:@selector(likeAction)];
+    if (self.listType != RMListHero) {
+        
+        BOOL result = [[RMLTools shareTools] isThisCollected:self.newsModel listType:self.listType];
+        if (result) {
+            self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"home_sc_n"] style:UIBarButtonItemStyleDone target:self action:@selector(likeAction)];
+        }else{
+            self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"like_n"] style:UIBarButtonItemStyleDone target:self action:@selector(likeAction)];
+        }
+        
     }
+    
     
     
     //KVO

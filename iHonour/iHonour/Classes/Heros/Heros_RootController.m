@@ -93,6 +93,7 @@
     HtmlDetailViewController *vc = [[HtmlDetailViewController alloc]init];
     vc.detailUrl = m.url;
     vc.titleStr = m.name;
+    vc.listType = RMListHero;
     vc.adType = Admob_Heros_Bottom;
     [self.navigationController pushViewController:vc animated:YES];
     

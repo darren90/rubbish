@@ -11,6 +11,7 @@
 typedef enum {
     RMListNews,
     RMListCheats,
+    RMListHero,
 //    RMListType,
 } RMListType;
 
