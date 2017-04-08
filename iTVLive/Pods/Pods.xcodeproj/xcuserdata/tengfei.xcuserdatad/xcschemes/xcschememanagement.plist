@@ -9,11 +9,6 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Masonry.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>Pods-iTVLive.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -37,12 +32,12 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>074F0E3BD740B4F0CB2FB94E0E956B33</key>
+		<key>0181202D7D32AF327CD387CB26052F11</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>85D44C4496DD6AA4ABFF9B71896EAAF0</key>
+		<key>721B54B2DE250393718BE4D918577189</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -52,17 +47,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>CC4AB0F2E137D8B095DF552374E9A068</key>
+		<key>E114C8789990C88DC165CA22D550F613</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>D52144DE9D7255DE912490FF5A806573</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>F060291FBAD05F9EAE92C8FC488DD033</key>
+		<key>FCFD36CBECFA254A594163C73E8DA07F</key>
 		<dict>
 			<key>primary</key>
 			<true/>

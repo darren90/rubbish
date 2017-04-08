@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "074F0E3BD740B4F0CB2FB94E0E956B33"
+               BlueprintIdentifier = "FCFD36CBECFA254A594163C73E8DA07F"
                BuildableName = "Pods_iTVLive.framework"
                BlueprintName = "Pods-iTVLive"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -45,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "074F0E3BD740B4F0CB2FB94E0E956B33"
+            BlueprintIdentifier = "FCFD36CBECFA254A594163C73E8DA07F"
             BuildableName = "Pods_iTVLive.framework"
             BlueprintName = "Pods-iTVLive"
             ReferencedContainer = "container:Pods.xcodeproj">

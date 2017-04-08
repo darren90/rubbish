@@ -11,7 +11,7 @@
 //#import  <YYWebImage/UIImage+YYWebImage.h>
 #import <YYKit/YYKit.h>
 
-#import  <Masonry/Masonry.h>
+//#import  <Masonry/Masonry.h>
 
 //友盟
 //#import <UMSocialCore/UMSocialCore.h>
@@ -35,7 +35,7 @@
 
 
 //播放器
-#import "TFPlayer.h"
+//#import "TFPlayer.h"
 #import <MediaPlayer/MediaPlayer.h>
 #import <AVFoundation/AVFoundation.h>
 #import "Vitamio.h"

@@ -1,6 +1,5 @@
 PODS:
   - Alamofire (4.0.1)
-  - Masonry (1.0.2)
   - SnapKit (3.2.0)
   - SwiftyJSON (3.1.4)
   - UMengAnalytics (4.2.4)
@@ -21,7 +20,6 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire (~> 4.0.0)
-  - Masonry
   - SnapKit (~> 3.2.0)
   - SwiftyJSON (~> 3.1.1)
   - UMengAnalytics
@@ -33,13 +31,12 @@ DEPENDENCIES:
 
 SPEC CHECKSUMS:
   Alamofire: 7682d43245de14874acd142ec137b144aa1dd335
-  Masonry: 7c429b56da9d4ee0bbb3ed77a5ea710d6a5df39e
   SnapKit: 1ca44df72cfa543218d177cb8aab029d10d86ea7
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
   UMengAnalytics: ef8d45f94c0e5771dc364cf6a5731d9d3b101da2
   UMengUShare: b208ac3bcf1f63d11a100b359990e9d77a0f2085
   YYKit: 7cda43304a8dc3696c449041e2cb3107b4e236e7
 
-PODFILE CHECKSUM: 25688a9d8a41c602ccea5409b0a91952ba27e921
+PODFILE CHECKSUM: f8900f0417161e6abed00c50a7a4bbf56d529657
 
 COCOAPODS: 1.1.1

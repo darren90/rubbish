@@ -51,7 +51,6 @@
 		FE5372BE1E6C13EA00FDF9FC /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE53720F1E6C13EA00FDF9FC /* ErrorView.swift */; };
 		FE5372BF1E6C13EA00FDF9FC /* ErrorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE5372101E6C13EA00FDF9FC /* ErrorView.xib */; };
 		FE5372C01E6C13EA00FDF9FC /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5372111E6C13EA00FDF9FC /* LoadingView.swift */; };
-		FE5372C11E6C13EA00FDF9FC /* TFMoviePlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5372121E6C13EA00FDF9FC /* TFMoviePlayerViewController.swift */; };
 		FE5372C21E6C13EA00FDF9FC /* MeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5372141E6C13EA00FDF9FC /* MeViewController.swift */; };
 		FE5372C31E6C13EA00FDF9FC /* String-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5372171E6C13EA00FDF9FC /* String-Extension.swift */; };
 		FE5372C41E6C13EA00FDF9FC /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5372181E6C13EA00FDF9FC /* UIColor+Extension.swift */; };
@@ -118,15 +117,6 @@
 		FE5373011E6C13EA00FDF9FC /* VKVideoPlayer_play@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FE5372781E6C13EA00FDF9FC /* VKVideoPlayer_play@2x.png */; };
 		FE5373021E6C13EA00FDF9FC /* VKVideoPlayer_play_big.png in Resources */ = {isa = PBXBuildFile; fileRef = FE5372791E6C13EA00FDF9FC /* VKVideoPlayer_play_big.png */; };
 		FE5373031E6C13EA00FDF9FC /* VKVideoPlayer_play_big@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FE53727A1E6C13EA00FDF9FC /* VKVideoPlayer_play_big@2x.png */; };
-		FE5373051E6C13EA00FDF9FC /* BrightnessView.m in Sources */ = {isa = PBXBuildFile; fileRef = FE53727F1E6C13EA00FDF9FC /* BrightnessView.m */; };
-		FE5373061E6C13EA00FDF9FC /* ForwardBackView.m in Sources */ = {isa = PBXBuildFile; fileRef = FE5372811E6C13EA00FDF9FC /* ForwardBackView.m */; };
-		FE5373071E6C13EA00FDF9FC /* TFUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = FE5372841E6C13EA00FDF9FC /* TFUtilities.m */; };
-		FE5373081E6C13EA00FDF9FC /* TTFVideoPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = FE5372861E6C13EA00FDF9FC /* TTFVideoPlayer.m */; };
-		FE5373091E6C13EA00FDF9FC /* TTFVideoPlayerView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = FE5372881E6C13EA00FDF9FC /* TTFVideoPlayerView+Extension.m */; };
-		FE53730A1E6C13EA00FDF9FC /* TTFVideoPlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = FE53728A1E6C13EA00FDF9FC /* TTFVideoPlayerView.m */; };
-		FE53730B1E6C13EA00FDF9FC /* TTFVideoPlayerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE53728B1E6C13EA00FDF9FC /* TTFVideoPlayerView.xib */; };
-		FE53730C1E6C13EA00FDF9FC /* TTFVSegmentSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = FE53728D1E6C13EA00FDF9FC /* TTFVSegmentSlider.m */; };
-		FE53730D1E6C13EA00FDF9FC /* UIView+RRFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = FE53728F1E6C13EA00FDF9FC /* UIView+RRFoundation.m */; };
 		FE53730E1E6C13EA00FDF9FC /* CHANGELOG.md in Sources */ = {isa = PBXBuildFile; fileRef = FE5372921E6C13EA00FDF9FC /* CHANGELOG.md */; };
 		FE53730F1E6C13EA00FDF9FC /* libffmpeg.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FE53729D1E6C13EA00FDF9FC /* libffmpeg.a */; };
 		FE5373101E6C13EA00FDF9FC /* libopenssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FE53729E1E6C13EA00FDF9FC /* libopenssl.a */; };
@@ -242,7 +232,6 @@
 		FE53720F1E6C13EA00FDF9FC /* ErrorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
 		FE5372101E6C13EA00FDF9FC /* ErrorView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ErrorView.xib; sourceTree = "<group>"; };
 		FE5372111E6C13EA00FDF9FC /* LoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
-		FE5372121E6C13EA00FDF9FC /* TFMoviePlayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TFMoviePlayerViewController.swift; sourceTree = "<group>"; };
 		FE5372141E6C13EA00FDF9FC /* MeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeViewController.swift; sourceTree = "<group>"; };
 		FE5372171E6C13EA00FDF9FC /* String-Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String-Extension.swift"; sourceTree = "<group>"; };
 		FE5372181E6C13EA00FDF9FC /* UIColor+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
@@ -330,24 +319,6 @@
 		FE5372781E6C13EA00FDF9FC /* VKVideoPlayer_play@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "VKVideoPlayer_play@2x.png"; sourceTree = "<group>"; };
 		FE5372791E6C13EA00FDF9FC /* VKVideoPlayer_play_big.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = VKVideoPlayer_play_big.png; sourceTree = "<group>"; };
 		FE53727A1E6C13EA00FDF9FC /* VKVideoPlayer_play_big@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "VKVideoPlayer_play_big@2x.png"; sourceTree = "<group>"; };
-		FE53727E1E6C13EA00FDF9FC /* BrightnessView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BrightnessView.h; sourceTree = "<group>"; };
-		FE53727F1E6C13EA00FDF9FC /* BrightnessView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BrightnessView.m; sourceTree = "<group>"; };
-		FE5372801E6C13EA00FDF9FC /* ForwardBackView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ForwardBackView.h; sourceTree = "<group>"; };
-		FE5372811E6C13EA00FDF9FC /* ForwardBackView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ForwardBackView.m; sourceTree = "<group>"; };
-		FE5372821E6C13EA00FDF9FC /* TFPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFPlayer.h; sourceTree = "<group>"; };
-		FE5372831E6C13EA00FDF9FC /* TFUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFUtilities.h; sourceTree = "<group>"; };
-		FE5372841E6C13EA00FDF9FC /* TFUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFUtilities.m; sourceTree = "<group>"; };
-		FE5372851E6C13EA00FDF9FC /* TTFVideoPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTFVideoPlayer.h; sourceTree = "<group>"; };
-		FE5372861E6C13EA00FDF9FC /* TTFVideoPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTFVideoPlayer.m; sourceTree = "<group>"; };
-		FE5372871E6C13EA00FDF9FC /* TTFVideoPlayerView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TTFVideoPlayerView+Extension.h"; sourceTree = "<group>"; };
-		FE5372881E6C13EA00FDF9FC /* TTFVideoPlayerView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "TTFVideoPlayerView+Extension.m"; sourceTree = "<group>"; };
-		FE5372891E6C13EA00FDF9FC /* TTFVideoPlayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTFVideoPlayerView.h; sourceTree = "<group>"; };
-		FE53728A1E6C13EA00FDF9FC /* TTFVideoPlayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTFVideoPlayerView.m; sourceTree = "<group>"; };
-		FE53728B1E6C13EA00FDF9FC /* TTFVideoPlayerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TTFVideoPlayerView.xib; sourceTree = "<group>"; };
-		FE53728C1E6C13EA00FDF9FC /* TTFVSegmentSlider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTFVSegmentSlider.h; sourceTree = "<group>"; };
-		FE53728D1E6C13EA00FDF9FC /* TTFVSegmentSlider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTFVSegmentSlider.m; sourceTree = "<group>"; };
-		FE53728E1E6C13EA00FDF9FC /* UIView+RRFoundation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+RRFoundation.h"; sourceTree = "<group>"; };
-		FE53728F1E6C13EA00FDF9FC /* UIView+RRFoundation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+RRFoundation.m"; sourceTree = "<group>"; };
 		FE5372921E6C13EA00FDF9FC /* CHANGELOG.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = CHANGELOG.md; sourceTree = "<group>"; };
 		FE5372951E6C13EA00FDF9FC /* VDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VDefines.h; sourceTree = "<group>"; };
 		FE5372961E6C13EA00FDF9FC /* Vitamio.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Vitamio.h; sourceTree = "<group>"; };
@@ -571,7 +542,6 @@
 				FE53720F1E6C13EA00FDF9FC /* ErrorView.swift */,
 				FE5372101E6C13EA00FDF9FC /* ErrorView.xib */,
 				FE5372111E6C13EA00FDF9FC /* LoadingView.swift */,
-				FE5372121E6C13EA00FDF9FC /* TFMoviePlayerViewController.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -758,7 +728,6 @@
 			children = (
 				89FB58841E6D3BAD004C1B6A /* TFVideoPlayer */,
 				FE53725A1E6C13EA00FDF9FC /* imgs */,
-				FE53727D1E6C13EA00FDF9FC /* TFPlayeroc */,
 				FE5372911E6C13EA00FDF9FC /* Vitamio-online */,
 			);
 			path = TFVideoPlayer;
@@ -809,31 +778,6 @@
 				FE53727A1E6C13EA00FDF9FC /* VKVideoPlayer_play_big@2x.png */,
 			);
 			path = imgs;
-			sourceTree = "<group>";
-		};
-		FE53727D1E6C13EA00FDF9FC /* TFPlayeroc */ = {
-			isa = PBXGroup;
-			children = (
-				FE53727E1E6C13EA00FDF9FC /* BrightnessView.h */,
-				FE53727F1E6C13EA00FDF9FC /* BrightnessView.m */,
-				FE5372801E6C13EA00FDF9FC /* ForwardBackView.h */,
-				FE5372811E6C13EA00FDF9FC /* ForwardBackView.m */,
-				FE5372821E6C13EA00FDF9FC /* TFPlayer.h */,
-				FE5372831E6C13EA00FDF9FC /* TFUtilities.h */,
-				FE5372841E6C13EA00FDF9FC /* TFUtilities.m */,
-				FE5372851E6C13EA00FDF9FC /* TTFVideoPlayer.h */,
-				FE5372861E6C13EA00FDF9FC /* TTFVideoPlayer.m */,
-				FE5372871E6C13EA00FDF9FC /* TTFVideoPlayerView+Extension.h */,
-				FE5372881E6C13EA00FDF9FC /* TTFVideoPlayerView+Extension.m */,
-				FE5372891E6C13EA00FDF9FC /* TTFVideoPlayerView.h */,
-				FE53728A1E6C13EA00FDF9FC /* TTFVideoPlayerView.m */,
-				FE53728B1E6C13EA00FDF9FC /* TTFVideoPlayerView.xib */,
-				FE53728C1E6C13EA00FDF9FC /* TTFVSegmentSlider.h */,
-				FE53728D1E6C13EA00FDF9FC /* TTFVSegmentSlider.m */,
-				FE53728E1E6C13EA00FDF9FC /* UIView+RRFoundation.h */,
-				FE53728F1E6C13EA00FDF9FC /* UIView+RRFoundation.m */,
-			);
-			path = TFPlayeroc;
 			sourceTree = "<group>";
 		};
 		FE5372911E6C13EA00FDF9FC /* Vitamio-online */ = {
@@ -1064,7 +1008,6 @@
 				FE5372E61E6C13EA00FDF9FC /* icon_kai.png in Resources */,
 				FE5372F11E6C13EA00FDF9FC /* left@3x.png in Resources */,
 				FE5372F61E6C13EA00FDF9FC /* pb-seek-bar-btn@2x.png in Resources */,
-				FE53730B1E6C13EA00FDF9FC /* TTFVideoPlayerView.xib in Resources */,
 				FE5372FF1E6C13EA00FDF9FC /* VKVideoPlayer_pause_big@2x.png in Resources */,
 				FE5371C61E6BFA5E00FDF9FC /* Assets.xcassets in Resources */,
 				FE5372F01E6C13EA00FDF9FC /* left@2x.png in Resources */,
@@ -1185,8 +1128,6 @@
 			files = (
 				FE5372BB1E6C13EA00FDF9FC /* BaseTabBarController.swift in Sources */,
 				FE53732A1E6C15A800FDF9FC /* TimeTools.swift in Sources */,
-				FE5373071E6C13EA00FDF9FC /* TFUtilities.m in Sources */,
-				FE5373051E6C13EA00FDF9FC /* BrightnessView.m in Sources */,
 				FE5372D31E6C13EA00FDF9FC /* MJRefreshAutoGifFooter.m in Sources */,
 				FE5372D81E6C13EA00FDF9FC /* MJRefreshBackStateFooter.m in Sources */,
 				FE5372D11E6C13EA00FDF9FC /* MJRefreshFooter.m in Sources */,
@@ -1211,16 +1152,12 @@
 				FE5372E01E6C13EA00FDF9FC /* UIScrollView+MJRefresh.m in Sources */,
 				FE5372B31E6C13EA00FDF9FC /* HomeCell.swift in Sources */,
 				FE5372C81E6C13EA00FDF9FC /* DateCollectionViewCell.swift in Sources */,
-				FE5373081E6C13EA00FDF9FC /* TTFVideoPlayer.m in Sources */,
 				FE5372C51E6C13EA00FDF9FC /* UIImage+Extension.swift in Sources */,
 				FE53732D1E6C15B200FDF9FC /* TVDetailModel.swift in Sources */,
 				FE5372AF1E6C13EA00FDF9FC /* ChannelViewCell.swift in Sources */,
-				FE53730C1E6C13EA00FDF9FC /* TTFVSegmentSlider.m in Sources */,
 				FE5373351E6DB20B00FDF9FC /* GetPlayUrlTool.swift in Sources */,
-				FE5372C11E6C13EA00FDF9FC /* TFMoviePlayerViewController.swift in Sources */,
 				FE5372B61E6C13EA00FDF9FC /* RMDBTools.swift in Sources */,
 				FE5372D71E6C13EA00FDF9FC /* MJRefreshBackNormalFooter.m in Sources */,
-				FE53730D1E6C13EA00FDF9FC /* UIView+RRFoundation.m in Sources */,
 				FE5372C21E6C13EA00FDF9FC /* MeViewController.swift in Sources */,
 				FE5372CF1E6C13EA00FDF9FC /* MJRefreshBackFooter.m in Sources */,
 				FE5372C61E6C13EA00FDF9FC /* APINetTools.swift in Sources */,
@@ -1235,15 +1172,12 @@
 				FE5371C11E6BFA5E00FDF9FC /* ViewController.swift in Sources */,
 				FE5371BF1E6BFA5E00FDF9FC /* AppDelegate.swift in Sources */,
 				FE5373331E6DB0D100FDF9FC /* PlayerViewController.swift in Sources */,
-				FE53730A1E6C13EA00FDF9FC /* TTFVideoPlayerView.m in Sources */,
 				8945ACD51E6D86C000B3E3DE /* DetailViewController.swift in Sources */,
 				FE5372BC1E6C13EA00FDF9FC /* BaseTableViewController.swift in Sources */,
-				FE5373091E6C13EA00FDF9FC /* TTFVideoPlayerView+Extension.m in Sources */,
 				FE5373291E6C15A800FDF9FC /* ApiTools.swift in Sources */,
 				FE5372BD1E6C13EA00FDF9FC /* BaseViewController.swift in Sources */,
 				FE5372AE1E6C13EA00FDF9FC /* ChannelModel.swift in Sources */,
 				FE5372DB1E6C13EA00FDF9FC /* MJRefreshStateHeader.m in Sources */,
-				FE5373061E6C13EA00FDF9FC /* ForwardBackView.m in Sources */,
 				FE5372B11E6C13EA00FDF9FC /* AdmobCell.swift in Sources */,
 				FE5372DD1E6C13EA00FDF9FC /* MJRefreshConst.m in Sources */,
 				FE5372C01E6C13EA00FDF9FC /* LoadingView.swift in Sources */,
