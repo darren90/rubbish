@@ -40,7 +40,7 @@
     self.title = self.titleStr;
     [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:self.detailUrl]]];
 
-    [self initAdView];
+//    [self initAdView];
     
     if (self.listType != RMListHero) {
         

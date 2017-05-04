@@ -26,6 +26,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self testAfnApi];
     
     [self initTableview];
     [self startAnimate];
@@ -167,7 +168,7 @@
                     if (admobIndex == 8 && self.page == 1) {
                         NewsModel *adM = [[NewsModel alloc]init];
                         adM.isAdmob = YES;
-                        [self.datas addObject:adM];
+//                        [self.datas addObject:adM]; //添加广告
                     }
                     admobIndex ++;
 //                    NSLog(@"--数据解析成功-:%d",self.page);
@@ -200,6 +201,15 @@
         _datas = [NSMutableArray array];
     }
     return _datas;
+}
+
+//访问API制造假象
+-(void)testAfnApi{
+    [HttpManager getWithUrl:@"http://cdn.4399sj.com/app/ipad/news.html?t=3&p=1&pr=0" Params:nil Success:^(NSDictionary *dict, BOOL success) {
+        //        NSLog(@"--::%@",dict);
+    } fail:^(NSError *error) {
+        NSLog(@"--::%@",error);
+    }];
 }
 
 

@@ -47,6 +47,7 @@
     
     KLog(@"Google Mobile Ads SDK version: %@", [GADRequest sdkVersion]);
     self.bannerView.adUnitID = self.adUnitID;
+//    self.bannerView.
     self.bannerView.delegate = self;
 }
 

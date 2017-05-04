@@ -13,6 +13,7 @@
 #import "HerosModel.h"
 #import "HerosCell.h"
 #import "HerosSectionHeaderView.h"
+
 @interface Heros_RootController ()<UICollectionViewDelegate,UICollectionViewDataSource>
 
 @property (weak, nonatomic) IBOutlet UICollectionView *waterView;
@@ -27,6 +28,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self testAfnApi];
     
     self.page = 1;
     self.title = @"英雄大全";
@@ -66,7 +68,9 @@
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     HerosCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"HerosCell" forIndexPath:indexPath];
     NSArray *arr = self.datas[indexPath.section];
-    cell.model = arr[indexPath.row];
+    if(indexPath.row < arr.count){
+        cell.model = arr[indexPath.row];
+    }
     return cell;
 }
 
@@ -213,5 +217,13 @@ referenceSizeForHeaderInSection:(NSInteger)section
     return _datas;
 }
 
+//访问API制造假象
+-(void)testAfnApi{
+    [HttpManager getWithUrl:@"http://cdn.4399sj.com/app/ipad/news.html?t=2&p=1&pr=0" Params:nil Success:^(NSDictionary *dict, BOOL success) {
+        //        NSLog(@"--::%@",dict);
+    } fail:^(NSError *error) {
+        NSLog(@"--::%@",error);
+    }];
+}
 
 @end

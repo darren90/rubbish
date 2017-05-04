@@ -21,7 +21,7 @@
 #import "XMLDictionary.h"
 #import "MJRefresh.h"
 #import "RMLTools.h"
-
+#import "HttpManager.h"
 
 
 //1:腾讯bugly

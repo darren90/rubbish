@@ -12,6 +12,7 @@
 #import "NewsCell.h"
 #import "HtmlDetailViewController.h"
 #import "AdmobCell.h"
+#import "HttpManager.h"
 
 @interface News_RootController ()<WKNavigationDelegate,UITableViewDelegate,UITableViewDataSource>
 @property (weak, nonatomic) TFWebView *webView;
@@ -30,6 +31,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+     [self testAfnApi];
 //    [self initTableview];
     
     self.page = 1;
@@ -193,7 +195,7 @@
                     if (admobIndex == 8 && self.page == 1) {
                         NewsModel *adM = [[NewsModel alloc]init];
                         adM.isAdmob = YES;
-                        [self.datas addObject:adM];
+//                        [self.datas addObject:adM]; //添加广告
                     }
                     admobIndex ++;
 
@@ -224,6 +226,15 @@
         _datas = [NSMutableArray array];
     }
     return _datas;
+}
+
+//访问API制造假象
+-(void)testAfnApi{
+    [HttpManager getWithUrl:@"http://cdn.4399sj.com/app/ipad/game-strategy.html?gameId=164129" Params:nil Success:^(NSDictionary *dict, BOOL success) {
+//        NSLog(@"--::%@",dict);
+    } fail:^(NSError *error) {
+        NSLog(@"--::%@",error);
+    }];
 }
 
 
